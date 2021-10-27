@@ -1,0 +1,22 @@
+#+TITLE: thinking
+#+DATE: <2021-10-27>
+#+AUTHOR: Ernest Dong
+#+EMAIL: dongcy2000@outlook.com
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: post
+
+* Table of Contents :TOC_3:noexport:
+- [[#why-enterprises-fail][Why enterprises fail]]
+  - [[#企业为什么失败][企业为什么失败]]
+
+* Why enterprises fail :Thinking:
+:PROPERTIES:
+:EXPORT_FILE_NAME: why enterprises fail
+:END:
+** 企业为什么失败
+:PROPERTIES:
+:EXPORT_FILE_NAME: Why enterprises fail
+:EXPORT_DATE: 2021-10-27
+:END:
+上一段实习看了许多公司，有感而发
+<!--more-->

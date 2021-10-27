@@ -1,11 +1,14 @@
 +++
 title = "用 ClashX 托管更新不覆盖本地规则"
 author = ["Ernest Dong"]
-date = 2021-09-25T00:00:00+08:00
+date = 2021-09-25
 tags = ["fun"]
 draft = false
-summary="ClashX with my rule"
 +++
+
+Clash for macOS usage
+<!--more-->
+
 
 ## 托管文件 {#托管文件}
 

@@ -3,7 +3,7 @@
 #+AUTHOR: Ernest Dong
 #+EMAIL: dongcy2000@outlook.com
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: posts
+#+HUGO_SECTION: post
 
 * Table of Contents :TOC_3:noexport:
 - [[#interesting-tools][Interesting Tools]]
@@ -20,7 +20,10 @@
 ** 用 Pass 管理密码
 :PROPERTIES:
 :EXPORT_FILE_NAME: the unix pass
+:EXPORT_DATE: 2021-07-03
 :END:
+pass for macOS usage
+<!--more-->
 *** Pass 的优点
 - [[https://www.passwordstore.org/][pass]] 是符合 unix 哲学的密码管理器，利用 gpg 本地加密存储，让人感觉比依靠互联网账号的密码管理器安全。
 - 和浏览器完美，利用[[https://github.com/browserpass/browserpass-extension][browserpass]]可以自动填充
@@ -99,7 +102,10 @@ echo "pinentry-program /usr/local/bin/pinentry-mac
 ** 用 ClashX 托管更新不覆盖本地规则
 :PROPERTIES:
 :EXPORT_FILE_NAME: Clash GFW
+:EXPORT_DATE: 2021-09-25
 :END:
+Clash for macOS usage
+<!--more-->
 *** 托管文件
 
 [[https://github.com/yichengchen/clashX][clashX]] （我用开源版）可以有多个托管配置文件，尽管可以直接编辑 =remote.yaml= ，但是托管更新后自己编辑的规则就被覆盖了

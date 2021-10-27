@@ -1,11 +1,14 @@
 +++
 title = "用 Pass 管理密码"
 author = ["Ernest Dong"]
-date = 2021-07-03T00:00:00+08:00
+date = 2021-07-03
 tags = ["fun"]
 draft = false
-summary= "unix pass in macOS"
 +++
+
+pass for macOS usage
+<!--more-->
+
 
 ## Pass 的优点 {#pass-的优点}
 
@@ -73,9 +76,9 @@ user: username
 ### Pass 使用 {#pass-使用}
 
 ```shell
-pass list # 展示.passwordstore 目录树
+pass list # 展示.passwordstore目录树
 pass insert # see below 插入已有的
-... # 用 emacs 所以不记这些了
+... # 用emacs 所以不记这些了
 ```
 
 详细可以看[archwiki](https://wiki.archlinux.org/title/Pass)

@@ -3,11 +3,12 @@
 #+AUTHOR: Ernest Dong
 #+EMAIL: dongcy2000@outlook.com
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: posts
+#+HUGO_SECTION: post
 
 * Table of Contents :TOC_3:noexport:
 - [[#coding][Coding]]
   - [[#a-stata-scratch][A stata scratch]]
+    - [[#summary][summary]]
     - [[#目的][目的]]
     - [[#可扩展性][可扩展性]]
     - [[#简介][简介]]
@@ -17,7 +18,11 @@
 ** A stata scratch :coding:
 :PROPERTIES:
 :EXPORT_FILE_NAME: a stata scratch
+:EXPORT_DATE: 2021-01-01
 :END:
+stata on our own
+<!--more-->
+*** summary
 这是一个模仿 stata 的 flask 网页应用，可以实现一些基本的 stata 操作，如数据的简单清洗、OLS 回归
 
 *Link [[https://github.com/ErnestDong/stata_scratch][HERE!]]*

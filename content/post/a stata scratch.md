@@ -1,12 +1,16 @@
 +++
 title = "A stata scratch"
 author = ["Ernest Dong"]
-date = 2020-12-11T00:00:00+08:00
+date = 2021-01-01
 tags = ["coding"]
 draft = false
-summary="stata and flask"
-pin=false
 +++
+
+stata on our own
+<!--more-->
+
+
+## summary {#summary}
 
 这是一个模仿 stata 的 flask 网页应用，可以实现一些基本的 stata 操作，如数据的简单清洗、OLS 回归
 
