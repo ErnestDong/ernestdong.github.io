@@ -12,25 +12,28 @@
 <title>用 Pass 管理密码 - Ernest Dong's blog</title>
 <link rel=icon type=image/x-icon href=images/avatar.png>
 <meta name=theme-color content="#1e2327">
-<meta name=description content="unix pass in macOS">
+<meta name=description content="pass for macOS usage
+">
 <meta name=keywords content="blog">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://ernestdong.github.io/post/the-unix-pass/>
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="用 Pass 管理密码 - Ernest Dong's blog">
-<meta name=twitter:description content="unix pass in macOS">
+<meta name=twitter:description content="pass for macOS usage
+">
 <meta name=twitter:site content="https://ernestdong.github.io/">
 <meta name=twitter:creator content="[Ernest Dong]">
 <meta name=twitter:image content="https://ernestdong.github.io/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 Pass 管理密码 - Ernest Dong's blog">
-<meta property="og:description" content="unix pass in macOS">
+<meta property="og:description" content="pass for macOS usage
+">
 <meta property="og:url" content="https://ernestdong.github.io/post/the-unix-pass/">
 <meta property="og:site_name" content="用 Pass 管理密码">
 <meta property="og:image" content="https://ernestdong.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
-<meta property="article:published_time" content="2021-07-03 00:00:00 +0800 +0800">
+<meta property="article:published_time" content="2021-07-03 00:00:00 +0000 UTC">
 </head>
 <body>
 <div style=position:relative>
@@ -84,11 +87,11 @@
 <a href=https://ernestdong.github.io/>董晨阳</a></span><span class=path-divider>/</span><strong class="css-truncate-target mr-1" style=max-width:410px><a href=https://ernestdong.github.io/post/the-unix-pass/>用 Pass 管理密码</a></strong>
 </h1>
 <div class="note m-0">
-Created <relative-time datetime="Sat, 03 Jul 2021 00:00:00 +0800" class=no-wrap>
-Sat, 03 Jul 2021 00:00:00 +0800</relative-time>
+Created <relative-time datetime="Sat, 03 Jul 2021 00:00:00 +0000" class=no-wrap>
+Sat, 03 Jul 2021 00:00:00 +0000</relative-time>
 <span class=file-info-divider></span>
-Modified <relative-time datetime="Wed, 27 Oct 2021 07:55:15 +0000" class=no-wrap>
-Wed, 27 Oct 2021 07:55:15 +0000</relative-time>
+Modified <relative-time datetime="Wed, 27 Oct 2021 08:48:44 +0000" class=no-wrap>
+Wed, 27 Oct 2021 08:48:44 +0000</relative-time>
 </div>
 </div>
 </div>
@@ -106,7 +109,7 @@ Wed, 27 Oct 2021 07:55:15 +0000</relative-time>
 <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 <summary id=toc-toggle class="btn btn-octicon m-0 mr-2 p-2" aria-haspopup=menu aria-label="Table of Contents" role=button><svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered"><path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zM3 8A1 1 0 111 8a1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"/></svg>
 </summary>
-537 Words
+545 Words
 </div>
 <div class="file-actions flex-order-2 pt-0">
 <a class="muted-link mr-3" href=/tags/fun><svg class="octicon octicon-tag" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25.0 01.25-.25h5.025a.25.25.0 01.177.073l6.25 6.25a.25.25.0 010 .354l-5.025 5.025a.25.25.0 01-.354.0l-6.25-6.25A.25.25.0 012.5 7.775zm-1.5.0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464.0.91.184 1.238.513l6.25 6.25a1.75 1.75.0 010 2.474l-5.026 5.026a1.75 1.75.0 01-2.474.0l-6.25-6.25A1.75 1.75.0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg>
@@ -116,7 +119,8 @@ fun
 </div>
 </div>
 <div class="Box-body px-5 pb-5">
-<article class="markdown-body entry-content container-lg"><h2 id=pass-的优点>Pass 的优点</h2>
+<article class="markdown-body entry-content container-lg"><p>pass for macOS usage</p>
+<h2 id=pass-的优点>Pass 的优点</h2>
 <ul>
 <li><a href=https://www.passwordstore.org/>pass</a> 是符合 unix 哲学的密码管理器，利用 gpg 本地加密存储，让人感觉比依靠互联网账号的密码管理器安全。</li>
 <li>和浏览器完美，利用<a href=https://github.com/browserpass/browserpass-extension>browserpass</a>可以自动填充</li>
@@ -148,9 +152,9 @@ pass init <span class=s2>&#34;your-keys here!&#34;</span>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text>a Strong Password
 user: username
 </code></pre></div><h3 id=pass-使用>Pass 使用</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>pass list <span class=c1># 展示.passwordstore 目录树</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>pass list <span class=c1># 展示.passwordstore目录树</span>
 pass insert <span class=c1># see below 插入已有的</span>
-... <span class=c1># 用 emacs 所以不记这些了</span>
+... <span class=c1># 用emacs 所以不记这些了</span>
 </code></pre></div><p>详细可以看<a href=https://wiki.archlinux.org/title/Pass>archwiki</a></p>
 <h3 id=tweaks>Tweaks</h3>
 <h4 id=用-git-同步>用 git 同步</h4>
@@ -165,8 +169,7 @@ chmod u+x .git/hooks/post-commit
 </span><span class=s2>&#34;</span> &gt;&gt; ~/.gnupg/gnupg.conf
 </code></pre></div><p>然后可以在对应的网站用 <code>command + L</code> 自动输入密码了。</p>
 <h2 id=配置-pass-for-ios>配置 <code>Pass for iOS</code></h2>
-<p>记得在“系统设置-密码”里填充来源加上 pass，就可以享受免费的 1password 了</p>
-</article>
+<p>记得在“系统设置-密码”里填充来源加上 pass，就可以享受免费的 1password 了</p></article>
 </div>
 </div>
 </div>
