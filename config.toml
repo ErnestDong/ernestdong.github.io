@@ -22,5 +22,8 @@ pygmentsUseClasses = true
     title = "resume"
     href = "resume.pdf"
     icon = "images/pdf.png"
+  [[params.links]]
+    title = "Have Issues?"
+    href = "https://github.com/ErnestDong/ernestdong.github.io/issues/new/choose"
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
