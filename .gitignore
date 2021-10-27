@@ -1,0 +1,5 @@
+TODO
+.vscode/
+.auctex-auto/
+/resources/*
+public/

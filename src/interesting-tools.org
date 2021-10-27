@@ -1,0 +1,145 @@
+#+TITLE: interesting-tools
+#+DATE: <2021-07-03>
+#+AUTHOR: Ernest Dong
+#+EMAIL: dongcy2000@outlook.com
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: posts
+
+* Table of Contents :TOC_3:noexport:
+- [[#interesting-tools][Interesting Tools]]
+  - [[#用-pass-管理密码][用 Pass 管理密码]]
+    - [[#pass-的优点][Pass 的优点]]
+    - [[#安装-pass-与-browserpass][安装 =Pass= 与 =browserpass=]]
+    - [[#配置-pass][配置 =Pass=]]
+    - [[#配置-pass-for-ios][配置 =Pass for iOS=]]
+  - [[#用-clashx-托管更新不覆盖本地规则][用 ClashX 托管更新不覆盖本地规则]]
+    - [[#托管文件][托管文件]]
+    - [[#解决办法][解决办法]]
+
+* Interesting Tools :fun:
+** 用 Pass 管理密码
+:PROPERTIES:
+:EXPORT_FILE_NAME: the unix pass
+:END:
+*** Pass 的优点
+- [[https://www.passwordstore.org/][pass]] 是符合 unix 哲学的密码管理器，利用 gpg 本地加密存储，让人感觉比依靠互联网账号的密码管理器安全。
+- 和浏览器完美，利用[[https://github.com/browserpass/browserpass-extension][browserpass]]可以自动填充
+- iOS 系统上有 [[https://github.com/mssun/passforios][pass for iOS]]，相当于免费的 1Password
+- [[https://github.com/hlissner/doom-emacs][doom emacs]] 中有现成的 =:tool pass= 可以使用
+
+遗憾的是 pass 需要一点点配置
+*** 安装 =Pass= 与 =browserpass=
+#+begin_src shell
+brew tap amar1729/formulae # browserpass tap
+brew install pass browserpass
+#+end_src
+之后根据 caveats
+#+begin_src shell
+PREFIX='/usr/local/opt/browserpass' make hosts-BROWSER-user -f '/usr/local/opt/browserpass/lib/browserpass/Makefile'
+#+end_src
+
+其中 =BROWSER= 可以是 chromium chrome vivaldi brave firefox 这几种浏览器 +(Safari 连 =endnote click= 都没有，除了轻快好难用)+
+*** 配置 =Pass=
+**** Pass init
+=Pass= 可以说是一套工具的集合，其中的 GnuPG 就是用来加密的。
+#+begin_src shell
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+# sec   some-text/your-keys time-today [SC]
+pass init "your-keys here!"
+#+end_src
+
+从此 =$HOME= 下的 =.passwordstore= & =.gnupg= 就不能删了
+
+**** Pass 导入
+把 Chrome +等+（ +万恶的+ Google 全家桶太好用了不得不用 Chrome）密码导出后可以用这段[[https://gist.github.com/ErnestDong/0fc61d76777770a03ffc5bdfda2a5b17][gist]]的 python 代码（参考自 [[https://www.passwordstore.org/][pass]] 官网）转换为 pass 的格式
+
+用这段 gist 导出后 pass 是这样存储的：
+#+begin_src shell
+tree
+# --example.com
+#  |-username.gpg
+#+end_src
+其中的 =username.gpg= 解密后是这样的
+#+begin_example
+a Strong Password
+user: username
+#+end_example
+
+**** Pass 使用
+#+begin_src shell
+pass list # 展示.passwordstore目录树
+pass insert # see below 插入已有的
+... # 用emacs 所以不记这些了
+#+end_src
+详细可以看[[https://wiki.archlinux.org/title/Pass][archwiki]]
+
+**** Tweaks
+***** 用 git 同步
+#+begin_src shell
+pass git init
+#+end_src
+这样每次加入密码都会 commit 并且可以同步。 用 pass for iOS 时需要 git 同步。不过 PGP 加密毕竟不是水货。
+***** git hook
+每次 commit 后自动 push 到 GitHub 上。
+#+begin_src shell
+echo "git push -u origin main" >> .git/hooks/post-commit
+chmod u+x .git/hooks/post-commit
+#+end_src
+
+***** mac 的 browser pass
+#+begin_src shell
+echo "pinentry-program /usr/local/bin/pinentry-mac
+" >> ~/.gnupg/gnupg.conf
+#+end_src
+然后可以在对应的网站用 =command + L= 自动输入密码了。
+*** 配置 =Pass for iOS=
+记得在“系统设置-密码”里填充来源加上 pass，就可以享受免费的 1password 了
+
+** 用 ClashX 托管更新不覆盖本地规则
+:PROPERTIES:
+:EXPORT_FILE_NAME: Clash GFW
+:END:
+*** 托管文件
+
+[[https://github.com/yichengchen/clashX][clashX]] （我用开源版）可以有多个托管配置文件，尽管可以直接编辑 =remote.yaml= ，但是托管更新后自己编辑的规则就被覆盖了
+
+*** 解决办法
+
+我贴到了[[https://gist.github.com/ErnestDong/8b59aad6a332401b3062ab13db3a559f][gist]]上
+
+假设 =~/.config/clash/= 是这样的：
+
+#+begin_src shell :results output
+$ exa ~/.config/clash/ -T
+
+/Users/dcy/.config/clash
+├── config.yaml
+└── remote.yaml
+
+#+end_src
+copy =config.yaml= 为 =local.yaml= 并添加
+#+begin_src yaml
+# proxy provider start here
+proxy-providers:
+  something-great:
+    type: http
+    url: your-remote-url
+    path: ./remote.yaml
+    interval: 36000
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 3600
+# proxy provider end
+
+proxy-groups:
+  - name: "your-awesome-name"
+    type: select
+    use:
+      - something-great
+rules:
+  - "DOMAIN-KEYWORD,google,your-awesome-name"
+#+end_src
+
+其中 =your-remote-url= 为订阅地址， =rules= 可以复制 =remote.yaml= 的相应部分，然后添加自己的规则，这样就不会被覆盖了

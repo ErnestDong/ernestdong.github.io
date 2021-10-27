@@ -1,0 +1,26 @@
+baseURL = "https://ernestdong.github.io/"
+languageCode = "zh-cn"
+title = "Ernest Dong's blog"
+theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = "董晨阳"
+  # description = "Wubba Lubba Dub Dub"
+  github = "ErnestDong"
+  linkedin = "晨阳-董-918ab41b4"
+  email = "dongcy2000@outlook.com"
+  url = "https://ernestdong.github.io/"
+  keywords = "blog"
+  rss = true
+  lastmod = true
+  favicon = "images/avatar.png"
+  location = "China"
+  userStatusEmoji = "😀"
+  [[params.links]]
+    title = "resume"
+    href = "resume.pdf"
+    icon = "images/pdf.png"
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
