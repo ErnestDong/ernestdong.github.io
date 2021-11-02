@@ -7,6 +7,10 @@ on:
   pull_request:
     branches:
       - main
+  workflow_run:
+    workflows: ["Waka Readme"]
+    types:
+      - completed
 jobs:
   deploy:
     runs-on: ubuntu-latest
