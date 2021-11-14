@@ -1,22 +1,40 @@
 +++
 title = "Ernest"
 +++
+### Hi, my name is Ernest Dong 👋 and I ❤️ open-source
+- **Senior Student** at PKU major in Risk Management and Insurance
 
-## About Me
+**Field of interests**: Machine Learning, Risk Management in Finance.
 
-I'm Chenyang Dong (Ernest). You can find more information about me on [LinkedIn](https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/)
+### Skills 🛠️
+- **Languages**:        Python, C/C++, R
+- **DS/ML/DL**: &nbsp;  NumPy, SciPy, Pandas, Scikit-Learn, PyTorch
+### Education 🎓
+| academic degree      | University          | Major                                      | duration  |
+| ---------------------| ------------------- | --------------------|-----------|
+| **Master’s degree**  |**Peking University**| **Insurance** [^1]                |**2022 - 2024**|
+| **Bachelor's degree**|Peking University    | Risk Management and Insurance |2018 - 2022|
 
-I major in Risk Management and Insurance in PKU. And I love coding.
+More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/).
 
-Here's my GitHub statistics.
+[^1]: have got postgraduate recommandation.
+### Work experience 👔
 
+- intern of Fintech Department at Harvest Fund Management.
+- intern of Fixed Income Department in E Fund Management Co., Ltd.
+
+More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/).
+### Github Stats ⭐
 ![Ernest's GitHub stats](https://github-readme-stats.vercel.app/api?username=ErnestDong&show_icons=true)
+
+### Wakatime Dashboard🕛 
+
 <!--START_SECTION:waka-->
 ```text
-org mode     6 hrs 16 mins   █████████░░░░░░░░░░░░░░░░   35.72 % 
-Emacs Lisp   3 hrs 23 mins   ████▓░░░░░░░░░░░░░░░░░░░░   19.31 % 
-Python       2 hrs 18 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.13 % 
-YAML         1 hr 19 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   07.55 % 
-TOML         50 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   04.83 % 
+org mode     15 hrs 52 mins  ██████████████░░░░░░░░░░░   55.82 % 
+Emacs Lisp   5 hrs 56 mins   █████▒░░░░░░░░░░░░░░░░░░░   20.87 % 
+Other        2 hrs 20 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.22 % 
+Python       1 hr 39 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.84 % 
+BibTeX       52 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.09 % 
 ```
 <!--END_SECTION:waka-->
