@@ -3,6 +3,8 @@ title = "python and mathematics"
 author = ["Ernest Dong"]
 draft = false
 date = 2021-11-20
+pin = true
+tags = ["programming"]
 +++
 一些有关 python 和数学的笔记
 <!--more-->
