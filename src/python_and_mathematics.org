@@ -1,0 +1,486 @@
+:PROPERTIES:
+:ID:       a4814766-a2fb-4303-ac75-e739aceb3d88
+:END:
+#+title: python and mathematics
+#+filetags: :python:
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: post
+#+DATE: <2021-11-20 Sat>
+* Table of Contents :TOC_3:noexport:
+- [[#get-start][Get Start]]
+- [[#numpy][numpy]]
+  - [[#numpy-基础数据类型][numpy 基础数据类型]]
+    - [[#数组的创建][数组的创建]]
+  - [[#索引与变形][索引与变形]]
+  - [[#运算][运算]]
+    - [[#算术运算符][算术运算符]]
+    - [[#一些方法][一些方法]]
+    - [[#广播][广播]]
+- [[#pandas][pandas]]
+  - [[#对象][对象]]
+    - [[#series][=Series=]]
+    - [[#dataframe][=DataFrame=]]
+  - [[#其他][其他]]
+    - [[#dropna][=dropna=]]
+    - [[#cut][=cut=]]
+    - [[#value_counts][=value_counts=]]
+- [[#stats-models][stats-models]]
+  - [[#ols-回归][OLS 回归]]
+    - [[#获得参数][获得参数]]
+  - [[#其他-1][其他]]
+- [[#matplotlib][matplotlib]]
+  - [[#中文][中文]]
+  - [[#example][example]]
+    - [[#具体][具体]]
+- [[#seaborn][seaborn]]
+  - [[#matplotlib-use-seaborn-style][matplotlib use seaborn style]]
+
+* Get Start
+#+begin_src emacs-lisp :session main
+(pyvenv-activate "~/Code/thesis/.venv/")
+#+end_src
+
+#+RESULTS:
+
+#+begin_src python :session main
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+#+end_src
+
+#+RESULTS:
++ 读报错信息
++ 用 Google 搜英文
+* numpy
+numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底层。
+
+中文文档：https://www.numpy.org.cn/
+英文文档：https://numpy.org/doc/stable/user/index.html
+
+非常的底层，数值计算的基础
+
+** numpy 基础数据类型
+NumPy 包的核心是 ndarray 对象，是一种容器，类似于 python 的 list 和 C++ 的 array 。
+它封装了 python 原生的同数据类型的 n 维数组，为了保证其性能优良，其中有许多操作都是代码在本地进行编译后执行的。
+
+ndarray 有固定的大小、容器中是相同的数据类型（可以通过 dtype 访问）。
+ndarray 通过 *矢量化* 加速程序运行
+
+#+begin_src python :session main :results output
+arr = np.array([1,2,3,np.nan])
+print(arr.astype(float))
+print(arr.dtype)
+#+end_src
+
+#+RESULTS:
+: [ 1.  2.  3. nan]
+: float64
+
+请注意 numpy 的整数有可能溢出
+*** 数组的创建
+**** 从其他 Python 结构（例如，列表，元组）转换
+=np.array(list_like)=
+**** numpy 原生数组的创建
+numpy 提供了部分函数，可以创建特定的数组
+#+begin_src python :results output :session main
+shape = (1, 4)
+print(np.ones(shape))
+print(np.zeros(shape))
+print(np.random.random(shape))
+print(np.arange(0, 6, 2)) # 从0到6，每隔2个
+print(np.linspace(1., 4., 6)) # 从1到4，一共6个
+#+end_src
+
+#+RESULTS:
+: [[1. 1. 1. 1.]]
+: [[0. 0. 0. 0.]]
+: [[0.97418174 0.62293833 0.60045374 0.93903169]]
+: [0 2 4]
+: [1.  1.6 2.2 2.8 3.4 4. ]
+
+** 索引与变形
+shape 属性储存了 numpy 数组的“形状”，并且是可以修改的
+
+#+begin_src python :session main :results output
+x = np.arange(10)
+x.shape = 2, 5
+print(x)
+print(x[0])
+print(x[0:2])
+#+end_src
+
+#+RESULTS:
+: [[0 1 2 3 4]
+:  [5 6 7 8 9]]
+: [0 1 2 3 4]
+: [[0 1 2 3 4]
+:  [5 6 7 8 9]]
+
+** 运算
+*** 算术运算符
+
+数组上的算术运算符会应用到 *元素* 级别。下面是创建一个新数组并填充结果的示例：
+#+begin_src python :results output :session main
+a = np.array( [20,30,40,50] )
+b = np.arange( 4 )
+c = a-b
+print(c)
+print(c**2)
+print(10*np.sin(a))
+print(a<35)
+#+end_src
+
+#+RESULTS:
+: [20 29 38 47]
+: [ 400  841 1444 2209]
+: [ 9.12945251 -9.88031624  7.4511316  -2.62374854]
+: [ True  True False False]
+
+对于矩阵，乘法使用@
+#+begin_src python :results output :session main
+A = np.array([[0, 1], [2, 3]])
+B = np.array([[4, 5], [6, 7]])
+print(A*B)
+print(A@B)
+#+end_src
+
+#+RESULTS:
+: [[ 0  5]
+:  [12 21]]
+: [[ 6  7]
+:  [26 31]]
+
+*** 一些方法
+axis 参数可以指定操作的方向，沿着第几维
+#+begin_src python :results output :session main
+x = np.array([[3, 1, 4, 1], [5, 9, 2, 6]])
+print(x.min())
+print(x.max())
+print(x.mean(axis=0))
+print(x.sum())
+print(x.argmax())
+print(x.cumsum(axis=1))
+print(np.fromfunction(lambda i, j: i == j, (3, 3), dtype=int))
+# The resulting array has a value fn(x, y, z) at coordinate (x, y, z).
+#+end_src
+
+#+RESULTS:
+#+begin_example
+1
+9
+[4.  5.  3.  3.5]
+31
+5
+[[ 3  4  8  9]
+ [ 5 14 16 22]]
+[[ True False False]
+ [False  True False]
+ [False False  True]]
+#+end_example
+
+*** 广播
+广播允许通用功能以有意义的方式处理不具有完全相同形状的输入。
+
+广播的第一个规则是，如果所有输入数组不具有相同数量的维度，则将“1”重复地预先添加到较小数组的形状，直到所有数组具有相同数量的维度。
+
+广播的第二个规则确保沿特定维度的大小为1的数组表现为具有沿该维度具有最大形状的数组的大小。假定数组元素的值沿着“广播”数组的那个维度是相同的。
+
+* pandas
+pandas 封装了 numpy 的一些操作，使得 python 可以像操作 excel （其实是基于 R 的语法）一样操作数据（称为 [[=DataFrame=]]）
+
+中文文档：https://www.pypandas.cn/docs/getting_started/10min.html
+英文文档：https://pandas.pydata.org/docs/
+** 对象
+*** =Series=
+可以理解成一列 excel 数据
+
+*** =DataFrame=
+可以理解成一张 excel 表，可以用切片/属性的方式访问某一列
+#+begin_src python :results output :session main
+dates = pd.date_range('20130101', periods=6)
+df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list('ABCD'))
+print(df.columns)
+print("===")
+print(df)
+print("===")
+print(df.T)
+print("===")
+print(df.A)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Index(['A', 'B', 'C', 'D'], dtype='object')
+===
+                   A         B         C         D
+2013-01-01 -0.399171  0.396533  1.009235 -0.010387
+2013-01-02  1.281025 -0.202739 -0.187433 -1.392012
+2013-01-03 -1.312737 -1.851408  0.158676 -1.080280
+2013-01-04 -0.517509  1.044536 -0.234037  0.133231
+2013-01-05  0.016502  1.558238  0.669181  0.305192
+2013-01-06 -1.322818  0.243269 -0.762493 -1.119781
+===
+   2013-01-01  2013-01-02  2013-01-03  2013-01-04  2013-01-05  2013-01-06
+A   -0.399171    1.281025   -1.312737   -0.517509    0.016502   -1.322818
+B    0.396533   -0.202739   -1.851408    1.044536    1.558238    0.243269
+C    1.009235   -0.187433    0.158676   -0.234037    0.669181   -0.762493
+D   -0.010387   -1.392012   -1.080280    0.133231    0.305192   -1.119781
+===
+2013-01-01   -0.399171
+2013-01-02    1.281025
+2013-01-03   -1.312737
+2013-01-04   -0.517509
+2013-01-05    0.016502
+2013-01-06   -1.322818
+Freq: D, Name: A, dtype: float64
+#+end_example
+**** dataframe 的导入导出
+导入可以用 =pd.read_*= ，而导出可以用 =pd.to_*= ，如 csv, excel
+**** 查看数据
+df 有属性 =head(n)=, =tail(n)= 可以查看头/尾 n 条数据
+
+=describe()= 可以快速查看数据的统计摘要：
+
+#+begin_src python :results output :session main
+desc = df.describe()
+print(desc)
+print(desc['A'])
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+              A         B         C         D
+count  6.000000  6.000000  6.000000  6.000000
+mean   0.676369  0.529232  0.494069 -0.081688
+std    0.941189  0.874553  1.091247  0.604421
+min   -0.707166 -0.521978 -0.964502 -0.762530
+25%    0.213043 -0.229293 -0.298316 -0.581076
+50%    0.604818  0.660847  0.748001 -0.029470
+75%    1.461771  1.229906  1.025321  0.202825
+max    1.725871  1.482090  1.962241  0.816030
+count    6.000000
+mean     0.676369
+std      0.941189
+min     -0.707166
+25%      0.213043
+50%      0.604818
+75%      1.461771
+max      1.725871
+Name: A, dtype: float64
+#+end_example
+**** 切片
+一个 [] 切出来是一个 Series，两个[[]] 则是 dataframe
+#+begin_src python
+df["A"] # return the column A as Series
+df[["A", "B"]] # return column AB as a new df
+#+end_src
+**** 排序
+#+begin_src python :results output :session main
+print(df.sort_values(by = ['A', 'B'], ascending=False))
+#+end_src
+
+#+RESULTS:
+:                    A         B         C         D
+: 2013-01-02  1.281025 -0.202739 -0.187433 -1.392012
+: 2013-01-05  0.016502  1.558238  0.669181  0.305192
+: 2013-01-01 -0.399171  0.396533  1.009235 -0.010387
+: 2013-01-04 -0.517509  1.044536 -0.234037  0.133231
+: 2013-01-03 -1.312737 -1.851408  0.158676 -1.080280
+: 2013-01-06 -1.322818  0.243269 -0.762493 -1.119781
+
+**** 筛选
+向量化操作会更快，条件中间用&
+
+#+begin_src python :results output :session main
+print(df[df["A"]<0])
+#+end_src
+
+#+RESULTS:
+:                    A         B         C         D
+: 2013-01-01 -0.399171  0.396533  1.009235 -0.010387
+: 2013-01-03 -1.312737 -1.851408  0.158676 -1.080280
+: 2013-01-04 -0.517509  1.044536 -0.234037  0.133231
+: 2013-01-06 -1.322818  0.243269 -0.762493 -1.119781
+
+**** 运算
+运算基本类似 numpy ，但是没有广播机制，必须对齐
+
+特别的，有 =apply= 函数很常用
+
+=df.apply(lambda x: x.max() - x.min())=
+
+=apply= 的含义是，对每一个 Series ，应用这个函数，并返回结果
+**** 合并
+两个 dataframe 合并，操作中 how 必须是 One of 'left', 'right', 'outer', 'inner'. Defaults to inner.
+
+#+begin_src python :results output :session main
+left = pd.DataFrame({'key': ['foo', 'bar'], 'lval': [1, 2]})
+right = pd.DataFrame({'key': ['foo', 'bar', "etc"], 'rval': [4, 5, 6]})
+
+print(pd.merge(left, right, on="key", how="left"))
+#+end_src
+
+#+RESULTS:
+:    key  lval  rval
+: 0  foo     1     4
+: 1  bar     2     5
+
+**** =group_by=
+return (group, df_in_group)
+
+#+begin_src python :results output :session main
+df = pd.DataFrame(
+    {
+        "A": ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"],
+        "B": ["one", "one", "two", "three", "two", "two", "one", "three"],
+        "C": np.random.randn(8),
+        "D": np.random.randn(8),
+    }
+)
+print(df.groupby("A").sum())
+#+end_src
+
+#+RESULTS:
+:             C         D
+: A
+: bar  0.401330  2.541315
+: foo  2.977543  1.277887
+
+**** =pivot_table=
+有四个最重要的参数 index、values、aggfunc
+***** index
+针对不同的索引构建透视表
+#+begin_src python
+pd.pivot_table(df,index=['a', 'b'])
+#+end_src
+***** values
+values 可以对需要的计算数据进行筛选
+***** aggfunc
+aggfunc 参数可以设置我们对数据聚合时进行的函数操作，默认是 mean
+
+** 其他
+*** =dropna=
+=df.dropna()= 删除掉空值
+*** =cut=
+#+begin_src python :results output :session main
+df = pd.DataFrame({0:[i for i in range(100)]})
+cutted = pd.cut(df[0], bins=[-1, 50, 101])
+print(cutted)
+#+end_src
+
+*** =value_counts=
+#+begin_src python :results output :session main
+print(cutted.value_counts())
+#+end_src
+
+#+RESULTS:
+: (-1, 50]     51
+: (50, 101]    49
+: Name: 0, dtype: int64
+
+* stats-models
+可以视作 stata 的替代品，也有部分机器学习算法（目前机器学习最流行的框架是 pytorch ）
+
+文档：https://www.statsmodels.org/stable/gettingstarted.html
+** OLS 回归
+#+begin_src python :results output :session main
+df = sm.datasets.get_rdataset("Guerry", "HistData").data # data loader, use pandas
+x = df[['Literacy', 'Wealth']]
+y = df['Lottery']
+model = sm.OLS(y, x)
+result = model.fit()
+print(result.summary())
+# print(result.summary().as_latex())
+#+end_src
+
+#+RESULTS:
+#+begin_example
+                                 OLS Regression Results
+=======================================================================================
+Dep. Variable:                Lottery   R-squared (uncentered):                   0.774
+Model:                            OLS   Adj. R-squared (uncentered):              0.769
+Method:                 Least Squares   F-statistic:                              143.9
+Date:                Fri, 19 Nov 2021   Prob (F-statistic):                    7.32e-28
+Time:                        20:09:09   Log-Likelihood:                         -394.64
+No. Observations:                  86   AIC:                                      793.3
+Df Residuals:                      84   BIC:                                      798.2
+Df Model:                           2
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Literacy       0.1980      0.090      2.198      0.031       0.019       0.377
+Wealth         0.7470      0.077      9.688      0.000       0.594       0.900
+==============================================================================
+Omnibus:                        4.777   Durbin-Watson:                   1.711
+Prob(Omnibus):                  0.092   Jarque-Bera (JB):                4.679
+Skew:                          -0.568   Prob(JB):                       0.0964
+Kurtosis:                       2.884   Cond. No.                         2.63
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+#+end_example
+*** 获得参数
+#+begin_src python :results output :session main
+print(result.params)
+print(result.rsquared)
+print(result.pvalue)
+#+end_src
+
+#+RESULTS:
+: Literacy    0.197961
+: Wealth      0.746979
+: dtype: float64
+: 0.7740968292328536
+
+** 其他
+https://www.statsmodels.org/stable/examples/notebooks/generated/ordinal_regression.html?highlight=logistic
+* matplotlib
+https://matplotlib.org/stable/tutorials/index
+
+基础的作图，对标 Matlab
+** 中文
+#+begin_src python :results file :session main :exports both
+plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
+plt.rcParams['axes.unicode_minus']=False
+#+end_src
+** example
+pyplot 是 matplotlib 暴露给我们的接口，可以用 plt.plot 作图
+
+教程：https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+#+begin_src python :results file :exports both
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(-5,5,100)
+y = np.sin(x)
+plt.plot(x,y)
+filename="plts/example.png"
+plt.title("example")
+plt.xlabel("X")
+plt.savefig(filename)
+return filename
+#+end_src
+
+#+RESULTS:
+[[file:plts/example.png]]
+*** 具体
+| 折线图 | 直方图 | 散点图  | 饼图 |
+| plot   | bar    | scatter | pie  |
+
+* seaborn
+seaborn 是封装了 matplotlib 的又一层接口，相较 matplotlib 默认更美观
+
+教程：https://seaborn.pydata.org/tutorial.html
+** matplotlib use seaborn style
+#+begin_src python
+plt.style.use("seaborn")
+# or
+sns.set()
+#+end_src
+
