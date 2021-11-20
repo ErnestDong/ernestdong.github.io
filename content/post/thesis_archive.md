@@ -1,4 +1,5 @@
 +++
+tags = ["thesis"]
 title = "已读已汇报文献"
 author = ["Ernest Dong"]
 draft = false
