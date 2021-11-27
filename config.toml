@@ -9,7 +9,6 @@ googleAnalytics = ""  # add your tracking id
   author = "Ernest Dong"
   description = ""
   favicon = "/images/favicon.ico"  # path to a .ico to use as favicon
-  # logo = "/images/avatar.png"  # url or path to a logo to put in the header
   [params.footer]
     text = "By Olivier Roques"
     url = "https://github.com/ojroques/hugo-researcher"
@@ -24,6 +23,10 @@ googleAnalytics = ""  # add your tracking id
     title = "GitHub"
     url = "https://github.com/ernestDong/"
   [[params.socialIcons]]
+    icon = "fab fa-linkedin-in"
+    title = "LinkedIn"
+    url = "https://www.linkedin.com/in/晨阳-董-918ab41b4/"
+  [[params.socialIcons]]
     icon = "fab fa-instagram"
     title = "Instagram"
     url = "https://www.instagram.com/ernestdong2000/"
@@ -31,21 +34,17 @@ googleAnalytics = ""  # add your tracking id
     icon = "fas fa-envelope"
     title = "E-mail"
     url = "mailto:dongcy2000@outlook.com"
-  [[params.socialIcons]]
-    icon = "fas fa-linkedin-in"
-    title = "LinkedIn"
-    url = "https://www.linkedin.com/in/晨阳-董-918ab41b4/"
 [permalinks]
   "/" = "/:filename"
 
 [menu]
   [[menu.main]]
-    name = "Posts"
-    url = "/posts"
-    weight = 1
-  [[menu.main]]
     name = "Notes"
     url = "/notes"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts"
     weight = 1
   [[menu.main]]
     name = "Resume"
