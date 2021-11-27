@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang=""><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>用 Pass 管理密码</title>
+    <meta name="description" content="">
+    <meta name="author" content='Ernest Dong'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="/sass/researcher.min.css">
+
+    
+        <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
+    
+
+    
+        
+    
+</head>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="https://ernestdong.github.io" title="Ernest Dong">
+          
+          Ernest Dong
+        </a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="/notes" title="Notes">
+                        Notes
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/posts" title="Posts">
+                        Posts
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/files/resume.pdf" title="Resume">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <p>pass for macOS usage</p>
+<h2 id="pass-的优点">Pass 的优点</h2>
+<ul>
+<li><a href="https://www.passwordstore.org/">pass</a> 是符合 unix 哲学的密码管理器，利用 gpg 本地加密存储，让人感觉比依靠互联网账号的密码管理器安全。</li>
+<li>和浏览器完美，利用<a href="https://github.com/browserpass/browserpass-extension">browserpass</a>可以自动填充</li>
+<li>iOS 系统上有 <a href="https://github.com/mssun/passforios">pass for iOS</a>，相当于免费的 1Password</li>
+<li><a href="https://github.com/hlissner/doom-emacs">doom emacs</a> 中有现成的 <code>:tool pass</code> 可以使用</li>
+</ul>
+<p>遗憾的是 pass 需要一点点配置</p>
+<h2 id="安装-pass-与-browserpass">安装 <code>Pass</code> 与 <code>browserpass</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew tap amar1729/formulae <span style="color:#75715e"># browserpass tap</span>
+brew install pass browserpass
+</code></pre></div><p>之后根据 caveats</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">PREFIX<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/local/opt/browserpass&#39;</span> make hosts-BROWSER-user -f <span style="color:#e6db74">&#39;/usr/local/opt/browserpass/lib/browserpass/Makefile&#39;</span>
+</code></pre></div><p>其中 <code>BROWSER</code> 可以是 chromium chrome vivaldi brave firefox 这几种浏览器 <del>(Safari 连 <code>endnote click</code> 都没有，除了轻快好难用)</del></p>
+<h2 id="配置-pass">配置 <code>Pass</code></h2>
+<h3 id="pass-init">Pass init</h3>
+<p><code>Pass</code> 可以说是一套工具的集合，其中的 GnuPG 就是用来加密的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+<span style="color:#75715e"># sec   some-text/your-keys time-today [SC]</span>
+pass init <span style="color:#e6db74">&#34;your-keys here!&#34;</span>
+</code></pre></div><p>从此 <code>$HOME</code> 下的 <code>.passwordstore</code> &amp; <code>.gnupg</code> 就不能删了</p>
+<h3 id="pass-导入">Pass 导入</h3>
+<p>把 Chrome <del>等+（ +万恶的</del> Google 全家桶太好用了不得不用 Chrome）密码导出后可以用这段<a href="https://gist.github.com/ErnestDong/0fc61d76777770a03ffc5bdfda2a5b17">gist</a>的 python 代码（参考自 <a href="https://www.passwordstore.org/">pass</a> 官网）转换为 pass 的格式</p>
+<p>用这段 gist 导出后 pass 是这样存储的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tree
+<span style="color:#75715e"># --example.com</span>
+<span style="color:#75715e">#  |-username.gpg</span>
+</code></pre></div><p>其中的 <code>username.gpg</code> 解密后是这样的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">a Strong Password
+user: username
+</code></pre></div><h3 id="pass-使用">Pass 使用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pass list <span style="color:#75715e"># 展示.passwordstore目录树</span>
+pass insert <span style="color:#75715e"># see below 插入已有的</span>
+... <span style="color:#75715e"># 用emacs 所以不记这些了</span>
+</code></pre></div><p>详细可以看<a href="https://wiki.archlinux.org/title/Pass">archwiki</a></p>
+<h3 id="tweaks">Tweaks</h3>
+<h4 id="用-git-同步">用 git 同步</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pass git init
+</code></pre></div><p>这样每次加入密码都会 commit 并且可以同步。 用 pass for iOS 时需要 git 同步。不过 PGP 加密毕竟不是水货。</p>
+<h4 id="git-hook">git hook</h4>
+<p>每次 commit 后自动 push 到 GitHub 上。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;git push -u origin main&#34;</span> &gt;&gt; .git/hooks/post-commit
+chmod u+x .git/hooks/post-commit
+</code></pre></div><h4 id="mac-的-browser-pass">mac 的 browser pass</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;pinentry-program /usr/local/bin/pinentry-mac
+</span><span style="color:#e6db74">&#34;</span> &gt;&gt; ~/.gnupg/gnupg.conf
+</code></pre></div><p>然后可以在对应的网站用 <code>command + L</code> 自动输入密码了。</p>
+<h2 id="配置-pass-for-ios">配置 <code>Pass for iOS</code></h2>
+<p>记得在“系统设置-密码”里填充来源加上 pass，就可以享受免费的 1password 了</p>
+</div>
+
+        </div><div id="footer" class="mb-5">
+    <hr>
+    <div class="container text-center">
+        
+            <a href="https://github.com/ernestDong/" class="fab fa-github fa-1x" title="GitHub"></a>
+        
+            <a href="https://www.instagram.com/ernestdong2000/" class="fab fa-instagram fa-1x" title="Instagram"></a>
+        
+            <a href="mailto:dongcy2000@outlook.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
+        
+            <a href="https://www.linkedin.com/in/%e6%99%a8%e9%98%b3-%e8%91%a3-918ab41b4/" class="fas fa-linkedin-in fa-1x" title="LinkedIn"></a>
+        
+    </div>
+    
+        <div class="container text-center">
+            <a href="https://github.com/ojroques/hugo-researcher" title="By Olivier Roques"><small>By Olivier Roques</small></a>
+        </div>
+    
+</div>
+</body>
+</html>

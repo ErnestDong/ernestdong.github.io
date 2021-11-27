@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=""><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据</title>
+    <meta name="description" content="">
+    <meta name="author" content='Ernest Dong'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="/sass/researcher.min.css">
+
+    
+        <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
+    
+
+    
+        
+    
+</head>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="https://ernestdong.github.io" title="Ernest Dong">
+          
+          Ernest Dong
+        </a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="/notes" title="Notes">
+                        Notes
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/posts" title="Posts">
+                        Posts
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/files/resume.pdf" title="Resume">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <p><a href="/ox-hugo/%E6%9D%A0%E6%9D%86%E7%8E%87%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E8%B5%84%E4%BA%A7%E4%BB%B7%E6%A0%BC_%E2%80%94%E2%80%94%E6%9D%A5%E8%87%AA%E4%B8%AD%E5%9B%BD%E5%80%BA%E5%88%B8%E5%B8%82%E5%9C%BA%E8%87%AA%E7%84%B6%E5%AE%9E%E9%AA%8C%E7%9A%84%E8%AF%81%E6%8D%AE_%E7%8E%8B%E6%B0%B8%E9%92%A6.pdf">杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据</a></p>
+<h2 id="主题">主题</h2>
+<p>折算率下调是一个比较领先的指标</p>
+<p>利用中证登提高合格质押债券的准入门槛这个自然实验，检验债券的质押率(杠杆率)与债券价格之间的因果关系，对债券的质押价值进行估计，分析杠杆调控政策对债券市场产生的影响。</p>
+<h2 id="数据">数据</h2>
+<p>采用的样本为 2017 年 1 月到 8 月在上海证券交易所、深圳证券交易所、银行间 债券市场发行的主体评级和债券评级均为 AA 级的债券。</p>
+<p>宏观数据包括省 GDP 增速、M2 同比增速</p>
+<h2 id="分析方法">分析方法</h2>
+<p>交易所市场质押要求从 AA变成 AA+AAA，银行间不变</p>
+<blockquote>
+<p>中证登公司出台新规之后，交易所债券市场发行的 AA 级债券的利差变化，要显著大于银行间债券市场发行的 AA 级债券的利差变化</p>
+</blockquote>
+<p>DID 双重差分</p>
+<h2 id="模型">模型</h2>
+<p>本部分在 Fostel and Geanakoplos 2015 等理论研究的基础上，构建了一个包 含不同态度的市场参与人的资产选择模型，采用一般均衡的视角研究限制杠杆率对于债 券价格的影响。</p>
+<h2 id="结论">结论</h2>
+<p>交易所债券市场在新规实施之后发行的 AA 级债券不能进入质押库进行质押，其平均的发行利差变化，相对于依旧可以质押的银行间债券市场的 AA 级债券，差异有大约 60 - 70 个基点。</p>
+
+</div>
+
+        </div><div id="footer" class="mb-5">
+    <hr>
+    <div class="container text-center">
+        
+            <a href="https://github.com/ernestDong/" class="fab fa-github fa-1x" title="GitHub"></a>
+        
+            <a href="https://www.instagram.com/ernestdong2000/" class="fab fa-instagram fa-1x" title="Instagram"></a>
+        
+            <a href="mailto:dongcy2000@outlook.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
+        
+            <a href="https://www.linkedin.com/in/%e6%99%a8%e9%98%b3-%e8%91%a3-918ab41b4/" class="fas fa-linkedin-in fa-1x" title="LinkedIn"></a>
+        
+    </div>
+    
+        <div class="container text-center">
+            <a href="https://github.com/ojroques/hugo-researcher" title="By Olivier Roques"><small>By Olivier Roques</small></a>
+        </div>
+    
+</div>
+</body>
+</html>

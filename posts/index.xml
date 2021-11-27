@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ernest Dong</title>
+    <link>https://ernestdong.github.io/posts/</link>
+    <description>Recent content in Posts on Ernest Dong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 20 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ernestdong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python and mathematics</title>
+      <link>https://ernestdong.github.io/posts/python_and_mathematics/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/python_and_mathematics/</guid>
+      <description>&lt;p&gt;一些有关 python 和数学的笔记&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用 ClashX 托管更新不覆盖本地规则</title>
+      <link>https://ernestdong.github.io/posts/clash-gfw/</link>
+      <pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/clash-gfw/</guid>
+      <description>&lt;p&gt;Clash for macOS usage&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用 Pass 管理密码</title>
+      <link>https://ernestdong.github.io/posts/the-unix-pass/</link>
+      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/the-unix-pass/</guid>
+      <description>&lt;p&gt;pass for macOS usage&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A stata scratch</title>
+      <link>https://ernestdong.github.io/posts/a-stata-scratch/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/a-stata-scratch/</guid>
+      <description>&lt;p&gt;stata on our own&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
