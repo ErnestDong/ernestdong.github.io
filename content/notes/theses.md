@@ -1,14 +1,10 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
+lastmod = 2021-11-28T10:46:41+08:00
 draft = false
-date = 2021-11-20
-pin = true
-tags = ["thesis"]
 +++
 
-毕业论文
-<!--more-->
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}
 
 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
@@ -17,95 +13,46 @@ tags = ["thesis"]
 ### link {#link}
 
 [thesis archive]({{<relref "thesis_archive.md#" >}})
-
 [经济研究](https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&tn=SE%5Fbaiduxueshu%5Fc1gjeupa&sc%5Ff%5Fpara=sc%5Ftasktype%3D%7BfirstAdvancedSearch%7D&sc%5Fhit=1&bcp=2&ie=utf-8&tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E3%80%8B%29)
-
 [金融研究](https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%29&tn=SE%5Fbaiduxueshu%5Fc1gjeupa&sc%5Fhit=1&bcp=2&ie=utf-8&filter=sc%5Fyear%3D%7B2017%2C%2B%7D&tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%E3%80%8B%29)
 
 
-## week2 {#week2}
-
-
-### model {#model}
-
-随机森林
+## week 4 {#week-4}
 
 
 ### link {#link}
 
-[link1](https://scholar.google.com/scholar?q=%E8%BF%9D%E7%BA%A6%7C%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9+journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%7C%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&hl=zh-CN&as%5Fsdt=0%2C5&as%5Fylo=2014&as%5Fyhi=)
-
-[link2](https://scholar.google.com/scholar?start=100&q=%E5%80%BA%E5%88%B8+journal:(%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%7C%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6)&hl=zh-CN&as%5Fsdt=0,5&as%5Fylo=2014)
+<https://scholar.google.com/scholar?q=%E8%AF%84%E7%BA%A7+journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%7C%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&hl=zh-CN&as%5Fsdt=0%2C44&as%5Fylo=2015&as%5Fyhi>
 
 
-
-### files {#files}
-
-
-#### 宏观 {#宏观}
-
-<!--list-separator-->
-
--  杠杆
-
-    [违约与杠杆周期——一个带有救助的金融加速器模型]({{<relref "thesis/陆磊2020违约与杠杆周期.md#" >}})
-
-    质押率上升，杠杆上升，债券价格下降
-
-    [杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据]({{<relref "thesis/王永钦2019杠杆率如何影响资产价格.md#" >}})
-
-    [中国创新型货币政策如何发挥作用: 抵押品渠道]({{<relref "thesis/王永钦2019中国创新型货币政策如何发挥作用.md#" >}})
-
-<!--list-separator-->
-
--  政策
-
-    [定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究]({{<relref "thesis/徐光2019定向支持政策能缓解民营企业的融资约束吗.md#" >}})
+### model {#model}
 
 
-#### 中观 {#中观}
+#### logit regression {#logit-regression}
 
-<!--list-separator-->
-
--  担保
-
-    [软预算约束与中国地方政府债务违约风险: 来自金融市场的证据]({{<relref "thesis/王永钦2016软预算约束与中国地方政府债务违约风险.md#" >}})
-
-    [政府隐性担保, 债务违约与利率决定]({{<relref "thesis/汪莉2015政府隐性担保.md#" >}})
-
-<!--list-separator-->
-
--  地区的“信任”
-
-    [信任被定价了吗?——来自债券市场的证据]({{<relref "thesis/杨国超2019信任被定价了吗.md#" >}})
+default = financial + spread + industry + r + liquidity + enterprise
 
 
-#### 微观 {#微观}
+#### random forests {#random-forests}
 
-<!--list-separator-->
 
--  评级
+### file {#file}
 
-    [多重信用评级与债券融资成本——来自中国债券市场的经验证据]({{<relref "thesis/陈关亭2021多重信用评级与债券融资成本.md#" >}})
 
-    [环境信息透明度与企业信用评级——基于债券评级市场的经验证据]({{<relref "thesis/常莹莹2019环境信息透明度与企业信用评级.md#" >}})
+#### 评级 {#评级}
 
-    [中国的信用评级真的影响发债成本吗?]({{<relref "thesis/寇宗来2015中国的信用评级真的影响发债成本吗.md#" >}})
+[私有信息, 评级偏差和中国评级机构的市场声誉]({{<relref "thesis/寇宗来2021私有信息.md#" >}})
 
-<!--list-separator-->
 
--  客户集中度
+#### 城投信仰 {#城投信仰}
 
-    [客户集中度与公司债二级市场信用利差]({{<relref "thesis/王雄元2017客户集中度与公司债二级市场信用利差.md#" >}})
+[政府隐性担保风险定价: 基于我国债券交易市场的探讨]({{<relref "thesis/王博森2016政府隐性担保风险定价.md#" >}})
 
-<!--list-separator-->
+[政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究]({{<relref "thesis/韩鹏飞2015政府隐性担保一定能降低债券的融资成本吗.md#" >}})
 
--  高管
 
-    [高管任职经历的得与失?——来自债券市场的经验证据]({{<relref "thesis/林晚发2018高管任职经历的得与失.md#" >}})
+#### 流动性 {#流动性}
 
-    不管研究方法，提取出来指标。
+整体市场流动性：[信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究]({{<relref "thesis/纪志宏2017信用风险溢价还是市场流动性溢价.md#" >}})
 
-    用过什么方法，是否可以为我所用
-
-    有什么问题/体会，想研究问题 x，研究到哪里，我计划用什么方法讨论，是否有差异。
+跨市场债流动性：[散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析]({{<relref "thesis/钟宁桦2018散户投资者如何影响债券价格.md#" >}})

@@ -7,7 +7,7 @@ googleAnalytics = ""  # add your tracking id
 
 [params]
   author = "Ernest Dong"
-  description = ""
+  description = "A Sisyphus Rolling Up Rock"
   favicon = "/images/favicon.ico"  # path to a .ico to use as favicon
   [params.footer]
     text = "By Olivier Roques"
