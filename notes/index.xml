@@ -5,11 +5,11 @@
     <link>https://ernestdong.github.io/notes/</link>
     <description>Recent content in Notes on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 28 Nov 2021 10:46:41 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Nov 2021 15:46:41 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业论文</title>
       <link>https://ernestdong.github.io/notes/theses/</link>
-      <pubDate>Sun, 28 Nov 2021 10:46:41 +0800</pubDate>
+      <pubDate>Sun, 28 Nov 2021 15:46:41 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/theses/</guid>
       <description>TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
@@ -21,6 +21,32 @@ random forests file 评级 私有信息, 评级偏差和中国评级机构的市
 政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究
 流动性 整体市场流动性：信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究
 跨市场债流动性：散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</description>
+    </item>
+    
+    <item>
+      <title>已读已汇报文献</title>
+      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
+      <pubDate>Sun, 28 Nov 2021 15:45:18 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
+      <description>week1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高?
+违约反作用于评级 债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析
+金融资产影响信用风险 金融资产配置与违约风险:蓄水池效应,还是逐利效应?
+非标缓冲 中国委托贷款弥补了正规信贷不足吗?
+note 个券流动性可以理解
+市场流动性可能影响不大现在 中债的标准券折算率变动相对频繁且是领先指标 个券溢价～个券溢价的平均值7/30d+个券特征值（信用评级、国企城投）回归不显著
+宏观政策 财政扩张,信用违约和民营企业融资困境 货币政策不确定性,违约风险与宏观经济波动 行政规定\疫情冲击
+违约专题 债券市场历史违约汇总
+思考  实控人风险、杠杆率 投资激进？ 展期算不算违约 技术性违约？  计量要看数据，不能只看显著 分段做回归
+week2 model 随机森林
+link link1 link2
+files 宏观    杠杆
+违约与杠杆周期——一个带有救助的金融加速器模型 质押率上升，杠杆上升，债券价格下降 杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 中国创新型货币政策如何发挥作用: 抵押品渠道
+     政策
+定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究
+  中观    担保
+软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 政府隐性担保, 债务违约与利率决定
+     地区的“信任”</description>
     </item>
     
     <item>
@@ -123,24 +149,6 @@ random forests file 评级 私有信息, 评级偏差和中国评级机构的市
 15 宏科 MTN001 主业不景气，经营亏损
 15 华阳经贸 MTN001 “伪国企”难以获得资金支持
 16 环保债 </description>
-    </item>
-    
-    <item>
-      <title>已读已汇报文献</title>
-      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
-      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
-      <description>微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高?
-违约反作用于评级 债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析
-金融资产影响信用风险 金融资产配置与违约风险:蓄水池效应,还是逐利效应?
-非标缓冲 中国委托贷款弥补了正规信贷不足吗?
-市场流动性 信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究
-note 个券流动性可以理解
-市场流动性可能影响不大现在 中债的标准券折算率变动相对频繁且是领先指标 个券溢价～个券溢价的平均值7/30d+个券特征值（信用评级、国企城投）回归不显著
-宏观政策 财政扩张,信用违约和民营企业融资困境 货币政策不确定性,违约风险与宏观经济波动 行政规定\疫情冲击
-违约专题 债券市场历史违约汇总
-思考  实控人风险、杠杆率 投资激进？ 展期算不算违约 技术性违约？  计量要看数据，不能只看显著 分段做回归</description>
     </item>
     
     <item>
