@@ -1,7 +1,7 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2021-11-28T15:46:41+08:00
+lastmod = 2021-12-03T10:58:05+08:00
 draft = false
 +++
 
@@ -23,6 +23,7 @@ draft = false
 ### link {#link}
 
 <https://scholar.google.com/scholar?q=%E8%AF%84%E7%BA%A7+journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%7C%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&hl=zh-CN&as%5Fsdt=0%2C44&as%5Fylo=2015&as%5Fyhi>
+<http://www.sfecr.com//xypjff/list%5F66.aspx>
 
 
 ### model {#model}
@@ -30,13 +31,26 @@ draft = false
 
 #### logit regression {#logit-regression}
 
-default = financial + spread + industry + r + liquidity + enterprise
+default = spread + industry + r + liquidity + enterprise(financial, state-owned) + bond
 
 
 #### random forests {#random-forests}
 
 
 ### file {#file}
+
+
+#### 风险传染 {#风险传染}
+
+系统性风险的传染：
+
+-   [债务杠杆与系统性风险传染机制——基于CCA模型的分析]({{<relref "thesis/苟文均2016债务杠杆与系统性风险传染机制——基于.md#" >}})
+-   [基于马尔科夫区制转移模型的中国金融风险预警研究]({{<relref "thesis/王春丽2014基于马尔科夫区制转移模型的中国金融风险预警研究.md#" >}})
+-   [中国系统性金融风险的度量——基于实体经济的视角]({{<relref "thesis/何青2018中国系统性金融风险的度量——基于实体经济的视角.md#" >}})
+
+非系统性风险传染：
+
+-   [城投债的担保可信吗?——来自债券评级和发行定价的证据]({{<relref "thesis/钟辉勇2016城投债的担保可信吗.md#" >}})
 
 
 #### 评级 {#评级}
