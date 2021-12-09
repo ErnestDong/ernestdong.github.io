@@ -5,33 +5,7 @@
     <link>https://ernestdong.github.io/</link>
     <description>Recent content in Ernest on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Dec 2021 22:48:01 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>已读已汇报文献</title>
-      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
-      <pubDate>Thu, 09 Dec 2021 22:48:01 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
-      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高?
-违约反作用于评级 债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析
-金融资产影响信用风险 金融资产配置与违约风险:蓄水池效应,还是逐利效应?
-非标缓冲 中国委托贷款弥补了正规信贷不足吗?
-note 个券流动性可以理解
-市场流动性可能影响不大现在 中债的标准券折算率变动相对频繁且是领先指标 个券溢价～个券溢价的平均值7/30d+个券特征值（信用评级、国企城投）回归不显著
-宏观政策 财政扩张,信用违约和民营企业融资困境 货币政策不确定性,违约风险与宏观经济波动 行政规定\疫情冲击
-违约专题 债券市场历史违约汇总
-思考  实控人风险、杠杆率 投资激进？ 展期算不算违约 技术性违约？  计量要看数据，不能只看显著 分段做回归
-week 2 model 随机森林
-link link1 link2
-files 宏观    杠杆
-违约与杠杆周期——一个带有救助的金融加速器模型 质押率上升，杠杆上升，债券价格下降 杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 中国创新型货币政策如何发挥作用: 抵押品渠道
-     政策
-定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究
-  中观    担保
-软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 政府隐性担保, 债务违约与利率决定
-     地区的“信任”</description>
-    </item>
-    
+    <lastBuildDate>Thu, 09 Dec 2021 22:47:29 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业论文</title>
       <link>https://ernestdong.github.io/notes/theses/</link>
@@ -63,18 +37,6 @@ journals  Journal of Finance Journal of Financial and Quantitative Analysis Jour
 模型 股票流动性和违约可能有双向因果，使用 DID 模型，分析 SEC 将最小报价从 1/16 变成0.01 美元的影响
 结论 较高的流动性允许知情投资者从他们的私人信息中获得更多利润，从而激励投资者获得更多信息并利用这些信息进行交易，从而导致更知情的股票价格。管理者从股票价格中学习，并利用它来指导企业投资。因此，管理者可以做出更好的投资决策，产生更高的现金流，并降低现金流的波动性，从而降低违约风险。
 更高的流动性使大块持有者更容易出售股票。事前，退出的威胁可以作为一种有效的公司治理机制。良好的公司治理约束管理者。它敦促他们从事增值投资，并防范机会主义管理行为，这可能会导致较低的违约概率。</description>
-    </item>
-    
-    <item>
-      <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
-      <link>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</link>
-      <pubDate>Thu, 09 Dec 2021 22:25:26 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
-      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle
-主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity
-数据 分析方法 流动性与评级/经济周期
- corporate bonds with higher credit ratings tend to be more liquid; corporate bonds are less liquid during economic downturns, especially for riskier bonds  一二级市场上的交互： 一方面，违约风险对公司债券的交易顺差和流动性折价有至关重要的影响。另一方面，更大的流动性折扣使公司对到期债务进行展期的成本更高，从而增加了违约的可能性。 当二级市场流动性恶化时，股权持有人更有可能违约，这反过来又会进一步恶化二级债券市场的流动性，以此类推。</description>
     </item>
     
     <item>
@@ -138,6 +100,44 @@ absorption: the fraction of the total variance of a set of asset returns explain
 传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty
 选择贝叶斯是因为 Techniques incorporating uncertainty in linear models do not immediately translate to nonlinear hazard models
 数据    Variable Description     WC/TA Working capital/Total assets   RE/TA Retained earnings/Total assets   EBIT/TA Earnings before interest and taxes/Total assets   ME/TL Market equity/Total liabilities   S/TA Sales/Total assets   TL/TA Total liabilities/Total assets   CA/CL Current assets/Current liabilities   NI/TA Net income/Total assets   π_MERTON Distance to default   SIGMA Standard deviation of firm stock returns   AGE log(Firm age in months)   SIZE ln(Market equity/Total S&amp;amp;P 500 market value)   EXRET ln(1+Firm stock return)−log(1 + S&amp;amp;P 500 return)   CASH/MTA Cash and short-term investments/(Market equity + Total liabilities)   MB Market equity/Book equity   PRICE ln(Firm stock price per share)   1/σE 1/Annualized volatility of firm stock returns   ME Market equity   MEF Face value of firm debt    分析方法 模型 对模型参数进行贝叶斯估计和 Laplace 近似</description>
+    </item>
+    
+    <item>
+      <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
+      <link>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</link>
+      <pubDate>Thu, 09 Dec 2021 22:14:42 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
+      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle
+主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity
+数据 分析方法 流动性与评级/经济周期
+ corporate bonds with higher credit ratings tend to be more liquid; corporate bonds are less liquid during economic downturns, especially for riskier bonds  一二级市场上的交互： 一方面，违约风险对公司债券的交易顺差和流动性折价有至关重要的影响。另一方面，更大的流动性折扣使公司对到期债务进行展期的成本更高，从而增加了违约的可能性。 当二级市场流动性恶化时，股权持有人更有可能违约，这反过来又会进一步恶化二级债券市场的流动性，以此类推。</description>
+    </item>
+    
+    <item>
+      <title>已读已汇报文献</title>
+      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
+      <pubDate>Wed, 08 Dec 2021 21:48:01 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
+      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高?
+违约反作用于评级 债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析
+金融资产影响信用风险 金融资产配置与违约风险:蓄水池效应,还是逐利效应?
+非标缓冲 中国委托贷款弥补了正规信贷不足吗?
+note 个券流动性可以理解
+市场流动性可能影响不大现在 中债的标准券折算率变动相对频繁且是领先指标 个券溢价～个券溢价的平均值7/30d+个券特征值（信用评级、国企城投）回归不显著
+宏观政策 财政扩张,信用违约和民营企业融资困境 货币政策不确定性,违约风险与宏观经济波动 行政规定\疫情冲击
+违约专题 债券市场历史违约汇总
+思考  实控人风险、杠杆率 投资激进？ 展期算不算违约 技术性违约？  计量要看数据，不能只看显著 分段做回归
+week 2 model 随机森林
+link link1 link2
+files 宏观    杠杆
+违约与杠杆周期——一个带有救助的金融加速器模型 质押率上升，杠杆上升，债券价格下降 杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 中国创新型货币政策如何发挥作用: 抵押品渠道
+     政策
+定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究
+  中观    担保
+软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 政府隐性担保, 债务违约与利率决定
+     地区的“信任”</description>
     </item>
     
     <item>
