@@ -1,7 +1,7 @@
 +++
 title = "Quantifying liquidity and default risks of corporate bonds over the business cycle"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:25:26+08:00
+lastmod = 2021-12-09T22:14:42+08:00
 draft = false
 +++
 
@@ -10,7 +10,7 @@ draft = false
 
 ## 主题 {#主题}
 
-(Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity
+(<a href="#citeproc_bib_item_1">Longstaff, Mithal, and Neis 2005</a>) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity
 
 
 ## 数据 {#数据}
@@ -37,3 +37,9 @@ draft = false
 
 
 ## 结论 {#结论}
+
+the interactions between liquidity and default risk account for 2540% of the observed credit spreads and up to 55% of the credit spread changes over the business cycle.As an application, we use this framework to quantitatively evaluate the effects of liquidity-provision policies for the corporate bond market
+
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Longstaff, Francis A, Sanjay Mithal, and Eric Neis. 2005. “Corporate Yield Spreads: Default Risk or Liquidity? New Evidence from the Credit Default Swap Market.” <i>The Journal of Finance</i> 60 (5): 2213–53.</div>
+</div>
