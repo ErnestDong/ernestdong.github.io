@@ -1,7 +1,9 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
+
 lastmod = 2021-12-09T22:47:29+08:00
+
 draft = false
 +++
 
@@ -16,14 +18,8 @@ draft = false
 看摘要、数据、模型、结论
 
 
-### link {#link}
-
-[thesis archive]({{<relref "thesis_archive.md#" >}})
-[经济研究](https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&tn=SE%5Fbaiduxueshu%5Fc1gjeupa&sc%5Ff%5Fpara=sc%5Ftasktype%3D%7BfirstAdvancedSearch%7D&sc%5Fhit=1&bcp=2&ie=utf-8&tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E3%80%8B%29)
-[金融研究](https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%29&tn=SE%5Fbaiduxueshu%5Fc1gjeupa&sc%5Fhit=1&bcp=2&ie=utf-8&filter=sc%5Fyear%3D%7B2017%2C%2B%7D&tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%E3%80%8B%29)
-
-
 ## journals {#journals}
+
 
 1.  Journal of Finance
 2.  Journal of Financial and Quantitative Analysis
@@ -55,7 +51,6 @@ draft = false
 
 [Stock liquidity and default risk]({{<relref "thesis/brogaard2017stock.md#" >}})
 
-
 #### 周期 {#周期}
 
 [Quantifying liquidity and default risks of corporate bonds over the business cycle]({{<relref "thesis/chen2018quantifying.md#" >}})
@@ -71,4 +66,6 @@ draft = false
 
 ### 贝叶斯方法 {#贝叶斯方法}
 
+
 [Firm default prediction: a bayesian model-averaging approach]({{<relref "thesis/traczynski2017firm.md#" >}})
+
