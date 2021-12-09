@@ -1,7 +1,9 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:25:52+08:00
+
+lastmod = 2021-12-09T22:47:29+08:00
+
 draft = false
 +++
 
@@ -18,6 +20,7 @@ draft = false
 
 ## journals {#journals}
 
+
 1.  Journal of Finance
 2.  Journal of Financial and Quantitative Analysis
 3.  Journal of Financial Economics
@@ -25,9 +28,7 @@ draft = false
 5.  Journal of Banking and Finance
 
 
-
 ## week 5 {#week-5}
-
 
 
 ### 宏观 {#宏观}
@@ -36,7 +37,6 @@ draft = false
 #### 系统性风险 {#系统性风险}
 
 [Do measures of systemic risk predict u.s. corporate bond default rates?]({{<relref "thesis/2020Do.md#" >}})
-
 
 
 #### 打破刚兑政策 {#打破刚兑政策}
@@ -66,4 +66,6 @@ draft = false
 
 ### 贝叶斯方法 {#贝叶斯方法}
 
+
 [Firm default prediction: a bayesian model-averaging approach]({{<relref "thesis/traczynski2017firm.md#" >}})
+

@@ -1,11 +1,11 @@
 +++
 title = "已读已汇报文献"
 author = ["Ernest Dong"]
-lastmod = 2021-11-28T15:45:18+08:00
+lastmod = 2021-12-09T22:48:01+08:00
 draft = false
 +++
 
-## week1 {#week1}
+## week 1 {#week-1}
 
 
 ### 微观指标 {#微观指标}
@@ -64,7 +64,7 @@ draft = false
 分段做回归
 
 
-## week2 {#week2}
+## week 2 {#week-2}
 
 
 ### model {#model}
@@ -139,3 +139,58 @@ draft = false
     不管研究方法，提取出来指标。
     用过什么方法，是否可以为我所用
     有什么问题/体会，想研究问题 x，研究到哪里，我计划用什么方法讨论，是否有差异。
+
+
+## week 4 {#week-4}
+
+
+### link {#link}
+
+<https://scholar.google.com/scholar?q=%E8%AF%84%E7%BA%A7+journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%7C%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&hl=zh-CN&as%5Fsdt=0%2C44&as%5Fylo=2015&as%5Fyhi>
+<http://www.sfecr.com//xypjff/list%5F66.aspx>
+
+
+### model {#model}
+
+
+#### logit regression {#logit-regression}
+
+default = spread + industry + r + liquidity + enterprise(financial, state-owned) + bond
+
+
+#### random forests {#random-forests}
+
+
+### file {#file}
+
+
+#### 风险传染 {#风险传染}
+
+系统性风险的传染：
+
+-   [债务杠杆与系统性风险传染机制——基于CCA模型的分析]({{<relref "thesis/苟文均2016债务杠杆与系统性风险传染机制——基于.md#" >}})
+-   [基于马尔科夫区制转移模型的中国金融风险预警研究]({{<relref "thesis/王春丽2014基于马尔科夫区制转移模型的中国金融风险预警研究.md#" >}})
+-   [中国系统性金融风险的度量——基于实体经济的视角]({{<relref "thesis/何青2018中国系统性金融风险的度量——基于实体经济的视角.md#" >}})
+
+非系统性风险传染：
+
+-   [城投债的担保可信吗?——来自债券评级和发行定价的证据]({{<relref "thesis/钟辉勇2016城投债的担保可信吗.md#" >}})
+
+
+#### 评级 {#评级}
+
+[私有信息, 评级偏差和中国评级机构的市场声誉]({{<relref "thesis/寇宗来2021私有信息.md#" >}})
+
+
+#### 城投信仰 {#城投信仰}
+
+[政府隐性担保风险定价: 基于我国债券交易市场的探讨]({{<relref "thesis/王博森2016政府隐性担保风险定价.md#" >}})
+
+[政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究]({{<relref "thesis/韩鹏飞2015政府隐性担保一定能降低债券的融资成本吗.md#" >}})
+
+
+#### 流动性 {#流动性}
+
+整体市场流动性：[信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究]({{<relref "thesis/纪志宏2017信用风险溢价还是市场流动性溢价.md#" >}})
+
+跨市场债流动性：[散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析]({{<relref "thesis/钟宁桦2018散户投资者如何影响债券价格.md#" >}})
