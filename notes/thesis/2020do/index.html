@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang=""><head>
-	<meta name="generator" content="Hugo 0.90.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ernest</title>
+    <title>Do measures of systemic risk predict u.s. corporate bond default rates?</title>
     <meta name="description" content="A Sisyphus Rolling Up Rock">
     <meta name="author" content='Ernest Dong'>
 
@@ -19,7 +18,6 @@
         <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
     
 
-    <link rel="alternate" type="application/rss+xml" href="https://ernestdong.github.io/index.xml" title="Ernest Dong" />
     
         
     
@@ -61,67 +59,34 @@
 <hr>
 <div id="content">
 <div class="container">
-    <h3 id="hi-my-name-is-ernest-dong--and-i--open-source">Hi, my name is Ernest Dong 👋 and I ❤️ open-source</h3>
-<ul>
-<li><strong>Senior Student</strong> at PKU major in Risk Management and Insurance</li>
-</ul>
-<p><strong>Field of interests</strong>: Machine Learning, Risk Management in Finance.</p>
-<h3 id="skills-">Skills 🛠️</h3>
-<ul>
-<li><strong>Languages</strong>:        Python, C/C++, R</li>
-<li><strong>DS/ML/DL</strong>:    NumPy, SciPy, Pandas, Scikit-Learn, PyTorch</li>
-</ul>
-<h3 id="education-">Education 🎓</h3>
-<table>
-<thead>
-<tr>
-<th>academic degree</th>
-<th>University</th>
-<th>Major</th>
-<th>duration</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Master’s degree</strong></td>
-<td><strong>Peking University</strong></td>
-<td><strong>Insurance</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></td>
-<td><strong>2022 - 2024</strong></td>
-</tr>
-<tr>
-<td><strong>Bachelor&rsquo;s degree</strong></td>
-<td>Peking University</td>
-<td>Risk Management and Insurance</td>
-<td>2018 - 2022</td>
-</tr>
-</tbody>
-</table>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="work-experience-">Work experience 👔</h3>
-<ul>
-<li>intern of Data Analysis Department at Springs Capital</li>
-<li>intern of Fintech Department at Harvest Fund Management.</li>
-<li>intern of Fixed Income Department in E Fund Management Co., Ltd.</li>
-</ul>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="github-stats-">Github Stats ⭐</h3>
-<p><img src="https://github-readme-stats.vercel.app/api?username=ErnestDong&amp;show_icons=true" alt="Ernest&rsquo;s GitHub stats"></p>
-<h3 id="wakatime-dashboard">Wakatime Dashboard🕛</h3>
-<!--START_SECTION:waka-->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">org mode     13 hrs 55 mins  ██████████▒░░░░░░░░░░░░░░   40.93 % 
-Python       9 hrs 52 mins   ███████▒░░░░░░░░░░░░░░░░░   29.04 % 
-Emacs Lisp   5 hrs 11 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.27 % 
-TeX          1 hr 10 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   03.48 % 
-BibTeX       57 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.80 % 
-</code></pre></div><!--END_SECTION:waka-->
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>have got postgraduate recommandation.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S1057521920301976">Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect</a></p>
+<h2 id="abstract">abstract</h2>
+<p>使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债券违约率。</p>
+<p>几乎所有的系统性风险指标对违约率都有预测能力。基于多元混频VAR模型的格兰杰因果检验进一步支持了这一结论。在MIDAS模型的基础上，进一步说明这些指标中的五个能够对2009年的公司违约危机进行样本外预测。使用 Lasso 多变量模型进一步表明，系统风险指标可以对 2009 年的违约率和危机后的违约率进行样本外预测。特定于机构的和波动性的系统性风险指标在建模美国公司债券违约率方面最相关</p>
+<h2 id="data">data</h2>
+<p>美国1926-2011 违约数据</p>
+<h2 id="model">model</h2>
+<p>Based on these contributions, we focus on 12 systemic risk measures proposed in the literature classified into four categories</p>
+<p>违约率 = &hellip;</p>
+<h3 id="co-movement-and-contagion">co-movement and contagion</h3>
+<p>风险传染指标</p>
+<p>absorption:
+the fraction of the total variance of a set of asset returns explained** institution-specific risk by a fixed number of principal components.</p>
+<p>dynamic causality index: 根据格兰杰因果检验设计的市场参与者回报的相关性</p>
+<h3 id="institution-specific">Institution-specific</h3>
+<p>the Conditional VaR:
+一家公司99分位数，已知另一家也是相同分位数下。识别“具有系统重要性”的机构给系统带来的风险</p>
+<p>marginal expected shortfall and the version of the marginal expected shortfall measure: 系统脆弱性指标</p>
+<h3 id="volatility-and-concentration">volatility and concentration</h3>
+<p>在波动性类别中，我们包括三个衡量标准：REAL_VOL、turbulence 和  CATFIN。</p>
+<p>REAL_VOL衡量标准是最大的20家金融机构的平均股票波动率。</p>
+<p>turbulence 考虑了投资组合中证券收益的情况。将其定义为一种条件，即资产价格在考虑到其历史行为后，以一种非同寻常的方式表现，包括极端的价格波动，相关资产的脱钩，以及不相关资产的趋同。在经验证据方面，作者发现动荡时期的风险收益明显低于非动荡时期。</p>
+<p>CATFIN，衡量金融部门的灾难性风险，是通过观察金融公司收益在任何时间点的横截面变化而得出的风险价值指标。它是对系统性风险的宏观衡量，它决定了金融系统总体风险承担的宏观经济影响。</p>
+<p>金融公司市场股权规模集中度 size_conc 被建议作为系统性风险的替代指标。其假设是，更大的集中度(意味着少数几家主要银行/金融机构之间的相互联系更强)构成了更大的系统性威胁。</p>
+<h3 id="liquidity">liquidity</h3>
+<p>Amihud&rsquo;s (2002) illiquidity measure(daily stock price reaction to a dollar of trading volume); the term spread; and the default spread.</p>
+<h2 id="conclusion">conclusion</h2>
+<p>Covar、catfin、MES_BE、REAL_VOL 和 DEF_DPR 最重要</p>
 
 </div>
 

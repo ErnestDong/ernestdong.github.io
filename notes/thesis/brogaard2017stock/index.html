@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang=""><head>
-	<meta name="generator" content="Hugo 0.90.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ernest</title>
+    <title>Stock liquidity and default risk</title>
     <meta name="description" content="A Sisyphus Rolling Up Rock">
     <meta name="author" content='Ernest Dong'>
 
@@ -19,7 +18,6 @@
         <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
     
 
-    <link rel="alternate" type="application/rss+xml" href="https://ernestdong.github.io/index.xml" title="Ernest Dong" />
     
         
     
@@ -61,67 +59,20 @@
 <hr>
 <div id="content">
 <div class="container">
-    <h3 id="hi-my-name-is-ernest-dong--and-i--open-source">Hi, my name is Ernest Dong 👋 and I ❤️ open-source</h3>
-<ul>
-<li><strong>Senior Student</strong> at PKU major in Risk Management and Insurance</li>
-</ul>
-<p><strong>Field of interests</strong>: Machine Learning, Risk Management in Finance.</p>
-<h3 id="skills-">Skills 🛠️</h3>
-<ul>
-<li><strong>Languages</strong>:        Python, C/C++, R</li>
-<li><strong>DS/ML/DL</strong>:    NumPy, SciPy, Pandas, Scikit-Learn, PyTorch</li>
-</ul>
-<h3 id="education-">Education 🎓</h3>
-<table>
-<thead>
-<tr>
-<th>academic degree</th>
-<th>University</th>
-<th>Major</th>
-<th>duration</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Master’s degree</strong></td>
-<td><strong>Peking University</strong></td>
-<td><strong>Insurance</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></td>
-<td><strong>2022 - 2024</strong></td>
-</tr>
-<tr>
-<td><strong>Bachelor&rsquo;s degree</strong></td>
-<td>Peking University</td>
-<td>Risk Management and Insurance</td>
-<td>2018 - 2022</td>
-</tr>
-</tbody>
-</table>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="work-experience-">Work experience 👔</h3>
-<ul>
-<li>intern of Data Analysis Department at Springs Capital</li>
-<li>intern of Fintech Department at Harvest Fund Management.</li>
-<li>intern of Fixed Income Department in E Fund Management Co., Ltd.</li>
-</ul>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="github-stats-">Github Stats ⭐</h3>
-<p><img src="https://github-readme-stats.vercel.app/api?username=ErnestDong&amp;show_icons=true" alt="Ernest&rsquo;s GitHub stats"></p>
-<h3 id="wakatime-dashboard">Wakatime Dashboard🕛</h3>
-<!--START_SECTION:waka-->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">org mode     13 hrs 55 mins  ██████████▒░░░░░░░░░░░░░░   40.93 % 
-Python       9 hrs 52 mins   ███████▒░░░░░░░░░░░░░░░░░   29.04 % 
-Emacs Lisp   5 hrs 11 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.27 % 
-TeX          1 hr 10 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   03.48 % 
-BibTeX       57 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.80 % 
-</code></pre></div><!--END_SECTION:waka-->
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>have got postgraduate recommandation.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17300405">Stock liquidity and default risk</a></p>
+<h2 id="主题">主题</h2>
+<p>更高的流动性能够帮助企业抵御破产风险</p>
+<h2 id="数据">数据</h2>
+<p>expected default frequency (EDF)衡量违约风险</p>
+<h2 id="分析方法">分析方法</h2>
+<p>股票流动性可能会影响违约风险。股票流动性对违约风险的影响并不是机械的，因为违约风险可能是非线性的，它取决于公司价值以外的几个因素。</p>
+<p>如果增加流动性会加剧噪声交易，导致更大的公司错误定价和更高的波动性。更大的流动性也会减少公司内部监控。</p>
+<p>更高的流动性可以通过提高价格效率来降低违约风险，或者通过放松投资者的退出能力来改善公司治理。</p>
+<h2 id="模型">模型</h2>
+<p>股票流动性和违约可能有双向因果，使用 DID 模型，分析 SEC 将最小报价从 1/16 变成0.01 美元的影响</p>
+<h2 id="结论">结论</h2>
+<p>较高的流动性允许知情投资者从他们的私人信息中获得更多利润，从而激励投资者获得更多信息并利用这些信息进行交易，从而导致更知情的股票价格。管理者从股票价格中学习，并利用它来指导企业投资。因此，管理者可以做出更好的投资决策，产生更高的现金流，并降低现金流的波动性，从而降低违约风险。</p>
+<p>更高的流动性使大块持有者更容易出售股票。事前，退出的威胁可以作为一种有效的公司治理机制。良好的公司治理约束管理者。它敦促他们从事增值投资，并防范机会主义管理行为，这可能会导致较低的违约概率。</p>
 
 </div>
 

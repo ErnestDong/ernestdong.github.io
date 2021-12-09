@@ -5,24 +5,113 @@
     <link>https://ernestdong.github.io/</link>
     <description>Recent content in Ernest on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 03 Dec 2021 10:58:05 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Dec 2021 22:25:52 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业论文</title>
       <link>https://ernestdong.github.io/notes/theses/</link>
-      <pubDate>Fri, 03 Dec 2021 10:58:05 +0800</pubDate>
+      <pubDate>Thu, 09 Dec 2021 22:25:52 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/theses/</guid>
       <description>TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
-link thesis archive 经济研究 金融研究
-week 4 link https://scholar.google.com/scholar?q=%E8%AF%84%E7%BA%A7+journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%7C%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&amp;amp;hl=zh-CN&amp;amp;as%5Fsdt=0%2C44&amp;amp;as%5Fylo=2015&amp;amp;as%5Fyhi http://www.sfecr.com//xypjff/list%5F66.aspx
-model logit regression default = spread + industry + r + liquidity + enterprise(financial, state-owned) + bond
-random forests file 风险传染 系统性风险的传染：
- 债务杠杆与系统性风险传染机制——基于CCA模型的分析 基于马尔科夫区制转移模型的中国金融风险预警研究 中国系统性金融风险的度量——基于实体经济的视角  非系统性风险传染：
- 城投债的担保可信吗?——来自债券评级和发行定价的证据  评级 私有信息, 评级偏差和中国评级机构的市场声誉
-城投信仰 政府隐性担保风险定价: 基于我国债券交易市场的探讨
-政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究
-流动性 整体市场流动性：信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究
-跨市场债流动性：散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</description>
+分类，前人用过什么样的指标（别人没用过），有没有显著的影响
+什么样的模型，原始数据 or 主成分（模型不一样/对象不一样）
+看摘要、数据、模型、结论
+journals  Journal of Finance Journal of Financial and Quantitative Analysis Journal of Financial Economics Review of Financial Studies Journal of Banking and Finance  week 5 宏观 系统性风险 Do measures of systemic risk predict u.s. corporate bond default rates?
+打破刚兑政策 China&amp;rsquo;s no-bailout reform: impact on bond yields and rating standards
+中观 流动性 Stock liquidity and default risk
+周期 Quantifying liquidity and default risks of corporate bonds over the business cycle</description>
+    </item>
+    
+    <item>
+      <title>Stock liquidity and default risk</title>
+      <link>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</link>
+      <pubDate>Thu, 09 Dec 2021 22:25:36 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</guid>
+      <description>Stock liquidity and default risk
+主题 更高的流动性能够帮助企业抵御破产风险
+数据 expected default frequency (EDF)衡量违约风险
+分析方法 股票流动性可能会影响违约风险。股票流动性对违约风险的影响并不是机械的，因为违约风险可能是非线性的，它取决于公司价值以外的几个因素。
+如果增加流动性会加剧噪声交易，导致更大的公司错误定价和更高的波动性。更大的流动性也会减少公司内部监控。
+更高的流动性可以通过提高价格效率来降低违约风险，或者通过放松投资者的退出能力来改善公司治理。
+模型 股票流动性和违约可能有双向因果，使用 DID 模型，分析 SEC 将最小报价从 1/16 变成0.01 美元的影响
+结论 较高的流动性允许知情投资者从他们的私人信息中获得更多利润，从而激励投资者获得更多信息并利用这些信息进行交易，从而导致更知情的股票价格。管理者从股票价格中学习，并利用它来指导企业投资。因此，管理者可以做出更好的投资决策，产生更高的现金流，并降低现金流的波动性，从而降低违约风险。
+更高的流动性使大块持有者更容易出售股票。事前，退出的威胁可以作为一种有效的公司治理机制。良好的公司治理约束管理者。它敦促他们从事增值投资，并防范机会主义管理行为，这可能会导致较低的违约概率。</description>
+    </item>
+    
+    <item>
+      <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
+      <link>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</link>
+      <pubDate>Thu, 09 Dec 2021 22:25:26 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
+      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle
+主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity
+数据 分析方法 流动性与评级/经济周期
+ corporate bonds with higher credit ratings tend to be more liquid; corporate bonds are less liquid during economic downturns, especially for riskier bonds  一二级市场上的交互： 一方面，违约风险对公司债券的交易顺差和流动性折价有至关重要的影响。另一方面，更大的流动性折扣使公司对到期债务进行展期的成本更高，从而增加了违约的可能性。 当二级市场流动性恶化时，股权持有人更有可能违约，这反过来又会进一步恶化二级债券市场的流动性，以此类推。</description>
+    </item>
+    
+    <item>
+      <title>The relevance of credit ratings in transparent bond markets</title>
+      <link>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</link>
+      <pubDate>Thu, 09 Dec 2021 22:25:15 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</guid>
+      <description>The relevance of credit ratings in transparent bond markets
+主题 信息更透明，评级机构的作用
+本文考察了通过TRACE系统对公司债券交易的公开披露如何影响
+ 信用评级的信息含量 评级和利差的相关性  数据 债券评级和其他债券特征的信息；
+从增强型跟踪数据库(TRACE)获得二级市场债券交易数据；
+获得每日股票回报 从每月标普长期发行人评级、季度收益公告日期以及来自来自美国证券交易委员会(SEC)电子数据收集、分析和检索(EDGAR)系统的公司8-K、10-Q和10-K财务信息； 以及来自 Fred 的每日国债收益率和每月消费者物价指数的信息。
+ 公司债务证券通常在交易商介入的分散的场外交易市场进行交易。虽然纽约证券交易所也有一些交易活动，但只有一小部分债券发行在那里上市，很大一部分上市证券的交易是在场外进行的
+美国法规要求通过贸易报告和合规引擎(TRACE)实时公开发布公司债务证券的所有场外交易(OTC)交易的信息(包括交易价格、收益率和交易量)。在2002年7月引入TRACE之前，公司债券市场是美国最不透明的证券市场之一：DEALER 报价和完成的交易都没有广泛或连续地报告，导致价格不高过去的研究记录了引入跟踪扩散后债券价格分散度的显著下降，这表明一旦最近交易的价格变得众所周知，投资者就可以更好地评估向他们提供的价格的公平性。
+ 分析方法 信息披露将评级下调对股价的平均短期影响从3.7%降低到0.9%，这表明市场价格的透明度减少了信息差距，从而减少了对中介机构的依赖。
+当发行人是CDS参考实体或在交易所有未偿还债券交易，或者股票分析师提出更可靠的收益预测时，传播的影响较小。我们还发现，有证据表明，评级机构在发布后提供了更及时和更准确的评级。最后，我们认为，传播增强了信用利差预测未来违约的能力，并增加了重要信用事件之前从债券市场到股票市场的信息流动，这与透明市场中更有效的信息聚集和传递是一致的。
+模型 面板数据回归，固定效应和随机效应
+结论 本文研究了公司债券二级市场强制价格透明度对信用评级信息含量的影响。
+ 公开已完成交易的价格极大地降低了评级下调对证券价格的影响，特别是在无法获得基于市场的信用质量替代指标的情况下。 评级在发布后对信用利差的变化变得更加敏感。 信息传播增强了信用利差预测未来违约的能力，增加了重要信用事件发生前从债券市场到股票市场的信息流，这与市场价格在透明市场中更有效地发挥其信息聚集和传递作用是一致的。  </description>
+    </item>
+    
+    <item>
+      <title>Do measures of systemic risk predict u.s. corporate bond default rates?</title>
+      <link>https://ernestdong.github.io/notes/thesis/2020do/</link>
+      <pubDate>Thu, 09 Dec 2021 22:25:04 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/2020do/</guid>
+      <description>Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect
+abstract 使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债券违约率。
+几乎所有的系统性风险指标对违约率都有预测能力。基于多元混频VAR模型的格兰杰因果检验进一步支持了这一结论。在MIDAS模型的基础上，进一步说明这些指标中的五个能够对2009年的公司违约危机进行样本外预测。使用 Lasso 多变量模型进一步表明，系统风险指标可以对 2009 年的违约率和危机后的违约率进行样本外预测。特定于机构的和波动性的系统性风险指标在建模美国公司债券违约率方面最相关
+data 美国1926-2011 违约数据
+model Based on these contributions, we focus on 12 systemic risk measures proposed in the literature classified into four categories
+违约率 = &amp;hellip;
+co-movement and contagion 风险传染指标
+absorption: the fraction of the total variance of a set of asset returns explained** institution-specific risk by a fixed number of principal components.</description>
+    </item>
+    
+    <item>
+      <title>China&#39;s no-bailout reform: impact on bond yields and rating standards</title>
+      <link>https://ernestdong.github.io/notes/thesis/mo2021china/</link>
+      <pubDate>Thu, 09 Dec 2021 22:24:54 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/mo2021china/</guid>
+      <description>China&amp;rsquo;s no-bailout reform: impact on bond yields and rating standards
+主题 债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响
+国企发行了80%的债券，但违约中只占了15%，因此作者认为政府支持是存在的。
+数据 主要是债项数据和财务数据
+   Variable Name Definition     Issue Amount Gross amount of bond issue in billions of RMB   Maturity Years to bond maturity   Coupon Rate Coupon rate in percentage of bonds with fixed coupons   Treasury Spreads Difference (in %) between the bond yield to maturity and Chinese Treasury yield of similar maturity   Callable = 1 for callable bonds and 0 otherwise   Putable = 1 for putable bonds and 0 otherwise   Senior = 1 for senior bonds and 0 otherwise   Sinking Fund = 1 for bonds with sinking fund provision and 0 otherwise   Enterprise = 1 if WIND classifies as Enterprise Bond issues and 0 otherwise   MTN = 1 if WIND classifies as Medium-term Notes and 0 otherwise   Corporate = 1 if WIND classifies as Corporate Bond issues and 0 otherwise   Exchange = 1 if the bond is traded in Shanghai or Shenzhen Stock Exchange and 0 otherwise   Interbank =1 if the bond is traded in the interbank market and 0 otherwise   Rating An ordinal variable from 1 for AAA rating to 4 for AA- rating   GP_CRA = 1 for the three CRAs with global partnership (Lianhe_Fitch, Chengxin_Moody and Brilliance)   Central SOE = 1 if WIND classifies the issuer as a state-owned enterprise (SOE) by Chinese central government   LocalSOE = 1 if WIND classifies the issuer as a SOE by a Chinese local government and 0 otherwise   NonSOE =1 if WIND classifies the issuer as an entity other than SOE and 0 otherwise   Log Issuer Age Natural log of the age (in years) of the issuer at the time of bond issuance   Listed = 1 if the issuer has public traded equity and 0 otherwise   POST = 1 for bonds issued after March 4, 2014 and 0 otherwise   Equity Beta Market model equity beta estimated with daily stock returns from two years prior to the bond issuance   Market Model Error Market model residual standard error estimated with daily stock returns two years prior to the bond issuance   Log of Coverage Ratio Natural log of the three-year average interest coverage ratio prior to the bond issuance   Log of Market Cap Natural log of the market capitalization (in billion RMB) at the calendar year-end prior to the bond issuance   Long-term Debt Ratio Three-year average total long-term debt to total asset ratio prior to the bond issuance   Total Debt Ratio Three-year average total debt to total asset ratio prior to bond issuance   Market to Book Ratio Market to book ratio at the end of calendar year prior to bond issuance   Operating Profit Margin Three-year average operating profit margin (EBIT/Revenue) prior to bond issuance   Return on Equity Three-year average return on equity (net income/total equity) prior to bond issuance    分析方法 分析超日债违约60日前后债券收益率的变化，发现显著上升；</description>
+    </item>
+    
+    <item>
+      <title>Firm default prediction: a bayesian model-averaging approach</title>
+      <link>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</link>
+      <pubDate>Thu, 09 Dec 2021 22:24:43 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</guid>
+      <description>Firm default prediction: a bayesian model-averaging approach
+主题 利用贝叶斯模型预测违约
+传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty
+选择贝叶斯是因为 Techniques incorporating uncertainty in linear models do not immediately translate to nonlinear hazard models
+数据    Variable Description     WC/TA Working capital/Total assets   RE/TA Retained earnings/Total assets   EBIT/TA Earnings before interest and taxes/Total assets   ME/TL Market equity/Total liabilities   S/TA Sales/Total assets   TL/TA Total liabilities/Total assets   CA/CL Current assets/Current liabilities   NI/TA Net income/Total assets   π_MERTON Distance to default   SIGMA Standard deviation of firm stock returns   AGE log(Firm age in months)   SIZE ln(Market equity/Total S&amp;amp;P 500 market value)   EXRET ln(1+Firm stock return)−log(1 + S&amp;amp;P 500 return)   CASH/MTA Cash and short-term investments/(Market equity + Total liabilities)   MB Market equity/Book equity   PRICE ln(Firm stock price per share)   1/σE 1/Annualized volatility of firm stock returns   ME Market equity   MEF Face value of firm debt    分析方法 模型 对模型参数进行贝叶斯估计和 Laplace 近似</description>
     </item>
     
     <item>

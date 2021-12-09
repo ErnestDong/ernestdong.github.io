@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang=""><head>
-	<meta name="generator" content="Hugo 0.90.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ernest</title>
+    <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
     <meta name="description" content="A Sisyphus Rolling Up Rock">
     <meta name="author" content='Ernest Dong'>
 
@@ -19,7 +18,6 @@
         <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
     
 
-    <link rel="alternate" type="application/rss+xml" href="https://ernestdong.github.io/index.xml" title="Ernest Dong" />
     
         
     
@@ -61,67 +59,24 @@
 <hr>
 <div id="content">
 <div class="container">
-    <h3 id="hi-my-name-is-ernest-dong--and-i--open-source">Hi, my name is Ernest Dong 👋 and I ❤️ open-source</h3>
-<ul>
-<li><strong>Senior Student</strong> at PKU major in Risk Management and Insurance</li>
-</ul>
-<p><strong>Field of interests</strong>: Machine Learning, Risk Management in Finance.</p>
-<h3 id="skills-">Skills 🛠️</h3>
-<ul>
-<li><strong>Languages</strong>:        Python, C/C++, R</li>
-<li><strong>DS/ML/DL</strong>:    NumPy, SciPy, Pandas, Scikit-Learn, PyTorch</li>
-</ul>
-<h3 id="education-">Education 🎓</h3>
-<table>
-<thead>
-<tr>
-<th>academic degree</th>
-<th>University</th>
-<th>Major</th>
-<th>duration</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Master’s degree</strong></td>
-<td><strong>Peking University</strong></td>
-<td><strong>Insurance</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></td>
-<td><strong>2022 - 2024</strong></td>
-</tr>
-<tr>
-<td><strong>Bachelor&rsquo;s degree</strong></td>
-<td>Peking University</td>
-<td>Risk Management and Insurance</td>
-<td>2018 - 2022</td>
-</tr>
-</tbody>
-</table>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="work-experience-">Work experience 👔</h3>
-<ul>
-<li>intern of Data Analysis Department at Springs Capital</li>
-<li>intern of Fintech Department at Harvest Fund Management.</li>
-<li>intern of Fixed Income Department in E Fund Management Co., Ltd.</li>
-</ul>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="github-stats-">Github Stats ⭐</h3>
-<p><img src="https://github-readme-stats.vercel.app/api?username=ErnestDong&amp;show_icons=true" alt="Ernest&rsquo;s GitHub stats"></p>
-<h3 id="wakatime-dashboard">Wakatime Dashboard🕛</h3>
-<!--START_SECTION:waka-->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">org mode     13 hrs 55 mins  ██████████▒░░░░░░░░░░░░░░   40.93 % 
-Python       9 hrs 52 mins   ███████▒░░░░░░░░░░░░░░░░░   29.04 % 
-Emacs Lisp   5 hrs 11 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.27 % 
-TeX          1 hr 10 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   03.48 % 
-BibTeX       57 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.80 % 
-</code></pre></div><!--END_SECTION:waka-->
-<section class="footnotes" role="doc-endnotes">
-<hr>
+    <p><a href="https://www.nber.org/system/files/working%5Fpapers/w20638/w20638.pdf">Quantifying liquidity and default risks of corporate bonds over the business cycle</a></p>
+<h2 id="主题">主题</h2>
+<p>(Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity</p>
+<h2 id="数据">数据</h2>
+<h2 id="分析方法">分析方法</h2>
+<p>流动性与评级/经济周期</p>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>have got postgraduate recommandation.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
+<li>corporate bonds with higher credit ratings tend to be more liquid;</li>
+<li>corporate bonds are less liquid during economic downturns, especially for riskier bonds</li>
 </ol>
-</section>
+<p>一二级市场上的交互：
+一方面，违约风险对公司债券的交易顺差和流动性折价有至关重要的影响。另一方面，更大的流动性折扣使公司对到期债务进行展期的成本更高，从而增加了违约的可能性。
+当二级市场流动性恶化时，股权持有人更有可能违约，这反过来又会进一步恶化二级债券市场的流动性，以此类推。</p>
+<h2 id="模型">模型</h2>
+<p>在公司债券的结构模型中建立了场外搜索摩擦。
+在模型中，企业违约决策与时变的宏观经济和二级市场流动性状况相互作用。</p>
+<p>根据违约概率的历史时刻、债券收益率和流动性的实证指标对模型进行了校准。该模型能够匹配公司债券在不同评级等级和集合体上的条件观测信用利差，以及以前文献中研究的各种非违约成分的度量，我们提出了一个结构分解，该结构分解捕捉了企业债券在整个商业周期中流动性和违约风险的交互作用，并使用这个框架来评估衰退期间流动性供应政策的效果。</p>
+<h2 id="结论">结论</h2>
 
 </div>
 

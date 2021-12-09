@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang=""><head>
-	<meta name="generator" content="Hugo 0.90.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ernest</title>
+    <title>Firm default prediction: a bayesian model-averaging approach</title>
     <meta name="description" content="A Sisyphus Rolling Up Rock">
     <meta name="author" content='Ernest Dong'>
 
@@ -19,7 +18,6 @@
         <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
     
 
-    <link rel="alternate" type="application/rss+xml" href="https://ernestdong.github.io/index.xml" title="Ernest Dong" />
     
         
     
@@ -61,67 +59,103 @@
 <hr>
 <div id="content">
 <div class="container">
-    <h3 id="hi-my-name-is-ernest-dong--and-i--open-source">Hi, my name is Ernest Dong 👋 and I ❤️ open-source</h3>
-<ul>
-<li><strong>Senior Student</strong> at PKU major in Risk Management and Insurance</li>
-</ul>
-<p><strong>Field of interests</strong>: Machine Learning, Risk Management in Finance.</p>
-<h3 id="skills-">Skills 🛠️</h3>
-<ul>
-<li><strong>Languages</strong>:        Python, C/C++, R</li>
-<li><strong>DS/ML/DL</strong>:    NumPy, SciPy, Pandas, Scikit-Learn, PyTorch</li>
-</ul>
-<h3 id="education-">Education 🎓</h3>
+    <p><a href="https://eds.s.ebscohost.com/eds/pdfviewer/pdfviewer?vid=1&amp;sid=2b984d92-27ba-4a57-8855-814ffa7c4f73%5C%40redis">Firm default prediction: a bayesian model-averaging approach</a></p>
+<h2 id="主题">主题</h2>
+<p>利用贝叶斯模型预测违约</p>
+<p>传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty</p>
+<p>选择贝叶斯是因为 Techniques incorporating  uncertainty  in  linear  models  do  not  immediately translate to nonlinear hazard models</p>
+<h2 id="数据">数据</h2>
 <table>
 <thead>
 <tr>
-<th>academic degree</th>
-<th>University</th>
-<th>Major</th>
-<th>duration</th>
+<th>Variable</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Master’s degree</strong></td>
-<td><strong>Peking University</strong></td>
-<td><strong>Insurance</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></td>
-<td><strong>2022 - 2024</strong></td>
+<td>WC/TA</td>
+<td>Working capital/Total assets</td>
 </tr>
 <tr>
-<td><strong>Bachelor&rsquo;s degree</strong></td>
-<td>Peking University</td>
-<td>Risk Management and Insurance</td>
-<td>2018 - 2022</td>
+<td>RE/TA</td>
+<td>Retained earnings/Total assets</td>
+</tr>
+<tr>
+<td>EBIT/TA</td>
+<td>Earnings before interest and taxes/Total assets</td>
+</tr>
+<tr>
+<td>ME/TL</td>
+<td>Market equity/Total liabilities</td>
+</tr>
+<tr>
+<td>S/TA</td>
+<td>Sales/Total assets</td>
+</tr>
+<tr>
+<td>TL/TA</td>
+<td>Total liabilities/Total assets</td>
+</tr>
+<tr>
+<td>CA/CL</td>
+<td>Current assets/Current liabilities</td>
+</tr>
+<tr>
+<td>NI/TA</td>
+<td>Net income/Total assets</td>
+</tr>
+<tr>
+<td>π_MERTON</td>
+<td>Distance to default</td>
+</tr>
+<tr>
+<td>SIGMA</td>
+<td>Standard deviation of firm stock returns</td>
+</tr>
+<tr>
+<td>AGE</td>
+<td>log(Firm age in months)</td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>ln(Market equity/Total S&amp;P 500 market value)</td>
+</tr>
+<tr>
+<td>EXRET</td>
+<td>ln(1+Firm stock return)−log(1 + S&amp;P 500 return)</td>
+</tr>
+<tr>
+<td>CASH/MTA</td>
+<td>Cash and short-term investments/(Market equity + Total liabilities)</td>
+</tr>
+<tr>
+<td>MB</td>
+<td>Market equity/Book equity</td>
+</tr>
+<tr>
+<td>PRICE</td>
+<td>ln(Firm stock price per share)</td>
+</tr>
+<tr>
+<td>1/σE</td>
+<td>1/Annualized volatility of firm stock returns</td>
+</tr>
+<tr>
+<td>ME</td>
+<td>Market equity</td>
+</tr>
+<tr>
+<td>MEF</td>
+<td>Face value of firm debt</td>
 </tr>
 </tbody>
 </table>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="work-experience-">Work experience 👔</h3>
-<ul>
-<li>intern of Data Analysis Department at Springs Capital</li>
-<li>intern of Fintech Department at Harvest Fund Management.</li>
-<li>intern of Fixed Income Department in E Fund Management Co., Ltd.</li>
-</ul>
-<p>More about me in my <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E8%91%A3-918ab41b4/">LinkedIn</a>.</p>
-<h3 id="github-stats-">Github Stats ⭐</h3>
-<p><img src="https://github-readme-stats.vercel.app/api?username=ErnestDong&amp;show_icons=true" alt="Ernest&rsquo;s GitHub stats"></p>
-<h3 id="wakatime-dashboard">Wakatime Dashboard🕛</h3>
-<!--START_SECTION:waka-->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">org mode     13 hrs 55 mins  ██████████▒░░░░░░░░░░░░░░   40.93 % 
-Python       9 hrs 52 mins   ███████▒░░░░░░░░░░░░░░░░░   29.04 % 
-Emacs Lisp   5 hrs 11 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.27 % 
-TeX          1 hr 10 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   03.48 % 
-BibTeX       57 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.80 % 
-</code></pre></div><!--END_SECTION:waka-->
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>have got postgraduate recommandation.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+<h2 id="分析方法">分析方法</h2>
+<h2 id="模型">模型</h2>
+<p>对模型参数进行贝叶斯估计和 Laplace 近似</p>
+<h2 id="结论">结论</h2>
+<p>only the ratio of total liabilities to total assets and the inverse of the annualized volatility of firm market equity are robust predictors of bankruptcy and default and that models using only these two variables better predict bankruptcies and defaults for all firms than  models  using  all available co-variate.</p>
 
 </div>
 

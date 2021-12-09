@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang=""><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>China&#39;s no-bailout reform: impact on bond yields and rating standards</title>
+    <meta name="description" content="A Sisyphus Rolling Up Rock">
+    <meta name="author" content='Ernest Dong'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="/sass/researcher.min.css">
+
+    
+        <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
+    
+
+    
+        
+    
+</head>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="https://ernestdong.github.io" title="Ernest Dong">
+          
+          Ernest Dong
+        </a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="/notes" title="Notes">
+                        Notes
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/posts" title="Posts">
+                        Posts
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/files/resume.pdf" title="Resume">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0378426621002387">China&rsquo;s no-bailout reform: impact on bond yields and rating standards</a></p>
+<h2 id="主题">主题</h2>
+<p>债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响</p>
+<p>国企发行了80%的债券，但违约中只占了15%，因此作者认为政府支持是存在的。</p>
+<h2 id="数据">数据</h2>
+<p>主要是债项数据和财务数据</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issue Amount</td>
+<td>Gross amount of bond issue in billions of RMB</td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td>Years to bond maturity</td>
+</tr>
+<tr>
+<td>Coupon Rate</td>
+<td>Coupon rate in percentage of bonds with fixed coupons</td>
+</tr>
+<tr>
+<td>Treasury Spreads</td>
+<td>Difference (in %) between the bond yield to maturity and Chinese Treasury yield of similar maturity</td>
+</tr>
+<tr>
+<td>Callable</td>
+<td>= 1 for callable bonds and 0 otherwise</td>
+</tr>
+<tr>
+<td>Putable</td>
+<td>= 1 for putable bonds and 0 otherwise</td>
+</tr>
+<tr>
+<td>Senior</td>
+<td>= 1 for senior bonds and 0 otherwise</td>
+</tr>
+<tr>
+<td>Sinking Fund</td>
+<td>= 1 for bonds with sinking fund provision and 0 otherwise</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>= 1 if WIND classifies as Enterprise Bond issues and 0 otherwise</td>
+</tr>
+<tr>
+<td>MTN</td>
+<td>= 1 if WIND classifies as Medium-term Notes and 0 otherwise</td>
+</tr>
+<tr>
+<td>Corporate</td>
+<td>= 1 if WIND classifies as Corporate Bond issues and 0 otherwise</td>
+</tr>
+<tr>
+<td>Exchange</td>
+<td>= 1 if the bond is traded in Shanghai or Shenzhen Stock Exchange and 0 otherwise</td>
+</tr>
+<tr>
+<td>Interbank</td>
+<td>=1 if the bond is traded in the interbank market and 0 otherwise</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td>An ordinal variable from 1 for AAA rating to 4 for AA- rating</td>
+</tr>
+<tr>
+<td>GP_CRA</td>
+<td>= 1 for the three CRAs with global partnership (Lianhe_Fitch, Chengxin_Moody and Brilliance)</td>
+</tr>
+<tr>
+<td>Central SOE</td>
+<td>= 1 if WIND classifies the issuer as a state-owned enterprise (SOE) by Chinese central government</td>
+</tr>
+<tr>
+<td>LocalSOE</td>
+<td>= 1 if WIND classifies the issuer as a SOE by a Chinese local government and 0 otherwise</td>
+</tr>
+<tr>
+<td>NonSOE</td>
+<td>=1 if WIND classifies the issuer as an entity other than SOE and 0 otherwise</td>
+</tr>
+<tr>
+<td>Log Issuer Age</td>
+<td>Natural log of the age (in years) of the issuer at the time of bond issuance</td>
+</tr>
+<tr>
+<td>Listed</td>
+<td>= 1 if the issuer has public traded equity and 0 otherwise</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>= 1 for bonds issued after March 4, 2014 and 0 otherwise</td>
+</tr>
+<tr>
+<td>Equity Beta</td>
+<td>Market model equity beta estimated with daily stock returns from two years prior to the bond issuance</td>
+</tr>
+<tr>
+<td>Market Model Error</td>
+<td>Market model residual standard error estimated with daily stock returns two years prior to the bond issuance</td>
+</tr>
+<tr>
+<td>Log of Coverage Ratio</td>
+<td>Natural log of the three-year average interest coverage ratio prior to the bond issuance</td>
+</tr>
+<tr>
+<td>Log of Market Cap</td>
+<td>Natural log of the market capitalization (in billion RMB) at the calendar year-end prior to the bond issuance</td>
+</tr>
+<tr>
+<td>Long-term Debt Ratio</td>
+<td>Three-year average total long-term debt to total asset ratio prior to the bond issuance</td>
+</tr>
+<tr>
+<td>Total Debt Ratio</td>
+<td>Three-year average total debt to total asset ratio prior to bond issuance</td>
+</tr>
+<tr>
+<td>Market to Book Ratio</td>
+<td>Market to book ratio at the end of calendar year prior to bond issuance</td>
+</tr>
+<tr>
+<td>Operating Profit Margin</td>
+<td>Three-year average operating profit margin (EBIT/Revenue) prior to bond issuance</td>
+</tr>
+<tr>
+<td>Return on Equity</td>
+<td>Three-year average return on equity (net income/total equity) prior to bond issuance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="分析方法">分析方法</h2>
+<p>分析超日债违约60日前后债券收益率的变化，发现显著上升；</p>
+<p>分析违约前后不同评级债券的利差发现变大，说明违约不只是一个短期冲击。</p>
+<h2 id="模型">模型</h2>
+<p>对金融机构和国企用 DIDID 分析，发现超日债违约影响不大</p>
+<h2 id="结论">结论</h2>
+<p>2014之后，评级机构降低了评级标准，</p>
+<p>增量无救助改革措施在推动中国国内债券市场向真正的信贷市场靠拢，并提高基于风险的债券定价方面是有效的</p>
+
+</div>
+
+        </div><div id="footer" class="mb-5">
+    <hr>
+    <div class="container text-center">
+        
+            <a href="https://github.com/ernestDong/" class="fab fa-github fa-1x" title="GitHub"></a>
+        
+            <a href="https://www.linkedin.com/in/%e6%99%a8%e9%98%b3-%e8%91%a3-918ab41b4/" class="fab fa-linkedin-in fa-1x" title="LinkedIn"></a>
+        
+            <a href="https://www.instagram.com/ernestdong2000/" class="fab fa-instagram fa-1x" title="Instagram"></a>
+        
+            <a href="mailto:dongcy2000@outlook.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
+        
+    </div>
+    
+        <div class="container text-center">
+            <a href="https://github.com/ojroques/hugo-researcher" title="By Olivier Roques"><small>By Olivier Roques</small></a>
+        </div>
+    
+</div>
+</body>
+</html>
