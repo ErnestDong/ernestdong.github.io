@@ -8,7 +8,7 @@ draft = false
 +++
 ## Presentation
 
-[Presentation Here](../../files/presentaion.pdf)
+[Presentation Notes](../../files/pre.pdf)
 
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}
 
