@@ -7,7 +7,6 @@ lastmod = 2021-12-09T22:47:29+08:00
 draft = false
 +++
 ## Presentation
-
 [Presentation Notes](../../files/pre.pdf)
 
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}

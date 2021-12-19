@@ -1,0 +1,58 @@
+\documentclass[fontset=mac]{ctexbeamer}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{董晨阳}
+\institute{风保系 1800015446}
+\date{\today}
+\title{我国资本市场债券违约特征分析}
+\usepackage[style=gb7714-2015ay]{biblatex}
+\usetheme{CambridgeUS}
+\def\ernest{notes see \url{https://ernestdong.github.io/notes}}
+\addbibresource{reference.bib}
+\begin{document}
+\setbeamertemplate{bibliography item}{}
+\setbeamertemplate{bibliography entry article}{}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+\setbeamertemplate{caption}[numbered]
+\AtBeginSection[]
+{
+	\begin{frame}
+		\tableofcontents[currentsection,currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/show/hide,subsubsectionstyle=show/show/show/hide]
+	\end{frame}
+}
+\maketitle
+\begin{frame}{目录}
+	\tableofcontents[hideallsubsections]
+
+\end{frame}
+
+\section{我国债券市场历史违约概述}
+\input{part1}
+
+\section{文献综述}
+\input{part2}
+
+\section{理论分析}
+\input{part3}
+
+\section{实证检验}
+\input{part4}
+
+\section{结论}
+\input{part5}
+
+\appendix
+\begin{frame}[allowframebreaks]{参考文献}
+	\nocite{*}
+	\printbibliography[heading=bibliography,title=参考文献]
+\end{frame}
+\end{document}
