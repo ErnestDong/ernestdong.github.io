@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>毕业论文</title>
+    <title>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</title>
     <meta name="description" content="A Sisyphus Rolling Up Rock">
     <meta name="author" content='Ernest Dong'>
 
@@ -59,39 +59,21 @@
 <hr>
 <div id="content">
 <div class="container">
-    <h2 id="presentation">Presentation</h2>
-<p><a href="../../files/pre.pdf">Presentation Notes</a></p>
-<h2 id="tasks"><span class="org-todo todo TODO">TODO</span> Tasks</h2>
-<p>你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。</p>
-<p>分类，前人用过什么样的指标（别人没用过），有没有显著的影响</p>
-<p>什么样的模型，原始数据 or 主成分（模型不一样/对象不一样）</p>
-<p>看摘要、数据、模型、结论</p>
-<h3 id="link">link</h3>
-<p><a href="/notes/thesis_archive/">thesis archive</a>
-<a href="https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&amp;tn=SE%5Fbaiduxueshu%5Fc1gjeupa&amp;sc%5Ff%5Fpara=sc%5Ftasktype%3D%7BfirstAdvancedSearch%7D&amp;sc%5Fhit=1&amp;bcp=2&amp;ie=utf-8&amp;tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E3%80%8B%29">经济研究</a>
-<a href="https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%29&amp;tn=SE%5Fbaiduxueshu%5Fc1gjeupa&amp;sc%5Fhit=1&amp;bcp=2&amp;ie=utf-8&amp;filter=sc%5Fyear%3D%7B2017%2C%2B%7D&amp;tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%E3%80%8B%29">金融研究</a></p>
-<h2 id="journals">journals</h2>
-<ol>
-<li>Journal of Finance</li>
-<li>Journal of Financial and Quantitative Analysis</li>
-<li>Journal of Financial Economics</li>
-<li>Review of Financial Studies</li>
-<li>Journal of Banking and Finance</li>
-</ol>
-<h2 id="week-6">week 6</h2>
-<h3 id="宏观-不确定性">宏观“不确定性”</h3>
-<p><a href="/notes/thesis/bali2021macroeconomic/">The macroeconomic uncertainty premium in the corporate bond market</a>
-<a href="/notes/thesis/bai2019common/">Common risk factors in the cross-section of corporate bond returns</a></p>
-<h3 id="宏观环境">宏观环境</h3>
-<p>疫情
-<a href="/notes/thesis/mirza2020impact/">Impact of covid-19 on corporate solvency and possible policy responses in the eu</a></p>
-<p>商业周期
-<a href="/notes/thesis/colacito2020business/">Business cycles and currency returns</a></p>
-<p>财政政策
-<a href="/notes/thesis/2020fiscal/">Fiscal policy driven bond risk premia</a></p>
-<h3 id="风险传染-衍生品视角">风险传染：衍生品视角</h3>
-<p><a href="/notes/thesis/nickerson2017debt/">Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</a></p>
-
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17301289">Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</a></p>
+<h2 id="主题">主题</h2>
+<p>结构化产品之间存在关联性，风险通过结构化产品如 MBS 、CDO 传染</p>
+<p>我们记录了评级机构假设的违约相关性，将他们的假设与我们的估计进行了对比，并量化了纳入脆弱因素(<a href="#citeproc_bib_item_1">Duffie et al. 2009</a>)的违约相关性估计对实际AAA级高级CDO部分的适当规模的影响。</p>
+<blockquote>
+<p>an unobservable time-varying factor referred to as ‘frailty’ can significantly help in explaining default clustering.</p>
+</blockquote>
+<h2 id="分析方法">分析方法</h2>
+<p>对于金融危机(1986年至2006年)之前的公司债券，当仅使用国家相关评级转移矩阵时，我们估计的两两违约相关性仅为0.002。然而，当只考虑模型脆弱性时，平均成对债券违约相关性跃升至0.086。这些违约相关性是危机前评级机构用于CLO的8倍以上。此外，将评级变化和模型脆弱性都包括在内，将平均违约相关性提高到0.10。如果纳入金融危机中包含的信息，并使用截至2012年12月的样本对模型进行估计，这一估计值将增加约25%，至0.125。总体而言，我们的研究结果表明，联合考虑可观察到的风险因素和脆弱性的共同移动可以为违约分布的右尾增加相当大的厚度。</p>
+<h2 id="模型">模型</h2>
+<p>现有文献主要通过对 <em>违约强度</em> 或资产寿命的相关性进行建模来检验多种资产的联合信用风险。这些方法的一个优点是它们能够从实现资产违约的特定时间范围中抽象出来。虽然这些技术有助于从广义上研究联合信用风险，但这种方法的局限性在于难以将由此产生的估计应用于一组特定资产的联合违约风险，通常还依赖于双重随机假设，即以观察到的风险因素路径为条件，已实现的违约是独立的。</p>
+<h2 id="结论">结论</h2>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Duffie, Darrell, Andreas Eckner, Guillaume Horel, and Leandro Saita. 2009. “Frailty Correlated Default.” <i>The Journal of Finance</i> 64 (5): 2089–2123.</div>
+</div>
 </div>
 
         </div><div id="footer" class="mb-5">
