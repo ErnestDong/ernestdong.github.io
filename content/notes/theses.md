@@ -1,14 +1,13 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-
-lastmod = 2021-12-09T22:47:29+08:00
-
+lastmod = 2021-12-23T16:53:38+08:00
+tags = ["thesis"]
 draft = false
 +++
+
 ## Presentation
 [Presentation Notes](../../files/pre.pdf)
-
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}
 
 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
@@ -20,8 +19,14 @@ draft = false
 看摘要、数据、模型、结论
 
 
-## journals {#journals}
+### link {#link}
 
+[thesis archive]({{<relref "thesis_archive.md#" >}})
+[经济研究](https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&tn=SE%5Fbaiduxueshu%5Fc1gjeupa&sc%5Ff%5Fpara=sc%5Ftasktype%3D%7BfirstAdvancedSearch%7D&sc%5Fhit=1&bcp=2&ie=utf-8&tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E3%80%8B%29)
+[金融研究](https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%29&tn=SE%5Fbaiduxueshu%5Fc1gjeupa&sc%5Fhit=1&bcp=2&ie=utf-8&filter=sc%5Fyear%3D%7B2017%2C%2B%7D&tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%E3%80%8B%29)
+
+
+## journals {#journals}
 
 1.  Journal of Finance
 2.  Journal of Financial and Quantitative Analysis
@@ -30,44 +35,27 @@ draft = false
 5.  Journal of Banking and Finance
 
 
-## week 5 {#week-5}
+## week 6 {#week-6}
 
 
-### 宏观 {#宏观}
+### 宏观“不确定性” {#宏观-不确定性}
+
+[The macroeconomic uncertainty premium in the corporate bond market]({{<relref "thesis/bali2021macroeconomic.md#" >}})
+[Common risk factors in the cross-section of corporate bond returns]({{<relref "thesis/bai2019common.md#" >}})
 
 
-#### 系统性风险 {#系统性风险}
+### 宏观环境 {#宏观环境}
 
-[Do measures of systemic risk predict u.s. corporate bond default rates?]({{<relref "thesis/2020Do.md#" >}})
+疫情
+[Impact of covid-19 on corporate solvency and possible policy responses in the eu]({{<relref "thesis/mirza2020impact.md#" >}})
 
+商业周期
+[Business cycles and currency returns]({{<relref "thesis/colacito2020business.md#" >}})
 
-#### 打破刚兑政策 {#打破刚兑政策}
-
-[China's no-bailout reform: impact on bond yields and rating standards]({{<relref "thesis/mo2021china.md#" >}})
-
-
-### 中观 {#中观}
-
-
-#### 流动性 {#流动性}
-
-[Stock liquidity and default risk]({{<relref "thesis/brogaard2017stock.md#" >}})
-
-#### 周期 {#周期}
-
-[Quantifying liquidity and default risks of corporate bonds over the business cycle]({{<relref "thesis/chen2018quantifying.md#" >}})
+财政政策
+[Fiscal policy driven bond risk premia]({{<relref "thesis/2020Fiscal.md#" >}})
 
 
-### 微观 {#微观}
+### 风险传染：衍生品视角 {#风险传染-衍生品视角}
 
-
-#### 评级 {#评级}
-
-[The relevance of credit ratings in transparent bond markets]({{<relref "thesis/badoer2019relevance.md#" >}})
-
-
-### 贝叶斯方法 {#贝叶斯方法}
-
-
-[Firm default prediction: a bayesian model-averaging approach]({{<relref "thesis/traczynski2017firm.md#" >}})
-
+[Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?]({{<relref "thesis/nickerson2017debt.md#" >}})
