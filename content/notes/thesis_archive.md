@@ -1,7 +1,8 @@
 +++
 title = "已读已汇报文献"
 author = ["Ernest Dong"]
-lastmod = 2021-12-08T21:48:01+08:00
+lastmod = 2021-12-23T16:55:07+08:00
+tags = ["thesis"]
 draft = false
 +++
 
@@ -194,3 +195,57 @@ default = spread + industry + r + liquidity + enterprise(financial, state-owned)
 整体市场流动性：[信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究]({{<relref "thesis/纪志宏2017信用风险溢价还是市场流动性溢价.md#" >}})
 
 跨市场债流动性：[散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析]({{<relref "thesis/钟宁桦2018散户投资者如何影响债券价格.md#" >}})
+
+
+## week 5 {#week-5}
+
+
+### 宏观 {#宏观}
+
+
+#### 系统性风险 {#系统性风险}
+
+[Do measures of systemic risk predict u.s. corporate bond default rates?]({{<relref "thesis/2020Do.md#" >}})
+
+
+#### 打破刚兑政策 {#打破刚兑政策}
+
+[China's no-bailout reform: impact on bond yields and rating standards]({{<relref "thesis/mo2021china.md#" >}})
+是因为国企救助还是因为国企资质好
+
+
+### 中观 {#中观}
+
+
+#### 流动性 {#流动性}
+
+[Stock liquidity and default risk]({{<relref "thesis/brogaard2017stock.md#" >}})
+流动性和违约之间的联系：公司治理
+
+
+#### 周期 {#周期}
+
+[Quantifying liquidity and default risks of corporate bonds over the business cycle]({{<relref "thesis/chen2018quantifying.md#" >}})
+
+
+### 微观 {#微观}
+
+
+#### 评级 {#评级}
+
+[The relevance of credit ratings in transparent bond markets]({{<relref "thesis/badoer2019relevance.md#" >}})
+
+
+### 贝叶斯方法 {#贝叶斯方法}
+
+[Firm default prediction: a bayesian model-averaging approach]({{<relref "thesis/traczynski2017firm.md#" >}})
+行业政策：两个100年之间的影响
+
+比较重要的指标有谁用了
+
+西部、中部、东部（多个）
+
+更留意看了哪些指标过渡的 **逻辑**: 选择控制变量、解释
+
+1.  经济学研究要注重边界：结论依赖于条件是什么。现在是一个大变革的时代，
+2.  **逻辑性** 必须解决清楚，理解因果。
