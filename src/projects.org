@@ -3,7 +3,7 @@
 #+AUTHOR: Ernest Dong
 #+EMAIL: dongcy2000@outlook.com
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: post
+#+HUGO_SECTION: posts
 
 * Table of Contents :TOC_3:noexport:
 - [[#coding][Coding]]
@@ -15,7 +15,7 @@
     - [[#运行截图][运行截图]]
 
 * Coding
-** A stata scratch :coding:
+** A stata scratch :programming:
 :PROPERTIES:
 :EXPORT_FILE_NAME: a stata scratch
 :EXPORT_DATE: 2021-01-01

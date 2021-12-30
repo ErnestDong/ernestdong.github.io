@@ -4,7 +4,7 @@
 #+title: python and mathematics
 #+filetags: :python:
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: post
+#+HUGO_SECTION: posts
 #+DATE: <2021-11-20 Sat>
 * Table of Contents :TOC_3:noexport:
 - [[#get-start][Get Start]]
