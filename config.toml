@@ -1,42 +1,29 @@
 title = "Ernest Dong"
 baseURL = "https://ernestdong.github.io"
-theme = "researcher"
+theme = "cactus" #"researcher"
 enableEmoji = true
-math = false          # enable KaTeX (https://katex.org/) globally
-googleAnalytics = ""  # add your tracking id
-
 [params]
   author = "Ernest Dong"
   description = "A Sisyphus Rolling Up Rock"
-  favicon = "/images/favicon.ico"  # path to a .ico to use as favicon
-  [params.footer]
-    text = "By Olivier Roques"
-    url = "https://github.com/ojroques/hugo-researcher"
-  [params.style]  # appearance options (can be omitted)
-    fontFamily = "Inconsolata"
-    pageWidth = "750px"
-    avatarSize = "90px"
-    colorBlack = "#222222"
-    colorRed = "#dc3545"
-  [[params.socialIcons]]
-    icon = "fab fa-github"
-    title = "GitHub"
-    url = "https://github.com/ernestDong/"
-  [[params.socialIcons]]
-    icon = "fab fa-linkedin-in"
-    title = "LinkedIn"
-    url = "https://www.linkedin.com/in/晨阳-董-918ab41b4/"
-  [[params.socialIcons]]
-    icon = "fab fa-instagram"
-    title = "Instagram"
-    url = "https://www.instagram.com/ernestdong2000/"
-  [[params.socialIcons]]
-    icon = "fas fa-envelope"
-    title = "E-mail"
-    url = "mailto:dongcy2000@outlook.com"
-[permalinks]
-  "/" = "/:filename"
-
+  favicon = "/images/favicon.ico"
+  showAllPostsOnHomePage = true
+  postsOnHomePage = 5
+  mainSection = "notes"
+  mainSectionTitle = "Thesis Notes"
+  tocInline = true
+  mathjax = true
+  [[params.social]]
+    name = "fab fa-github"
+    link = "https://github.com/ernestDong/"
+  [[params.social]]
+    name = "fab fa-linkedin-in"
+    link = "https://www.linkedin.com/in/晨阳-董-918ab41b4/"
+  [[params.social]]
+    name = "fab fa-instagram"
+    link = "https://www.instagram.com/ernestdong2000/"
+  [[params.social]]
+    name = "email"
+    link = "dongcy2000@outlook.com"
 [menu]
   [[menu.main]]
     name = "Notes"
@@ -45,14 +32,29 @@ googleAnalytics = ""  # add your tracking id
   [[menu.main]]
     name = "Posts"
     url = "/posts"
-    weight = 1
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/readme/index.html"
+    weight = 4
   [[menu.main]]
     name = "Resume"
     url = "/files/resume.pdf"
-    # 'pre' and 'post' hooks are available
-    # here we use an icon from Bootstrap https://icons.getbootstrap.com/
-    pre = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> '
-    weight = 2
-
+    weight = 5
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown files
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
