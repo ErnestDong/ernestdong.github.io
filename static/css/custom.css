@@ -1,0 +1,12 @@
+#logo {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    width: $logo-width;
+    height: $logo-height;
+    border-radius: 5px;
+    background-size: $logo-width $logo-height;
+    background-repeat: no-repeat;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+  }

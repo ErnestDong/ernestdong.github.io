@@ -12,6 +12,7 @@ enableEmoji = true
   mainSectionTitle = "Thesis Notes"
   tocInline = true
   mathjax = true
+  css = ["css/custom.css"]
   [[params.social]]
     name = "fab fa-github"
     link = "https://github.com/ernestDong/"
