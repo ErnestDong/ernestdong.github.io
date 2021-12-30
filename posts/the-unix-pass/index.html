@@ -1,65 +1,220 @@
 <!DOCTYPE html>
-<html lang=""><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> 用 Pass 管理密码 | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/posts/the-unix-pass/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="用 Pass 管理密码" />
+<meta property="og:description" content="pass for macOS usage" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/posts/the-unix-pass/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-03T00:00:00+00:00" />
 
-    <title>用 Pass 管理密码</title>
-    <meta name="description" content="A Sisyphus Rolling Up Rock">
-    <meta name="author" content='Ernest Dong'>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="用 Pass 管理密码"/>
+<meta name="twitter:description" content="pass for macOS usage"/>
 
-    
-    <link rel="stylesheet" href="/sass/researcher.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.94f653e9e151e28067a7c5dbbc4600cbd5a3c721e79faaf971e523c40f3b249b8e4f20bb57810dfffa8d559ca5c140fd56eb4cd9c0853113ad08e66afdb08bdd.css" integrity="sha512-lPZT6eFR4oBnp8XbvEYAy9WjxyHnn6r5ceUjxA87JJuOTyC7V4EN//qNVZylwUD9VutM2cCFMROtCOZq/bCL3Q=="> 
 
-    
-        <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
-    
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
 
-    
-        
-    
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
 </head>
 
-    <body><div class="container mt-5">
-    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-        <a class="navbar-brand mx-0 mr-sm-auto" href="https://ernestdong.github.io" title="Ernest Dong">
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/posts/a-stata-scratch/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/posts/clash-gfw/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&text=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&title=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&is_video=false&description=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&title=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&title=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&name=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81&description=%3cp%3epass%20for%20macOS%20usage%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&t=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        用 Pass 管理密码
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
           
-          Ernest Dong
-        </a>
-        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+          <time datetime="2021-07-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-07-03</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
             
-                
-                
-                    <a class="nav-item nav-link" href="/notes" title="Notes">
-                        Notes
-                    </a>
-                    
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    
-                
-                    <a class="nav-item nav-link" href="/posts" title="Posts">
-                        Posts
-                    </a>
-                    
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    
-                
-                    <a class="nav-item nav-link" href="/files/resume.pdf" title="Resume">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
-                    </a>
-                    
-                
+            
+            <a class="tag-link" href="/tags/fun" rel="tag">fun</a>
             
         </div>
-    </nav>
-</div>
-<hr>
-<div id="content">
-<div class="container">
-    <p>pass for macOS usage</p>
+        
+      </div>
+    </header>
+
+  
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pass-的优点">Pass 的优点</a></li>
+    <li><a href="#安装-pass-与-browserpass">安装 <code>Pass</code> 与 <code>browserpass</code></a></li>
+    <li><a href="#配置-pass">配置 <code>Pass</code></a>
+      <ul>
+        <li><a href="#pass-init">Pass init</a></li>
+        <li><a href="#pass-导入">Pass 导入</a></li>
+        <li><a href="#pass-使用">Pass 使用</a></li>
+        <li><a href="#tweaks">Tweaks</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置-pass-for-ios">配置 <code>Pass for iOS</code></a></li>
+  </ul>
+</nav>
+    </div>
+    
+    <div class="content" itemprop="articleBody">
+      <p>pass for macOS usage</p>
 <h2 id="pass-的优点">Pass 的优点</h2>
 <ul>
 <li><a href="https://www.passwordstore.org/">pass</a> 是符合 unix 哲学的密码管理器，利用 gpg 本地加密存储，让人感觉比依靠互联网账号的密码管理器安全。</li>
@@ -69,67 +224,275 @@
 </ul>
 <p>遗憾的是 pass 需要一点点配置</p>
 <h2 id="安装-pass-与-browserpass">安装 <code>Pass</code> 与 <code>browserpass</code></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew tap amar1729/formulae <span style="color:#75715e"># browserpass tap</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew tap amar1729/formulae <span style="color:#6272a4"># browserpass tap</span>
 brew install pass browserpass
-</code></pre></div><p>之后根据 caveats</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">PREFIX<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/local/opt/browserpass&#39;</span> make hosts-BROWSER-user -f <span style="color:#e6db74">&#39;/usr/local/opt/browserpass/lib/browserpass/Makefile&#39;</span>
-</code></pre></div><p>其中 <code>BROWSER</code> 可以是 chromium chrome vivaldi brave firefox 这几种浏览器 <del>(Safari 连 <code>endnote click</code> 都没有，除了轻快好难用)</del></p>
+</code></pre></td></tr></table>
+</div>
+</div><p>之后根据 caveats</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#8be9fd;font-style:italic">PREFIX</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;/usr/local/opt/browserpass&#39;</span> make hosts-BROWSER-user -f <span style="color:#f1fa8c">&#39;/usr/local/opt/browserpass/lib/browserpass/Makefile&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>其中 <code>BROWSER</code> 可以是 chromium chrome vivaldi brave firefox 这几种浏览器 <del>(Safari 连 <code>endnote click</code> 都没有，除了轻快好难用)</del></p>
 <h2 id="配置-pass">配置 <code>Pass</code></h2>
 <h3 id="pass-init">Pass init</h3>
 <p><code>Pass</code> 可以说是一套工具的集合，其中的 GnuPG 就是用来加密的。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gpg --full-generate-key
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gpg --full-generate-key
 gpg --list-secret-keys --keyid-format LONG
-<span style="color:#75715e"># sec   some-text/your-keys time-today [SC]</span>
-pass init <span style="color:#e6db74">&#34;your-keys here!&#34;</span>
-</code></pre></div><p>从此 <code>$HOME</code> 下的 <code>.passwordstore</code> &amp; <code>.gnupg</code> 就不能删了</p>
+<span style="color:#6272a4"># sec   some-text/your-keys time-today [SC]</span>
+pass init <span style="color:#f1fa8c">&#34;your-keys here!&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>从此 <code>$HOME</code> 下的 <code>.passwordstore</code> &amp; <code>.gnupg</code> 就不能删了</p>
 <h3 id="pass-导入">Pass 导入</h3>
 <p>把 Chrome <del>等+（ +万恶的</del> Google 全家桶太好用了不得不用 Chrome）密码导出后可以用这段<a href="https://gist.github.com/ErnestDong/0fc61d76777770a03ffc5bdfda2a5b17">gist</a>的 python 代码（参考自 <a href="https://www.passwordstore.org/">pass</a> 官网）转换为 pass 的格式</p>
 <p>用这段 gist 导出后 pass 是这样存储的：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tree
-<span style="color:#75715e"># --example.com</span>
-<span style="color:#75715e">#  |-username.gpg</span>
-</code></pre></div><p>其中的 <code>username.gpg</code> 解密后是这样的</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">a Strong Password
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tree
+<span style="color:#6272a4"># --example.com</span>
+<span style="color:#6272a4">#  |-username.gpg</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>其中的 <code>username.gpg</code> 解密后是这样的</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">a Strong Password
 user: username
-</code></pre></div><h3 id="pass-使用">Pass 使用</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pass list <span style="color:#75715e"># 展示.passwordstore目录树</span>
-pass insert <span style="color:#75715e"># see below 插入已有的</span>
-... <span style="color:#75715e"># 用emacs 所以不记这些了</span>
-</code></pre></div><p>详细可以看<a href="https://wiki.archlinux.org/title/Pass">archwiki</a></p>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="pass-使用">Pass 使用</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pass list <span style="color:#6272a4"># 展示.passwordstore目录树</span>
+pass insert <span style="color:#6272a4"># see below 插入已有的</span>
+... <span style="color:#6272a4"># 用emacs 所以不记这些了</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>详细可以看<a href="https://wiki.archlinux.org/title/Pass">archwiki</a></p>
 <h3 id="tweaks">Tweaks</h3>
 <h4 id="用-git-同步">用 git 同步</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pass git init
-</code></pre></div><p>这样每次加入密码都会 commit 并且可以同步。 用 pass for iOS 时需要 git 同步。不过 PGP 加密毕竟不是水货。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pass git init
+</code></pre></td></tr></table>
+</div>
+</div><p>这样每次加入密码都会 commit 并且可以同步。 用 pass for iOS 时需要 git 同步。不过 PGP 加密毕竟不是水货。</p>
 <h4 id="git-hook">git hook</h4>
 <p>每次 commit 后自动 push 到 GitHub 上。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;git push -u origin main&#34;</span> &gt;&gt; .git/hooks/post-commit
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;git push -u origin main&#34;</span> &gt;&gt; .git/hooks/post-commit
 chmod u+x .git/hooks/post-commit
-</code></pre></div><h4 id="mac-的-browser-pass">mac 的 browser pass</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;pinentry-program /usr/local/bin/pinentry-mac
-</span><span style="color:#e6db74">&#34;</span> &gt;&gt; ~/.gnupg/gnupg.conf
-</code></pre></div><p>然后可以在对应的网站用 <code>command + L</code> 自动输入密码了。</p>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="mac-的-browser-pass">mac 的 browser pass</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;pinentry-program /usr/local/bin/pinentry-mac
+</span><span style="color:#f1fa8c">&#34;</span> &gt;&gt; ~/.gnupg/gnupg.conf
+</code></pre></td></tr></table>
+</div>
+</div><p>然后可以在对应的网站用 <code>command + L</code> 自动输入密码了。</p>
 <h2 id="配置-pass-for-ios">配置 <code>Pass for iOS</code></h2>
 <p>记得在“系统设置-密码”里填充来源加上 pass，就可以享受免费的 1password 了</p>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&text=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&title=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&is_video=false&description=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&title=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&title=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&name=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81&description=%3cp%3epass%20for%20macOS%20usage%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fthe-unix-pass%2f&t=%e7%94%a8%20Pass%20%e7%ae%a1%e7%90%86%e5%af%86%e7%a0%81" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
 </div>
 
-        </div><div id="footer" class="mb-5">
-    <hr>
-    <div class="container text-center">
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
         
-            <a href="https://github.com/ernestDong/" class="fab fa-github fa-1x" title="GitHub"></a>
-        
-            <a href="https://www.linkedin.com/in/%e6%99%a8%e9%98%b3-%e8%91%a3-918ab41b4/" class="fab fa-linkedin-in fa-1x" title="LinkedIn"></a>
-        
-            <a href="https://www.instagram.com/ernestdong2000/" class="fab fa-instagram fa-1x" title="Instagram"></a>
-        
-            <a href="mailto:dongcy2000@outlook.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
-        
-    </div>
-    
-        <div class="container text-center">
-            <a href="https://github.com/ojroques/hugo-researcher" title="By Olivier Roques"><small>By Olivier Roques</small></a>
-        </div>
-    
-</div>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
 </body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

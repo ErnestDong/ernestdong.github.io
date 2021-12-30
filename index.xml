@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ernest on Ernest Dong</title>
+    <title>Ernest Dong</title>
     <link>https://ernestdong.github.io/</link>
-    <description>Recent content in Ernest on Ernest Dong</description>
+    <description>Recent content on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 23 Dec 2021 16:55:07 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -788,6 +788,16 @@ Amihud 测度、高低价差( high-low) 和换手率( turnover) 三个常用的�
       
       <guid>https://ernestdong.github.io/posts/a-stata-scratch/</guid>
       <description>&lt;p&gt;stata on our own&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ernest</title>
+      <link>https://ernestdong.github.io/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/readme/</guid>
+      <description>Hi, my name is Ernest Dong 👋 and I ❤️ open-source  Senior Student at PKU major in Risk Management and Insurance  Field of interests: Machine Learning, Risk Management in Finance.
+Skills 🛠️  Languages: Python, C/C++, R DS/ML/DL: NumPy, SciPy, Pandas, Scikit-Learn, PyTorch  Education 🎓    academic degree University Major duration     Master’s degree Peking University Insurance 1 2022 - 2024   Bachelor&amp;rsquo;s degree Peking University Risk Management and Insurance 2018 - 2022    More about me in my LinkedIn.</description>
     </item>
     
   </channel>

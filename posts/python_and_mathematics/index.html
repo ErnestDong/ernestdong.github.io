@@ -1,74 +1,268 @@
 <!DOCTYPE html>
-<html lang=""><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> python and mathematics | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/posts/python_and_mathematics/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="python and mathematics" />
+<meta property="og:description" content="一些有关 python 和数学的笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/posts/python_and_mathematics/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-20T00:00:00+00:00" />
 
-    <title>python and mathematics</title>
-    <meta name="description" content="A Sisyphus Rolling Up Rock">
-    <meta name="author" content='Ernest Dong'>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python and mathematics"/>
+<meta name="twitter:description" content="一些有关 python 和数学的笔记"/>
 
-    
-    <link rel="stylesheet" href="/sass/researcher.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.94f653e9e151e28067a7c5dbbc4600cbd5a3c721e79faaf971e523c40f3b249b8e4f20bb57810dfffa8d559ca5c140fd56eb4cd9c0853113ad08e66afdb08bdd.css" integrity="sha512-lPZT6eFR4oBnp8XbvEYAy9WjxyHnn6r5ceUjxA87JJuOTyC7V4EN//qNVZylwUD9VutM2cCFMROtCOZq/bCL3Q=="> 
 
-    
-        <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
-    
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
 
-    
-        
-    
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
 </head>
 
-    <body><div class="container mt-5">
-    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-        <a class="navbar-brand mx-0 mr-sm-auto" href="https://ernestdong.github.io" title="Ernest Dong">
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/%E5%80%BA%E5%88%B8%E5%B8%82%E5%9C%BA%E5%8E%86%E5%8F%B2%E8%BF%9D%E7%BA%A6%E6%B1%87%E6%80%BB/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&text=python%20and%20mathematics" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&is_video=false&description=python%20and%20mathematics" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=python%20and%20mathematics&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&name=python%20and%20mathematics&description=%3cp%3e%e4%b8%80%e4%ba%9b%e6%9c%89%e5%85%b3%20python%20%e5%92%8c%e6%95%b0%e5%ad%a6%e7%9a%84%e7%ac%94%e8%ae%b0%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&t=python%20and%20mathematics" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        python and mathematics
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
           
-          Ernest Dong
-        </a>
-        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+          <time datetime="2021-11-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-20</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
             
-                
-                
-                    <a class="nav-item nav-link" href="/notes" title="Notes">
-                        Notes
-                    </a>
-                    
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    
-                
-                    <a class="nav-item nav-link" href="/posts" title="Posts">
-                        Posts
-                    </a>
-                    
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    
-                
-                    <a class="nav-item nav-link" href="/files/resume.pdf" title="Resume">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
-                    </a>
-                    
-                
+            
+            <a class="tag-link" href="/tags/programming" rel="tag">programming</a>
             
         </div>
-    </nav>
-</div>
-<hr>
-<div id="content">
-<div class="container">
-    <p>一些有关 python 和数学的笔记</p>
+        
+      </div>
+    </header>
+
+  
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#get-start">Get Start</a></li>
+    <li><a href="#numpy">numpy</a>
+      <ul>
+        <li><a href="#numpy-基础数据类型">numpy 基础数据类型</a></li>
+        <li><a href="#索引与变形">索引与变形</a></li>
+        <li><a href="#运算">运算</a></li>
+      </ul>
+    </li>
+    <li><a href="#pandas">pandas</a>
+      <ul>
+        <li><a href="#对象">对象</a></li>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+    <li><a href="#stats-models">stats-models</a>
+      <ul>
+        <li><a href="#ols-回归">OLS 回归</a></li>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+    <li><a href="#matplotlib">matplotlib</a>
+      <ul>
+        <li><a href="#中文">中文</a></li>
+        <li><a href="#example">example</a></li>
+      </ul>
+    </li>
+    <li><a href="#seaborn">seaborn</a>
+      <ul>
+        <li><a href="#matplotlib-use-seaborn-style">matplotlib use seaborn style</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+    <div class="content" itemprop="articleBody">
+      <p>一些有关 python 和数学的笔记</p>
 <h2 id="get-start">Get Start</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(pyvenv-activate <span style="color:#e6db74">&#34;~/Code/thesis/.venv/&#34;</span>)
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-<span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
-<span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
-<span style="color:#f92672">import</span> statsmodels.formula.api <span style="color:#66d9ef">as</span> smf
-</code></pre></div><h2 id="numpy">numpy</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#8be9fd;font-style:italic">pyvenv-activate</span> <span style="color:#f1fa8c">&#34;~/Code/thesis/.venv/&#34;</span>)
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> pandas <span style="color:#ff79c6">as</span> pd
+<span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
+<span style="color:#ff79c6">import</span> matplotlib.pyplot <span style="color:#ff79c6">as</span> plt
+<span style="color:#ff79c6">import</span> seaborn <span style="color:#ff79c6">as</span> sns
+<span style="color:#ff79c6">import</span> statsmodels.api <span style="color:#ff79c6">as</span> sm
+<span style="color:#ff79c6">import</span> statsmodels.formula.api <span style="color:#ff79c6">as</span> smf
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="numpy">numpy</h2>
 <p>numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底层。</p>
 <p>中文文档：<a href="https://www.numpy.org.cn/">https://www.numpy.org.cn/</a>
 英文文档：<a href="https://numpy.org/doc/stable/user/index.html">https://numpy.org/doc/stable/user/index.html</a></p>
@@ -78,10 +272,19 @@
 它封装了 python 原生的同数据类型的 n 维数组，为了保证其性能优良，其中有许多操作都是代码在本地进行编译后执行的。</p>
 <p>ndarray 有固定的大小、容器中是相同的数据类型（可以通过 dtype 访问）。
 ndarray 通过 <strong>矢量化</strong> 加速程序运行</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,np<span style="color:#f92672">.</span>nan])
-print(arr<span style="color:#f92672">.</span>astype(float))
-print(arr<span style="color:#f92672">.</span>dtype)
-</code></pre></div><p>请注意 numpy 的整数有可能溢出</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">3</span>,np<span style="color:#ff79c6">.</span>nan])
+<span style="color:#8be9fd;font-style:italic">print</span>(arr<span style="color:#ff79c6">.</span>astype(<span style="color:#8be9fd;font-style:italic">float</span>))
+<span style="color:#8be9fd;font-style:italic">print</span>(arr<span style="color:#ff79c6">.</span>dtype)
+</code></pre></td></tr></table>
+</div>
+</div><p>请注意 numpy 的整数有可能溢出</p>
 <h4 id="数组的创建">数组的创建</h4>
 <!--list-separator-->
 <ul>
@@ -95,48 +298,109 @@ print(arr<span style="color:#f92672">.</span>dtype)
 <li>
 <p>numpy 原生数组的创建</p>
 <p>numpy 提供了部分函数，可以创建特定的数组</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">shape <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>)
-print(np<span style="color:#f92672">.</span>ones(shape))
-print(np<span style="color:#f92672">.</span>zeros(shape))
-print(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random(shape))
-print(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>)) <span style="color:#75715e"># 从0到6，每隔2个</span>
-print(np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">4.</span>, <span style="color:#ae81ff">6</span>)) <span style="color:#75715e"># 从1到4，一共6个</span>
-</code></pre></div></li>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">shape <span style="color:#ff79c6">=</span> (<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">4</span>)
+<span style="color:#8be9fd;font-style:italic">print</span>(np<span style="color:#ff79c6">.</span>ones(shape))
+<span style="color:#8be9fd;font-style:italic">print</span>(np<span style="color:#ff79c6">.</span>zeros(shape))
+<span style="color:#8be9fd;font-style:italic">print</span>(np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>random(shape))
+<span style="color:#8be9fd;font-style:italic">print</span>(np<span style="color:#ff79c6">.</span>arange(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">2</span>)) <span style="color:#6272a4"># 从0到6，每隔2个</span>
+<span style="color:#8be9fd;font-style:italic">print</span>(np<span style="color:#ff79c6">.</span>linspace(<span style="color:#bd93f9">1.</span>, <span style="color:#bd93f9">4.</span>, <span style="color:#bd93f9">6</span>)) <span style="color:#6272a4"># 从1到4，一共6个</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h3 id="索引与变形">索引与变形</h3>
 <p>shape 属性储存了 numpy 数组的“形状”，并且是可以修改的</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">10</span>)
-x<span style="color:#f92672">.</span>shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>
-print(x)
-print(x[<span style="color:#ae81ff">0</span>])
-print(x[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>])
-</code></pre></div><h3 id="运算">运算</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>arange(<span style="color:#bd93f9">10</span>)
+x<span style="color:#ff79c6">.</span>shape <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">5</span>
+<span style="color:#8be9fd;font-style:italic">print</span>(x)
+<span style="color:#8be9fd;font-style:italic">print</span>(x[<span style="color:#bd93f9">0</span>])
+<span style="color:#8be9fd;font-style:italic">print</span>(x[<span style="color:#bd93f9">0</span>:<span style="color:#bd93f9">2</span>])
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="运算">运算</h3>
 <h4 id="算术运算符">算术运算符</h4>
 <p>数组上的算术运算符会应用到 <strong>元素</strong> 级别。下面是创建一个新数组并填充结果的示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array( [<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">50</span>] )
-b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange( <span style="color:#ae81ff">4</span> )
-c <span style="color:#f92672">=</span> a<span style="color:#f92672">-</span>b
-print(c)
-print(c<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
-print(<span style="color:#ae81ff">10</span><span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>sin(a))
-print(a<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">35</span>)
-</code></pre></div><p>对于矩阵，乘法使用@</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">A <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]])
-B <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>]])
-print(A<span style="color:#f92672">*</span>B)
-print(A<span style="color:#a6e22e">@B</span>)
-</code></pre></div><h4 id="一些方法">一些方法</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array( [<span style="color:#bd93f9">20</span>,<span style="color:#bd93f9">30</span>,<span style="color:#bd93f9">40</span>,<span style="color:#bd93f9">50</span>] )
+b <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>arange( <span style="color:#bd93f9">4</span> )
+c <span style="color:#ff79c6">=</span> a<span style="color:#ff79c6">-</span>b
+<span style="color:#8be9fd;font-style:italic">print</span>(c)
+<span style="color:#8be9fd;font-style:italic">print</span>(c<span style="color:#ff79c6">**</span><span style="color:#bd93f9">2</span>)
+<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#bd93f9">10</span><span style="color:#ff79c6">*</span>np<span style="color:#ff79c6">.</span>sin(a))
+<span style="color:#8be9fd;font-style:italic">print</span>(a<span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">35</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p>对于矩阵，乘法使用@</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">A <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([[<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>], [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>]])
+B <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([[<span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>], [<span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">7</span>]])
+<span style="color:#8be9fd;font-style:italic">print</span>(A<span style="color:#ff79c6">*</span>B)
+<span style="color:#8be9fd;font-style:italic">print</span>(A@B)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="一些方法">一些方法</h4>
 <p>axis 参数可以指定操作的方向，沿着第几维</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>]])
-print(x<span style="color:#f92672">.</span>min())
-print(x<span style="color:#f92672">.</span>max())
-print(x<span style="color:#f92672">.</span>mean(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>))
-print(x<span style="color:#f92672">.</span>sum())
-print(x<span style="color:#f92672">.</span>argmax())
-print(x<span style="color:#f92672">.</span>cumsum(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>))
-print(np<span style="color:#f92672">.</span>fromfunction(<span style="color:#66d9ef">lambda</span> i, j: i <span style="color:#f92672">==</span> j, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), dtype<span style="color:#f92672">=</span>int))
-<span style="color:#75715e"># The resulting array has a value fn(x, y, z) at coordinate (x, y, z).</span>
-</code></pre></div><h4 id="广播">广播</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([[<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">1</span>], [<span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">9</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">6</span>]])
+<span style="color:#8be9fd;font-style:italic">print</span>(x<span style="color:#ff79c6">.</span>min())
+<span style="color:#8be9fd;font-style:italic">print</span>(x<span style="color:#ff79c6">.</span>max())
+<span style="color:#8be9fd;font-style:italic">print</span>(x<span style="color:#ff79c6">.</span>mean(axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>))
+<span style="color:#8be9fd;font-style:italic">print</span>(x<span style="color:#ff79c6">.</span>sum())
+<span style="color:#8be9fd;font-style:italic">print</span>(x<span style="color:#ff79c6">.</span>argmax())
+<span style="color:#8be9fd;font-style:italic">print</span>(x<span style="color:#ff79c6">.</span>cumsum(axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>))
+<span style="color:#8be9fd;font-style:italic">print</span>(np<span style="color:#ff79c6">.</span>fromfunction(<span style="color:#ff79c6">lambda</span> i, j: i <span style="color:#ff79c6">==</span> j, (<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">3</span>), dtype<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">int</span>))
+<span style="color:#6272a4"># The resulting array has a value fn(x, y, z) at coordinate (x, y, z).</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="广播">广播</h4>
 <p>广播允许通用功能以有意义的方式处理不具有完全相同形状的输入。</p>
 <p>广播的第一个规则是，如果所有输入数组不具有相同数量的维度，则将“1”重复地预先添加到较小数组的形状，直到所有数组具有相同数量的维度。</p>
 <p>广播的第二个规则确保沿特定维度的大小为1的数组表现为具有沿该维度具有最大形状的数组的大小。假定数组元素的值沿着“广播”数组的那个维度是相同的。</p>
@@ -149,16 +413,31 @@ print(np<span style="color:#f92672">.</span>fromfunction(<span style="color:#66d
 <p>可以理解成一列 excel 数据</p>
 <h4 id="dataframe"><code>DataFrame</code></h4>
 <p>可以理解成一张 excel 表，可以用切片/属性的方式访问某一列</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;20130101&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>)
-df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>), index<span style="color:#f92672">=</span>dates, columns<span style="color:#f92672">=</span>list(<span style="color:#e6db74">&#39;ABCD&#39;</span>))
-print(df<span style="color:#f92672">.</span>columns)
-print(<span style="color:#e6db74">&#34;===&#34;</span>)
-print(df)
-print(<span style="color:#e6db74">&#34;===&#34;</span>)
-print(df<span style="color:#f92672">.</span>T)
-print(<span style="color:#e6db74">&#34;===&#34;</span>)
-print(df<span style="color:#f92672">.</span>A)
-</code></pre></div><!--list-separator-->
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dates <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>date_range(<span style="color:#f1fa8c">&#39;20130101&#39;</span>, periods<span style="color:#ff79c6">=</span><span style="color:#bd93f9">6</span>)
+df <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame(np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>randn(<span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">4</span>), index<span style="color:#ff79c6">=</span>dates, columns<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#f1fa8c">&#39;ABCD&#39;</span>))
+<span style="color:#8be9fd;font-style:italic">print</span>(df<span style="color:#ff79c6">.</span>columns)
+<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;===&#34;</span>)
+<span style="color:#8be9fd;font-style:italic">print</span>(df)
+<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;===&#34;</span>)
+<span style="color:#8be9fd;font-style:italic">print</span>(df<span style="color:#ff79c6">.</span>T)
+<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;===&#34;</span>)
+<span style="color:#8be9fd;font-style:italic">print</span>(df<span style="color:#ff79c6">.</span>A)
+</code></pre></td></tr></table>
+</div>
+</div><!--list-separator-->
 <ul>
 <li>
 <p>dataframe 的导入导出</p>
@@ -171,35 +450,67 @@ print(df<span style="color:#f92672">.</span>A)
 <p>查看数据</p>
 <p>df 有属性 <code>head(n)</code>, <code>tail(n)</code> 可以查看头/尾 n 条数据</p>
 <p><code>describe()</code> 可以快速查看数据的统计摘要：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">desc <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>describe()
-print(desc)
-print(desc[<span style="color:#e6db74">&#39;A&#39;</span>])
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">desc <span style="color:#ff79c6">=</span> df<span style="color:#ff79c6">.</span>describe()
+<span style="color:#8be9fd;font-style:italic">print</span>(desc)
+<span style="color:#8be9fd;font-style:italic">print</span>(desc[<span style="color:#f1fa8c">&#39;A&#39;</span>])
 
-</code></pre></div></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <!--list-separator-->
 <ul>
 <li>
 <p>切片</p>
 <p>一个 [] 切出来是一个 Series，两个[[]] 则是 dataframe</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#e6db74">&#34;A&#34;</span>] <span style="color:#75715e"># return the column A as Series</span>
-df[[<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>]] <span style="color:#75715e"># return column AB as a new df</span>
-</code></pre></div></li>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#f1fa8c">&#34;A&#34;</span>] <span style="color:#6272a4"># return the column A as Series</span>
+df[[<span style="color:#f1fa8c">&#34;A&#34;</span>, <span style="color:#f1fa8c">&#34;B&#34;</span>]] <span style="color:#6272a4"># return column AB as a new df</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <!--list-separator-->
 <ul>
 <li>
 <p>排序</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df<span style="color:#f92672">.</span>sort_values(by <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>], ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>))
-</code></pre></div></li>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8be9fd;font-style:italic">print</span>(df<span style="color:#ff79c6">.</span>sort_values(by <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;A&#39;</span>, <span style="color:#f1fa8c">&#39;B&#39;</span>], ascending<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>))
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <!--list-separator-->
 <ul>
 <li>
 <p>筛选</p>
 <p>向量化操作会更快，条件中间用&amp;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df[df[<span style="color:#e6db74">&#34;A&#34;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span>])
-</code></pre></div></li>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8be9fd;font-style:italic">print</span>(df[df[<span style="color:#f1fa8c">&#34;A&#34;</span>]<span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">0</span>])
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <!--list-separator-->
 <ul>
@@ -216,27 +527,52 @@ df[[<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">
 <li>
 <p>合并</p>
 <p>两个 dataframe 合并，操作中 how 必须是 One of &lsquo;left&rsquo;, &lsquo;right&rsquo;, &lsquo;outer&rsquo;, &lsquo;inner&rsquo;. Defaults to inner.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">left <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: [<span style="color:#e6db74">&#39;foo&#39;</span>, <span style="color:#e6db74">&#39;bar&#39;</span>], <span style="color:#e6db74">&#39;lval&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]})
-right <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: [<span style="color:#e6db74">&#39;foo&#39;</span>, <span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#e6db74">&#34;etc&#34;</span>], <span style="color:#e6db74">&#39;rval&#39;</span>: [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]})
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">left <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame({<span style="color:#f1fa8c">&#39;key&#39;</span>: [<span style="color:#f1fa8c">&#39;foo&#39;</span>, <span style="color:#f1fa8c">&#39;bar&#39;</span>], <span style="color:#f1fa8c">&#39;lval&#39;</span>: [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>]})
+right <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame({<span style="color:#f1fa8c">&#39;key&#39;</span>: [<span style="color:#f1fa8c">&#39;foo&#39;</span>, <span style="color:#f1fa8c">&#39;bar&#39;</span>, <span style="color:#f1fa8c">&#34;etc&#34;</span>], <span style="color:#f1fa8c">&#39;rval&#39;</span>: [<span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>]})
 
-print(pd<span style="color:#f92672">.</span>merge(left, right, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;key&#34;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span>))
-</code></pre></div></li>
+<span style="color:#8be9fd;font-style:italic">print</span>(pd<span style="color:#ff79c6">.</span>merge(left, right, on<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;key&#34;</span>, how<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;left&#34;</span>))
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <!--list-separator-->
 <ul>
 <li>
 <p><code>group_by</code></p>
 <p>return (group, df_in_group)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame(
     {
-        <span style="color:#e6db74">&#34;A&#34;</span>: [<span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>, <span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>, <span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>, <span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;foo&#34;</span>],
-        <span style="color:#e6db74">&#34;B&#34;</span>: [<span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#e6db74">&#34;three&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#e6db74">&#34;three&#34;</span>],
-        <span style="color:#e6db74">&#34;C&#34;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">8</span>),
-        <span style="color:#e6db74">&#34;D&#34;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">8</span>),
+        <span style="color:#f1fa8c">&#34;A&#34;</span>: [<span style="color:#f1fa8c">&#34;foo&#34;</span>, <span style="color:#f1fa8c">&#34;bar&#34;</span>, <span style="color:#f1fa8c">&#34;foo&#34;</span>, <span style="color:#f1fa8c">&#34;bar&#34;</span>, <span style="color:#f1fa8c">&#34;foo&#34;</span>, <span style="color:#f1fa8c">&#34;bar&#34;</span>, <span style="color:#f1fa8c">&#34;foo&#34;</span>, <span style="color:#f1fa8c">&#34;foo&#34;</span>],
+        <span style="color:#f1fa8c">&#34;B&#34;</span>: [<span style="color:#f1fa8c">&#34;one&#34;</span>, <span style="color:#f1fa8c">&#34;one&#34;</span>, <span style="color:#f1fa8c">&#34;two&#34;</span>, <span style="color:#f1fa8c">&#34;three&#34;</span>, <span style="color:#f1fa8c">&#34;two&#34;</span>, <span style="color:#f1fa8c">&#34;two&#34;</span>, <span style="color:#f1fa8c">&#34;one&#34;</span>, <span style="color:#f1fa8c">&#34;three&#34;</span>],
+        <span style="color:#f1fa8c">&#34;C&#34;</span>: np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>randn(<span style="color:#bd93f9">8</span>),
+        <span style="color:#f1fa8c">&#34;D&#34;</span>: np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>randn(<span style="color:#bd93f9">8</span>),
     }
 )
-print(df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#34;A&#34;</span>)<span style="color:#f92672">.</span>sum())
-</code></pre></div></li>
+<span style="color:#8be9fd;font-style:italic">print</span>(df<span style="color:#ff79c6">.</span>groupby(<span style="color:#f1fa8c">&#34;A&#34;</span>)<span style="color:#ff79c6">.</span>sum())
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <!--list-separator-->
 <ul>
@@ -248,8 +584,15 @@ print(df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">
 <li>
 <p>index</p>
 <p>针对不同的索引构建透视表</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#f92672">.</span>pivot_table(df,index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>])
-</code></pre></div></li>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#ff79c6">.</span>pivot_table(df,index<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;a&#39;</span>, <span style="color:#f1fa8c">&#39;b&#39;</span>])
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
  <!--list-separator-->
 <ul>
@@ -271,49 +614,111 @@ print(df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">
 <h4 id="dropna"><code>dropna</code></h4>
 <p><code>df.dropna()</code> 删除掉空值</p>
 <h4 id="cut"><code>cut</code></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#ae81ff">0</span>:[i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>)]})
-cutted <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>cut(df[<span style="color:#ae81ff">0</span>], bins<span style="color:#f92672">=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">101</span>])
-print(cutted)
-</code></pre></div><h4 id="value-counts"><code>value_counts</code></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(cutted<span style="color:#f92672">.</span>value_counts())
-</code></pre></div><h2 id="stats-models">stats-models</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame({<span style="color:#bd93f9">0</span>:[i <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">100</span>)]})
+cutted <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>cut(df[<span style="color:#bd93f9">0</span>], bins<span style="color:#ff79c6">=</span>[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">50</span>, <span style="color:#bd93f9">101</span>])
+<span style="color:#8be9fd;font-style:italic">print</span>(cutted)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="value-counts"><code>value_counts</code></h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8be9fd;font-style:italic">print</span>(cutted<span style="color:#ff79c6">.</span>value_counts())
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="stats-models">stats-models</h2>
 <p>可以视作 stata 的替代品，也有部分机器学习算法（目前机器学习最流行的框架是 pytorch ）</p>
 <p>文档：<a href="https://www.statsmodels.org/stable/gettingstarted.html">https://www.statsmodels.org/stable/gettingstarted.html</a></p>
 <h3 id="ols-回归">OLS 回归</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>datasets<span style="color:#f92672">.</span>get_rdataset(<span style="color:#e6db74">&#34;Guerry&#34;</span>, <span style="color:#e6db74">&#34;HistData&#34;</span>)<span style="color:#f92672">.</span>data <span style="color:#75715e"># data loader, use pandas</span>
-x <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;Literacy&#39;</span>, <span style="color:#e6db74">&#39;Wealth&#39;</span>]]
-y <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;Lottery&#39;</span>]
-model <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(y, x)
-result <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit()
-print(result<span style="color:#f92672">.</span>summary())
-<span style="color:#75715e"># print(result.summary().as_latex())</span>
-</code></pre></div><h4 id="获得参数">获得参数</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(result<span style="color:#f92672">.</span>params)
-print(result<span style="color:#f92672">.</span>rsquared)
-print(result<span style="color:#f92672">.</span>pvalue)
-</code></pre></div><h3 id="其他">其他</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#ff79c6">=</span> sm<span style="color:#ff79c6">.</span>datasets<span style="color:#ff79c6">.</span>get_rdataset(<span style="color:#f1fa8c">&#34;Guerry&#34;</span>, <span style="color:#f1fa8c">&#34;HistData&#34;</span>)<span style="color:#ff79c6">.</span>data <span style="color:#6272a4"># data loader, use pandas</span>
+x <span style="color:#ff79c6">=</span> df[[<span style="color:#f1fa8c">&#39;Literacy&#39;</span>, <span style="color:#f1fa8c">&#39;Wealth&#39;</span>]]
+y <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;Lottery&#39;</span>]
+model <span style="color:#ff79c6">=</span> sm<span style="color:#ff79c6">.</span>OLS(y, x)
+result <span style="color:#ff79c6">=</span> model<span style="color:#ff79c6">.</span>fit()
+<span style="color:#8be9fd;font-style:italic">print</span>(result<span style="color:#ff79c6">.</span>summary())
+<span style="color:#6272a4"># print(result.summary().as_latex())</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="获得参数">获得参数</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8be9fd;font-style:italic">print</span>(result<span style="color:#ff79c6">.</span>params)
+<span style="color:#8be9fd;font-style:italic">print</span>(result<span style="color:#ff79c6">.</span>rsquared)
+<span style="color:#8be9fd;font-style:italic">print</span>(result<span style="color:#ff79c6">.</span>pvalue)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="其他">其他</h3>
 <p><a href="https://www.statsmodels.org/stable/examples/notebooks/generated/ordinal%5Fregression.html?highlight=logistic">https://www.statsmodels.org/stable/examples/notebooks/generated/ordinal%5Fregression.html?highlight=logistic</a></p>
 <h2 id="matplotlib">matplotlib</h2>
 <p><a href="https://matplotlib.org/stable/tutorials/index">https://matplotlib.org/stable/tutorials/index</a></p>
 <p>基础的作图，对标 Matlab</p>
 <h3 id="中文">中文</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>]<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;SimHei&#39;</span>] <span style="color:#75715e">#用来正常显示中文标签</span>
-plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>]<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>
-</code></pre></div><p>&lt;&gt;</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#ff79c6">.</span>rcParams[<span style="color:#f1fa8c">&#39;font.sans-serif&#39;</span>]<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;SimHei&#39;</span>] <span style="color:#6272a4">#用来正常显示中文标签</span>
+plt<span style="color:#ff79c6">.</span>rcParams[<span style="color:#f1fa8c">&#39;axes.unicode_minus&#39;</span>]<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>&lt;&gt;</p>
 <h3 id="example">example</h3>
 <p>pyplot 是 matplotlib 暴露给我们的接口，可以用 plt.plot 作图</p>
 <p>教程：<a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html">https://matplotlib.org/stable/tutorials/introductory/pyplot.html</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">100</span>)
-y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sin(x)
-plt<span style="color:#f92672">.</span>plot(x,y)
-filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plts/example.png&#34;</span>
-plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;example&#34;</span>)
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;X&#34;</span>)
-plt<span style="color:#f92672">.</span>savefig(filename)
-<span style="color:#66d9ef">return</span> filename
-</code></pre></div><p>&lt;&gt;</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> matplotlib.pyplot <span style="color:#ff79c6">as</span> plt
+<span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
+x <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>linspace(<span style="color:#ff79c6">-</span><span style="color:#bd93f9">5</span>,<span style="color:#bd93f9">5</span>,<span style="color:#bd93f9">100</span>)
+y <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>sin(x)
+plt<span style="color:#ff79c6">.</span>plot(x,y)
+filename<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;plts/example.png&#34;</span>
+plt<span style="color:#ff79c6">.</span>title(<span style="color:#f1fa8c">&#34;example&#34;</span>)
+plt<span style="color:#ff79c6">.</span>xlabel(<span style="color:#f1fa8c">&#34;X&#34;</span>)
+plt<span style="color:#ff79c6">.</span>savefig(filename)
+<span style="color:#ff79c6">return</span> filename
+</code></pre></td></tr></table>
+</div>
+</div><p>&lt;&gt;</p>
 <h4 id="具体">具体</h4>
 <table>
 <thead>
@@ -337,30 +742,173 @@ plt<span style="color:#f92672">.</span>savefig(filename)
 <p>seaborn 是封装了 matplotlib 的又一层接口，相较 matplotlib 默认更美观</p>
 <p>教程：<a href="https://seaborn.pydata.org/tutorial.html">https://seaborn.pydata.org/tutorial.html</a></p>
 <h3 id="matplotlib-use-seaborn-style">matplotlib use seaborn style</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#34;seaborn&#34;</span>)
-<span style="color:#75715e"># or</span>
-sns<span style="color:#f92672">.</span>set()
-</code></pre></div>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#ff79c6">.</span>style<span style="color:#ff79c6">.</span>use(<span style="color:#f1fa8c">&#34;seaborn&#34;</span>)
+<span style="color:#6272a4"># or</span>
+sns<span style="color:#ff79c6">.</span>set()
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&text=python%20and%20mathematics" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&is_video=false&description=python%20and%20mathematics" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=python%20and%20mathematics&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&name=python%20and%20mathematics&description=%3cp%3e%e4%b8%80%e4%ba%9b%e6%9c%89%e5%85%b3%20python%20%e5%92%8c%e6%95%b0%e5%ad%a6%e7%9a%84%e7%ac%94%e8%ae%b0%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&t=python%20and%20mathematics" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
 </div>
 
-        </div><div id="footer" class="mb-5">
-    <hr>
-    <div class="container text-center">
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
         
-            <a href="https://github.com/ernestDong/" class="fab fa-github fa-1x" title="GitHub"></a>
-        
-            <a href="https://www.linkedin.com/in/%e6%99%a8%e9%98%b3-%e8%91%a3-918ab41b4/" class="fab fa-linkedin-in fa-1x" title="LinkedIn"></a>
-        
-            <a href="https://www.instagram.com/ernestdong2000/" class="fab fa-instagram fa-1x" title="Instagram"></a>
-        
-            <a href="mailto:dongcy2000@outlook.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
-        
-    </div>
-    
-        <div class="container text-center">
-            <a href="https://github.com/ojroques/hugo-researcher" title="By Olivier Roques"><small>By Olivier Roques</small></a>
-        </div>
-    
-</div>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
 </body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

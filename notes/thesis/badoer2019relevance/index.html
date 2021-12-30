@@ -1,64 +1,116 @@
 <!DOCTYPE html>
-<html lang=""><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> The relevance of credit ratings in transparent bond markets | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/badoer2019relevance/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="The relevance of credit ratings in transparent bond markets" />
+<meta property="og:description" content="The relevance of credit ratings in transparent bond markets
+主题 信息更透明，评级机构的作用
+本文考察了通过TRACE系统对公司债券交易的公开披露如何影响
+ 信用评级的信息含量 评级和利差的相关性  数据 债券评级和其他债券特征的信息；
+从增强型跟踪数据库(TRACE)获得二级市场债券交易数据；
+获得每日股票回报 从每月标普长期发行人评级、季度收益公告日期以及来自来自美国证券交易委员会(SEC)电子数据收集、分析和检索(EDGAR)系统的公司8-K、10-Q和10-K财务信息； 以及来自 Fred 的每日国债收益率和每月消费者物价指数的信息。
+ 公司债务证券通常在交易商介入的分散的场外交易市场进行交易。虽然纽约证券交易所也有一些交易活动，但只有一小部分债券发行在那里上市，很大一部分上市证券的交易是在场外进行的
+美国法规要求通过贸易报告和合规引擎(TRACE)实时公开发布公司债务证券的所有场外交易(OTC)交易的信息(包括交易价格、收益率和交易量)。在2002年7月引入TRACE之前，公司债券市场是美国最不透明的证券市场之一：DEALER 报价和完成的交易都没有广泛或连续地报告，导致价格不高过去的研究记录了引入跟踪扩散后债券价格分散度的显著下降，这表明一旦最近交易的价格变得众所周知，投资者就可以更好地评估向他们提供的价格的公平性。
+ 分析方法 信息披露将评级下调对股价的平均短期影响从3.7%降低到0.9%，这表明市场价格的透明度减少了信息差距，从而减少了对中介机构的依赖。
+当发行人是CDS参考实体或在交易所有未偿还债券交易，或者股票分析师提出更可靠的收益预测时，传播的影响较小。我们还发现，有证据表明，评级机构在发布后提供了更及时和更准确的评级。最后，我们认为，传播增强了信用利差预测未来违约的能力，并增加了重要信用事件之前从债券市场到股票市场的信息流动，这与透明市场中更有效的信息聚集和传递是一致的。
+模型 面板数据回归，固定效应和随机效应
+结论 本文研究了公司债券二级市场强制价格透明度对信用评级信息含量的影响。
+ 公开已完成交易的价格极大地降低了评级下调对证券价格的影响，特别是在无法获得基于市场的信用质量替代指标的情况下。 评级在发布后对信用利差的变化变得更加敏感。 信息传播增强了信用利差预测未来违约的能力，增加了重要信用事件发生前从债券市场到股票市场的信息流，这与市场价格在透明市场中更有效地发挥其信息聚集和传递作用是一致的。  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/badoer2019relevance/" /><meta property="article:section" content="notes" />
 
-    <title>The relevance of credit ratings in transparent bond markets</title>
-    <meta name="description" content="A Sisyphus Rolling Up Rock">
-    <meta name="author" content='Ernest Dong'>
+<meta property="article:modified_time" content="2021-12-09T22:25:15+08:00" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
 
-    
-    <link rel="stylesheet" href="/sass/researcher.min.css">
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The relevance of credit ratings in transparent bond markets"/>
+<meta name="twitter:description" content="The relevance of credit ratings in transparent bond markets
+主题 信息更透明，评级机构的作用
+本文考察了通过TRACE系统对公司债券交易的公开披露如何影响
+ 信用评级的信息含量 评级和利差的相关性  数据 债券评级和其他债券特征的信息；
+从增强型跟踪数据库(TRACE)获得二级市场债券交易数据；
+获得每日股票回报 从每月标普长期发行人评级、季度收益公告日期以及来自来自美国证券交易委员会(SEC)电子数据收集、分析和检索(EDGAR)系统的公司8-K、10-Q和10-K财务信息； 以及来自 Fred 的每日国债收益率和每月消费者物价指数的信息。
+ 公司债务证券通常在交易商介入的分散的场外交易市场进行交易。虽然纽约证券交易所也有一些交易活动，但只有一小部分债券发行在那里上市，很大一部分上市证券的交易是在场外进行的
+美国法规要求通过贸易报告和合规引擎(TRACE)实时公开发布公司债务证券的所有场外交易(OTC)交易的信息(包括交易价格、收益率和交易量)。在2002年7月引入TRACE之前，公司债券市场是美国最不透明的证券市场之一：DEALER 报价和完成的交易都没有广泛或连续地报告，导致价格不高过去的研究记录了引入跟踪扩散后债券价格分散度的显著下降，这表明一旦最近交易的价格变得众所周知，投资者就可以更好地评估向他们提供的价格的公平性。
+ 分析方法 信息披露将评级下调对股价的平均短期影响从3.7%降低到0.9%，这表明市场价格的透明度减少了信息差距，从而减少了对中介机构的依赖。
+当发行人是CDS参考实体或在交易所有未偿还债券交易，或者股票分析师提出更可靠的收益预测时，传播的影响较小。我们还发现，有证据表明，评级机构在发布后提供了更及时和更准确的评级。最后，我们认为，传播增强了信用利差预测未来违约的能力，并增加了重要信用事件之前从债券市场到股票市场的信息流动，这与透明市场中更有效的信息聚集和传递是一致的。
+模型 面板数据回归，固定效应和随机效应
+结论 本文研究了公司债券二级市场强制价格透明度对信用评级信息含量的影响。
+ 公开已完成交易的价格极大地降低了评级下调对证券价格的影响，特别是在无法获得基于市场的信用质量替代指标的情况下。 评级在发布后对信用利差的变化变得更加敏感。 信息传播增强了信用利差预测未来违约的能力，增加了重要信用事件发生前从债券市场到股票市场的信息流，这与市场价格在透明市场中更有效地发挥其信息聚集和传递作用是一致的。  "/>
 
-    
-        <link rel="icon" type="image/ico" href="https://ernestdong.github.io/images/favicon.ico">
-    
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.94f653e9e151e28067a7c5dbbc4600cbd5a3c721e79faaf971e523c40f3b249b8e4f20bb57810dfffa8d559ca5c140fd56eb4cd9c0853113ad08e66afdb08bdd.css" integrity="sha512-lPZT6eFR4oBnp8XbvEYAy9WjxyHnn6r5ceUjxA87JJuOTyC7V4EN//qNVZylwUD9VutM2cCFMROtCOZq/bCL3Q=="> 
 
-    
-        
-    
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
 </head>
 
-    <body><div class="container mt-5">
-    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-        <a class="navbar-brand mx-0 mr-sm-auto" href="https://ernestdong.github.io" title="Ernest Dong">
-          
-          Ernest Dong
-        </a>
-        <div class="navbar-nav flex-row flex-wrap justify-content-center">
-            
-                
-                
-                    <a class="nav-item nav-link" href="/notes" title="Notes">
-                        Notes
-                    </a>
-                    
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    
-                
-                    <a class="nav-item nav-link" href="/posts" title="Posts">
-                        Posts
-                    </a>
-                    
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    
-                
-                    <a class="nav-item nav-link" href="/files/resume.pdf" title="Resume">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
-                    </a>
-                    
-                
-            
-        </div>
-    </nav>
-</div>
-<hr>
-<div id="content">
-<div class="container">
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+    <header id="header">
+  <a href="https://ernestdong.github.io">
+  
+    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+  
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
+      </li>
+      
+        <li><a href="/notes">Notes</a></li>
+      
+        <li><a href="/posts">Posts</a></li>
+      
+        <li><a href="/tags">Tags</a></li>
+      
+        <li><a href="/readme/index.html">About</a></li>
+      
+        <li><a href="/files/resume.pdf">Resume</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+
+
+    
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="content" itemprop="articleBody">
+  
     <p><a href="https://www.paris-december.eu/sites/default/files/pdf/parismeeting/2017/badoer%5F2017.pdfjournalThe%20Review%20of%20Financial%20Studies">The relevance of credit ratings in transparent bond markets</a></p>
 <h2 id="主题">主题</h2>
 <p>信息更透明，评级机构的作用</p>
@@ -90,26 +142,39 @@
 <li>信息传播增强了信用利差预测未来违约的能力，增加了重要信用事件发生前从债券市场到股票市场的信息流，这与市场价格在透明市场中更有效地发挥其信息聚集和传递作用是一致的。</li>
 </ol>
 
-</div>
+  
+  </div>
+</article>
 
-        </div><div id="footer" class="mb-5">
-    <hr>
-    <div class="container text-center">
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
         
-            <a href="https://github.com/ernestDong/" class="fab fa-github fa-1x" title="GitHub"></a>
-        
-            <a href="https://www.linkedin.com/in/%e6%99%a8%e9%98%b3-%e8%91%a3-918ab41b4/" class="fab fa-linkedin-in fa-1x" title="LinkedIn"></a>
-        
-            <a href="https://www.instagram.com/ernestdong2000/" class="fab fa-instagram fa-1x" title="Instagram"></a>
-        
-            <a href="mailto:dongcy2000@outlook.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
-        
-    </div>
-    
-        <div class="container text-center">
-            <a href="https://github.com/ojroques/hugo-researcher" title="By Olivier Roques"><small>By Olivier Roques</small></a>
-        </div>
-    
-</div>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
 </body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
 </html>
