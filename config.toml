@@ -46,8 +46,6 @@ enableEmoji = true
     name = "Resume"
     url = "/files/resume.pdf"
     weight = 5
-[markup.goldmark.renderer]
-  unsafe = true  # allow raw HTML in markdown files
 [markup]
   [markup.highlight]
     codeFences = true
@@ -59,3 +57,5 @@ enableEmoji = true
     noClasses = true
     style = "dracula"
     tabWidth = 4
+[markup.goldmark.renderer]
+  unsafe= true
