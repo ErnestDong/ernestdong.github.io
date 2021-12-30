@@ -5,7 +5,20 @@
     <link>https://ernestdong.github.io/</link>
     <description>Recent content on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Dec 2021 16:55:07 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doom Emacs 写论文的小 tweak</title>
+      <link>https://ernestdong.github.io/posts/doom-thesis/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/doom-thesis/</guid>
+      <description>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。
+emacs = jabref + onenote + tex studio
+和学术搜索集成 org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web of science 这样的功能。切换到 vertico、用 org-mode 的 cite 之后 org-ref 显得有些重了，我想到了 doom 的 lookup 功能。
+1 2 3 4 5 6 7  (setq! +lookup-provider-url-alist &amp;#39;( (&amp;#34;Google&amp;#34; +lookup--online-backend-google &amp;#34;https://google.com/search?q=%s&amp;#34;) (&amp;#34;DevDocs.io&amp;#34; &amp;#34;https://devdocs.io/#q=%s&amp;#34;) (&amp;#34;Google Scholar&amp;#34; &amp;#34;https://scholar.google.com/scholar?q=%s&amp;#34;) (&amp;#34;Xueshu&amp;#34; &amp;#34;https://xueshu.baidu.com/s?wd=%s&amp;#34;) (&amp;#34;Github&amp;#34; &amp;#34;https://github.com/search?ref=simplesearch&amp;amp;q=%s&amp;#34;)))   这样用 K 就在这些学术搜索网站上搜到相应论文，下载后在 bibtex entry 中添加文件路径（利用 embark）
+org-roam-bibtex 每周跟老师汇报读文献进展，用 org-roam-bibtex 配合 org-roam 做摘要，显得比老师给的用 excel 好看些（Intel Mac excel 太卡了，还容易崩溃）。分类是老师给我的示例做的，配合 org-cite 而非 org-ref。</description>
+    </item>
+    
     <item>
       <title>已读已汇报文献</title>
       <link>https://ernestdong.github.io/notes/thesis_archive/</link>
