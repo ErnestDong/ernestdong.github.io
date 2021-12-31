@@ -84,7 +84,7 @@ all-the-icons-completion 增加类似 all-the-icons-ivy-rich 的 icon
     (t "")))
 ```
 
-[example](https://emacs-china.org/uploads/default/original/3X/8/8/88e62c52a5894a0348d34638860d656aef4fba3f.png)
+![example](https://emacs-china.org/uploads/default/original/3X/8/8/88e62c52a5894a0348d34638860d656aef4fba3f.png)
 
 
 ## 复制 PDF 之后粘贴去掉空格 {#复制-pdf-之后粘贴去掉空格}
