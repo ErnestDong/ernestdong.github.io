@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/%E4%BD%95%E9%9D%922018%E4%B8%AD%E5%9B%BD%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E7%9A%84%E5%BA%A6%E9%87%8F%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%BB%8F%E6%B5%8E%E7%9A%84%E8%A7%86%E8%A7%92/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/traczynski2017firm/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -112,8 +117,89 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="https://www.nber.org/system/files/working%5Fpapers/w20638/w20638.pdf">Quantifying liquidity and default risks of corporate bonds over the business cycle</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&text=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&title=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&is_video=false&description=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&title=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&title=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&name=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle&description=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle%20%e4%b8%bb%e9%a2%98%20%28Longstaff%2c%20Mithal%2c%20and%20Neis%202005%29%20%e4%bc%b0%e8%ae%a1%e2%80%9cnon-default%20components%e2%80%9d%20%e5%8d%a0%e5%88%a9%e5%b7%aeAAA%20%e6%88%96%20AA%20%e7%9a%84%e7%ba%a6%2050%25%ef%bc%8cBaa%20%e7%9a%8430%25%ef%bc%8c%e4%b8%94%20non-default%20components%20of" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&t=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Quantifying liquidity and default risks of corporate bonds over the business cycle
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-12-09 22:14:42 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://www.nber.org/system/files/working%5Fpapers/w20638/w20638.pdf">Quantifying liquidity and default risks of corporate bonds over the business cycle</a></p>
 <h2 id="主题">主题</h2>
 <p>(<a href="#citeproc_bib_item_1">Longstaff, Mithal, and Neis 2005</a>) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity</p>
 <h2 id="数据">数据</h2>
@@ -136,12 +222,111 @@
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Longstaff, Francis A, Sanjay Mithal, and Eric Neis. 2005. “Corporate Yield Spreads: Default Risk or Liquidity? New Evidence from the Credit Default Swap Market.” <i>The Journal of Finance</i> 60 (5): 2213–53.</div>
 </div>
 
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&text=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&title=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&is_video=false&description=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&title=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&title=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&name=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle&description=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle%20%e4%b8%bb%e9%a2%98%20%28Longstaff%2c%20Mithal%2c%20and%20Neis%202005%29%20%e4%bc%b0%e8%ae%a1%e2%80%9cnon-default%20components%e2%80%9d%20%e5%8d%a0%e5%88%a9%e5%b7%aeAAA%20%e6%88%96%20AA%20%e7%9a%84%e7%ba%a6%2050%25%ef%bc%8cBaa%20%e7%9a%8430%25%ef%bc%8c%e4%b8%94%20non-default%20components%20of" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchen2018quantifying%2f&t=Quantifying%20liquidity%20and%20default%20risks%20of%20corporate%20bonds%20over%20the%20business%20cycle" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -171,4 +356,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

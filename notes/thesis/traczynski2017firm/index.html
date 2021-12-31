@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/chen2018quantifying/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/mo2021china/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -112,8 +117,89 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="https://eds.s.ebscohost.com/eds/pdfviewer/pdfviewer?vid=1&amp;sid=2b984d92-27ba-4a57-8855-814ffa7c4f73%5C%40redis">Firm default prediction: a bayesian model-averaging approach</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&text=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&title=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&is_video=false&description=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&title=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&title=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&name=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach&description=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach%20%e4%b8%bb%e9%a2%98%20%e5%88%a9%e7%94%a8%e8%b4%9d%e5%8f%b6%e6%96%af%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e8%bf%9d%e7%ba%a6%20%e4%bc%a0%e7%bb%9f%e5%88%86%e6%9e%90%e6%96%b9%e6%b3%95%e4%b8%a5%e9%87%8d%e4%be%9d%e8%b5%96%e4%ba%8e%e9%a6%96%e5%85%88%e8%af%86%e5%88%ab%e5%87%ba%e8%bf%9d%e7%ba%a6%e7%9a%84%e5%9b%a0%e5%ad%90%ef%bc%8c%e5%ad%98%e5%9c%a8%20model%20uncertainty%20%e9%80%89%e6%8b%a9%e8%b4%9d%e5%8f%b6%e6%96%af%e6%98%af%e5%9b%a0%e4%b8%ba%20Techniques%20incorporating%20uncertainty%20in%20linear%20models%20do%20not%20immediately%20translate%20to%20nonlinear%20hazard%20models%20%e6%95%b0%e6%8d%ae" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&t=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Firm default prediction: a bayesian model-averaging approach
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-12-09 22:24:43 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://eds.s.ebscohost.com/eds/pdfviewer/pdfviewer?vid=1&amp;sid=2b984d92-27ba-4a57-8855-814ffa7c4f73%5C%40redis">Firm default prediction: a bayesian model-averaging approach</a></p>
 <h2 id="主题">主题</h2>
 <p>利用贝叶斯模型预测违约</p>
 <p>传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty</p>
@@ -211,12 +297,111 @@
 <h2 id="结论">结论</h2>
 <p>only the ratio of total liabilities to total assets and the inverse of the annualized volatility of firm market equity are robust predictors of bankruptcy and default and that models using only these two variables better predict bankruptcies and defaults for all firms than  models  using  all available co-variate.</p>
 
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&text=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&title=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&is_video=false&description=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&title=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&title=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&name=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach&description=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach%20%e4%b8%bb%e9%a2%98%20%e5%88%a9%e7%94%a8%e8%b4%9d%e5%8f%b6%e6%96%af%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e8%bf%9d%e7%ba%a6%20%e4%bc%a0%e7%bb%9f%e5%88%86%e6%9e%90%e6%96%b9%e6%b3%95%e4%b8%a5%e9%87%8d%e4%be%9d%e8%b5%96%e4%ba%8e%e9%a6%96%e5%85%88%e8%af%86%e5%88%ab%e5%87%ba%e8%bf%9d%e7%ba%a6%e7%9a%84%e5%9b%a0%e5%ad%90%ef%bc%8c%e5%ad%98%e5%9c%a8%20model%20uncertainty%20%e9%80%89%e6%8b%a9%e8%b4%9d%e5%8f%b6%e6%96%af%e6%98%af%e5%9b%a0%e4%b8%ba%20Techniques%20incorporating%20uncertainty%20in%20linear%20models%20do%20not%20immediately%20translate%20to%20nonlinear%20hazard%20models%20%e6%95%b0%e6%8d%ae" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ftraczynski2017firm%2f&t=Firm%20default%20prediction%3a%20a%20bayesian%20model-averaging%20approach" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -246,4 +431,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

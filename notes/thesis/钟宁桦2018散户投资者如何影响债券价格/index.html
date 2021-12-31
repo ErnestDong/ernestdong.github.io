@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52021%E7%A7%81%E6%9C%89%E4%BF%A1%E6%81%AF/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -112,8 +117,89 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="/ox-hugo/%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC_%E2%80%94%E2%80%94...%E4%BA%8E%E4%BA%A4%E6%98%93%E6%89%80%E5%90%8C%E4%B8%80%E5%8F%AA%E4%BF%A1%E7%94%A8%E5%80%BA%E7%9A%84%E4%BB%B7%E6%A0%BC%E5%B7%AE%E5%88%86%E6%9E%90_%E9%92%9F%E5%AE%81%E6%A1%A6.pdf">散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&text=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&title=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&is_video=false&description=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&title=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&title=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&name=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90&description=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90%20%e4%b8%bb%e9%a2%98%20%e5%90%88%e6%a0%bc%e6%8a%95%e8%b5%84%e8%80%85%e5%a4%a7%e2%80%9c%e6%95%a3%e6%88%b7%e2%80%9d%20%e5%85%b6%e8%ae%a4%e4%b8%ba%e6%9c%ba%e6%9e%84%e6%b2%a1%e6%9c%89%e5%af%b9%e9%ab%98%e6%94%b6%e7%9b%8a%e7%9a%84%e5%81%8f%e5%a5%bd%ef%bc%8c%e5%8f%aa%e6%9c%89%e6%95%a3%e6%88%b7%e6%9c%89%e3%80%82%e4%ba%8b%e5%ae%9e%e5%ba%94%e8%af%a5" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&t=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-11-28 10:46:05 &#43;0800 &#43;0800" itemprop="datePublished">2021-11-28</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="/ox-hugo/%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC_%E2%80%94%E2%80%94...%E4%BA%8E%E4%BA%A4%E6%98%93%E6%89%80%E5%90%8C%E4%B8%80%E5%8F%AA%E4%BF%A1%E7%94%A8%E5%80%BA%E7%9A%84%E4%BB%B7%E6%A0%BC%E5%B7%AE%E5%88%86%E6%9E%90_%E9%92%9F%E5%AE%81%E6%A1%A6.pdf">散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</a></p>
 <h2 id="主题">主题</h2>
 <p>合格投资者大“散户”</p>
 <p>其认为机构没有对高收益的偏好，只有散户有。事实应该是机构和散户都有一定的刚兑信仰</p>
@@ -131,12 +217,111 @@
 <p>“城投债危机”期间，竞价交易与大宗交易的价格差为负，散户需求效应更大以及西部地区的债券价格差更小(负的更多)。</p>
 <p>“城投债危机”期间，隐性担保能力越大的地区发行的债券价格差更大(负的更少)。</p>
 
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&text=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&title=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&is_video=false&description=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&title=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&title=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&name=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90&description=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90%20%e4%b8%bb%e9%a2%98%20%e5%90%88%e6%a0%bc%e6%8a%95%e8%b5%84%e8%80%85%e5%a4%a7%e2%80%9c%e6%95%a3%e6%88%b7%e2%80%9d%20%e5%85%b6%e8%ae%a4%e4%b8%ba%e6%9c%ba%e6%9e%84%e6%b2%a1%e6%9c%89%e5%af%b9%e9%ab%98%e6%94%b6%e7%9b%8a%e7%9a%84%e5%81%8f%e5%a5%bd%ef%bc%8c%e5%8f%aa%e6%9c%89%e6%95%a3%e6%88%b7%e6%9c%89%e3%80%82%e4%ba%8b%e5%ae%9e%e5%ba%94%e8%af%a5" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2592%259F%25E5%25AE%2581%25E6%25A1%25A62018%25E6%2595%25A3%25E6%2588%25B7%25E6%258A%2595%25E8%25B5%2584%25E8%2580%2585%25E5%25A6%2582%25E4%25BD%2595%25E5%25BD%25B1%25E5%2593%258D%25E5%2580%25BA%25E5%2588%25B8%25E4%25BB%25B7%25E6%25A0%25BC%2f&t=%e6%95%a3%e6%88%b7%e6%8a%95%e8%b5%84%e8%80%85%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e5%80%ba%e5%88%b8%e4%bb%b7%e6%a0%bc%3f%e2%80%94%e2%80%94%e5%9f%ba%e4%ba%8e%e4%ba%a4%e6%98%93%e6%89%80%e5%90%8c%e4%b8%80%e5%8f%aa%e4%bf%a1%e7%94%a8%e5%80%ba%e7%9a%84%e4%bb%b7%e6%a0%bc%e5%b7%ae%e5%88%86%e6%9e%90" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -166,4 +351,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

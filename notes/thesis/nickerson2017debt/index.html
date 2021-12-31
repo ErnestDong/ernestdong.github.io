@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/brogaard2017stock/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/bai2019common/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -111,8 +116,97 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17301289">Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&text=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&title=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&is_video=false&description=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&title=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&title=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&name=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f&description=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f%20%e4%b8%bb%e9%a2%98%20%e7%bb%93%e6%9e%84%e5%8c%96%e4%ba%a7%e5%93%81%e4%b9%8b%e9%97%b4%e5%ad%98%e5%9c%a8%e5%85%b3%e8%81%94%e6%80%a7%ef%bc%8c%e9%a3%8e%e9%99%a9%e9%80%9a%e8%bf%87%e7%bb%93%e6%9e%84%e5%8c%96%e4%ba%a7%e5%93%81%e5%a6%82%20MBS%20%e3%80%81CDO%20%e4%bc%a0%e6%9f%93%20%e6%88%91%e4%bb%ac%e8%ae%b0%e5%bd%95%e4%ba%86%e8%af%84%e7%ba%a7%e6%9c%ba%e6%9e%84%e5%81%87%e8%ae%be%e7%9a%84%e8%bf%9d%e7%ba%a6%e7%9b%b8%e5%85%b3%e6%80%a7%ef%bc%8c%e5%b0%86%e4%bb%96%e4%bb%ac" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&t=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-12-23 16:51:49 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-23</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17301289">Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</a></p>
 <h2 id="主题">主题</h2>
 <p>结构化产品之间存在关联性，风险通过结构化产品如 MBS 、CDO 传染</p>
 <p>我们记录了评级机构假设的违约相关性，将他们的假设与我们的估计进行了对比，并量化了纳入脆弱因素(<a href="#citeproc_bib_item_1">Duffie et al. 2009</a>)的违约相关性估计对实际AAA级高级CDO部分的适当规模的影响。</p>
@@ -127,12 +221,111 @@
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Duffie, Darrell, Andreas Eckner, Guillaume Horel, and Leandro Saita. 2009. “Frailty Correlated Default.” <i>The Journal of Finance</i> 64 (5): 2089–2123.</div>
 </div>
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&text=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&title=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&is_video=false&description=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&title=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&title=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&name=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f&description=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f%20%e4%b8%bb%e9%a2%98%20%e7%bb%93%e6%9e%84%e5%8c%96%e4%ba%a7%e5%93%81%e4%b9%8b%e9%97%b4%e5%ad%98%e5%9c%a8%e5%85%b3%e8%81%94%e6%80%a7%ef%bc%8c%e9%a3%8e%e9%99%a9%e9%80%9a%e8%bf%87%e7%bb%93%e6%9e%84%e5%8c%96%e4%ba%a7%e5%93%81%e5%a6%82%20MBS%20%e3%80%81CDO%20%e4%bc%a0%e6%9f%93%20%e6%88%91%e4%bb%ac%e8%ae%b0%e5%bd%95%e4%ba%86%e8%af%84%e7%ba%a7%e6%9c%ba%e6%9e%84%e5%81%87%e8%ae%be%e7%9a%84%e8%bf%9d%e7%ba%a6%e7%9b%b8%e5%85%b3%e6%80%a7%ef%bc%8c%e5%b0%86%e4%bb%96%e4%bb%ac" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fnickerson2017debt%2f&t=Debt%20correlations%20in%20the%20wake%20of%20the%20financial%20crisis%3a%20what%20are%20appropriate%20default%20correlations%20for%20structured%20products%3f" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -162,4 +355,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

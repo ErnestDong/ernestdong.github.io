@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/traczynski2017firm/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/2020do/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -112,8 +117,89 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="https://www.sciencedirect.com/science/article/pii/S0378426621002387">China&rsquo;s no-bailout reform: impact on bond yields and rating standards</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&text=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&title=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&is_video=false&description=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&title=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&title=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&name=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards&description=China%26rsquo%3bs%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards%20%e4%b8%bb%e9%a2%98%20%e5%80%ba%e5%88%b8%e6%89%93%e7%a0%b4%e5%88%9a%e5%85%91%e5%90%8e%e5%af%b9%e8%bf%9d%e7%ba%a6%e7%8e%87%e7%9a%84%e5%88%86%e6%9e%90%ef%bc%8c%e4%bb%a5%e5%8f%8a%e5%87%ba%e7%8e%b0%e8%bf%9d%e7%ba%a6%e5%90%8e%e5%af%b9%e6%94%b6%e7%9b%8a%e7%8e%87%e5%92%8c%e8%af%84%e7%ba%a7%e6%a0%87%e5%87%86%e7%9a%84%e5%bd%b1%e5%93%8d%20%e5%9b%bd%e4%bc%81%e5%8f%91%e8%a1%8c%e4%ba%8680%25%e7%9a%84%e5%80%ba%e5%88%b8%ef%bc%8c%e4%bd%86%e8%bf%9d%e7%ba%a6%e4%b8%ad%e5%8f%aa%e5%8d%a0%e4%ba%8615%25%ef%bc%8c%e5%9b%a0" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&t=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        China&#39;s no-bailout reform: impact on bond yields and rating standards
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-12-09 22:24:54 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://www.sciencedirect.com/science/article/pii/S0378426621002387">China&rsquo;s no-bailout reform: impact on bond yields and rating standards</a></p>
 <h2 id="主题">主题</h2>
 <p>债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响</p>
 <p>国企发行了80%的债券，但违约中只占了15%，因此作者认为政府支持是存在的。</p>
@@ -258,12 +344,111 @@
 <p>2014之后，评级机构降低了评级标准，</p>
 <p>增量无救助改革措施在推动中国国内债券市场向真正的信贷市场靠拢，并提高基于风险的债券定价方面是有效的</p>
 
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&text=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&title=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&is_video=false&description=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&title=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&title=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&name=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards&description=China%26rsquo%3bs%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards%20%e4%b8%bb%e9%a2%98%20%e5%80%ba%e5%88%b8%e6%89%93%e7%a0%b4%e5%88%9a%e5%85%91%e5%90%8e%e5%af%b9%e8%bf%9d%e7%ba%a6%e7%8e%87%e7%9a%84%e5%88%86%e6%9e%90%ef%bc%8c%e4%bb%a5%e5%8f%8a%e5%87%ba%e7%8e%b0%e8%bf%9d%e7%ba%a6%e5%90%8e%e5%af%b9%e6%94%b6%e7%9b%8a%e7%8e%87%e5%92%8c%e8%af%84%e7%ba%a7%e6%a0%87%e5%87%86%e7%9a%84%e5%bd%b1%e5%93%8d%20%e5%9b%bd%e4%bc%81%e5%8f%91%e8%a1%8c%e4%ba%8680%25%e7%9a%84%e5%80%ba%e5%88%b8%ef%bc%8c%e4%bd%86%e8%bf%9d%e7%ba%a6%e4%b8%ad%e5%8f%aa%e5%8d%a0%e4%ba%8615%25%ef%bc%8c%e5%9b%a0" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmo2021china%2f&t=China%27s%20no-bailout%20reform%3a%20impact%20on%20bond%20yields%20and%20rating%20standards" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -293,4 +478,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

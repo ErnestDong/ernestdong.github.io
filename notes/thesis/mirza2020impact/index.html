@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/bai2019common/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%A0%94%E7%A9%B6/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -122,8 +127,97 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="https://www.sciencedirect.com/science/article/pii/S1062976920301125">Impact of covid-19 on corporate solvency and possible policy responses in the eu</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&text=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&title=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&is_video=false&description=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&title=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&title=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&name=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu&description=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu%20%e4%b8%bb%e9%a2%98%20%e5%88%a9%e7%94%a8%e5%a4%9a%e7%a7%8d%e6%a8%a1%e5%9e%8b%e5%8e%8b%e5%8a%9b%e6%b5%8b%e8%af%95%ef%bc%8c%e7%a0%94%e7%a9%b6%e7%96%ab%e6%83%85%e5%af%b9%e6%ac%a7%e7%9b%9f%e9%9d%9e%e9%87%91%e8%9e%8d%e4%b8%8a%e5%b8%82%e5%85%ac%e5%8f%b8%e7%9a%84%e5%81%bf%e4%bb%98%e8%83%bd%e5%8a%9b%e7%9a%84%e5%bd%b1%e5%93%8d%e3%80%82%20%e6%95%b0%e6%8d%ae%20WC%2fTA%e3%80%81RE%2fTA%e3%80%81EBIT%2fTA" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&t=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Impact of covid-19 on corporate solvency and possible policy responses in the eu
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-12-23 16:52:20 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-23</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://www.sciencedirect.com/science/article/pii/S1062976920301125">Impact of covid-19 on corporate solvency and possible policy responses in the eu</a></p>
 <h2 id="主题">主题</h2>
 <p>利用多种模型压力测试，研究疫情对欧盟非金融上市公司的偿付能力的影响。</p>
 <h2 id="数据">数据</h2>
@@ -150,12 +244,111 @@
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Ohlson, James A. 1980. “Financial Ratios and the Probabilistic Prediction of Bankruptcy.” <i>Journal of Accounting Research</i>, 109–31.</div>
 </div>
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&text=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&title=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&is_video=false&description=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&title=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&title=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&name=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu&description=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu%20%e4%b8%bb%e9%a2%98%20%e5%88%a9%e7%94%a8%e5%a4%9a%e7%a7%8d%e6%a8%a1%e5%9e%8b%e5%8e%8b%e5%8a%9b%e6%b5%8b%e8%af%95%ef%bc%8c%e7%a0%94%e7%a9%b6%e7%96%ab%e6%83%85%e5%af%b9%e6%ac%a7%e7%9b%9f%e9%9d%9e%e9%87%91%e8%9e%8d%e4%b8%8a%e5%b8%82%e5%85%ac%e5%8f%b8%e7%9a%84%e5%81%bf%e4%bb%98%e8%83%bd%e5%8a%9b%e7%9a%84%e5%bd%b1%e5%93%8d%e3%80%82%20%e6%95%b0%e6%8d%ae%20WC%2fTA%e3%80%81RE%2fTA%e3%80%81EBIT%2fTA" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fmirza2020impact%2f&t=Impact%20of%20covid-19%20on%20corporate%20solvency%20and%20possible%20policy%20responses%20in%20the%20eu" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -185,4 +378,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

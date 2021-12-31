@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62016%E8%BD%AF%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -109,8 +114,97 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="/ox-hugo/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E3%80%81%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%B3%A2%E5%8A%A8_%E7%8E%8B%E5%8D%9A.pdf">货币政策不确定性,违约风险与宏观经济波动</a>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&text=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&title=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&is_video=false&description=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&title=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&title=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&name=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8&description=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8%20%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%e7%9a%84%e5%a2%9e%e5%8a%a0%e4%bc%9a%e5%b8%a6%e6%9d%a5%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e7%9a%84%e4%b8%8a%e5%8d%87%20%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%e7%9a%84%e5%ba%a6%e9%87%8f%20%e9%80%9a%e8%bf%87%20%28Jurado%2c%20Ludvigson%2c%20and%20Ng%202015%29%20%e5%8a%a0%e6%9d%83%e5%b9%b3%e5%9d%87%e5%92%8c%e4%b8%bb%e6%88%90%e5%88%86%e5%88%86%e6%9e%90%e6%b3%95" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&t=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        货币政策不确定性,违约风险与宏观经济波动
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="/ox-hugo/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E3%80%81%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%B3%A2%E5%8A%A8_%E7%8E%8B%E5%8D%9A.pdf">货币政策不确定性,违约风险与宏观经济波动</a>
 货币政策不确定性的增加会带来违约风险的上升</p>
 <h2 id="货币政策不确定性的度量">货币政策不确定性的度量</h2>
 <p>通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法对所有的条件波动率提取公共因子得到两种货币政策的不 确定性指数。</p>
@@ -118,12 +212,111 @@
 <h2 id="宏观违约风险因子">宏观违约风险因子</h2>
 <p>信用利差的上升是信贷市场违约风险加大和经济衰退的重要预警指标(Gilchrist, Yankov, and Zakrajšek 2009)。同时，大量文献指出信贷/ GDP 缺口指标，即总信贷与 GDP 比值偏离其长期均值的部分，往往是债务违约以及银行危机的早期预警指标。信贷/GDP 缺口越大，表明信贷扩张引发债务违约和银行危机的可能性越大。本文用来测度违约风险的变量全部与违约风险正向相关。</p>
 
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&text=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&title=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&is_video=false&description=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&title=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&title=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&name=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8&description=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8%20%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%e7%9a%84%e5%a2%9e%e5%8a%a0%e4%bc%9a%e5%b8%a6%e6%9d%a5%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e7%9a%84%e4%b8%8a%e5%8d%87%20%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%e7%9a%84%e5%ba%a6%e9%87%8f%20%e9%80%9a%e8%bf%87%20%28Jurado%2c%20Ludvigson%2c%20and%20Ng%202015%29%20%e5%8a%a0%e6%9d%83%e5%b9%b3%e5%9d%87%e5%92%8c%e4%b8%bb%e6%88%90%e5%88%86%e5%88%86%e6%9e%90%e6%b3%95" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E7%258E%258B%25E5%258D%259A2019%25E8%25B4%25A7%25E5%25B8%2581%25E6%2594%25BF%25E7%25AD%2596%25E4%25B8%258D%25E7%25A1%25AE%25E5%25AE%259A%25E6%2580%25A7%2f&t=%e8%b4%a7%e5%b8%81%e6%94%bf%e7%ad%96%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%2c%e8%bf%9d%e7%ba%a6%e9%a3%8e%e9%99%a9%e4%b8%8e%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e6%b3%a2%e5%8a%a8" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -153,4 +346,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>

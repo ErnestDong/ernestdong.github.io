@@ -46,61 +46,66 @@
 
   
   
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
-    <header id="header">
-  <a href="https://ernestdong.github.io">
-  
-    <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-  
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-      </li>
-      
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <li><a href="/">Ernest</a></li>
+         
         <li><a href="/notes">Notes</a></li>
-      
+         
         <li><a href="/posts">Posts</a></li>
-      
+         
         <li><a href="/tags">Tags</a></li>
-      
+         
         <li><a href="/readme/index.html">About</a></li>
-      
+         
         <li><a href="/files/resume.pdf">Resume</a></li>
-      
-    </ul>
-  </div>
-</header>
-
-
-
-    
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="content" itemprop="articleBody">
-  
-    
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/2020fiscal/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/theses/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
@@ -112,8 +117,97 @@
   </ul>
 </nav>
     </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
     
-    <p><a href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/macroeconomic-uncertainty-premium-in-the-corporate-bond-market/AFE59386DA73CF237E36D168D090CD58">The macroeconomic uncertainty premium in the corporate bond market</a></p>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&text=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&title=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&is_video=false&description=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&title=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&title=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&name=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market&description=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market%20%e4%b8%bb%e9%a2%98%20%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%e5%9c%a8%e5%85%ac%e5%8f%b8%e5%80%ba%e5%88%b8%e6%a8%aa%e6%88%aa%e9%9d%a2%e4%b8%ad%e7%9a%84%e4%bd%9c%e7%94%a8%ef%bc%8c%e5%8f%91%e7%8e%b0%e6%8a%95%e8%b5%84%e7%ba%a7%e5%80%ba%e5%88%b8%28%e6%af%8f%e6%9c%880.40%25%29%e5%92%8c%e9%9d%9e%e6%8a%95%e8%b5%84%e7%ba%a7%e5%80%ba%e5%88%b8%28%e6%af%8f%e6%9c%880.81%25%29%e9%83%bd%e5%ad%98%e5%9c%a8%e6%98%be%e8%91%97%e7%9a%84" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&t=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        The macroeconomic uncertainty premium in the corporate bond market
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-12-23 16:53:20 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-23</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/macroeconomic-uncertainty-premium-in-the-corporate-bond-market/AFE59386DA73CF237E36D168D090CD58">The macroeconomic uncertainty premium in the corporate bond market</a></p>
 <h2 id="主题">主题</h2>
 <p>宏观经济不确定性在公司债券横截面中的作用，发现投资级债券(每月0.40%)和非投资级债券(每月0.81%)都存在显著的不确定性溢价。</p>
 <h2 id="数据">数据</h2>
@@ -135,12 +229,111 @@
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Jurado, Kyle, Sydney C Ludvigson, and Serena Ng. 2015. “Measuring Uncertainty.” <i>American Economic Review</i> 105 (3): 1177–1216.</div>
 </div>
+    </div>
+  </article>
+
   
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&text=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&title=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&is_video=false&description=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&title=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&title=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&name=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market&description=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market%20%e4%b8%bb%e9%a2%98%20%e5%ae%8f%e8%a7%82%e7%bb%8f%e6%b5%8e%e4%b8%8d%e7%a1%ae%e5%ae%9a%e6%80%a7%e5%9c%a8%e5%85%ac%e5%8f%b8%e5%80%ba%e5%88%b8%e6%a8%aa%e6%88%aa%e9%9d%a2%e4%b8%ad%e7%9a%84%e4%bd%9c%e7%94%a8%ef%bc%8c%e5%8f%91%e7%8e%b0%e6%8a%95%e8%b5%84%e7%ba%a7%e5%80%ba%e5%88%b8%28%e6%af%8f%e6%9c%880.40%25%29%e5%92%8c%e9%9d%9e%e6%8a%95%e8%b5%84%e7%ba%a7%e5%80%ba%e5%88%b8%28%e6%af%8f%e6%9c%880.81%25%29%e9%83%bd%e5%ad%98%e5%9c%a8%e6%98%be%e8%91%97%e7%9a%84" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbali2021macroeconomic%2f&t=The%20macroeconomic%20uncertainty%20premium%20in%20the%20corporate%20bond%20market" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
   </div>
-</article>
+</div>
 
 
-    <footer id="footer">
+  <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2021  Ernest Dong 
   </div>
@@ -170,4 +363,26 @@
 <link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
 <script src=/lib/jquery/jquery.min.js></script>
 <script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </html>
