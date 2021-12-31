@@ -12,11 +12,7 @@
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/posts/doom-thesis/</guid>
-      <description>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。
-emacs = jabref + onenote + tex studio
-和学术搜索集成 org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web of science 这样的功能。切换到 vertico、用 org-mode 的 cite 之后 org-ref 显得有些重了，我想到了 doom 的 lookup 功能。
-1 2 3 4 5 6 7  (setq! +lookup-provider-url-alist &amp;#39;( (&amp;#34;Google&amp;#34; +lookup--online-backend-google &amp;#34;https://google.com/search?q=%s&amp;#34;) (&amp;#34;DevDocs.io&amp;#34; &amp;#34;https://devdocs.io/#q=%s&amp;#34;) (&amp;#34;Google Scholar&amp;#34; &amp;#34;https://scholar.google.com/scholar?q=%s&amp;#34;) (&amp;#34;Xueshu&amp;#34; &amp;#34;https://xueshu.baidu.com/s?wd=%s&amp;#34;) (&amp;#34;Github&amp;#34; &amp;#34;https://github.com/search?ref=simplesearch&amp;amp;q=%s&amp;#34;)))   这样用 K 就在这些学术搜索网站上搜到相应论文，下载后在 bibtex entry 中添加文件路径（利用 embark）
-org-roam-bibtex 每周跟老师汇报读文献进展，用 org-roam-bibtex 配合 org-roam 做摘要，显得比老师给的用 excel 好看些（Intel Mac excel 太卡了，还容易崩溃）。分类是老师给我的示例做的，配合 org-cite 而非 org-ref。</description>
+      <description>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。 emacs = jabref + onenote + tex studio 和学术搜索集成 org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web</description>
     </item>
     
     <item>
@@ -25,24 +21,7 @@ org-roam-bibtex 每周跟老师汇报读文献进展，用 org-roam-bibtex 配�
       <pubDate>Thu, 23 Dec 2021 16:55:07 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
-      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高?
-违约反作用于评级 债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析
-金融资产影响信用风险 金融资产配置与违约风险:蓄水池效应,还是逐利效应?
-非标缓冲 中国委托贷款弥补了正规信贷不足吗?
-note 个券流动性可以理解
-市场流动性可能影响不大现在 中债的标准券折算率变动相对频繁且是领先指标 个券溢价～个券溢价的平均值7/30d+个券特征值（信用评级、国企城投）回归不显著
-宏观政策 财政扩张,信用违约和民营企业融资困境 货币政策不确定性,违约风险与宏观经济波动 行政规定\疫情冲击
-违约专题 债券市场历史违约汇总
-思考  实控人风险、杠杆率 投资激进？ 展期算不算违约 技术性违约？  计量要看数据，不能只看显著 分段做回归
-week 2 model 随机森林
-link link1 link2
-files 宏观    杠杆
-违约与杠杆周期——一个带有救助的金融加速器模型 质押率上升，杠杆上升，债券价格下降 杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 中国创新型货币政策如何发挥作用: 抵押品渠道
-     政策
-定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究
-  中观    担保
-软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 政府隐性担保, 债务违约与利率决定
-     地区的“信任”</description>
+      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdq</description>
     </item>
     
     <item>
@@ -51,14 +30,7 @@ files 宏观    杠杆
       <pubDate>Thu, 23 Dec 2021 16:53:38 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/theses/</guid>
-      <description>Presentation Presentation Notes
-TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
-分类，前人用过什么样的指标（别人没用过），有没有显著的影响
-什么样的模型，原始数据 or 主成分（模型不一样/对象不一样）
-看摘要、数据、模型、结论
-link thesis archive 经济研究 金融研究
-journals  Journal of Finance Journal of Financial and Quantitative Analysis Journal of Financial Economics Review of Financial Studies Journal of Banking and Finance  week 6 宏观“不确定性” The macroeconomic uncertainty premium in the corporate bond market Common risk factors in the cross-section of corporate bond returns
-宏观环境 疫情 Impact of covid-19 on corporate solvency and possible policy responses in the eu</description>
+      <description>Presentation Presentation Notes TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的</description>
     </item>
     
     <item>
@@ -67,21 +39,7 @@ journals  Journal of Finance Journal of Financial and Quantitative Analysis Jour
       <pubDate>Thu, 23 Dec 2021 16:53:20 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/bali2021macroeconomic/</guid>
-      <description>The macroeconomic uncertainty premium in the corporate bond market
-主题 宏观经济不确定性在公司债券横截面中的作用，发现投资级债券(每月0.40%)和非投资级债券(每月0.81%)都存在显著的不确定性溢价。
-数据 宏观经济不确定性：Jurado, Ludvigson, and Ng (2015)提出的宏观经济不确定性指标：大量经济指标中不可预测成分的条件波动率。他们选择了一套丰富的时间序列，代表宏观经济活动的广泛类别：实际产出和收入、就业和工时、实际零售、制造和贸易销售、消费者支出、住房开工、库存和库存销售比、订单和未完成订单、薪酬和劳动力成本、产能利用指标、价格指数、债券和股市指数，以及外汇衡量标准。他们估计每个序列未来价值中不可预测部分的条件波动率，然后将单个条件波动率聚合成一个宏观不确定性指数。
-研究债券对宏观不确定性的 \(\beta\)（uncertainty beta），为负风险更高，为正可以作为对冲工具。
-VIX 作为预期未来市场波动率的代理
-betas: the bond market beta, the default beta, the term beta, and the equity-market-volatility beta
-控制变量包括债券级别的非流动性、信用评级、到期年限、未偿还债券金额(规模)和1个月的滞后债券回报。
-分析方法 将 Uncertainty Beta 和若干 factor 进行回归，其系数显著，说明其代表的含义没有被通常的因子所包括
-将债券的βUNC 和股票的比较，相关性只有8%，表明公司债券不确定性溢价不只是股权不确定性溢价的一种表现。
-因为在实践中，股票和债券吸引的客户不同。公司债券主要由机构投资者持有，而散户投资者则是股票客户的主要组成部分。有理由认为，机构投资者比散户投资者拥有不同和更好的信息，机构投资者的风险厌恶程度低于散户投资者，这表明两个市场的信息集合和偏好存在异质性。此外，做空成本和流动性水平在这两个资产类别之间差别很大，暗示套利摩擦
-模型 \(R_{i,t+1}=\lambda_0+\lambda_{1,t}\beta^{UNC}+\lambda_{2,t}\beta^{MKT}+\lambda_{3,t}\beta^{DEF}+\lambda_{4,t}\beta^{TERM}+\lambda_{5,t}\beta^{VIX}+\lambda Controls\)
-结论 公司债券市场在经济上和统计上都存在显著的不确定性溢价：IG债券每月0.40%，NIG债券每月0.81%。
-随着逐步剔除降级债券，经济不确定性溢价下降，这表明溢价代表着信用和宏观经济风险较高的债券要求的回报增加。
-不同股票和债券的经济不确定性溢价是不同的，这与主要参与者不平等(散户投资者)和债券(机构投资者)的风险规避水平不同是一致的。
-.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}Jurado, Kyle, Sydney C Ludvigson, and Serena Ng. 2015. “Measuring Uncertainty.” American Economic Review 105 (3): 1177–1216.</description>
+      <description>The macroeconomic uncertainty premium in the corporate bond market 主题 宏观经济不确定性在公司债券横截面中的作用，发现投资级债券(每月0.40%)和非投资级债券(每月0.81%)都存在显著的</description>
     </item>
     
     <item>
@@ -90,16 +48,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 23 Dec 2021 16:53:03 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/2020fiscal/</guid>
-      <description>Fiscal policy driven bond risk premia
-主题 较高的政府支出水平和不确定性预示着未来的债券超额回报会更高。
-更高水平的政府支出导致收益率曲线正向移动和变陡，而更高的不确定性导致收益率曲线变陡。
-分析方法 对政府支出的正面冲击会增加产出需求并挤出消费和投资。 更高的产出会导致资本回报率的增加，这会导致在实现积极的支出水平冲击后立即飙升。 高通胀转化为正的通胀风险溢价。
-另一方面，积极的政府支出不确定性冲击对短期和长期债券有不同的影响。 更高的不确定性导致实际工资、资本回报率、和投资以及政府债务的增加。 不确定性冲击的短暂性使得短期债券作为消费对冲比长期债券更有价值。 因此，在边际效用高的状态下，短期债券相对于长期债券变得昂贵。 最终，政府支出不确定性的增加导致收益率曲线变陡和正的期限溢价。
-模型 向量自回归 (VAR) 中再现了宏观经济和金融变量的动态响应
-主成分代替债券超额收益作为因变量，减少财政政策与通过影响环境来影响收益率
-开发了一个新凯恩斯动态随机一般均衡 (DSGE) 模型，其中包含政府支出和对资本收入的扭曲税收，使我们能够研究财政政策、债券收益率和风险溢价之间的联系。该模型由五个组成部分组成：具有 Epstein-Zin 偏好的代表性家庭、具有投资调整成本的资本积累、与垄断生产商的交错定价、货币当局以及通过政府预算约束实施的财政政策。
-结论 模型成功地匹配了宏观经济和金融时刻。通过模拟数据进行的资产定价测试进一步验证了我们的实证结果。在模型中，政府支出水平冲击意味着边际效用与通货膨胀（期限结构水平效应）之间存在正相关关系，从而导致正的通货膨胀风险溢价。另一方面，政府支出的不确定性冲击意味着对期限结构的强烈斜率效应。当边际效用高时，正支出不确定性冲击会导致长期债券相对于短期债券便宜，从而产生正期限溢价。
-.csl-entry{text-indent: -1.5em; margin-left: 1.</description>
+      <description>Fiscal policy driven bond risk premia 主题 较高的政府支出水平和不确定性预示着未来的债券超额回报会更高。 更高水平的政府支出导致收益率曲线正向移动和变陡，而更高的不确定性</description>
     </item>
     
     <item>
@@ -108,15 +57,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 23 Dec 2021 16:52:50 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/colacito2020business/</guid>
-      <description>Business cycles and currency returns
-主题  单独行业的周期非常多，纳入到模型中一方面可能维度爆炸多重共线性，另一方面也很可能遗漏重要的行业周期因素。但是可以把行业分成顺周期、逆周期，使用宏观的 RBC 来代理中观的行业？
- 商业周期预测货币的超额收益，专注于商业周期的单一代理产出缺口
-数据 产出缺口被定义为实际产出和“潜在” 产出的差。
-一个国家的潜在产出无法直接观察到，因此必须进行估算。已经提出了许多统计方法来衡量潜在产出主要目的是将产出分解为其趋势和周期性成分。趋势成分可以被视为经济的自然或潜在增长路径，增长周期偏离该路径。因此，周期性成分是衡量短期偏差的指标，并作为我们对产出缺口的经验代理。采用多种滤波方式估计趋势性成分
-分析方法 根据相对于美国的产出缺口排序构建 5 组投资组合，并对滤波结果展开主成分分析。
-模型 滤波、主成分分析
-结论 资产定价结果表明，文献中使用的标准风险因素无法解释按产出缺口排序的货币投资组合的回报。
-.csl-entry{text-indent: -1.5em; margin-left: 1.</description>
+      <description>Business cycles and currency returns 主题 单独行业的周期非常多，纳入到模型中一方面可能维度爆炸多重共线性，另一方面也很可能遗漏重要的行业周期因素。但是可以把行业分成顺周</description>
     </item>
     
     <item>
@@ -125,14 +66,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 23 Dec 2021 16:52:35 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%A0%94%E7%A9%B6/</guid>
-      <description>二个注意事项 第一个注意事项 要注意 任何一个经济理论、行为假设都有其边界，不能盲目运用 。此点非常重要，许多经济学家，将书本上一些理论简单地完全套用到现实经济中去，而不考虑一个经济理论、行为假设都有其边界，没有意识这些理论是基于理性状态下所发展出来的理论，主要是为了建立参照系及努力目标和方向而发展的。这种现象在我国经济学界特别严重，许多经济学家就一些经济问题发表看法可谓语不惊人死不休，也许是为了获得媒体的聚焦，故意把一些问题说得耸人听闻，将某个经济理论的作用盲目夸大，而不考虑其理论背后的先决条件。由于经济学理论一般不能拿社会作试验，检验其正确性，如果没有社会责任感，盲目应用，搞不好会出大问题。社会科学，像数学里面的所有定理一样，都有其边界条件，是否认识到此点是辨别训练有素的经济学家和一般老百姓的基本方法。由于经济问题和老百姓切身相关，即使一般老百姓对经济问题也能谈出一些看法，比如通货膨胀、经济是否景气、需求供给是否平衡、失业、股票市场等大家都能谈一番，由此很多人说经济学不是科学。这种不考虑任何约束条件和理论依据的“经济学”当然不是科学，这种人也不是真正的经济学家。经济变量间关系的成立有其边界条件，由此得出的结论亦有其内在逻辑。经济学理论的边界条件异常重要，我在后面会反复强调这一点，加深大家的印象，使得大家充分重视理论和行为假设的边界条件。
-第二个注意事项 经济学理论一般不能拿社会作实验，从而靠的是它的内在逻辑分析。此点也非常重要，近些年来在国外非常流行的实验经济学，主要是通过实验的手段来检验人的行为，检验人的行为假设是否理性，而很少通过实验检验理论。其原因是，经济理论的结论很难拿社会做实验，比如我经常所举的例子，为了研究通货膨胀和失业的关系，一个国家能拼命发钞票吗？这也是和自然科学非常不同之处。自然科学能够对自然现象进行实验研究，通过实验室可以检验和发展理论。自然科学大致只有天文学不能做实验，但天文学不涉及到人的行为。另外，自然科学可以非常的精确，比如造楼、修桥、造导弹、核武器，可以精确到任意程度，其参数都是可控的，变量之间的关系是可做实验的。比如造一栋楼，可以做到任意的精确度和稳定性，但经济学和自然科学非常不一样，经济学中影响经济现象的许多因素都是不可控的。经常听到有人说经济学家的预测都是不准确的，很多媒体和老百姓公开批评现代经济学家，“你们经济学家预测性怎么这么差？”
-为什么会这样，问题出在什么地方？这分两种情况。 一个原因是这些经济学家本身就非常差，没有经过严格的经济学基本训练，不能找出问题的成因，开错治理经济问题的药方； 另外一个原因，即使有很好的经济学训练，具有经济学的直觉和洞察力，但影响经济结果的一些经济因素发生了突变，使其预测变成不确切。
-一个经济问题除了牵扯到人的行为，使得问题变得复杂之外，还有许多不可控的因素。尽管某个经济学家非常高明，但很多影响经济结果的因素是他无法控制的，一旦变化就会使得预测发生偏误。就像我们国家的领导人很有威望，能管住中国的事情，但能管到美国去么？能让美国金融危机不蔓延至世界上其他地方去吗？即使你有准确的判断，由于经济环境、政治环境、社会环境发生突变，也可能使得你的预测不准确。那么，是不是说，经济学就不是一门科学呢？不是的。经济学是实实在在的一门学问。可以说，现代经济学中几乎所有的理论，都是来自于现实。既然经济学不能做实验，靠的又是什么呢？靠的就是其内在逻辑分析！在我的一篇关于金融危机的文章中也提到，完全靠理论来判断经济形势是不行的，完全靠数据说话也是不行的，实践是检验真理的唯一标准，但实践和数据不是预测真理的标准。那么，靠什么来判断经济形势或作出比较准确的预测呢？这就靠经济学的内在逻辑分析。
-两个注意事项的重要意义 一些经济学家不考虑边界条件也不进行内在逻辑分析，把自己的想法不加任何附加条件就建议给政府或发布于媒体，这样做往往会出大问题。比如，这次美国金融危机，中国经济大幅度下滑，或多或少就是没有考虑到经济学的内在逻辑。去年上半年，数据显示宏观经济形势相当好，外贸出口经济增长的速度都很高，当然通货膨胀也比较高，于是有关部门采取各种政策措施打压经济和股市。其实，如果用现代经济学内在逻辑分析，就会有不同结论。
-实际上，早在2007年4月份时美国的第二大次贷供应商新世纪金融公司（New Century Financial Corporation）申请破产保护，美国资金的流动性几乎一夜间从高度流动一下子变得极端不流动，这就是预兆。尽管我国的数据直到2008年上半年显示出经济好得很，让人的感觉是经济过热，但当时不少经济学家包括曾在美联储当过经济学家的黄晓东教授和我本人已经看到经济大幅度下滑的风险。我后面要讲五个分析步骤，其首要步骤就是如何界定经济环境，在制定宏观经济政策的时候，就看你能不能把经济环境的成因界定得比较准确。我和黄晓东教授当时的分析基于以下几点：第一、国外的流动性已经变得很差，不怕一万只怕万一，因而要作最坏的打算。政府的目标在许多情况下，是风险或损失目标函数极小化，而不是收益最大化。一旦世界经济进一步恶化，发生世界金融危机，后果将非常严重，实际当时已经呈现出许多迹象。第二、国内的《劳动法》出来之后，许多企业特别是出口导向型企业的劳动力成本上升不少，并且人民币升值超过20%左右，让出口商品的生产成本上升超过了20%，许多靠低成本优势占有国外市场的产品已没有什么优势，订单开始大幅度减少（尽管出口数据还很好），许多企业赚不到什么钱了，当时在沿海地区不少香港企业都开始用脚投票，到越南、柬埔寨劳动成本较低的国家去，沿海地区的经济也已经开始下滑。尽管通货膨胀的风险大，但不管怎样，它的风险没有经济大幅下滑大。中国的经济是粗放式的经济，经济增长率一旦低于8%，就会很麻烦，可能会带来大量失业人口，造成社会不稳。第三、股市一再下降，1.2亿股民是中国中产阶级的基本组成部分，保证和扩大内需特别是消费需求主要靠他们。由于股市大幅度下滑，资产下降了近50%，有些甚至是血本无亏，让他们的收入大幅度下滑，从而不愿意消费。
-同时，解决通货膨胀和经济大幅下滑的两难困境需要综合治理和有所侧重。通货膨胀麻烦，但经济大幅度下滑更麻烦。即使通胀超过10%时，能严重到什么程度呢？1988年和1994年，通胀都超过了20%，也没有出大问题，但经济大幅下滑就很麻烦。这时两害相权取其轻应该是基本原则。既要治理通货膨胀，更要防止经济大幅下滑。这好像开中药，中药比西医好的地方在于它治病是，从宏观和一般均衡的视角进行辩证而又系统的综合治理。
-于是在去年6月份，我和黄晓东教授写了一份题为《治理通货膨胀，更要警惕经济大幅度下滑的风险》的研究报告，提出了“慎紧缩、稳股市、拉两头、控中间、停升值、缓提价”18字的综合治理方针，递交给了有关部门，结果没有引起什么重视。直到去年7、8月份，政府的财政和货币政策取向仍然是打压经济，然而到了9月份忽然来一个180度的大转弯，经济学的内在逻辑性没有得到运用和体现。尽管经济形势和外界经济环境不可控，但在一定程度上是可以预测的，另外一些我们能够控制的，却发生了误判，做反了。警惕经济大幅度下滑，一定要把最坏的可能情况作为约束条件充分考虑。我们现在不少学者型政府官员，是许多学校的博导和教授（不像一个单纯的学者，只是一个学校的博导和教授），自视很高，不太会听得进去意见。当然，能理解的是，他们也面临着许多约束条件，包括作为政府官员有纪律上不能乱说话，再加上他们也很难知道下面的实际情况，出去考察都是被当地官员事先安排好了，去哪个家庭，要老百姓说什么话，都提前设定好了，领导人的信息非常不对称，使得我们的一些宏观调控政策显得没有前瞻性、连续性和稳定性，也就不奇怪了。</description>
+      <description>二个注意事项 第一个注意事项 要注意 任何一个经济理论、行为假设都有其边界，不能盲目运用 。此点非常重要，许多经济学家，将书本上一些理论简单地完全套</description>
     </item>
     
     <item>
@@ -141,16 +75,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 23 Dec 2021 16:52:20 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/mirza2020impact/</guid>
-      <description>Impact of covid-19 on corporate solvency and possible policy responses in the eu
-主题 利用多种模型压力测试，研究疫情对欧盟非金融上市公司的偿付能力的影响。
-数据 WC/TA、RE/TA、EBIT/TA、MVE/BD、NI/TA、TL/TA、FFO/Debt、FOCF to Debt、FFO/Cash Interest
-分析方法 情景包括
- 市值将下降 15%、30% 和 45% 销售额下降 25%、50% 和 75%  模型 基于市场的违约概率模型 Merton 的模型计算违约概率的变化
-基于会计的违约概率模型 Altman&amp;rsquo;s Z 和 (Ohlson 1980) O
-现金流充足 将这些比率分为两类，即债务偿还率和覆盖率。投资回收率包括运营资金 (FFO) 与债务和自由经营现金流 (FOCF) 与债务。对于覆盖率，我们考虑 FFO 对现金利息和 EBITDA 对利息。
-结论 所有部门的违约概率都显着增加
-政策干预 延期缴纳税款、通过次级过桥贷款纳入以及股权注入
-如果销售收入下降限制在 25%，则整个欧盟的最佳反应是延期纳税。这将使爱尔兰 74%（最多）的公司能够将其 PD 维持在 COVID-19 之前的水平。在塞尔维亚，52%（最低）的公司将能够通过税收减免维持其默认情况。如果收入下降仅限于 25%，则不需要大量注资。 但是，如果预期收入下降50%和75%，次级贷款和注资则更优。在收入下降 50% 的情况下，次级贷款将恢复最多 50% 的西班牙公司（最多）和 21% 的奥地利公司（最少）。大多数奥地利公司（51.</description>
+      <description>Impact of covid-19 on corporate solvency and possible policy responses in the eu 主题 利用多种模型压力测试，研究疫情对欧盟非金融上市公司的偿付能力的影响。 数据 WC/TA、RE/TA、EBIT/TA</description>
     </item>
     
     <item>
@@ -159,17 +84,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 23 Dec 2021 16:52:05 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/bai2019common/</guid>
-      <description>Common risk factors in the cross-section of corporate bond returns
-主题 考察了公司债券收益的横截面决定因素，发现下行风险是未来债券收益的最强预测因素。 尽管公司债券和股票都反映了公司的基本面，但它们在几个关键特征上有所不同。
- 首先，与股东相比，债券持有人对下行风险更为敏感。 第二，鉴于法律对支付息票和本金的要求，发行公司债券的公司存在潜在的违约风险，而发行股票的公司破产风险相对较低。 第三，公司债市场由于其场外交易机制等市场特点，承担了较高的流动性风险。债券市场参与者以保险公司、养老基金和共同基金等机构投资者为主。许多债券持有人是长期投资者，往往采取买入并持有的策略。因此，与股票市场相比，公司债券市场的流动性较低，股票市场的活跃交易部分归因于个人投资者的存在。  数据 衡量下行风险的指标是从历史收益率分布的较低尾部估计的5%的 VaR
-衡量流动性不足的指标是Bao, Pan, and Wang (2011)的债券水平衡量标准
-控制变量包括过去债券风险/回报特征(包括信用评级、流动性不足、市场贝塔、到期日、规模、滞后回报以及债券对违约和期限因素的敞口)
-分析方法 根据公司债券的普遍风险特征-下行风险、信用风险和流动性风险-引入了常见的风险因素，并发现这些新的债券因素具有显著的经济和统计上的风险溢价，这些溢价不能用长期存在的股票和债券市场因素来解释。新提出的风险因素比文献中考虑的所有其他模型在解释行业和规模/期限排序的公司债券投资组合的收益方面表现更好。
-在建立了下行风险是未来债券收益的有力预测因素的证据之后，我们调查了下行风险溢价的来源。具体地说，我们将下行风险分解为波动率、偏度和峰度成分，债券回报波动率和偏度是未来债券收益的显著正/负预测因子。此外，波动性和偏度对公司债券市场下行风险的重要性贡献很大，而峰度对控制波动性和偏度后的下行风险溢价的增量贡献较小。
-模型 在构建新的债券因子时，我们依赖于以信用评级为主要排序变量，下行风险、流动性不足和过去一个月回报为其他排序变量的独立排序的投资组合，即下行风险因子(DRF)、流动性风险因子(LRF)和回报逆转因子(REV)。这些独立的分类还产生了三个信用风险因素，因此最终的信用风险因素(CRF)被定义为信用风险的三个因素的平均值。
-公司债市场有其独特之处，导致除了股票因子之外还有因子影响。 CRF，信用风险在决定公司债券回报时尤为重要，因为鉴于法律对支付息票和本金的要求，发行公司债券的公司面临潜在的违约风险。 DRF，债券持有人比股东对下行风险更为敏感。 LRF，公司债券市场的流动性不如股票市场，大多数公司债券交易不频繁。因此，流动性水平和流动性风险都是公司债券市场投资者严重关注的问题。 第四，公司债券市场参与者一直由机构投资者主导，如保险公司、养老基金和共同基金，他们对风险的态度与个人投资者有很大不同。 有一些证据表明股票市场和公司债券市场在回报溢价方面的差异，存在潜在的市场分割。
-结论 回归中的截距(α)代表标准股票和债券市场因素无法解释的异常收益。当使用结合了所有常用的股票和债券市场因素的最一般的十因素模型时，我们发现DRF、CRF、LRF 和 REV 因素的 α 都具有显著的经济意义和统计意义，表明现有的因素不足以捕捉这些新提出的债券因素中的信息含量。 现有因子模型所产生的公司债券投资组合显著的超额收益(α)实际上是对下行风险、信用风险和流动性风险的补偿。
-.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}Bao, Jack, Jun Pan, and Jiang Wang. 2011. “The Illiquidity of Corporate Bonds.” The Journal of Finance 66 (3): 911–46. </description>
+      <description>Common risk factors in the cross-section of corporate bond returns 主题 考察了公司债券收益的横截面决定因素，发现下行风险是未来债券收益的最强预测因素。 尽管公司债券和股票都反映了公司的基本面</description>
     </item>
     
     <item>
@@ -178,13 +93,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 23 Dec 2021 16:51:49 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/nickerson2017debt/</guid>
-      <description>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?
-主题 结构化产品之间存在关联性，风险通过结构化产品如 MBS 、CDO 传染
-我们记录了评级机构假设的违约相关性，将他们的假设与我们的估计进行了对比，并量化了纳入脆弱因素(Duffie et al. 2009)的违约相关性估计对实际AAA级高级CDO部分的适当规模的影响。
- an unobservable time-varying factor referred to as ‘frailty’ can significantly help in explaining default clustering.
- 分析方法 对于金融危机(1986年至2006年)之前的公司债券，当仅使用国家相关评级转移矩阵时，我们估计的两两违约相关性仅为0.002。然而，当只考虑模型脆弱性时，平均成对债券违约相关性跃升至0.086。这些违约相关性是危机前评级机构用于CLO的8倍以上。此外，将评级变化和模型脆弱性都包括在内，将平均违约相关性提高到0.10。如果纳入金融危机中包含的信息，并使用截至2012年12月的样本对模型进行估计，这一估计值将增加约25%，至0.125。总体而言，我们的研究结果表明，联合考虑可观察到的风险因素和脆弱性的共同移动可以为违约分布的右尾增加相当大的厚度。
-模型 现有文献主要通过对 违约强度 或资产寿命的相关性进行建模来检验多种资产的联合信用风险。这些方法的一个优点是它们能够从实现资产违约的特定时间范围中抽象出来。虽然这些技术有助于从广义上研究联合信用风险，但这种方法的局限性在于难以将由此产生的估计应用于一组特定资产的联合违约风险，通常还依赖于双重随机假设，即以观察到的风险因素路径为条件，已实现的违约是独立的。
-结论 .csl-entry{text-indent: -1.5em; margin-left: 1.5em;}Duffie, Darrell, Andreas Eckner, Guillaume Horel, and Leandro Saita. 2009. “Frailty Correlated Default.” The Journal of Finance 64 (5): 2089–2123.</description>
+      <description>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products? 主题 结构化产品之间存在关联性，风险通过结构化产品如 MBS 、CDO 传染 我们记录了评级机构假设的违约相关性，将他们</description>
     </item>
     
     <item>
@@ -193,15 +102,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 09 Dec 2021 22:25:36 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</guid>
-      <description>Stock liquidity and default risk
-主题 更高的流动性能够帮助企业抵御破产风险
-数据 expected default frequency (EDF)衡量违约风险
-分析方法 股票流动性可能会影响违约风险。股票流动性对违约风险的影响并不是机械的，因为违约风险可能是非线性的，它取决于公司价值以外的几个因素。
-如果增加流动性会加剧噪声交易，导致更大的公司错误定价和更高的波动性。更大的流动性也会减少公司内部监控。
-更高的流动性可以通过提高价格效率来降低违约风险，或者通过放松投资者的退出能力来改善公司治理。
-模型 股票流动性和违约可能有双向因果，使用 DID 模型，分析 SEC 将最小报价从 1/16 变成0.01 美元的影响
-结论 较高的流动性允许知情投资者从他们的私人信息中获得更多利润，从而激励投资者获得更多信息并利用这些信息进行交易，从而导致更知情的股票价格。管理者从股票价格中学习，并利用它来指导企业投资。因此，管理者可以做出更好的投资决策，产生更高的现金流，并降低现金流的波动性，从而降低违约风险。
-更高的流动性使大块持有者更容易出售股票。事前，退出的威胁可以作为一种有效的公司治理机制。良好的公司治理约束管理者。它敦促他们从事增值投资，并防范机会主义管理行为，这可能会导致较低的违约概率。</description>
+      <description>Stock liquidity and default risk 主题 更高的流动性能够帮助企业抵御破产风险 数据 expected default frequency (EDF)衡量违约风险 分析方法 股票流动性可能会影响违约风险。股票流动性对违约风险</description>
     </item>
     
     <item>
@@ -210,19 +111,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 09 Dec 2021 22:25:15 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</guid>
-      <description>The relevance of credit ratings in transparent bond markets
-主题 信息更透明，评级机构的作用
-本文考察了通过TRACE系统对公司债券交易的公开披露如何影响
- 信用评级的信息含量 评级和利差的相关性  数据 债券评级和其他债券特征的信息；
-从增强型跟踪数据库(TRACE)获得二级市场债券交易数据；
-获得每日股票回报 从每月标普长期发行人评级、季度收益公告日期以及来自来自美国证券交易委员会(SEC)电子数据收集、分析和检索(EDGAR)系统的公司8-K、10-Q和10-K财务信息； 以及来自 Fred 的每日国债收益率和每月消费者物价指数的信息。
- 公司债务证券通常在交易商介入的分散的场外交易市场进行交易。虽然纽约证券交易所也有一些交易活动，但只有一小部分债券发行在那里上市，很大一部分上市证券的交易是在场外进行的
-美国法规要求通过贸易报告和合规引擎(TRACE)实时公开发布公司债务证券的所有场外交易(OTC)交易的信息(包括交易价格、收益率和交易量)。在2002年7月引入TRACE之前，公司债券市场是美国最不透明的证券市场之一：DEALER 报价和完成的交易都没有广泛或连续地报告，导致价格不高过去的研究记录了引入跟踪扩散后债券价格分散度的显著下降，这表明一旦最近交易的价格变得众所周知，投资者就可以更好地评估向他们提供的价格的公平性。
- 分析方法 信息披露将评级下调对股价的平均短期影响从3.7%降低到0.9%，这表明市场价格的透明度减少了信息差距，从而减少了对中介机构的依赖。
-当发行人是CDS参考实体或在交易所有未偿还债券交易，或者股票分析师提出更可靠的收益预测时，传播的影响较小。我们还发现，有证据表明，评级机构在发布后提供了更及时和更准确的评级。最后，我们认为，传播增强了信用利差预测未来违约的能力，并增加了重要信用事件之前从债券市场到股票市场的信息流动，这与透明市场中更有效的信息聚集和传递是一致的。
-模型 面板数据回归，固定效应和随机效应
-结论 本文研究了公司债券二级市场强制价格透明度对信用评级信息含量的影响。
- 公开已完成交易的价格极大地降低了评级下调对证券价格的影响，特别是在无法获得基于市场的信用质量替代指标的情况下。 评级在发布后对信用利差的变化变得更加敏感。 信息传播增强了信用利差预测未来违约的能力，增加了重要信用事件发生前从债券市场到股票市场的信息流，这与市场价格在透明市场中更有效地发挥其信息聚集和传递作用是一致的。  </description>
+      <description>The relevance of credit ratings in transparent bond markets 主题 信息更透明，评级机构的作用 本文考察了通过TRACE系统对公司债券交易的公开披露如何影响 信用评级的信息含量 评级和利差的相</description>
     </item>
     
     <item>
@@ -231,14 +120,7 @@ betas: the bond market beta, the default beta, the term beta, and the equity-mar
       <pubDate>Thu, 09 Dec 2021 22:25:04 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/2020do/</guid>
-      <description>Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect
-abstract 使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债券违约率。
-几乎所有的系统性风险指标对违约率都有预测能力。基于多元混频VAR模型的格兰杰因果检验进一步支持了这一结论。在MIDAS模型的基础上，进一步说明这些指标中的五个能够对2009年的公司违约危机进行样本外预测。使用 Lasso 多变量模型进一步表明，系统风险指标可以对 2009 年的违约率和危机后的违约率进行样本外预测。特定于机构的和波动性的系统性风险指标在建模美国公司债券违约率方面最相关
-data 美国1926-2011 违约数据
-model Based on these contributions, we focus on 12 systemic risk measures proposed in the literature classified into four categories
-违约率 = &amp;hellip;
-co-movement and contagion 风险传染指标
-absorption: the fraction of the total variance of a set of asset returns explained** institution-specific risk by a fixed number of principal components.</description>
+      <description>Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect abstract 使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债</description>
     </item>
     
     <item>
@@ -247,11 +129,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 09 Dec 2021 22:24:54 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/mo2021china/</guid>
-      <description>China&amp;rsquo;s no-bailout reform: impact on bond yields and rating standards
-主题 债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响
-国企发行了80%的债券，但违约中只占了15%，因此作者认为政府支持是存在的。
-数据 主要是债项数据和财务数据
-   Variable Name Definition     Issue Amount Gross amount of bond issue in billions of RMB   Maturity Years to bond maturity   Coupon Rate Coupon rate in percentage of bonds with fixed coupons   Treasury Spreads Difference (in %) between the bond yield to maturity and Chinese Treasury yield of similar maturity   Callable = 1 for callable bonds and 0 otherwise   Putable = 1 for putable bonds and 0 otherwise   Senior = 1 for senior bonds and 0 otherwise   Sinking Fund = 1 for bonds with sinking fund provision and 0 otherwise   Enterprise = 1 if WIND classifies as Enterprise Bond issues and 0 otherwise   MTN = 1 if WIND classifies as Medium-term Notes and 0 otherwise   Corporate = 1 if WIND classifies as Corporate Bond issues and 0 otherwise   Exchange = 1 if the bond is traded in Shanghai or Shenzhen Stock Exchange and 0 otherwise   Interbank =1 if the bond is traded in the interbank market and 0 otherwise   Rating An ordinal variable from 1 for AAA rating to 4 for AA- rating   GP_CRA = 1 for the three CRAs with global partnership (Lianhe_Fitch, Chengxin_Moody and Brilliance)   Central SOE = 1 if WIND classifies the issuer as a state-owned enterprise (SOE) by Chinese central government   LocalSOE = 1 if WIND classifies the issuer as a SOE by a Chinese local government and 0 otherwise   NonSOE =1 if WIND classifies the issuer as an entity other than SOE and 0 otherwise   Log Issuer Age Natural log of the age (in years) of the issuer at the time of bond issuance   Listed = 1 if the issuer has public traded equity and 0 otherwise   POST = 1 for bonds issued after March 4, 2014 and 0 otherwise   Equity Beta Market model equity beta estimated with daily stock returns from two years prior to the bond issuance   Market Model Error Market model residual standard error estimated with daily stock returns two years prior to the bond issuance   Log of Coverage Ratio Natural log of the three-year average interest coverage ratio prior to the bond issuance   Log of Market Cap Natural log of the market capitalization (in billion RMB) at the calendar year-end prior to the bond issuance   Long-term Debt Ratio Three-year average total long-term debt to total asset ratio prior to the bond issuance   Total Debt Ratio Three-year average total debt to total asset ratio prior to bond issuance   Market to Book Ratio Market to book ratio at the end of calendar year prior to bond issuance   Operating Profit Margin Three-year average operating profit margin (EBIT/Revenue) prior to bond issuance   Return on Equity Three-year average return on equity (net income/total equity) prior to bond issuance    分析方法 分析超日债违约60日前后债券收益率的变化，发现显著上升；</description>
+      <description>China&amp;rsquo;s no-bailout reform: impact on bond yields and rating standards 主题 债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响 国企发行了80%的债券，但违约中只占了15%，因</description>
     </item>
     
     <item>
@@ -260,11 +138,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 09 Dec 2021 22:24:43 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</guid>
-      <description>Firm default prediction: a bayesian model-averaging approach
-主题 利用贝叶斯模型预测违约
-传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty
-选择贝叶斯是因为 Techniques incorporating uncertainty in linear models do not immediately translate to nonlinear hazard models
-数据    Variable Description     WC/TA Working capital/Total assets   RE/TA Retained earnings/Total assets   EBIT/TA Earnings before interest and taxes/Total assets   ME/TL Market equity/Total liabilities   S/TA Sales/Total assets   TL/TA Total liabilities/Total assets   CA/CL Current assets/Current liabilities   NI/TA Net income/Total assets   π_MERTON Distance to default   SIGMA Standard deviation of firm stock returns   AGE log(Firm age in months)   SIZE ln(Market equity/Total S&amp;amp;P 500 market value)   EXRET ln(1+Firm stock return)−log(1 + S&amp;amp;P 500 return)   CASH/MTA Cash and short-term investments/(Market equity + Total liabilities)   MB Market equity/Book equity   PRICE ln(Firm stock price per share)   1/σE 1/Annualized volatility of firm stock returns   ME Market equity   MEF Face value of firm debt    分析方法 模型 对模型参数进行贝叶斯估计和 Laplace 近似</description>
+      <description>Firm default prediction: a bayesian model-averaging approach 主题 利用贝叶斯模型预测违约 传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty 选择贝叶斯是因为 Techniques incorporating uncertainty in linear models do not immediately translate to nonlinear hazard models 数据</description>
     </item>
     
     <item>
@@ -273,10 +147,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 09 Dec 2021 22:14:42 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
-      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle
-主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of credit spreads are strongly related to measures of bond liquidity
-数据 分析方法 流动性与评级/经济周期
- corporate bonds with higher credit ratings tend to be more liquid; corporate bonds are less liquid during economic downturns, especially for riskier bonds  一二级市场上的交互： 一方面，违约风险对公司债券的交易顺差和流动性折价有至关重要的影响。另一方面，更大的流动性折扣使公司对到期债务进行展期的成本更高，从而增加了违约的可能性。 当二级市场流动性恶化时，股权持有人更有可能违约，这反过来又会进一步恶化二级债券市场的流动性，以此类推。</description>
+      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle 主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of</description>
     </item>
     
     <item>
@@ -285,15 +156,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Fri, 03 Dec 2021 10:57:55 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E4%BD%95%E9%9D%922018%E4%B8%AD%E5%9B%BD%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E7%9A%84%E5%BA%A6%E9%87%8F%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%BB%8F%E6%B5%8E%E7%9A%84%E8%A7%86%E8%A7%92/</guid>
-      <description>中国系统性金融风险的度量——基于实体经济的视角
-主题 2015年股灾后的反思，利用主成分分析法，不拘泥于某个特定指标。
-数据 系统性风险测度指标涵盖了机构个体风险、联动和传染效应、波动和不稳定性以及流动性与信用
-选择实际工业增加值增长率度量实际经济活动的月度变化
-分析方法 第一步，归纳总结已有的系统性风险测度指标，采用分位数回归的样本外预测分析方法衡量各个测度指标预测宏观经济冲击的有效性。
-第二步，采用主成分分析分位数回归法(PCQR)提取单个测度指标中能够有效预测宏观经济冲击的不可观测因子，加总并提取这些测度中的有效信息构建系统性风险指数。
-最后，用上述系统性风险指标和 PCQR 构建的系统性风险指数对信贷增长率进行了预测。
-模型 分位数回归和主成分分析
-结论 系统性风险的上升会导致信贷的紧缩，进而对实体经济产生负面影响。</description>
+      <description>中国系统性金融风险的度量——基于实体经济的视角 主题 2015年股灾后的反思，利用主成分分析法，不拘泥于某个特定指标。 数据 系统性风险测度指标涵盖</description>
     </item>
     
     <item>
@@ -302,20 +165,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Fri, 03 Dec 2021 10:57:46 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E8%8B%9F%E6%96%87%E5%9D%872016%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E5%9F%BA%E4%BA%8E/</guid>
-      <description>债务杠杆与系统性风险传染机制——基于CCA模型的分析
-主题 债务杠杆如何导致宏观的系统性风险
-数据 采用国民经济各部门各项债务之和度量其财务危机临界点 B。
-采用股票和其它股权价值衡量非金融企业部门和金融部门低等索取权价值，采用金融资产净值衡量居民部门、政府部门和外国部门低等索取权价值。
-低等索取权波动率 σ_E 通过金融市场数据获得。
-无风险利率分别采用美国和德国 1 年期国债收益率衡量。
-分析方法 假设宏观经济包含 5 个部门，依据最大熵方法，构建国民经济各部门通过金融工具 F 相互联接的网络结构
-当外部冲击导致资产价值 A 下跌时，受冲击部门股权价值 E 和风险债务价值D均将出现下跌。同时，由于资产负债表关联的存在，受冲击部门股权价值和风险债务价值的下跌，将通过资产负债表传染，经由股权和债权两个渠道，导致持有受冲击部门股权或债权类资产的其它部门资产价值遭受损失，进而造成其股权价值和风险债务价值出现连锁下跌，并向与其具有资产负债表关联的其他国民经济部门进一步传递损失。
-模型 Contingent Claims Analysis CCA 模型
-债务杠杆与宏观金融风险在时间维度上的累积 随着债务杠杆率提升，国民经济各部门宏观金融风险将加速积聚，其成为风险策源地，并向网络结构中其它节点输出风险的可能性加速上升。此外，金融市场波动性对各部门宏观金融风险同样具有显著影响，金融市场波动性攀升时(下降时)各部门金融风险上升(下降)。
-债务杠杆与宏观金融风险在截面维度上的传染 在截面维度上，当某一部门因债台高筑出现违约并成为风险源时，由于资产负债表关联的存在，其违约造成的冲击，将通过权益渠道和债务渠道在网络结构内部形成连锁冲击，不断推高网络结构中其它部门的债务杠杆率和财务违约风险，进而推升宏观经济系统性风险水平。
-结论 对中国情景模拟
- 非金融企业部门债务发生 5% 的损失，金融市场波动性保持稳定。 非金融企业部门债务发生 5% 的损失，同时金融市场波动性在每一轮冲击中 上升 500 个基点。 政府部门发行 40000 亿地方政府债瑏瑠，置换现存的约 40000 亿地方政府融资平台债务。非金融企业部门债务发生 5% 的违约，金融市场波动性保持不变。 居民部门债务杠杆提高 50% 用于消费，并假设居民部门新增消费资金全部流入非金融企业部门。非金融企业部门债务发生 5% 的违约，金融市场波动性保持不变。  近年来我国国民经济各部门债务杠杆显著攀升，债务杠杆影响的财务违约距离指标大幅恶化，预示系统性风险正伴随债务杠杆的攀升不断积聚。
-债务杠杆由杠杆率相对较高的非金融企业部门转移至杠杆率相对较低的政府部门和居民部门，能够在一定程度上增强宏观金融网络稳健性，提升宏观经济体系抵御外部冲击的能力。同时大力发展股权融资，有效改善企业融资结构，能够有效降低非金融企业部门风险水平和对外输出损失强度，提升宏观经济的整体稳定性。</description>
+      <description>债务杠杆与系统性风险传染机制——基于CCA模型的分析 主题 债务杠杆如何导致宏观的系统性风险 数据 采用国民经济各部门各项债务之和度量其财务危机临界</description>
     </item>
     
     <item>
@@ -324,16 +174,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Fri, 03 Dec 2021 10:57:38 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%98%A5%E4%B8%BD2014%E5%9F%BA%E4%BA%8E%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%8C%BA%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%AD%E5%9B%BD%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%A2%84%E8%AD%A6%E7%A0%94%E7%A9%B6/</guid>
-      <description>基于马尔科夫区制转移模型的中国金融风险预警研究
-主题 2014年3月预测了2014-2015年金融风险，认为金融风险很低。没有纳入杠杆率考虑
-数据 银行不良贷款率 出口增长率 外商直接投资 宏观经济风险 GDP 增长率 外贸依存 外汇储备/GDP 欧元区综合PMI 美国芝加哥PMI 财政赤字/GDP 地方政府债务增长率 M2/GDP增长率 通货膨胀率 房地产开发综合景气指数 股票价格动率 股市收益率
-分析方法 国际间金融风险的传播渠道有国际贸易渠道、国际资本流动渠道、预期渠道、银行溢出渠道、国际债务渠道和投资者行为渠道
-金融风险预警指标体系需综合考虑宏观、中观和微观三个层面的指标，其中， GDP 增长率通货膨胀率、 M2 、信贷、 外汇储备等指标的预测效果相对更好
-模型 协整分析后纳入实际汇率高估、外汇储备/GDP、房地产开发综合景气指数、股市收益率、股市波动率、M2/GDP增长率、外贸依存度，代入马尔可夫转移模型
-结论 历史上比较吻合
-2000年上半年我国处于高金融风险状态，主要是因为当时我国仍未完全摆脱亚洲金融风暴的影响在应对1997年的金融危机中我国一直采取积极的财政和货币政策，银行不良贷款增加，银行储蓄转化为投资的效率较低，金融机构风险相对较大。
-2002年6月到2004年2月的高风险主要是由于经济转轨和国企改制等原因导致银行业历史遗留不良贷款巨大、而新的不良贷款不断涌现，整体不良贷款率维持在20%以上。同时受银广夏等上市公司违规造假事件的曝光券商危机严重的自然灾害“非典”等的影响，我国股市出现剧烈波动、风险加大。
-2008年5月至2010年9月的高风险主要是受美国次贷危机及欧债危机的影响，股指一度下跌至近年最低1664点，股市风险凸显。此外，国际贸易重创、外汇市场波动，大批外贸企业倒闭、银行不良贷款率上升，致使宏观金融风险陡增。</description>
+      <description>基于马尔科夫区制转移模型的中国金融风险预警研究 主题 2014年3月预测了2014-2015年金融风险，认为金融风险很低。没有纳入杠杆率考虑 数据</description>
     </item>
     
     <item>
@@ -342,15 +183,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Fri, 03 Dec 2021 10:57:28 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E8%BE%89%E5%8B%872016%E5%9F%8E%E6%8A%95%E5%80%BA%E7%9A%84%E6%8B%85%E4%BF%9D%E5%8F%AF%E4%BF%A1%E5%90%97/</guid>
-      <description>城投债的担保可信吗?——来自债券评级和发行定价的证据
-主题 12 东飞 01 担而不保的现象。
-从决定发行企业债到发行成功，中间需要经过聘请承销商进行发行材料准备、作为监管部门的国家发改委审核、到最终发行人实施债券发行等流程，其周期较长，一般需要一年左右的时间。需要对某些变量滞后一期
-外部增信一般指为债券发行人提供担保的外部企业，包括外部关联企业、外部非关联企业和专业第三方担保机构，外部企业的担保形式一般为不可撤销连带责任担保。内部增信则指来自发行人内部的增信措施，主要包括抵押担保和质押担保两种形式，这两者的主要区别是抵押担保可以是动产或不动产，但不要求转移抵押物，而质押担保必须是动产抵押，并且要求转移抵押物。
-数据 控制了地方融资平台公司本身的特征变量，包括以平台公司总资产代表的企业规模、资产负债率、主营业务利润率、短期债务占总债务比重、货币资金占总债务比重等变量;
-债券的其它特征变量，包括发行债券的规模、债券期限。最后，我们也控制了省份固定效应( θl ) 、融资平台公司所在行业 的固定效应( μm ) 、债券评级机构的固定效应( πn ) 以及年份固定效应( ρt ) 。
-分析方法 在回归中考察融资平台公司发行债券的评级和信用利差对地方政府公共财政收入的反应。
-模型 OLS 回归。
-结论 当发行的债券有担保措施时，其债券评级会得到显著提高，但是有担保的债券对债券的信用利差，也就是债券发行成本并没有显著影响。 即机构不相信评级</description>
+      <description>城投债的担保可信吗?——来自债券评级和发行定价的证据 主题 12 东飞 01 担而不保的现象。 从决定发行企业债到发行成功，中间需要经过聘请承销商进行发行材</description>
     </item>
     
     <item>
@@ -359,16 +192,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Sun, 28 Nov 2021 10:46:28 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%9F%A9%E9%B9%8F%E9%A3%9E2015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E4%B8%80%E5%AE%9A%E8%83%BD%E9%99%8D%E4%BD%8E%E5%80%BA%E5%88%B8%E7%9A%84%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC%E5%90%97/</guid>
-      <description>政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究
-主题 对国企，政府的激励是经济发展，隐性担保保护其不能倒
-对城投，政府的激励则是非市场化的，对自身的经营管理漠不关心，却对地方建设情况情有独钟。
-数据 同花顺数据库
- 债券剩余期限 存续期限 债券票面利率 债券规模的对数 EBIT/利息费用 ROE B/(B+S)  分析方法 企业性质对利差的影响
-模型 OLS 回归
-结论 政府隐性担保降低了国有企业债券的风险，却增加了地方融资平台债券的风险。
-信用评级越低，政府隐性担保越能降低国有企业债券的风险，相反，信用评级越高，政府隐性担保越能增加地方融资平台债券的风险。
-不同于国有企业，政府帮助地方融资平台取得债务资金，隐性担保的方式发生了变化，损害了债权人的利益。
-不同信用评级是否应该分开建模：AAA adj R^2 25%，AA adj R^2 40%</description>
+      <description>政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究 主题 对国企，政府的激励是经济发展，隐性担保保护其不能倒 对</description>
     </item>
     
     <item>
@@ -377,19 +201,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Sun, 28 Nov 2021 10:46:17 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52021%E7%A7%81%E6%9C%89%E4%BF%A1%E6%81%AF/</guid>
-      <description>私有信息, 评级偏差和中国评级机构的市场声誉
-主题 评级包含了三方面的信息：公开信息、评级机构的私有信息和竞争付费导致的评级机构的评级偏差
- 既有文献常见的做法是将评级与债券的各种基本面信息进行回归，然后将“回归残差”作为评级偏差的量度。但考虑到可观测的评级都是由最终赢得评级竞争的评级机构所给出的，故从前面分析可知，上述“回归残差”既有可能反映了评级偏差，也有可能反映了赢得评级竞争的评级机构获得了关于发债企业及其债券的私有信息。由此，需要在上述回归残差中进一步剔除私有信息部分，才能得到真正所需要的评级偏差，这也正是本文核心工作和关键贡献之一。
- 数据 数据主要来源于 Wind 数据库
-评级机构距离、是否担保/上市、企业性质、行业/省份/时间的固定效应
-分析方法 私有信息用物理距离计算
-对于私有信息
- 给定其他条件不变，发债企业到所有评级机构的平均距离越大，其所得评级越低 给定各评级机构到发债企业的平均距离不变，距离方差越大则发债企业所得评级越高  对于偏差，评级机构向上扭曲信用评级会降低企业的发债成本；但市场对不同评级机构的评级偏差存在不同反应（即声誉），发债成本降低的程度也会不同。
-事件分析法( Event study model) 来验证双重差分的平行趋势
-模型 DID 模型
-直观上，在空间距离一定的情况下，高铁开通会降低发债企业与评级机构之间的“信息距离”或信息不对称程度，进而在一定程度上缓解距离对信用评级的影响，由此我们就可以利用平均距离 Dis 与高铁 H 的交互项来进一步佐证私有信息的存在。
-结论 在引入距离变量度量私有信息的基础上，通过 PSM 获得相对科学的评级偏差，研究发现评级机构的评级偏差可以降低企业发债成本，并且不同评级机构降低成本的能力不同。本文研究表明，尽管近年来中国评级机构受到质疑，但它们平均而言，仍然具有一定的市场声誉。
-90%的AAA，95%的AA+以上。降低评级一定是有问题，但是确定/升高评级的意义或许不大</description>
+      <description>私有信息, 评级偏差和中国评级机构的市场声誉 主题 评级包含了三方面的信息：公开信息、评级机构的私有信息和竞争付费导致的评级机构的评级偏差 既有文献</description>
     </item>
     
     <item>
@@ -398,18 +210,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Sun, 28 Nov 2021 10:46:05 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E5%AE%81%E6%A1%A62018%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC/</guid>
-      <description>散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析
-主题 合格投资者大“散户”
-其认为机构没有对高收益的偏好，只有散户有。事实应该是机构和散户都有一定的刚兑信仰
-数据 价格差 DPRICE 的定义为竞价交易收盘价减去大宗交易的加权平均价，主要的解释变量为票面利率 COUPON。其他控制变量包括:发行量 ISSUE、债券已发行年限YEARTOISS、债券剩余年限 YEARTOMATU、债券的修正久期 DURATION、竞价(大宗)交易 到期收益率 YTM_AT(YTM_BT)、竞价(大宗)交易换手率的自然对数 TURNOVER_AT (TURNOVER_BT)、竞价(大宗)交易价格每日的振幅 HLPRICE_AT(HLPRICE_BT)以及竞价(大宗)交易的非流动性指标 AMIHUD_AT(AMIHUD_BT)。
-分析方法 在竞价交易下，收益率更高的债券换手率更高、交易更频繁，即竞价交易中的投资者体现出片面追求收益率的特点。进一步的分析发现，两种交易方式下的价格差在截面上有着很强的异质性。尤其是，我们使用票面利率作为散户需求的代理，发现价格差随着票面利率的上升而增大；并且，在散户认知度更高的债券上（如在上海交易所交易的债券），散户的需求效应更大，其价格差也越大。
-交易利差源于不能做空，竞价交易与大宗交易之间的套利不能在当天立刻完成，并且两种交易方式下的交易量存在不匹配
-模型 OLS 回归
-结论 竞价交易与大宗交易的价格差会随着债券的票面利率上升而增大。
-散户投资者的需求效应对价格差的影响随着债券久期的上升而增强。
-如果价格差是由于竞价交易的高估以及两种交易方式间存在套利限制，那么当竞价交易的流动性降低时，价格差会增大;如果价格差是由于流动性溢价造成的，那么当竞价交易的流动性提高时，价格差会增大。
-“城投债危机”期间，竞价交易与大宗交易的价格差为负，散户需求效应更大以及西部地区的债券价格差更小(负的更多)。
-“城投债危机”期间，隐性担保能力越大的地区发行的债券价格差更大(负的更少)。</description>
+      <description>散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析 主题 合格投资者大“散户” 其认为机构没有对高收益的偏好，只有散户有。事实应该</description>
     </item>
     
     <item>
@@ -418,12 +219,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Sun, 28 Nov 2021 10:45:53 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/</guid>
-      <description>政府隐性担保风险定价: 基于我国债券交易市场的探讨
-主题 数学看不懂
-数据 由于我国企业债市场交易量较小，本文参考使用三次样条折现函数法对利率期限结构曲线进行处理。虽然三次样条函数会使较长期限结构的远期利率估计结果不稳定，但由于我国企业债发行期限通常不超过7年，而国有企业债券和民营企业债券期限更是集中于5年以内，可以合理避免上述问题。
-分析方法 模型 (Duffie and Singleton 1997)纳入可违约债券的 CIR 仿射模型，并运用卡尔曼滤波法对该隐性担保作用进行了实证考察。
-结论 相同信用评级水平上，央企债和国有企业债较民营企业债有明显的隐性担保溢价
-市场中投资者对于政府隐性担保的看法还是较为理性的。AA评级中央企业债和地方国有企业债的定价中，分别隐含着对应政府以 39.9% 和 6.7% 概率进行的隐性担保，而类似隐性担保在 AA+ 评级中央企业债和国有企业债定价中分别为 33.9% 和 1.2%。该数字远低于 100% 的政府实际兜底概率</description>
+      <description>政府隐性担保风险定价: 基于我国债券交易市场的探讨 主题 数学看不懂 数据 由于我国企业债市场交易量较小，本文参考使用三次样条折现函数法对利率期限结构</description>
     </item>
     
     <item>
@@ -441,27 +237,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/%E5%80%BA%E5%88%B8%E5%B8%82%E5%9C%BA%E5%8E%86%E5%8F%B2%E8%BF%9D%E7%BA%A6%E6%B1%87%E6%80%BB/</guid>
-      <description>违约汇总 部分违约债券
-2014年 11 超日债 金融危机背景下改变销售政策导致应收帐款难以转化为现金，光伏补贴减少营收下降，仍大举投资导致债务负担过重
-重大事项包括：高管离职、监管要求整改、评级下调、股权转让受阻、股票退市警告
-13 中森债 私募债、担而不保
-产能过剩严重依赖于房地产，且集中在徐州
-2015年 12 湘鄂债 主营高端餐饮受“八项规定”影响，盲目转型环保科技、网络新媒体、大数据处理开发、食品工业
-重大事项包括：股东减持、违规违纪、评级下调
-12 圣达债 先款后货采购、先货后款销售，资金压力大
-卖子求生、主营业务停工、评级下调
-15 山水 SCP001 争夺控制权，经营情况持续恶化，触发美元债提前还款条款，引发交叉违约
-2016 15 春和 CP001 船舶行业景气度下滑，垫资较多
-评级下调、子公司破产、延期披露年报
-15 雨润 CP001 实控人被羁押
-2017 五洋债 欺诈发行
-2018 投资激进
-15 乐视 01 投资过度、股东减持、股票存在暂停上市风险、列入失信执行人
-17 沪华信 SCP005 短贷长投，海外投资激进、非标违约
-16 丹港 01 行业景气底部、大肆投资扩张、大规模抵押
-15 宏科 MTN001 主业不景气，经营亏损
-15 华阳经贸 MTN001 “伪国企”难以获得资金支持
-16 环保债 </description>
+      <description>违约汇总 部分违约债券 2014年 11 超日债 金融危机背景下改变销售政策导致应收帐款难以转化为现金，光伏补贴减少营收下降，仍大举投资导致债务负担过重</description>
     </item>
     
     <item>
@@ -470,11 +246,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E5%8F%B2%E6%B0%B8%E4%B8%9C2021%E4%B8%AD%E5%80%BA%E4%BC%B0%E5%80%BC%E8%AF%86%E5%88%AB%E4%BA%86%E5%80%BA%E5%88%B8%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E5%90%97/</guid>
-      <description>中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析
-债券信用风险识别：针对信用评级 信用评级对信用利差的影响
-投资者付费评级相较于发行人付费评级更独立，更能反应债券预期违约风险，但是覆盖范围有限，没有对外部评级形成有效约束
-针对资产价格或收益率跳跃 股票收益波动和跳跃大影响债券信用风险（反应在 CDS 上）
-结论 中债估值跳跃能显著提高信用利差，且包含了公有及私有信息</description>
+      <description>中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 债券信用风险识别：针对信用评级 信用评级对信用利差的影响 投资者付费评级相较于发行人付费</description>
     </item>
     
     <item>
@@ -483,15 +255,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E4%B8%AD%E5%9B%BD%E5%88%9B%E6%96%B0%E5%9E%8B%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%A6%82%E4%BD%95%E5%8F%91%E6%8C%A5%E4%BD%9C%E7%94%A8/</guid>
-      <description>中国创新型货币政策如何发挥作用: 抵押品渠道
-主题 MLF 扩大担保品范围的货币政策是否降低了在银行间市场上可作为新增担保品的债券二级市场利差
-二级市场上使得在银行间市场的债券利差相比交易所市场的债券利差下降了 77 个基点。
-一级市场上使得符合在银行间市场此次新增担保品条件的债券的发行利差下降了 51 个基点。
-数据 二级市场数据为 2018 年 1 月 1 日—2018 年 9 月 30 日评级不低于 AA 级的公司信用类债券和金融债的日交易数据
-分析方法 DDD 三重差分法
-模型 包含不同风险偏好的投资者的叠代 (OLG) 模型。
-基准回归 \(Spread_{ijt} = β1Post_t × IB_j × Treat_i + β_2ΔGDP_{it} + δ_{ij} + η_{it} + θ_{jt} + ε_{ijt}\)
-结论 </description>
+      <description>中国创新型货币政策如何发挥作用: 抵押品渠道 主题 MLF 扩大担保品范围的货币政策是否降低了在银行间市场上可作为新增担保品的债券二级市场利差 二级市场上</description>
     </item>
     
     <item>
@@ -500,8 +264,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%92%B1%E9%9B%AA%E6%9D%BE2018%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97/</guid>
-      <description>中国委托贷款弥补了正规信贷不足吗?
-委托贷款  逆信贷周期 更多流向体制外企业 违约概率高于银行不良率  </description>
+      <description>中国委托贷款弥补了正规信贷不足吗? 委托贷款 逆信贷周期 更多流向体制外企业 违约概率高于银行不良率</description>
     </item>
     
     <item>
@@ -510,15 +273,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52015%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E7%9C%9F%E7%9A%84%E5%BD%B1%E5%93%8D%E5%8F%91%E5%80%BA%E6%88%90%E6%9C%AC%E5%90%97/</guid>
-      <description>中国的信用评级真的影响发债成本吗?
-主题 超日债违约后的反思，信用评级机构在很大程度上已经失去了公信力，需通过改革消除评级机构的利益冲突和激励扭曲
-数据 2008 年 1 月到 2014 年 4 月间在银行间市场和交易所市场公开发行的全部企业债券和公司债券(WIND 数据库)
-分析方法 以各地区评级机构的竞争程度作为债券评级的工具变量
-评级和发债成本存在双向因果，评级低成本低，也因此发行人为了降低成本要求评级公司提高评级。
-第一，评级市场竞争不会对发债成本有直接影响。评级机构与发债企业之间不构成直接竞争，因而评级市场结构不会直接影响个体企业的资金供求。第二，评级市场竞争在加总层面(省份 - 年份单元)进行观测，企业发债成本在个体债券层面观测，后者不会对前者有反方向影响。第三，受中央政府规制，信用评级行业存在严格的进入壁垒，评级机构的市场份额不会同特定省份的债务融资需求、资金供给等经济基本面存在明显关系。
-模型 纳什均衡，N 家评级公司说真话/假话
-在寡头评级市场下，评级机构数量越多，说真话的条件愈苛刻。
-结论 工具变量回归结果发现，债券评级对发债成本的影响，不但经济效应明显减弱，而且统计显著性也完全消失了。从消极角度看，这表明中国债券信用评级企业缺乏市场认可的公信力，并没有起到提高资本市场配置效率的应有之义，而只是成为应付监管的橡皮图章而已。而从积极的角度看，正因为信用评级机构缺乏公信力，糟糕的信用评级也并不能“欺骗”市场。</description>
+      <description>中国的信用评级真的影响发债成本吗? 主题 超日债违约后的反思，信用评级机构在很大程度上已经失去了公信力，需通过改革消除评级机构的利益冲突和激励扭</description>
     </item>
     
     <item>
@@ -527,20 +282,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E6%9D%A8%E5%9B%BD%E8%B6%852019%E4%BF%A1%E4%BB%BB%E8%A2%AB%E5%AE%9A%E4%BB%B7%E4%BA%86%E5%90%97/</guid>
-      <description>信任被定价了吗?——来自债券市场的证据
-主题 利用最高法“失信被执行人”数据构建各地区失信程度指标，发现失信及失信程度的增加会降低债券信用评级，提高债券信用利差。
-信任作为一种非正式的制度的作用
-债券本身信息不对称比较严重，投资者搭便车比较多，“信仰”
-数据 2008 - 2015 年发行的全部公司债、企业债和中期票据为研究对象。
-信任采取(张维迎 and 柯荣住)度量
-分析方法 信任发挥作用有三个渠道
- 企业所有制隐性担保，如政府隐性担保, 债务违约与利率决定 地区金融业发达程度，投资者的行为决策也会更依赖于正式制度，导致信任这一非正式制度的作用下降 企业发债频次，发债频次多资质更好，少则信任的作用可能更大  模型 因变量为债券债项信用评级，采用有序 logit 模型。
-因变量为债券信用利差， 该模型采用 OLS 估计。
-自变量中加入信任水平 Trust
-结论 信任有助于提高债券信用评级，降低债券信用利差
-利用最高人民法院公布的失信被执行企业名单数据，统计得到各省份失信企业数量，然后以各省份失信企业数量除以各省份企业法人数量获得各省份的失信程度排名，排名越高的省份，地区失信程度也越高
-地区的失信程度越高，该地区企业发行的债券信用评级显著越低，债券信用利差显著越大。
-执行人/增速</description>
+      <description>信任被定价了吗?——来自债券市场的证据 主题 利用最高法“失信被执行人”数据构建各地区失信程度指标，发现失信及失信程度的增加会降低债券信用评级，</description>
     </item>
     
     <item>
@@ -549,15 +291,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%BA%AA%E5%BF%97%E5%AE%8F2017%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7/</guid>
-      <description>信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究
-现象 2016年前，经济下行反而信用利差收窄
-研究 国外研究 利差模型：结构模型、简约模型、分解模型
-信用风险影响最大，个券流动性、税收也会影响
-国内研究 资产负债率、资本报酬率、国企产权性质、债券剩余期限、信用评级
-对我国解释力不高
-本文 刚兑预期和信用债套利交易模式使我国信用债利差反应宏观流动性溢价
-中央对手方质押融资模式进一步模糊市场主体信用差异，放大宏观流动性影响
-异常原因</description>
+      <description>信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究 现象 2016年前，经济下行反而信用利差收窄 研究 国外研究 利差模型：结构模型、简约模</description>
     </item>
     
     <item>
@@ -566,12 +300,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%BB%84%E5%B0%8F%E7%90%B32017%E5%80%BA%E5%88%B8%E8%BF%9D%E7%BA%A6%E5%AF%B9%E6%B6%89%E4%BA%8B%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E6%9C%BA%E6%9E%84%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%B8%82%E5%9C%BA%E8%BF%9D%E7%BA%A6%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90/</guid>
-      <description>债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析
-涉事评级机构不仅没有因为债券违约事件而收紧信用评级标准，反而为了争取市场份额更加高估企业的信用评级，采取了“放宽标准，提高评级”策略。
-涉及违约事件的次数越多，高估信用等级的偏差程度越大。
-涉事评级机构在违约事件后采取的“放宽标准，提高评级”策略没有抵消债券违约的负面影响，其市场份额相比非涉事评级机构仍然出现显著下降或者增长较低的态势。
-涉事评级机构在违约事件后，其信用评级意见对于降低融资成本的作用显著降低。
-非涉事评级机构在违约事件后略微收紧了评级标准，主要采取了“收紧标准，降低评级”策略。</description>
+      <description>债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析 涉事评级机构不仅没有因为债券违约事件而收紧信用评级标准，反而为了争取市场</description>
     </item>
     
     <item>
@@ -580,13 +309,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%99%88%E5%85%B3%E4%BA%AD2021%E5%A4%9A%E9%87%8D%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E4%B8%8E%E5%80%BA%E5%88%B8%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC/</guid>
-      <description>多重信用评级与债券融资成本——来自中国债券市场的经验证据
-主题 当多重信用评级的评级意见不一致时，平均评级的信息含量最高
-在我国债券市场，评级机构声誉的差异体现在市场份额以及是否有境外三大评级机构持股。根据以上两个判断标准，(王雄元 and 张春强) 确定中诚信国际和联合资信两家评级公司为高声誉评级机构，其余评级机构为低声誉评级机构。
-数据 同花顺数据库提取了 2002 年 1 月 1 日至 2018 年 3 月 31 日证券交易所市场和银行间市场所有已到期和在市的短期融资券、中期票据、企业债和公司债发行数据，包括债券发行信息、发债主体信息、发债企业财务数据、主体信用评级和评级机构信息。
-分析方法 OLS 回归
-模型 \(Spread = \beta_0 + \beta_1Multi + \beta_2Consist + Controls + ε\)
-企业规模(Size)，上一年年末总资产账面价值的自然对数; 财务杠杆(Lev) ，上一年年末总负债/总资产; 经营性现金流比率(CFO) ，上一年年末经营活动现金净流量 / 总资产; 净资产收益率(ROE) ，上一年净利润 / 净资产; 成长性(Growth) ，上一年营业总收入增长率; Z 值(Z) ，采用 Altman Z 值衡量，该值越小，企业发生破产风险的概率越大; 是否上市(List) ; 是否国企(State) ; 债券是否有担保(Guarantee) ; 债券规模(Scale) ，债券发行金额的自然对数; 债券期限(Duration) ，以年为单位确定的债券到期时间; 债券类型(Type)，哑变量，当分别为短期融资券、企业债、公司债与中期票据时取值为 1，否则为 0; 评级机构声誉( Reputation) ，当评级机构为中诚信国际或联合资信时，取值为 1，否则为 0?</description>
+      <description>多重信用评级与债券融资成本——来自中国债券市场的经验证据 主题 当多重信用评级的评级意见不一致时，平均评级的信息含量最高 在我国债券市场，评级机构</description>
     </item>
     
     <item>
@@ -595,14 +318,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E5%BE%90%E5%85%892019%E5%AE%9A%E5%90%91%E6%94%AF%E6%8C%81%E6%94%BF%E7%AD%96%E8%83%BD%E7%BC%93%E8%A7%A3%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F%E5%90%97/</guid>
-      <description>定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究
-主题 民营企业债务融资支持工具旨在为经营正常、流动性遇到暂时困难的民营企业发债提供增信支持。这一政策不仅引入了信用风险缓释凭证(CRMW) 等衍生工具，而且采取了在债券发行阶段同步发售 CRMW 的方式，让 CRMW 发售与债券发行相互配合，使投资者在购买债券时可以选择同时购买 CRMW 以规避债券违约风险。
-本文研究这一定向政策是否真的能精准缓解民营企业的融资困境以及作用路径
-数据 本文选取 2018 年 4 月至 2019 年 3 月作为研究区间，探讨民营企业在银行间债券市场债券融资的变化情况。
-分析方法 probit 模型
-模型 CRMW 传导机制 信号传递效应（支持民营企业融资的政策倾向）
-保险效应
-结论 民营企业债务融资支持政策对改善民营企业的融资约束起到了一定的作用</description>
+      <description>定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究 主题 民营企业债务融资支持工具旨在为经营正常、流动性遇到暂时</description>
     </item>
     
     <item>
@@ -611,16 +327,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E9%9B%84%E5%85%832017%E5%AE%A2%E6%88%B7%E9%9B%86%E4%B8%AD%E5%BA%A6%E4%B8%8E%E5%85%AC%E5%8F%B8%E5%80%BA%E4%BA%8C%E7%BA%A7%E5%B8%82%E5%9C%BA%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</guid>
-      <description>客户集中度与公司债二级市场信用利差
-主题 恒大倒下对南通三建
-客户集中度是把“双刃剑”。一方面集中的客户有助于稳定供应链，改善供应链管理效率，提高供应商收益，避免资产价值波动。另一方面集中的客户有能力要求企业降低销售价格、延长商业信用以及分次运送产品等以降低自身存货成本，通过压迫企业获得更大利润空间。因此客户集中度既可能通过供应链合作而降低风险，又可能由于过度依赖引致资产波动率过高而提高风险。
-数据 用前五大客户各自销售占比的平方和衡量客户集中度
-上市公司 2007 - 2014 年二级市场公司债年度数据为初始样本，并做了如下筛选:
- 因无法计算信用利差，剔除浮动利率债券; 赎回条款影响信用利差但方向不确定，因此剔除可赎回债券; 剔除未详细披露前五大客户合计销售占比的债券年度数据; 剔除控制变量缺失的样本。  对所有变量进行了上下 1% 的 Winsorize 处理。
-分析方法 OLS 回归
-客户集中度确实包含未来收入风险和未来现金流风险
-模型 \(Spread = \alpha + \beta_1 Customer +\beta_2BondControl +\beta_3FirmControl + \beta_4EconControl\)
-结论  客户集中度提高了债券信用利差，表明关注风险的债券投资者将客户集中度解读为风险; 客户关系风险强化了客户集中度对公司债信用利差的风险效应，具体而言，客户集中度风险效应主要体现在发债公司市场份额较低、销售费用率较高、客户关系不稳定的样本中; 商业信用风险强化了客户集中度对公司债信用利差的风险效应，具体而言，企业应收账款较高、坏账准备较高以及客户为非政府背景时，商业信用风险较大，客户集中度主要体现为风险效应; 债券信用评级越低，偿债能力、信息质量以及公司治理越差，客户集中度更可能被债券投资者解读为风险; 客户集中导致企业未来收入风险与偿债风险增加  </description>
+      <description>客户集中度与公司债二级市场信用利差 主题 恒大倒下对南通三建 客户集中度是把“双刃剑”。一方面集中的客户有助于稳定供应链，改善供应链管理效率，提高</description>
     </item>
     
     <item>
@@ -629,8 +336,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E5%90%B4%E8%82%B2%E8%BE%892020/</guid>
-      <description>:Custom_ID: 吴育辉 2020 :URL: :AUTHOR: 吴育辉, , 翟玲玲, , 张润楠, , &amp;amp; 魏志华,
-投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高? (1) 与“发行人付费”模式相比，采用“投资人付费”模式的中债 资信给出的信用评级显著更低。 (2) 这一结果并非由于“投资人付费”模式下评级机构 主观刻意地压低信用评级导致，而是与公司未来的盈利能力和违约风险相关，并得到 债券投资人认可。这表明“投资人付费”模式下评级机构给出的信用评级质量更高。 (3) “发行人付费”模式下，信用评级虽然可以在一定程度上包含公司的内部私有信息， 但由于独立性缺失问题，其总体的信用评级质量仍然低于“投资人付费”模式下的信用 评级质量。</description>
+      <description>:Custom_ID: 吴育辉 2020 :URL: :AUTHOR: 吴育辉, , 翟玲玲, , 张润楠, , &amp;amp; 魏志华, 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更</description>
     </item>
     
     <item>
@@ -639,14 +345,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E6%B1%AA%E8%8E%892015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D/</guid>
-      <description>政府隐性担保, 债务违约与利率决定
-主题 募集资金用途隐含了债券资金的风险-收益，会对利率有一定影响（中西部经济较差的地区显著，因为投资者更为谨慎，东部不显著）
-数据 以 2006 年到 2011 间发行的 336 只城投债作为研究样本对模型结果进行检验，城投债的发行规模、期限、发行主体的信用评级、是否担保、地方政府财政收支、GDP、股指收益率
-投资比例数据则是根据各城投公司的《募集说明书》、《跟踪评级报告》、《信用评级报告》、《发行公告书》整理而得
-分析方法 地方政府财政盈余与 GDP 比值作为政府隐性担保能力的代理变量，收益率与隐含担保、债项自身特征、募集资金投向、宏观经济运行及其预期的回归
-\(rate = \beta_0 + \beta_1 im_guarantee + \beta_2 bond_c + \beta_3 invest_c + \beta_4 macro_c +\epsilon\)
-模型 包含代表性借款人和贷款人的无限期离散时间递归模型。
-结论 政府隐性担保对利率的决定依赖于发行人所在地的经济发展状况，当区域经济发展状况不理想时，债券利率并不受到政府隐性担保的影响，这时悲观的投资预期使得政府隐性担保变得不再可信，任何政府隐性担保的存在都无法通过改善投资者对债券未来违约风险的预期来降低债券发行企业的融资成本。相反，随着经济发展状况的改善，政府隐性担保变得更加可信并且它的存在有利于债券利率的降低。</description>
+      <description>政府隐性担保, 债务违约与利率决定 主题 募集资金用途隐含了债券资金的风险-收益，会对利率有一定影响（中西部经济较差的地区显著，因为投资者更为谨慎</description>
     </item>
     
     <item>
@@ -655,16 +354,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E6%9D%A0%E6%9D%86%E7%8E%87%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E8%B5%84%E4%BA%A7%E4%BB%B7%E6%A0%BC/</guid>
-      <description>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据
-主题 折算率下调是一个比较领先的指标
-利用中证登提高合格质押债券的准入门槛这个自然实验，检验债券的质押率(杠杆率)与债券价格之间的因果关系，对债券的质押价值进行估计，分析杠杆调控政策对债券市场产生的影响。
-数据 采用的样本为 2017 年 1 月到 8 月在上海证券交易所、深圳证券交易所、银行间 债券市场发行的主体评级和债券评级均为 AA 级的债券。
-宏观数据包括省 GDP 增速、M2 同比增速
-分析方法 交易所市场质押要求从 AA变成 AA+AAA，银行间不变
- 中证登公司出台新规之后，交易所债券市场发行的 AA 级债券的利差变化，要显著大于银行间债券市场发行的 AA 级债券的利差变化
- DID 双重差分
-模型 本部分在 Fostel and Geanakoplos 2015 等理论研究的基础上，构建了一个包 含不同态度的市场参与人的资产选择模型，采用一般均衡的视角研究限制杠杆率对于债 券价格的影响。
-结论 交易所债券市场在新规实施之后发行的 AA 级债券不能进入质押库进行质押，其平均的发行利差变化，相对于依旧可以质押的银行间债券市场的 AA 级债券，差异有大约 60 - 70 个基点。</description>
+      <description>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 主题 折算率下调是一个比较领先的指标 利用中证登提高合格质押债券的准入门槛这个自然实验</description>
     </item>
     
     <item>
@@ -673,18 +363,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E5%B8%B8%E8%8E%B9%E8%8E%B92019%E7%8E%AF%E5%A2%83%E4%BF%A1%E6%81%AF%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E4%BC%81%E4%B8%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7/</guid>
-      <description>环境信息透明度与企业信用评级——基于债券评级市场的经验证据
-主题 绿色债券和 ESG 投资
-企业环境信息等非财务信息向信用评级机构传递出与企业信用风险相关的信息，从而影响市场中介的决策，进而影响融资成本
-环境信息向市场传递了有价值的信息，可通过影响信用评级机构的决策使得企业承担 环境治理的经济成本
-数据 2008 至 2015 年期间公司债券发行主体作为研究对象，按照下列步骤筛选样本:
- 删除不能与上市公司匹配的发行主体; 删除属于银行业、保险业和其他金融行业的发行主体; 删除净资产小于或等于零的观测值; 删除计算控制变量所需数据缺失的观测值。  评级机构对企业债券发行主体的信用评级以及计算控制变量所需的数据均来源于 CSMAR 数据库。
-手工收集了企业的环境信息透明度数据，具体步骤如下:
- 收集和整理企业在公司年报、独立社会责任报告以及其他公开途径披露的环境信息;  分析方法 工具变量两阶段回归方法、公司固定效应模型以及倾向得分配对方法控制内生性
-模型  按照Clarkson et al. 2008的框架对这些信息进行文本分析，并对各项目评分; 总计各项得分最终获得环境信息透明度的总得分。  结论 公司的环境信息透明度与获得高信用评级的概率之间显著正相关。
-环境信息传递出公司的特质风险、盈余持续性、盈余质量等信息，从而影响了评级机构的决策。
-进一步，内部控制质量高(具有高质量外部审计)的公司中，环境信息透明度对企业信用评级的正向影响更显著。原因在于，内部控制(高质量外部审计)在一定程度上有助于提升环境信息的可靠性，从而增加了环境信息的价值。
-环境信息透明度可通过影响企业信用评级降低债券融资成本，环境信息透明度对企业信用评级的提升作用和对债券融资成本的降低效果在污染行业中显著更强。</description>
+      <description>环境信息透明度与企业信用评级——基于债券评级市场的经验证据 主题 绿色债券和 ESG 投资 企业环境信息等非财务信息向信用评级机构传递出与企业信用风险相关</description>
     </item>
     
     <item>
@@ -693,10 +372,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/</guid>
-      <description>财政扩张,信用违约和民营企业融资困境 四万亿的财政扩张的挤出效应，随后去杠杆更高的借贷成本 和更高的外部融资风险溢价，导致民营企业融资成本大幅上升
-不同政策或者冲击都是一方面影响金融中介的资产负债表，通过“存贷溢价”摩擦影响了金融市场基准的借贷成本，另一方面通过金融加速器效应对企业外部融资溢价产生影响，两者共同作用决定企业的融资成本。反事实分析表明，在这两个作用渠道中，“存贷溢价”摩擦都占据了主导。
-一类是金融中介将居民存款转化为贷款所产生的“存贷溢价”摩擦，另一种是企业从银行借贷由于信息不对称导致的“金融加速器”摩擦，
-包含金融摩擦的多部门 DSGE 模型</description>
+      <description>财政扩张,信用违约和民营企业融资困境 四万亿的财政扩张的挤出效应，随后去杠杆更高的借贷成本 和更高的外部融资风险溢价，导致民营企业融资成本大幅上</description>
     </item>
     
     <item>
@@ -705,10 +381,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A2019%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/</guid>
-      <description>货币政策不确定性,违约风险与宏观经济波动 货币政策不确定性的增加会带来违约风险的上升
-货币政策不确定性的度量 通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法对所有的条件波动率提取公共因子得到两种货币政策的不 确定性指数。
-非线性 DSGE 模型，使用带有随机波动率的货币政策规则刻画中国货币政策的不确定性
-宏观违约风险因子 信用利差的上升是信贷市场违约风险加大和经济衰退的重要预警指标(Gilchrist, Yankov, and Zakrajšek 2009)。同时，大量文献指出信贷/ GDP 缺口指标，即总信贷与 GDP 比值偏离其长期均值的部分，往往是债务违约以及银行危机的早期预警指标。信贷/GDP 缺口越大，表明信贷扩张引发债务违约和银行危机的可能性越大。本文用来测度违约风险的变量全部与违约风险正向相关。</description>
+      <description>货币政策不确定性,违约风险与宏观经济波动 货币政策不确定性的增加会带来违约风险的上升 货币政策不确定性的度量 通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法</description>
     </item>
     
     <item>
@@ -717,20 +390,7 @@ absorption: the fraction of the total variance of a set of asset returns explain
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62016%E8%BD%AF%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</guid>
-      <description>软预算约束与中国地方政府债务违约风险: 来自金融市场的证据
-主题 中国的地方政府债务存在普遍的软预算约束问题。
-将城投债利差分解为流动性溢价和信用风险溢价
-数据 城投债数据 城投债的数据来自 Wind 数据库，包括了债券发行主体、债券发行规模(issue size) 、息票率(coupon)、久期(macaulay duration)、历史主体信用评级(ratings) 、GICS 行业等信息。剔除了距到期时间不足一月的城投债，同时也剔除了含权城投债及可转换城投债。
-省市数据 地方政府的财政数据及宏观数据来自历年《中国统计年鉴》。地方政府数据主要包括实际 GDP 增长率(GDP growth) 、人均 GDP(GDP per capital) 、地方政府财政收入与财政支出之比(fiscal ratio) 、地方房地产固定资产投资或土地出让金收入与 GDP 之比(land cost) 、房地产 GDP 贡献值对 GDP 的比值(real estate GDP)等变量。
-宏观政策数据 M2 同比增速的季度均值来衡量货币政策的松紧。
-实际有效汇率、是否位于金融危机中
-分析方法 利用货币政策变动、汇率变动和金融危机这些对于地方政府而言外生的冲击，通过双重差分的方法来解决实证中的内生性问题，确立因果关系。
-模型 收益率价差和债券流动性进行随机效应面板数据回归
-Amihud 测度、高低价差( high-low) 和换手率( turnover) 三个常用的流动性风险度量
-定义流动性价差，收益率减去价差为违约风险
-结论 流动性风险都显著地反映在收益率价差中。城投债的评级信息没有被反映在价差中
-地方政府债务的违约风险并没有在城投债的收益率价差中得到反映，而中国的整体违约风险则在其中得到了有效的定价；整体违约风险价差在 2012 年后大幅飙升。
-非城投债是否反应了信用风险溢价</description>
+      <description>软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 主题 中国的地方政府债务存在普遍的软预算约束问题。 将城投债利差分解为流动性溢价和信用风</description>
     </item>
     
     <item>
@@ -739,15 +399,7 @@ Amihud 测度、高低价差( high-low) 和换手率( turnover) 三个常用的�
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%99%86%E7%A3%8A2020%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F/</guid>
-      <description>违约与杠杆周期——一个带有救助的金融加速器模型
-主题 地方政府为在短期内维持大量信贷投放的持续性，有内在激励为部分潜在的违约企业在可能发生违约时提供必要的救助
-苏宁的例子
-数据 理论模型和对关键数据假设，没有具体数据
-分析方法 静态分析 经济下行情景动态模拟 技术水平下降、风险冲击、救助冲击
-模型 BGG 模型的基础上，建立一个带有救助特征的 DSGE 模型
-随着救助的增加，实际的违约率 F(ω*) 不断下降，而潜在的违约率 F(ω**) 则不断上升
-随着实际违约率的下率，外部融资溢价 χ 也随之下降，企业家的资本购买需求 K 则随融资溢价的下降而上升，产出 Y 和家庭部门的消费 C 也最终随之上升。然而，随着救助的上升，企业部门的杠杆水平也将不断上升
-结论 去杠杆政策如果忽略了资产价格稳定，或者说没有相关的政策工具来维护金融稳定，则会导致资产价格下降，从而带来企业资产负债表衰退和杠杆率的反弹。</description>
+      <description>违约与杠杆周期——一个带有救助的金融加速器模型 主题 地方政府为在短期内维持大量信贷投放的持续性，有内在激励为部分潜在的违约企业在可能发生违约时</description>
     </item>
     
     <item>
@@ -756,9 +408,7 @@ Amihud 测度、高低价差( high-low) 和换手率( turnover) 三个常用的�
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E9%82%93%E8%B7%AF%E5%88%98%E6%AC%A2%E4%BE%AF%E7%B2%B2%E7%84%B62020%E9%87%91%E8%9E%8D%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</guid>
-      <description>金融资产配置与违约风险:蓄水池效应,还是逐利效应?
-金融资产的作用 企业的金融资产配置存在促进主业发展的“蓄水池效应”和损害主业投资的“逐利效应”两种作用机制。
- 蓄水池效应认为，金融资产能够起到稳定公司收益、 降低公司融资成本的作用，有利于提升公司发展潜力; 逐利效应则提出，企业持有过多的 金融资产会威胁主营业务、抑制实体投资能力，损害公司长远发展。  </description>
+      <description>金融资产配置与违约风险:蓄水池效应,还是逐利效应? 金融资产的作用 企业的金融资产配置存在促进主业发展的“蓄水池效应”和损害主业投资的“逐利效应</description>
     </item>
     
     <item>
@@ -767,13 +417,7 @@ Amihud 测度、高低价差( high-low) 和换手率( turnover) 三个常用的�
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/%E6%9E%97%E6%99%9A%E5%8F%912018%E9%AB%98%E7%AE%A1%E4%BB%BB%E8%81%8C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%BE%97%E4%B8%8E%E5%A4%B1/</guid>
-      <description>高管任职经历的得与失?——来自债券市场的经验证据
-主题 (毛新述 and 周小伟) 研究了高管担任过人大代表或政协委员的企业更倾向于通过发行债券而不是银行贷款等渠道融资
-本文则研究高管是否担任人大代表对债券发行成功率的影响
-数据 2008 - 2015 年上市公司发行的公司债券数据，其中财务数据和债券相关数据均来自于 Wind 数据库，而高管任职经历数据来源于作者对 CSMAR 数据库与年报中高管背景的手工收集。
-分析方法 发现有高管担任过人大代表或政协委员的企业在发债前的盈余管理和业绩都较高，而在发债后的盈余管理与业绩都下降的更快。
-模型 OLS 回归融资成本，logit 回归发行成功概率
-结论 相比没有高管担任过人大代表或政协委员的企业，有高管担任过人大代表或政协委员的企业债券发行成功率更高，但同时其发债成本也更大。因为在发债前进行了较多的盈余管理，这种盈余管理行为使得企业后续业绩发生“变脸”</description>
+      <description>高管任职经历的得与失?——来自债券市场的经验证据 主题 (毛新述 and 周小伟) 研究了高管担任过人大代表或政协委员的企业更倾向于通过发行债券而不是银行</description>
     </item>
     
     <item>
@@ -809,8 +453,7 @@ Amihud 测度、高低价差( high-low) 和换手率( turnover) 三个常用的�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ernestdong.github.io/readme/</guid>
-      <description>Hi, my name is Ernest Dong 👋 and I ❤️ open-source  Senior Student at PKU major in Risk Management and Insurance  Field of interests: Machine Learning, Risk Management in Finance.
-Skills 🛠️  Languages: Python, C/C++, R DS/ML/DL: NumPy, SciPy, Pandas, Scikit-Learn, PyTorch  Education 🎓    academic degree University Major duration     Master’s degree Peking University Insurance 1 2022 - 2024   Bachelor&amp;rsquo;s degree Peking University Risk Management and Insurance 2018 - 2022    More about me in my LinkedIn.</description>
+      <description>Hi, my name is Ernest Dong 👋 and I ❤️ open-source Senior Student at PKU major in Risk Management and Insurance Field of interests: Machine Learning, Risk Management in Finance. Skills 🛠️ Languages: Python, C/C++, R DS/ML/DL: NumPy, SciPy, Pandas, Scikit-Learn, PyTorch Education 🎓 academic degree University Major duration Master’s degree Peking University Insurance 1 2022 - 2024 Bachelor&amp;rsquo;s degree Peking</description>
     </item>
     
   </channel>
