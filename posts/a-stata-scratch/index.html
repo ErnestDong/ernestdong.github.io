@@ -179,7 +179,6 @@
 </ul>
 
     </div>
-    
   </span>
 </div>
 
@@ -212,23 +211,6 @@
     </header>
 
   
-    
-    <div id="toc">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#summary">summary</a></li>
-    <li><a href="#目的">目的</a></li>
-    <li><a href="#可扩展性">可扩展性</a></li>
-    <li><a href="#简介">简介</a>
-      <ul>
-        <li><a href="#依赖">依赖</a></li>
-        <li><a href="#执行">执行</a></li>
-      </ul>
-    </li>
-    <li><a href="#运行截图">运行截图</a></li>
-  </ul>
-</nav>
-    </div>
     
     <div class="content" itemprop="articleBody">
       <p>stata on our own</p>
@@ -306,6 +288,23 @@
     </div>
 
     
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">summary</a></li>
+    <li><a href="#目的">目的</a></li>
+    <li><a href="#可扩展性">可扩展性</a></li>
+    <li><a href="#简介">简介</a>
+      <ul>
+        <li><a href="#依赖">依赖</a></li>
+        <li><a href="#执行">执行</a></li>
+      </ul>
+    </li>
+    <li><a href="#运行截图">运行截图</a></li>
+  </ul>
+</nav>
+    </div>
+    
 
     <div id="share-footer" style="display: none">
       
@@ -368,6 +367,9 @@
       
         <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
           <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
         
         <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
           <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>

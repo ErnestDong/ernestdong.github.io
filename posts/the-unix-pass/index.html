@@ -180,7 +180,6 @@
 </ul>
 
     </div>
-    
   </span>
 </div>
 
@@ -213,24 +212,6 @@
     </header>
 
   
-    
-    <div id="toc">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#pass-的优点">Pass 的优点</a></li>
-    <li><a href="#安装-pass-与-browserpass">安装 <code>Pass</code> 与 <code>browserpass</code></a></li>
-    <li><a href="#配置-pass">配置 <code>Pass</code></a>
-      <ul>
-        <li><a href="#pass-init">Pass init</a></li>
-        <li><a href="#pass-导入">Pass 导入</a></li>
-        <li><a href="#pass-使用">Pass 使用</a></li>
-        <li><a href="#tweaks">Tweaks</a></li>
-      </ul>
-    </li>
-    <li><a href="#配置-pass-for-ios">配置 <code>Pass for iOS</code></a></li>
-  </ul>
-</nav>
-    </div>
     
     <div class="content" itemprop="articleBody">
       <p>pass for macOS usage</p>
@@ -391,6 +372,24 @@ chmod u+x .git/hooks/post-commit
     </div>
 
     
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pass-的优点">Pass 的优点</a></li>
+    <li><a href="#安装-pass-与-browserpass">安装 <code>Pass</code> 与 <code>browserpass</code></a></li>
+    <li><a href="#配置-pass">配置 <code>Pass</code></a>
+      <ul>
+        <li><a href="#pass-init">Pass init</a></li>
+        <li><a href="#pass-导入">Pass 导入</a></li>
+        <li><a href="#pass-使用">Pass 使用</a></li>
+        <li><a href="#tweaks">Tweaks</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置-pass-for-ios">配置 <code>Pass for iOS</code></a></li>
+  </ul>
+</nav>
+    </div>
+    
 
     <div id="share-footer" style="display: none">
       
@@ -453,6 +452,9 @@ chmod u+x .git/hooks/post-commit
       
         <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
           <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
         
         <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
           <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>

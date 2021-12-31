@@ -167,7 +167,6 @@
 </ul>
 
     </div>
-    
   </span>
 </div>
 
@@ -200,17 +199,6 @@
     </header>
 
   
-    
-    <div id="toc">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#和学术搜索集成">和学术搜索集成</a></li>
-    <li><a href="#org-roam-bibtex">org-roam-bibtex</a></li>
-    <li><a href="#all-the-icons-completion">all-the-icons-completion</a></li>
-    <li><a href="#复制-pdf-之后粘贴去掉空格">复制 PDF 之后粘贴去掉空格</a></li>
-  </ul>
-</nav>
-    </div>
     
     <div class="content" itemprop="articleBody">
       <p>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。</p>
@@ -381,6 +369,17 @@
     </div>
 
     
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#和学术搜索集成">和学术搜索集成</a></li>
+    <li><a href="#org-roam-bibtex">org-roam-bibtex</a></li>
+    <li><a href="#all-the-icons-completion">all-the-icons-completion</a></li>
+    <li><a href="#复制-pdf-之后粘贴去掉空格">复制 PDF 之后粘贴去掉空格</a></li>
+  </ul>
+</nav>
+    </div>
+    
 
     <div id="share-footer" style="display: none">
       
@@ -443,6 +442,9 @@
       
         <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
           <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
         
         <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
           <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
