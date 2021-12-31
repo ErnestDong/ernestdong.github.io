@@ -2,6 +2,7 @@ title = "Ernest Dong"
 baseURL = "https://ernestdong.github.io"
 theme = "cactus" #"researcher"
 enableEmoji = true
+hasCJKLanguage = true
 [params]
   author = "Ernest Dong"
   description = "A Sisyphus Rolling Up Rock"
@@ -57,5 +58,9 @@ enableEmoji = true
     noClasses = true
     style = "dracula"
     tabWidth = 4
-[markup.goldmark.renderer]
-  unsafe= true
+  [markup.goldmark.renderer]
+    unsafe= true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
