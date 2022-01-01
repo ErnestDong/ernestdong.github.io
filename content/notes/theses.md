@@ -1,13 +1,11 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:53:38+08:00
+lastmod = 2022-01-01T19:14:00+08:00
 tags = ["thesis"]
 draft = false
 +++
 
-## Presentation
-[Presentation Notes](../../files/pre.pdf)
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}
 
 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
@@ -35,27 +33,24 @@ draft = false
 5.  Journal of Banking and Finance
 
 
-## week 6 {#week-6}
+## week 7 {#week-7}
 
 
-### 宏观“不确定性” {#宏观-不确定性}
+### 公司治理 {#公司治理}
 
-[The macroeconomic uncertainty premium in the corporate bond market]({{<relref "thesis/bali2021macroeconomic.md#" >}})
-[Common risk factors in the cross-section of corporate bond returns]({{<relref "thesis/bai2019common.md#" >}})
-
-
-### 宏观环境 {#宏观环境}
-
-疫情
-[Impact of covid-19 on corporate solvency and possible policy responses in the eu]({{<relref "thesis/mirza2020impact.md#" >}})
-
-商业周期
-[Business cycles and currency returns]({{<relref "thesis/colacito2020business.md#" >}})
-
-财政政策
-[Fiscal policy driven bond risk premia]({{<relref "thesis/2020Fiscal.md#" >}})
+[Corporate governance of banks and financial stability]({{<relref "thesis/anginer2018corporate.md#" >}})
 
 
-### 风险传染：衍生品视角 {#风险传染-衍生品视角}
+#### CDS 对公司治理的影响 {#cds-对公司治理的影响}
 
-[Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?]({{<relref "thesis/nickerson2017debt.md#" >}})
+[Credit default swaps, exacting creditors and corporate liquidity management]({{<relref "thesis/subrahmanyam2017credit.md#" >}})
+
+
+#### COVID-19 对公司治理的影响 {#covid-19-对公司治理的影响}
+
+[Corporate immunity to the covid-19 pandemic]({{<relref "thesis/ding2021corporate.md#" >}})
+
+
+### 风险传染 {#风险传染}
+
+[Exploring the sources of default clustering]({{<relref "thesis/azizpour2018exploring.md#" >}})

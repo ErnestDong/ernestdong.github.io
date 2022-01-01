@@ -1,7 +1,7 @@
 +++
 title = "已读已汇报文献"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:55:07+08:00
+lastmod = 2022-01-01T19:14:32+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -249,3 +249,29 @@ default = spread + industry + r + liquidity + enterprise(financial, state-owned)
 
 1.  经济学研究要注重边界：结论依赖于条件是什么。现在是一个大变革的时代，
 2.  **逻辑性** 必须解决清楚，理解因果。
+
+
+## week 6 {#week-6}
+
+
+### 宏观“不确定性” {#宏观-不确定性}
+
+[The macroeconomic uncertainty premium in the corporate bond market]({{<relref "thesis/bali2021macroeconomic.md#" >}})
+[Common risk factors in the cross-section of corporate bond returns]({{<relref "thesis/bai2019common.md#" >}})
+
+
+### 宏观环境 {#宏观环境}
+
+疫情
+[Impact of covid-19 on corporate solvency and possible policy responses in the eu]({{<relref "thesis/mirza2020impact.md#" >}})
+
+商业周期
+[Business cycles and currency returns]({{<relref "thesis/colacito2020business.md#" >}})
+
+财政政策
+[Fiscal policy driven bond risk premia]({{<relref "thesis/2020Fiscal.md#" >}})
+
+
+### 风险传染：衍生品视角 {#风险传染-衍生品视角}
+
+[Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?]({{<relref "thesis/nickerson2017debt.md#" >}})
