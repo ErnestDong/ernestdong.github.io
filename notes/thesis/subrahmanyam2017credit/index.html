@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="/js/cactus.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Credit default swaps, exacting creditors and corporate liquidity management | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/subrahmanyam2017credit/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Credit default swaps, exacting creditors and corporate liquidity management" />
+<meta property="og:description" content="Credit default swaps, exacting creditors and corporate liquidity management 主题 虽然 CDS 目前（信用风险缓释合约 CRMA 、信用风险缓释凭证 CRMW ）应用很小，但是交叉违约条款导致违约的也挺常见。 引入 CDS 交易后，高现金" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/subrahmanyam2017credit/" /><meta property="article:section" content="notes" />
+
+<meta property="article:modified_time" content="2022-01-01T19:13:04+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Credit default swaps, exacting creditors and corporate liquidity management"/>
+<meta name="twitter:description" content="Credit default swaps, exacting creditors and corporate liquidity management 主题 虽然 CDS 目前（信用风险缓释合约 CRMA 、信用风险缓释凭证 CRMW ）应用很小，但是交叉违约条款导致违约的也挺常见。 引入 CDS 交易后，高现金"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.9ff6ff738e4ca1afbc788713d620eb1f0eb083318d081606f5f460e5d14280181c69f7700882507f2c3826ad339d8ee3b21ed82917f30dfa4dd648d0d7c073f6.css" integrity="sha512-n/b/c45Moa&#43;8eIcT1iDrHw6wgzGNCBYG9fRg5dFCgBgcafdwCIJQfyw4Jq0znY7jsh7YKRfzDfpN1kjQ18Bz9g=="> 
+
+  
+   <link rel="stylesheet" href="https://ernestdong.github.io/css/custom.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+        <li><a href="/">HomePage</a></li>
+        
+        <li><a href="/notes">Notes</a></li>
+        
+        <li><a href="/posts">Posts</a></li>
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        <li><a href="/readme/index.html">About</a></li>
+        
+        <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/ding2021corporate/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/anginer2018corporate/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&text=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&title=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&is_video=false&description=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&title=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&title=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&name=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management&description=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management%20%e4%b8%bb%e9%a2%98%20%e8%99%bd%e7%84%b6%20CDS%20%e7%9b%ae%e5%89%8d%ef%bc%88%e4%bf%a1%e7%94%a8%e9%a3%8e%e9%99%a9%e7%bc%93%e9%87%8a%e5%90%88%e7%ba%a6%20CRMA%20%e3%80%81%e4%bf%a1%e7%94%a8%e9%a3%8e%e9%99%a9%e7%bc%93%e9%87%8a%e5%87%ad%e8%af%81%20CRMW%20%ef%bc%89%e5%ba%94%e7%94%a8%e5%be%88%e5%b0%8f%ef%bc%8c%e4%bd%86%e6%98%af%e4%ba%a4%e5%8f%89%e8%bf%9d%e7%ba%a6%e6%9d%a1%e6%ac%be%e5%af%bc%e8%87%b4%e8%bf%9d%e7%ba%a6%e7%9a%84%e4%b9%9f%e6%8c%ba%e5%b8%b8%e8%a7%81%e3%80%82%20%e5%bc%95%e5%85%a5%20CDS%20%e4%ba%a4%e6%98%93%e5%90%8e%ef%bc%8c%e9%ab%98%e7%8e%b0%e9%87%91" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&t=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Credit default swaps, exacting creditors and corporate liquidity management
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2022-01-01 19:13:04 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-01</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17300247">Credit default swaps, exacting creditors and corporate liquidity management</a></p>
+<h2 id="主题">主题</h2>
+<p>虽然 CDS 目前（信用风险缓释合约 CRMA 、信用风险缓释凭证 CRMW ）应用很小，但是交叉违约条款导致违约的也挺常见。</p>
+<p>引入 CDS 交易后，高现金现象与高杠杆现象并存。</p>
+<h2 id="数据">数据</h2>
+<p>因变量是现金和有价证券与总资产的比率</p>
+<p>自变量包括行业现金流风险（Industry sigma）、现金流与总资产的比率（Cash flow/Assets）、衡量投资机会的指标（Market to book）、总资产的对数（Size）、营运资本比率（Net working capital/Assets）、资本支出（Capital Spend）、杠杆（Leverage）、研发与销售的比率 （R&amp;D/Sales）、股息支付（ Dividend dummy ）、收购占总资产的比率（ Acquisition activity ）、占国外税前收入的比例（ Foreign pretax income ）。</p>
+<h2 id="分析方法">分析方法</h2>
+<p>CDS 的收益和成本之间存在矛盾关系</p>
+<ol>
+<li>CDS 有助于增加当前的信贷供应，因为债权人可以将部分信用风险转移到 CDS 市场。引入 CDS 后债权人的监控可能不那么严格。在这种情况下，借款公司可能会进行风险转移并减少持有具有高机会成本的现金以最大化股权价值；</li>
+<li>CDS 的存在可能会改变债权人和借款人之间的关系，并对借款人施加未来的融资约束或成本。事后，受 CDS 保护的债权人在重新谈判的过程中往往更加强硬，这增加了公司对流动性的预防性需求。</li>
+</ol>
+<p>影响途径是</p>
+<ol>
+<li>公司的预防考虑，如信用风险恶化和派息</li>
+<li>借款人的风险转移激励</li>
+</ol>
+<h2 id="模型">模型</h2>
+<p>CDS 交易可能是内生的。有可能存在一个不可观察的变量来推动 CDS 交易的引入和公司现金持有</p>
+<p>工具变量为公司在其债务上引入 CDS 交易的潜在倾向，具体为 Lender FX usage (<a href="#citeproc_bib_item_1">Saretto and Tookes 2013</a>) &amp; Lender Tier 1 capital (<a href="#citeproc_bib_item_2">Subrahmanyam, Tang, and Wang 2014</a>)</p>
+<h2 id="结论">结论</h2>
+<p>现金持有的最佳水平取决于现金的边际价值。</p>
+<p>在 CDS 交易开始后，有关公司持有更多的现金来偿还债务。对于不支付股息且流动性边际价值较高的 CDS 公司，现金持有量的增加更为明显。对于现金流波动较大的 CDS 公司，这些增加的现金持有量并降低杠杆率。总体而言，CDS 公司采用更保守的流动性政策以避免与更严格的债权人谈判的观点一致。</p>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Saretto, Alessio, and Heather E Tookes. 2013. “Corporate Leverage, Debt Maturity, and Credit Supply: The Role of Credit Default Swaps.” <i>The Review of Financial Studies</i> 26 (5): 1190–1247.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Subrahmanyam, Marti G, Dragon Yongjun Tang, and Sarah Qian Wang. 2014. “Does the Tail Wag the Dog? the Effect of Credit Default Swaps on Credit Risk.” <i>The Review of Financial Studies</i> 27 (10): 2927–60.</div>
+</div>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">HomePage</a></li>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&text=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&title=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&is_video=false&description=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&title=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&title=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&name=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management&description=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management%20%e4%b8%bb%e9%a2%98%20%e8%99%bd%e7%84%b6%20CDS%20%e7%9b%ae%e5%89%8d%ef%bc%88%e4%bf%a1%e7%94%a8%e9%a3%8e%e9%99%a9%e7%bc%93%e9%87%8a%e5%90%88%e7%ba%a6%20CRMA%20%e3%80%81%e4%bf%a1%e7%94%a8%e9%a3%8e%e9%99%a9%e7%bc%93%e9%87%8a%e5%87%ad%e8%af%81%20CRMW%20%ef%bc%89%e5%ba%94%e7%94%a8%e5%be%88%e5%b0%8f%ef%bc%8c%e4%bd%86%e6%98%af%e4%ba%a4%e5%8f%89%e8%bf%9d%e7%ba%a6%e6%9d%a1%e6%ac%be%e5%af%bc%e8%87%b4%e8%bf%9d%e7%ba%a6%e7%9a%84%e4%b9%9f%e6%8c%ba%e5%b8%b8%e8%a7%81%e3%80%82%20%e5%bc%95%e5%85%a5%20CDS%20%e4%ba%a4%e6%98%93%e5%90%8e%ef%bc%8c%e9%ab%98%e7%8e%b0%e9%87%91" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fsubrahmanyam2017credit%2f&t=Credit%20default%20swaps%2c%20exacting%20creditors%20and%20corporate%20liquidity%20management" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">HomePage</a></li>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="/js/tex-mml-chtml.js">
+</script>
+
+</html>
