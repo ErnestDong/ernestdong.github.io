@@ -28,7 +28,7 @@ hasCJKLanguage = true
     link = "dongcy2000@outlook.com"
 [menu]
   [[menu.main]]
-    name = "HomePage"
+    name = "Home"
     url = "/"
     weight = 1
   [[menu.main]]
