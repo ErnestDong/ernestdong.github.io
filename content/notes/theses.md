@@ -1,7 +1,7 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-01T19:14:00+08:00
+lastmod = 2022-01-06T11:26:57+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -56,3 +56,16 @@ draft = false
 ### 风险传染 {#风险传染}
 
 [Exploring the sources of default clustering]({{<relref "thesis/azizpour2018exploring.md#" >}})
+
+
+### 机器学习 {#机器学习}
+
+
+#### 神经网络 {#神经网络}
+
+[Opening the black box--quantile neural networks for loss given default prediction]({{<relref "thesis/kellner2022opening.md#" >}})
+
+
+#### 决策树 {#决策树}
+
+[Grabit: gradient tree-boosted tobit models for default prediction]({{<relref "thesis/sigrist2019grabit.md#" >}})
