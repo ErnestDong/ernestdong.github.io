@@ -5,11 +5,11 @@
     <link>https://ernestdong.github.io/notes/</link>
     <description>Recent content in Notes on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 06 Jan 2022 11:27:24 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jan 2022 19:14:32 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>已读已汇报文献</title>
       <link>https://ernestdong.github.io/notes/thesis_archive/</link>
-      <pubDate>Thu, 06 Jan 2022 11:27:24 +0800</pubDate>
+      <pubDate>Sat, 01 Jan 2022 19:14:32 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
       <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdq</description>
@@ -18,28 +18,10 @@
     <item>
       <title>毕业论文</title>
       <link>https://ernestdong.github.io/notes/theses/</link>
-      <pubDate>Thu, 06 Jan 2022 11:26:57 +0800</pubDate>
+      <pubDate>Sat, 01 Jan 2022 19:14:00 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/theses/</guid>
       <description>Presentation Presentation Notes TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的</description>
-    </item>
-    
-    <item>
-      <title>Grabit: gradient tree-boosted tobit models for default prediction</title>
-      <link>https://ernestdong.github.io/notes/thesis/sigrist2019grabit/</link>
-      <pubDate>Thu, 06 Jan 2022 11:26:41 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/sigrist2019grabit/</guid>
-      <description>Grabit: gradient tree-boosted tobit models for default prediction 主题 建立新的二元分类模型 Grabit，该模型是通过将梯度树提升应用于 Tobit 模型而获得的 Grabit 算法在 python 包 KTBoost 中实现，该包可从 pypi 存储库中公</description>
-    </item>
-    
-    <item>
-      <title>Opening the black box–quantile neural networks for loss given default prediction</title>
-      <link>https://ernestdong.github.io/notes/thesis/kellner2022opening/</link>
-      <pubDate>Thu, 06 Jan 2022 11:26:25 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/kellner2022opening/</guid>
-      <description>Opening the black box&amp;ndash;quantile neural networks for loss given default prediction 主题 针对贷款数据集进行分位数回归 与中位数相比，更高的分位数是由对宏观经济的更高敏感性以及整体更高的非线性和相互作用驱动</description>
     </item>
     
     <item>
