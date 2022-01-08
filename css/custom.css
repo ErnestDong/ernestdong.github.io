@@ -10,3 +10,27 @@
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
   }
+body {
+    counter-reset: h2counter;
+}
+h1 {
+    counter-reset: h2counter;
+    text-decoration: initial;
+}
+h2:before {
+    content: counter(h2counter) "\0000a0\0000a0";
+    counter-increment: h2counter;
+    counter-reset: h3counter;
+    text-decoration: initial;
+}
+h3:before {
+    content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0";
+    counter-increment: h3counter;
+    text-decoration: initial;
+}
+
+h4:before {
+    content: counter(h2counter) "." counter(h3counter)"." counter(h4counter) "\0000a0\0000a0";
+    counter-increment: h4counter;
+    text-decoration: initial;
+}
