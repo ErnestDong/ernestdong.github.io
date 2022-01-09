@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -187,36 +224,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        毕业论文
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          毕业论文
+        </h1>
+        <div class="meta">
           
-          <time datetime="2022-01-06 11:26:57 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-06</time>
+          <div class="postdate">
+            
+            <time datetime="2022-01-06 11:26:57 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-06</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <h2 id="presentation">Presentation</h2>
+      
+      <div class="content" itemprop="articleBody">
+        <h2 id="presentation">Presentation</h2>
 <p><a href="../../files/pre.pdf">Presentation Notes</a></p>
 <h2 id="tasks"><span class="org-todo todo TODO">TODO</span> Tasks</h2>
 <p>你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。</p>
@@ -250,18 +287,18 @@
 <h4 id="决策树">决策树</h4>
 <p><a href="/notes/thesis/sigrist2019grabit/">Grabit: gradient tree-boosted tobit models for default prediction</a></p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -380,7 +417,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -417,7 +454,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -430,8 +467,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

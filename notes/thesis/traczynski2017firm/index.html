@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,28 +215,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Firm default prediction: a bayesian model-averaging approach
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Firm default prediction: a bayesian model-averaging approach
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-12-09 22:24:43 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          <div class="postdate">
+            
+            <time datetime="2021-12-09 22:24:43 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://eds.s.ebscohost.com/eds/pdfviewer/pdfviewer?vid=1&amp;sid=2b984d92-27ba-4a57-8855-814ffa7c4f73%5C%40redis">Firm default prediction: a bayesian model-averaging approach</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://eds.s.ebscohost.com/eds/pdfviewer/pdfviewer?vid=1&amp;sid=2b984d92-27ba-4a57-8855-814ffa7c4f73%5C%40redis">Firm default prediction: a bayesian model-averaging approach</a></p>
 <h2 id="主题">主题</h2>
 <p>利用贝叶斯模型预测违约</p>
 <p>传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty</p>
@@ -297,18 +334,18 @@
 <h2 id="结论">结论</h2>
 <p>only the ratio of total liabilities to total assets and the inverse of the annualized volatility of firm market equity are robust predictors of bankruptcy and default and that models using only these two variables better predict bankruptcies and defaults for all firms than  models  using  all available co-variate.</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -418,7 +455,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -455,7 +492,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -468,8 +505,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -208,36 +245,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        已读已汇报文献
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          已读已汇报文献
+        </h1>
+        <div class="meta">
           
-          <time datetime="2022-01-06 11:27:24 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-06</time>
+          <div class="postdate">
+            
+            <time datetime="2022-01-06 11:27:24 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-06</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <h2 id="week-1">week 1</h2>
+      
+      <div class="content" itemprop="articleBody">
+        <h2 id="week-1">week 1</h2>
 <h3 id="微观指标">微观指标</h3>
 <h3 id="评级度量风险">评级度量风险</h3>
 <p><a href="/notes/thesis/%E5%8F%B2%E6%B0%B8%E4%B8%9C2021%E4%B8%AD%E5%80%BA%E4%BC%B0%E5%80%BC%E8%AF%86%E5%88%AB%E4%BA%86%E5%80%BA%E5%88%B8%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E5%90%97/">中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析</a>
@@ -404,18 +441,18 @@
 <h3 id="风险传染-衍生品视角">风险传染：衍生品视角</h3>
 <p><a href="/notes/thesis/nickerson2017debt/">Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</a></p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -561,7 +598,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -598,7 +635,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -611,8 +648,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

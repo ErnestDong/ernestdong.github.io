@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -183,36 +220,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        违约与杠杆周期——一个带有救助的金融加速器模型
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          违约与杠杆周期——一个带有救助的金融加速器模型
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F%E2%80%94%E2%80%94%E4%B8%80%E4%B8%AA%E5%B8%A6%E6%9C%89%E6%95%91%E5%8A%A9%E7%9A%84%E9%87%91%E8%9E%8D%E5%8A%A0%E9%80%9F%E5%99%A8%E6%A8%A1%E5%9E%8B_%E9%99%86%E7%A3%8A.pdf">违约与杠杆周期——一个带有救助的金融加速器模型</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F%E2%80%94%E2%80%94%E4%B8%80%E4%B8%AA%E5%B8%A6%E6%9C%89%E6%95%91%E5%8A%A9%E7%9A%84%E9%87%91%E8%9E%8D%E5%8A%A0%E9%80%9F%E5%99%A8%E6%A8%A1%E5%9E%8B_%E9%99%86%E7%A3%8A.pdf">违约与杠杆周期——一个带有救助的金融加速器模型</a></p>
 <h2 id="主题">主题</h2>
 <p>地方政府为在短期内维持大量信贷投放的持续性，有内在激励为部分潜在的违约企业在可能发生违约时提供必要的救助</p>
 <p>苏宁的例子</p>
@@ -229,18 +266,18 @@
 <h2 id="结论">结论</h2>
 <p>去杠杆政策如果忽略了资产价格稳定，或者说没有相关的政策工具来维护金融稳定，则会导致资产价格下降，从而带来企业资产负债表衰退和杠杆率的反弹。</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -355,7 +392,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -392,7 +429,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -405,8 +442,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

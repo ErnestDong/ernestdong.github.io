@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,28 +215,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        China&#39;s no-bailout reform: impact on bond yields and rating standards
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          China&#39;s no-bailout reform: impact on bond yields and rating standards
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-12-09 22:24:54 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          <div class="postdate">
+            
+            <time datetime="2021-12-09 22:24:54 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://www.sciencedirect.com/science/article/pii/S0378426621002387">China&rsquo;s no-bailout reform: impact on bond yields and rating standards</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0378426621002387">China&rsquo;s no-bailout reform: impact on bond yields and rating standards</a></p>
 <h2 id="主题">主题</h2>
 <p>债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响</p>
 <p>国企发行了80%的债券，但违约中只占了15%，因此作者认为政府支持是存在的。</p>
@@ -344,18 +381,18 @@
 <p>2014之后，评级机构降低了评级标准，</p>
 <p>增量无救助改革措施在推动中国国内债券市场向真正的信贷市场靠拢，并提高基于风险的债券定价方面是有效的</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -465,7 +502,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -502,7 +539,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -515,8 +552,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

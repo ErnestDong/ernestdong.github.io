@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,28 +215,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-28 10:46:05 &#43;0800 &#43;0800" itemprop="datePublished">2021-11-28</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-28 10:46:05 &#43;0800 &#43;0800" itemprop="datePublished">2021-11-28</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC_%E2%80%94%E2%80%94...%E4%BA%8E%E4%BA%A4%E6%98%93%E6%89%80%E5%90%8C%E4%B8%80%E5%8F%AA%E4%BF%A1%E7%94%A8%E5%80%BA%E7%9A%84%E4%BB%B7%E6%A0%BC%E5%B7%AE%E5%88%86%E6%9E%90_%E9%92%9F%E5%AE%81%E6%A1%A6.pdf">散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC_%E2%80%94%E2%80%94...%E4%BA%8E%E4%BA%A4%E6%98%93%E6%89%80%E5%90%8C%E4%B8%80%E5%8F%AA%E4%BF%A1%E7%94%A8%E5%80%BA%E7%9A%84%E4%BB%B7%E6%A0%BC%E5%B7%AE%E5%88%86%E6%9E%90_%E9%92%9F%E5%AE%81%E6%A1%A6.pdf">散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</a></p>
 <h2 id="主题">主题</h2>
 <p>合格投资者大“散户”</p>
 <p>其认为机构没有对高收益的偏好，只有散户有。事实应该是机构和散户都有一定的刚兑信仰</p>
@@ -217,18 +254,18 @@
 <p>“城投债危机”期间，竞价交易与大宗交易的价格差为负，散户需求效应更大以及西部地区的债券价格差更小(负的更多)。</p>
 <p>“城投债危机”期间，隐性担保能力越大的地区发行的债券价格差更大(负的更少)。</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -338,7 +375,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -375,7 +412,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -388,8 +425,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

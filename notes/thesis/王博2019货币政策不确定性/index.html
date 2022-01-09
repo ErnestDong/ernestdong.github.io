@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -175,36 +212,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        货币政策不确定性,违约风险与宏观经济波动
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          货币政策不确定性,违约风险与宏观经济波动
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E3%80%81%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%B3%A2%E5%8A%A8_%E7%8E%8B%E5%8D%9A.pdf">货币政策不确定性,违约风险与宏观经济波动</a>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E3%80%81%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%B3%A2%E5%8A%A8_%E7%8E%8B%E5%8D%9A.pdf">货币政策不确定性,违约风险与宏观经济波动</a>
 货币政策不确定性的增加会带来违约风险的上升</p>
 <h2 id="货币政策不确定性的度量">货币政策不确定性的度量</h2>
 <p>通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法对所有的条件波动率提取公共因子得到两种货币政策的不 确定性指数。</p>
@@ -212,18 +249,18 @@
 <h2 id="宏观违约风险因子">宏观违约风险因子</h2>
 <p>信用利差的上升是信贷市场违约风险加大和经济衰退的重要预警指标(Gilchrist, Yankov, and Zakrajšek 2009)。同时，大量文献指出信贷/ GDP 缺口指标，即总信贷与 GDP 比值偏离其长期均值的部分，往往是债务违约以及银行危机的早期预警指标。信贷/GDP 缺口越大，表明信贷扩张引发债务违约和银行危机的可能性越大。本文用来测度违约风险的变量全部与违约风险正向相关。</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -330,7 +367,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -367,7 +404,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -380,8 +417,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

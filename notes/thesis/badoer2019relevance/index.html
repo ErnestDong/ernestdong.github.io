@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,28 +215,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        The relevance of credit ratings in transparent bond markets
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          The relevance of credit ratings in transparent bond markets
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-12-09 22:25:15 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          <div class="postdate">
+            
+            <time datetime="2021-12-09 22:25:15 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://www.paris-december.eu/sites/default/files/pdf/parismeeting/2017/badoer%5F2017.pdfjournalThe%20Review%20of%20Financial%20Studies">The relevance of credit ratings in transparent bond markets</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.paris-december.eu/sites/default/files/pdf/parismeeting/2017/badoer%5F2017.pdfjournalThe%20Review%20of%20Financial%20Studies">The relevance of credit ratings in transparent bond markets</a></p>
 <h2 id="主题">主题</h2>
 <p>信息更透明，评级机构的作用</p>
 <p>本文考察了通过TRACE系统对公司债券交易的公开披露如何影响</p>
@@ -230,18 +267,18 @@
 <li>信息传播增强了信用利差预测未来违约的能力，增加了重要信用事件发生前从债券市场到股票市场的信息流，这与市场价格在透明市场中更有效地发挥其信息聚集和传递作用是一致的。</li>
 </ol>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -351,7 +388,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -388,7 +425,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -401,8 +438,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

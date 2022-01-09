@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,36 +215,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Exploring the sources of default clustering
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Exploring the sources of default clustering
+        </h1>
+        <div class="meta">
           
-          <time datetime="2022-01-01 19:13:41 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-01</time>
+          <div class="postdate">
+            
+            <time datetime="2022-01-01 19:13:41 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-01</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X1830103X">Exploring the sources of default clustering</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X1830103X">Exploring the sources of default clustering</a></p>
 <h2 id="主题">主题</h2>
 <p>违约聚类的一个主要来源是公司共同暴露于共同或相关的风险因素，如利率、股票收益和 GDP 增长。这些因素的变动导致公司有条件违约率的相关变化。除了公司对系统性因素的共同暴露之外，还有其他违约集群的来源。</p>
 <p>公司之间的财务、法律或业务关系可能充当风险分散的渠道。例如，信用互换中保护卖方的违约可能会使买方面临保护，并增加保护买方的其他交易对手承担的违约风险。通过传染，一家公司的违约会对其他公司的有条件违约率产生直接影响(<a href="#citeproc_bib_item_1">Acemoglu, Ozdaglar, and Tahbaz-Salehi 2015</a>)。</p>
@@ -241,18 +278,18 @@
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Hamilton, David. 2005. “Moodys Senior Ratings Algorithm and Estimated Senior Ratings.” <i>Moodys Investors Service</i>.</div>
 </div>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -362,7 +399,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -399,7 +436,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -412,8 +449,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

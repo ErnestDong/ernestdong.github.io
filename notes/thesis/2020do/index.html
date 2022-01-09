@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -184,28 +221,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Do measures of systemic risk predict u.s. corporate bond default rates?
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Do measures of systemic risk predict u.s. corporate bond default rates?
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-12-09 22:25:04 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          <div class="postdate">
+            
+            <time datetime="2021-12-09 22:25:04 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://www.sciencedirect.com/science/article/pii/S1057521920301976">Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S1057521920301976">Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect</a></p>
 <h2 id="abstract">abstract</h2>
 <p>使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债券违约率。</p>
 <p>几乎所有的系统性风险指标对违约率都有预测能力。基于多元混频VAR模型的格兰杰因果检验进一步支持了这一结论。在MIDAS模型的基础上，进一步说明这些指标中的五个能够对2009年的公司违约危机进行样本外预测。使用 Lasso 多变量模型进一步表明，系统风险指标可以对 2009 年的违约率和危机后的违约率进行样本外预测。特定于机构的和波动性的系统性风险指标在建模美国公司债券违约率方面最相关</p>
@@ -234,18 +271,18 @@ the fraction of the total variance of a set of asset returns explained** institu
 <h2 id="conclusion">conclusion</h2>
 <p>Covar、catfin、MES_BE、REAL_VOL 和 DEF_DPR 最重要</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -361,7 +398,7 @@ the fraction of the total variance of a set of asset returns explained** institu
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -398,7 +435,7 @@ the fraction of the total variance of a set of asset returns explained** institu
 
 
 
-  
+
 
 
 <script>
@@ -411,8 +448,8 @@ the fraction of the total variance of a set of asset returns explained** institu
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

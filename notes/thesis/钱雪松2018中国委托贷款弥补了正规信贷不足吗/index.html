@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -174,36 +211,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        中国委托贷款弥补了正规信贷不足吗?
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          中国委托贷款弥补了正规信贷不足吗?
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97%EF%BC%9F.pdf">中国委托贷款弥补了正规信贷不足吗?</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97%EF%BC%9F.pdf">中国委托贷款弥补了正规信贷不足吗?</a></p>
 <h2 id="委托贷款">委托贷款</h2>
 <ul>
 <li>逆信贷周期</li>
@@ -211,18 +248,18 @@
 <li>违约概率高于银行不良率</li>
 </ul>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -328,7 +365,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -365,7 +402,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -378,8 +415,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

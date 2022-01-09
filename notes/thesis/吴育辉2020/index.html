@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -170,36 +207,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        投资人付费&#34;vs.&#34;发行人付费&#34;:谁的信用评级质量更高?
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          投资人付费&#34;vs.&#34;发行人付费&#34;:谁的信用评级质量更高?
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p>:Custom_ID: 吴育辉 2020
+      
+      <div class="content" itemprop="articleBody">
+        <p>:Custom_ID: 吴育辉 2020
 :URL:
 :AUTHOR: 吴育辉, , 翟玲玲, , 张润楠, , &amp; 魏志华,</p>
 <p><a href="/ox-hugo/%E2%80%9C%E6%8A%95%E8%B5%84%E4%BA%BA%E4%BB%98%E8%B4%B9%E2%80%9Dvs.%E2%80%9C%E5%8F%91%E8%A1%8C%E4%BA%BA%E4%BB%98%E8%B4%B9%E2%80%9D_%E8%B0%81%E7%9A%84%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E8%B4%A8%E9%87%8F%E6%9B%B4%E9%AB%98__%E5%90%B4%E8%82%B2%E8%BE%89.pdf">投资人付费&quot;vs.&ldquo;发行人付费&rdquo;:谁的信用评级质量更高?</a>
@@ -207,18 +244,18 @@
 (2) 这一结果并非由于“投资人付费”模式下评级机构 主观刻意地压低信用评级导致，而是与公司未来的盈利能力和违约风险相关，并得到 债券投资人认可。这表明“投资人付费”模式下评级机构给出的信用评级质量更高。
 (3) “发行人付费”模式下，信用评级虽然可以在一定程度上包含公司的内部私有信息， 但由于独立性缺失问题，其总体的信用评级质量仍然低于“投资人付费”模式下的信用 评级质量。</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -320,7 +357,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -357,7 +394,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -370,8 +407,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

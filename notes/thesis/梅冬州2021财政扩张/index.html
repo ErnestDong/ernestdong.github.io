@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -170,53 +207,53 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        财政扩张,信用违约和民营企业融资困境
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          财政扩张,信用违约和民营企业融资困境
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0%E3%80%81%E4%BF%A1%E7%94%A8%E8%BF%9D%E7%BA%A6%E5%92%8C%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E8%9E%8D%E8%B5%84%E5%9B%B0%E5%A2%83_%E6%A2%85%E5%86%AC%E5%B7%9E.pdf">财政扩张,信用违约和民营企业融资困境</a>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0%E3%80%81%E4%BF%A1%E7%94%A8%E8%BF%9D%E7%BA%A6%E5%92%8C%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E8%9E%8D%E8%B5%84%E5%9B%B0%E5%A2%83_%E6%A2%85%E5%86%AC%E5%B7%9E.pdf">财政扩张,信用违约和民营企业融资困境</a>
 四万亿的财政扩张的挤出效应，随后去杠杆更高的借贷成本 和更高的外部融资风险溢价，导致民营企业融资成本大幅上升</p>
 <p>不同政策或者冲击都是一方面影响金融中介的资产负债表，通过“存贷溢价”摩擦影响了金融市场基准的借贷成本，另一方面通过金融加速器效应对企业外部融资溢价产生影响，两者共同作用决定企业的融资成本。反事实分析表明，在这两个作用渠道中，“存贷溢价”摩擦都占据了主导。</p>
 <p>一类是金融中介将居民存款转化为贷款所产生的“存贷溢价”摩擦，另一种是企业从银行借贷由于信息不对称导致的“金融加速器”摩擦，</p>
 <p>包含金融摩擦的多部门 DSGE 模型</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -318,7 +355,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -355,7 +392,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -368,8 +405,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

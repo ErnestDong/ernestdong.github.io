@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,28 +215,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Stock liquidity and default risk
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Stock liquidity and default risk
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-12-09 22:25:36 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+          <div class="postdate">
+            
+            <time datetime="2021-12-09 22:25:36 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-09</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17300405">Stock liquidity and default risk</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17300405">Stock liquidity and default risk</a></p>
 <h2 id="主题">主题</h2>
 <p>更高的流动性能够帮助企业抵御破产风险</p>
 <h2 id="数据">数据</h2>
@@ -214,18 +251,18 @@
 <p>较高的流动性允许知情投资者从他们的私人信息中获得更多利润，从而激励投资者获得更多信息并利用这些信息进行交易，从而导致更知情的股票价格。管理者从股票价格中学习，并利用它来指导企业投资。因此，管理者可以做出更好的投资决策，产生更高的现金流，并降低现金流的波动性，从而降低违约风险。</p>
 <p>更高的流动性使大块持有者更容易出售股票。事前，退出的威胁可以作为一种有效的公司治理机制。良好的公司治理约束管理者。它敦促他们从事增值投资，并防范机会主义管理行为，这可能会导致较低的违约概率。</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -335,7 +372,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -372,7 +409,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -385,8 +422,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -178,36 +215,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Credit default swaps, exacting creditors and corporate liquidity management
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Credit default swaps, exacting creditors and corporate liquidity management
+        </h1>
+        <div class="meta">
           
-          <time datetime="2022-01-01 19:13:04 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-01</time>
+          <div class="postdate">
+            
+            <time datetime="2022-01-01 19:13:04 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-01</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17300247">Credit default swaps, exacting creditors and corporate liquidity management</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X17300247">Credit default swaps, exacting creditors and corporate liquidity management</a></p>
 <h2 id="主题">主题</h2>
 <p>虽然 CDS 目前（信用风险缓释合约 CRMA 、信用风险缓释凭证 CRMW ）应用很小，但是交叉违约条款导致违约的也挺常见。</p>
 <p>引入 CDS 交易后，高现金现象与高杠杆现象并存。</p>
@@ -235,18 +272,18 @@
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Saretto, Alessio, and Heather E Tookes. 2013. “Corporate Leverage, Debt Maturity, and Credit Supply: The Role of Credit Default Swaps.” <i>The Review of Financial Studies</i> 26 (5): 1190–1247.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Subrahmanyam, Marti G, Dragon Yongjun Tang, and Sarah Qian Wang. 2014. “Does the Tail Wag the Dog? the Effect of Credit Default Swaps on Credit Risk.” <i>The Review of Financial Studies</i> 27 (10): 2927–60.</div>
 </div>
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -356,7 +393,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -393,7 +430,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -406,8 +443,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

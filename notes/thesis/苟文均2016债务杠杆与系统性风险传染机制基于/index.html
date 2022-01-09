@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -183,28 +220,28 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        债务杠杆与系统性风险传染机制——基于CCA模型的分析
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          债务杠杆与系统性风险传染机制——基于CCA模型的分析
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-12-03 10:57:46 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-03</time>
+          <div class="postdate">
+            
+            <time datetime="2021-12-03 10:57:46 &#43;0800 &#43;0800" itemprop="datePublished">2021-12-03</time>
+            
+          </div>
+          
+          
+          
           
         </div>
-        
-        
-        
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8ECCA%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%88%86%E6%9E%90.pdf">债务杠杆与系统性风险传染机制——基于CCA模型的分析</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8ECCA%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%88%86%E6%9E%90.pdf">债务杠杆与系统性风险传染机制——基于CCA模型的分析</a></p>
 <h2 id="主题">主题</h2>
 <p>债务杠杆如何导致宏观的系统性风险</p>
 <h2 id="数据">数据</h2>
@@ -232,18 +269,18 @@
 <p>近年来我国国民经济各部门债务杠杆显著攀升，债务杠杆影响的财务违约距离指标大幅恶化，预示系统性风险正伴随债务杠杆的攀升不断积聚。</p>
 <p>债务杠杆由杠杆率相对较高的非金融企业部门转移至杠杆率相对较低的政府部门和居民部门，能够在一定程度上增强宏观金融网络稳健性，提升宏观经济体系抵御外部冲击的能力。同时大力发展股权融资，有效改善企业融资结构，能够有效降低非金融企业部门风险水平和对外输出损失强度，提升宏观经济的整体稳定性。</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -358,7 +395,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -395,7 +432,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -408,8 +445,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

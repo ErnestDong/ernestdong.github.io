@@ -48,10 +48,47 @@
   
 </head>
 
+
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -181,36 +218,36 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究
+        </h1>
+        <div class="meta">
           
-          <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+          <div class="postdate">
+            
+            <time datetime="2021-11-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-11-18</time>
+            
+          </div>
           
-        </div>
-        
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    <div class="content" itemprop="articleBody">
-      <p><a href="/ox-hugo/%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7_%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%AE%9A%E4%BB%B7%E7%9A%84%E5%AE%9E%E8%AF%81%E7%A0%94%E7%A9%B6.pdf">信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究</a></p>
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="/ox-hugo/%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7_%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%AE%9A%E4%BB%B7%E7%9A%84%E5%AE%9E%E8%AF%81%E7%A0%94%E7%A9%B6.pdf">信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究</a></p>
 <h2 id="现象">现象</h2>
 <p>2016年前，经济下行反而信用利差收窄</p>
 <h2 id="研究">研究</h2>
@@ -225,18 +262,18 @@
 <p>中央对手方质押融资模式进一步模糊市场主体信用差异，放大宏观流动性影响</p>
 <p>异常原因</p>
 
-    </div>
-  </article>
+      </div>
+    </article>
 
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -349,7 +386,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -386,7 +423,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -399,8 +436,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="/js/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>
