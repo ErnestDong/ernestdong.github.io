@@ -4,7 +4,6 @@ theme = "cactus" #"researcher"
 enableEmoji = true
 hasCJKLanguage = true
 [params]
-  author = "Ernest Dong"
   description = "A Sisyphus Rolling Up Rock"
   favicon = "/images/favicon.ico"
   showAllPostsOnHomePage = true
@@ -12,6 +11,7 @@ hasCJKLanguage = true
   mainSection = "notes"
   mainSectionTitle = "Thesis Notes"
   tocInline = false
+  showReadTime = true
   mathjax = true
   css = ["css/custom.css"]
   [[params.social]]

@@ -49,17 +49,11 @@
           {{ .Title }}
         </h1>
         <div class="meta">
-          {{ if (or (isset .Site "author") (isset .Site "title"))}}
           <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">
-              {{ if isset .Site "author" }}
-              {{ .Site.Author }}
-              {{ else if isset .Site "title" }}
               {{ .Site.Title }}
-              {{ end }}
             </span>
           </span>
-          {{ end }}
           <div class="postdate">
             {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
             <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time>
