@@ -1,7 +1,7 @@
 +++
 title = "已读已汇报文献"
 author = ["Ernest Dong"]
-lastmod = 2022-01-06T11:27:24+08:00
+lastmod = 2022-01-14T14:58:37+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -275,3 +275,43 @@ default = spread + industry + r + liquidity + enterprise(financial, state-owned)
 ### 风险传染：衍生品视角 {#风险传染-衍生品视角}
 
 [Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?]({{<relref "thesis/nickerson2017debt.md#" >}})
+
+
+## week 7 {#week-7}
+
+
+### 公司治理 {#公司治理}
+
+[Corporate governance of banks and financial stability]({{<relref "thesis/anginer2018corporate.md#" >}})
+
+
+#### CDS 对公司治理的影响 {#cds-对公司治理的影响}
+
+[Credit default swaps, exacting creditors and corporate liquidity management]({{<relref "thesis/subrahmanyam2017credit.md#" >}})
+
+
+#### COVID-19 对公司治理的影响 {#covid-19-对公司治理的影响}
+
+[Corporate immunity to the covid-19 pandemic]({{<relref "thesis/ding2021corporate.md#" >}})
+
+
+### 风险传染 {#风险传染}
+
+[Exploring the sources of default clustering]({{<relref "thesis/azizpour2018exploring.md#" >}})
+
+
+### 机器学习 {#机器学习}
+
+
+#### 神经网络 {#神经网络}
+
+[Opening the black box--quantile neural networks for loss given default prediction]({{<relref "thesis/kellner2022opening.md#" >}})
+
+
+#### 决策树 {#决策树}
+
+[Grabit: gradient tree-boosted tobit models for default prediction]({{<relref "thesis/sigrist2019grabit.md#" >}})
+
+有了农业保险对带有风险的新技术有更多的应用
+
+改变风险偏好会对违约有很大的影响因素

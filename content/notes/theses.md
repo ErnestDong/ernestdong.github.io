@@ -1,13 +1,11 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-06T11:26:57+08:00
+lastmod = 2022-01-14T14:58:09+08:00
 tags = ["thesis"]
 draft = false
 +++
 
-## Presentation
-[Presentation Notes](../../files/pre.pdf)
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}
 
 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
@@ -35,37 +33,22 @@ draft = false
 5.  Journal of Banking and Finance
 
 
-## week 7 {#week-7}
+## week 8 {#week-8}
 
 
-### 公司治理 {#公司治理}
+### 疫情的影响 {#疫情的影响}
 
-[Corporate governance of banks and financial stability]({{<relref "thesis/anginer2018corporate.md#" >}})
-
-
-#### CDS 对公司治理的影响 {#cds-对公司治理的影响}
-
-[Credit default swaps, exacting creditors and corporate liquidity management]({{<relref "thesis/subrahmanyam2017credit.md#" >}})
+[Breakup and default risks in the great lockdown]({{<relref "thesis/bonaccolto2021breakup.md#" >}})
 
 
-#### COVID-19 对公司治理的影响 {#covid-19-对公司治理的影响}
-
-[Corporate immunity to the covid-19 pandemic]({{<relref "thesis/ding2021corporate.md#" >}})
+### 机器学习的应用 {#机器学习的应用}
 
 
-### 风险传染 {#风险传染}
+#### 机器学习模型分析 {#机器学习模型分析}
 
-[Exploring the sources of default clustering]({{<relref "thesis/azizpour2018exploring.md#" >}})
-
-
-### 机器学习 {#机器学习}
+[A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees]({{<relref "thesis/golbayani2020comparative.md#" >}})
 
 
-#### 神经网络 {#神经网络}
+#### 文本分析新闻的影响 {#文本分析新闻的影响}
 
-[Opening the black box--quantile neural networks for loss given default prediction]({{<relref "thesis/kellner2022opening.md#" >}})
-
-
-#### 决策树 {#决策树}
-
-[Grabit: gradient tree-boosted tobit models for default prediction]({{<relref "thesis/sigrist2019grabit.md#" >}})
+[How news and its context drive risk and returns around the world]({{<relref "thesis/calomiris2019news.md#" >}})
