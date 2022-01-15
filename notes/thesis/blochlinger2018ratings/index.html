@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="/js/cactus.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Are ratings the worst form of credit assessment except for all the others? | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Are ratings the worst form of credit assessment except for all the others?" />
+<meta property="og:description" content="Are ratings the worst form of credit assessment except for all the others? 主题 提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好 在一个理论模型中表明，最 powerful 的违约预测" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/" /><meta property="article:section" content="notes" />
+
+<meta property="article:modified_time" content="2022-01-15T12:35:05+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Are ratings the worst form of credit assessment except for all the others?"/>
+<meta name="twitter:description" content="Are ratings the worst form of credit assessment except for all the others? 主题 提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好 在一个理论模型中表明，最 powerful 的违约预测"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.93f530596bf3d2d8fa3b06df91ced7fab5c4ce778013607ce61aa0feca4b9d34d8b1de8b6223253b085809501855899b421d016e1f4d493df7471d52f897fbc5.css" integrity="sha512-k/UwWWvz0tj6Owbfkc7X&#43;rXEzneAE2B85hqg/spLnTTYsd6LYiMlOwhYCVAYVYmbQh0Bbh9NST33Rx1S&#43;Jf7xQ=="> 
+
+  
+   <link rel="stylesheet" href="https://ernestdong.github.io/css/custom.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
+</head>
+
+
+<body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
+  <div class="content index py4">
+
+    <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/notes">Notes</a></li>
+        
+        <li><a href="/posts">Posts</a></li>
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        <li><a href="/readme/index.html">About</a></li>
+        
+        <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/golbayani2020comparative/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/theses/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a>
+      <ul>
+        <li><a href="#如何将-z-和-d-联系起来">如何将 Z 和 D 联系起来</a></li>
+        <li><a href="#定义-powerful">定义 powerful</a></li>
+        <li><a href="#模型结论">模型结论</a></li>
+      </ul>
+    </li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&text=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&is_video=false&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&name=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f%20%e4%b8%bb%e9%a2%98%20%e6%8f%90%e5%87%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e4%bc%81%e4%b8%9a%e8%bf%9d%e7%ba%a6%ef%bc%8c%e6%a8%a1%e5%9e%8b%e5%8c%85%e6%8b%ac%e4%ba%86%20Altman%20Z%20%e8%af%84%e5%88%86%e5%92%8c%20Merton%20%e8%bf%9d%e7%ba%a6%e8%b7%9d%e7%a6%bb%ef%bc%8c%e4%b8%94%e6%af%94%e8%af%84%e7%ba%a7%e6%9b%b4%e5%a5%bd%20%e5%9c%a8%e4%b8%80%e4%b8%aa%e7%90%86%e8%ae%ba%e6%a8%a1%e5%9e%8b%e4%b8%ad%e8%a1%a8%e6%98%8e%ef%bc%8c%e6%9c%80%20powerful%20%e7%9a%84%e8%bf%9d%e7%ba%a6%e9%a2%84%e6%b5%8b" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&t=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+  </span>
+</div>
+
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Are ratings the worst form of credit assessment except for all the others?
+        </h1>
+        <div class="meta">
+          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">
+              Ernest Dong
+            </span>
+          </span>
+          <div class="postdate">
+            
+            <time datetime="2022-01-15 12:35:05 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-15</time>
+            
+          </div>
+          
+          
+          <div class="article-read-time">
+            <i class="far fa-clock"></i>
+            
+            2 minute read
+          </div>
+          
+          
+          
+          <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
+            
+          </div>
+          
+        </div>
+      </header>
+
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/are-ratings-the-worst-form-of-credit-assessment-except-for-all-the-others/94B1DAE28B06D9E48B3BB4A8352C14A3">Are ratings the worst form of credit assessment except for all the others?</a></p>
+<h2 id="主题">主题</h2>
+<p>提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好</p>
+<p>在一个理论模型中表明，最 powerful 的违约预测因素必须同时纳入市场和会计数据。</p>
+<p>过滤掉宏观因素，因为监管规定导致了非周期</p>
+<h2 id="数据">数据</h2>
+<p>使用 1982-1999 年的数据训练模型，2000-2010 年的数据作为测试集</p>
+<h2 id="分析方法">分析方法</h2>
+<p>首先作者开发了理论 <a href="#%E6%A8%A1%E5%9E%8B">模型</a>，然后提出假设：违约概率分布在剔除掉 Through-the-Cycle 因素影响下应当是稳定的</p>
+<h2 id="模型">模型</h2>
+<h3 id="如何将-z-和-d-联系起来">如何将 Z 和 D 联系起来</h3>
+<h4 id="假设">假设</h4>
+<ul>
+<li>利用 public 信息，对于资产价值对数的估计是无偏的，</li>
+<li>资产价值、误差和收益率 mutually 独立</li>
+<li>公开信息的产生服从一定的概率分布</li>
+</ul>
+<h4 id="证明">证明</h4>
+<p>违约概率是违约距离 D 和 Z 的函数</p>
+<h3 id="定义-powerful">定义 powerful</h3>
+<p>条件概率 P{Y=1|G} 是由信息集 G 生成的所有预测器中最强大的预测器，即任何其他 G-可测的预测器的 Lorenz 曲线必须位于条件概率的 Lorenz 曲线之上</p>
+<h3 id="模型结论">模型结论</h3>
+<p>莫顿的违约距离和 Altman Z 都是作者模型的特例，是信息完全前提下分别知道两个角度的数据得到的结论</p>
+<p>违约距离和 relative rankings of S 有关</p>
+<h2 id="结论">结论</h2>
+<p>作者的模型是可以被实证检验的，基于当前借款人群体的相对 ranking，在任何情况下，至少仍与标普评级一样强大。</p>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+</div>
+      </div>
+    </article>
+
+    
+  
+
+
+
+
+
+
+    <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+         
+          <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a>
+      <ul>
+        <li><a href="#如何将-z-和-d-联系起来">如何将 Z 和 D 联系起来</a></li>
+        <li><a href="#定义-powerful">定义 powerful</a></li>
+        <li><a href="#模型结论">模型结论</a></li>
+      </ul>
+    </li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&text=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&is_video=false&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&name=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f%20%e4%b8%bb%e9%a2%98%20%e6%8f%90%e5%87%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e4%bc%81%e4%b8%9a%e8%bf%9d%e7%ba%a6%ef%bc%8c%e6%a8%a1%e5%9e%8b%e5%8c%85%e6%8b%ac%e4%ba%86%20Altman%20Z%20%e8%af%84%e5%88%86%e5%92%8c%20Merton%20%e8%bf%9d%e7%ba%a6%e8%b7%9d%e7%a6%bb%ef%bc%8c%e4%b8%94%e6%af%94%e8%af%84%e7%ba%a7%e6%9b%b4%e5%a5%bd%20%e5%9c%a8%e4%b8%80%e4%b8%aa%e7%90%86%e8%ae%ba%e6%a8%a1%e5%9e%8b%e4%b8%ad%e8%a1%a8%e6%98%8e%ef%bc%8c%e6%9c%80%20powerful%20%e7%9a%84%e8%bf%9d%e7%ba%a6%e9%a2%84%e6%b5%8b" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&t=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+         
+        <li><a href="/files/resume.pdf">Resume</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
+</script>
+
+
+</html>
