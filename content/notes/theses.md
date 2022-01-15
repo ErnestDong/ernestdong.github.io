@@ -1,7 +1,7 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-15T12:35:20+08:00
+lastmod = 2022-01-15T16:45:38+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -43,7 +43,7 @@ draft = false
 [Breakup and default risks in the great lockdown]({{<relref "thesis/bonaccolto2021breakup.md#" >}})
 
 
-### 预测违约指标 {#评级}
+### 预测违约指标 {#预测违约指标}
 
 [Are ratings the worst form of credit assessment except for all the others?]({{<relref "thesis/blochlinger2018ratings.md#" >}})
 
