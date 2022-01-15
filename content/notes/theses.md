@@ -43,7 +43,7 @@ draft = false
 [Breakup and default risks in the great lockdown]({{<relref "thesis/bonaccolto2021breakup.md#" >}})
 
 
-### 评级 {#评级}
+### 预测违约指标 {#评级}
 
 [Are ratings the worst form of credit assessment except for all the others?]({{<relref "thesis/blochlinger2018ratings.md#" >}})
 
