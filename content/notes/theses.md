@@ -1,11 +1,13 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-14T14:58:09+08:00
+lastmod = 2022-01-15T12:35:20+08:00
 tags = ["thesis"]
 draft = false
 +++
 
+## Presentation
+[Presentation Notes](../../files/pre.pdf)
 ## <span class="org-todo todo TODO">TODO</span> Tasks {#tasks}
 
 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的框架就搭起来了。本科论文首先得过文献综述观。建议你找几篇《经济研究》、《金融研究》上和这个主题大致相关（不一定有那么绝对相关的论文，大致相关就行），精度文献综述部分，看看他们的文献综述怎么写的。不过，期刊上论文的文献综述因版面有限，是浓缩过的，学位论文的文献综述篇幅要更长些。但从期刊文献综述起码能看出来文献综述应该怎么写。
@@ -39,6 +41,11 @@ draft = false
 ### 疫情的影响 {#疫情的影响}
 
 [Breakup and default risks in the great lockdown]({{<relref "thesis/bonaccolto2021breakup.md#" >}})
+
+
+### 评级 {#评级}
+
+[Are ratings the worst form of credit assessment except for all the others?]({{<relref "thesis/blochlinger2018ratings.md#" >}})
 
 
 ### 机器学习的应用 {#机器学习的应用}
