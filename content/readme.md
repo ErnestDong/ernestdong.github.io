@@ -17,7 +17,7 @@ lastmod = 2000-04-30
 | **Master’s degree**  |**Peking University**| **Insurance** [^1]                |**2022 - 2024**|
 | **Bachelor's degree**|Peking University    | Risk Management and Insurance |2018 - 2022|
 
-More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/).
+More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/) and [resume](../files/resume.pdf).
 
 [^1]: have got postgraduate recommandation.
 ### Work experience 👔
@@ -25,7 +25,7 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 - intern of Fintech Department at Harvest Fund Management.
 - intern of Fixed Income Department in E Fund Management Co., Ltd.
 
-More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/).
+More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/) and [resume](../files/resume.pdf).
 ### Github Stats ⭐
 ![Ernest's GitHub stats](https://github-readme-stats.vercel.app/api?username=ErnestDong&show_icons=true)
 

@@ -14,6 +14,7 @@ hasCJKLanguage = true
   showReadTime = true
   mathjax = true
   css = ["css/custom.css"]
+  rss = true
   [[params.social]]
     name = "fab fa-github"
     link = "https://github.com/ernestDong/"
@@ -46,10 +47,6 @@ hasCJKLanguage = true
   [[menu.main]]
     name = "About"
     url = "/readme/index.html"
-    weight = 5
-  [[menu.main]]
-    name = "Resume"
-    url = "/files/resume.pdf"
     weight = 5
 [markup]
   [markup.highlight]
