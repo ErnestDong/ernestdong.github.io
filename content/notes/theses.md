@@ -1,7 +1,7 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-15T16:45:38+08:00
+lastmod = 2022-01-16T11:31:24+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -45,7 +45,17 @@ draft = false
 
 ### 预测违约指标 {#预测违约指标}
 
+
+#### 评级 {#评级}
+
 [Are ratings the worst form of credit assessment except for all the others?]({{<relref "thesis/blochlinger2018ratings.md#" >}})
+
+
+#### 利差 {#利差}
+
+[The myth of the credit spread puzzle]({{<relref "thesis/feldhutter2018myth.md#" >}})
+
+[Is the credit spread puzzle a myth?]({{<relref "thesis/bai2020credit.md#" >}})
 
 
 ### 机器学习的应用 {#机器学习的应用}
