@@ -1,8 +1,8 @@
 +++
 title = "Corporate immunity to the covid-19 pandemic"
 author = ["Ernest Dong"]
-lastmod = 2022-01-01T19:12:37+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:11:08+08:00
+tags = ["疫情", "公司治理", "thesis"]
 draft = false
 +++
 

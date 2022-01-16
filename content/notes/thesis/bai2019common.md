@@ -1,8 +1,8 @@
 +++
 title = "Common risk factors in the cross-section of corporate bond returns"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:52:05+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:12:50+08:00
+tags = ["产业政策", "thesis"]
 draft = false
 +++
 

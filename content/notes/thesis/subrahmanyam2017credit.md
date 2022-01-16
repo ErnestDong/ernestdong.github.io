@@ -1,8 +1,8 @@
 +++
 title = "Credit default swaps, exacting creditors and corporate liquidity management"
 author = ["Ernest Dong"]
-lastmod = 2022-01-01T19:13:04+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:13:38+08:00
+tags = ["风险传染", "公司治理", "thesis"]
 draft = false
 +++
 

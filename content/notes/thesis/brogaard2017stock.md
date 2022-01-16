@@ -1,7 +1,8 @@
 +++
 title = "Stock liquidity and default risk"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:25:36+08:00
+lastmod = 2022-01-16T20:26:25+08:00
+tags = ["流动性", "thesis"]
 draft = false
 +++
 

@@ -1,8 +1,8 @@
 +++
 title = "Exploring the sources of default clustering"
 author = ["Ernest Dong"]
-lastmod = 2022-01-01T19:13:41+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:24:46+08:00
+tags = ["风险传染", "thesis"]
 draft = false
 +++
 
@@ -18,7 +18,7 @@ draft = false
 
 ## 数据 {#数据}
 
-![美国公司违约数量](/ox-hugo/美国公司违约数量.jpg)
+[美国公司违约数量](/ox-hugo/美国公司违约数量.jpg)
 
 违约定义为(<a href="#citeproc_bib_item_2">Hamilton 2005</a>)
 

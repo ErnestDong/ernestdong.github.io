@@ -1,8 +1,8 @@
 +++
 title = "Impact of covid-19 on corporate solvency and possible policy responses in the eu"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:52:20+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:13:56+08:00
+tags = ["疫情", "thesis"]
 draft = false
 +++
 

@@ -1,8 +1,8 @@
 +++
 title = "A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees"
 author = ["Ernest Dong"]
-lastmod = 2022-01-14T14:57:56+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:23:15+08:00
+tags = ["计量模型", "thesis"]
 draft = false
 +++
 

@@ -1,8 +1,8 @@
 +++
 title = "Are ratings the worst form of credit assessment except for all the others?"
 author = ["Ernest Dong"]
-lastmod = 2022-01-15T12:35:05+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:18:10+08:00
+tags = ["评级", "thesis"]
 draft = false
 +++
 

@@ -1,8 +1,8 @@
 +++
 title = "Opening the black box–quantile neural networks for loss given default prediction"
 author = ["Ernest Dong"]
-lastmod = 2022-01-06T11:26:25+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:14:20+08:00
+tags = ["计量模型", "thesis"]
 draft = false
 +++
 

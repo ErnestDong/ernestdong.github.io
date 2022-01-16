@@ -1,7 +1,8 @@
 +++
 title = "The relevance of credit ratings in transparent bond markets"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:25:15+08:00
+lastmod = 2022-01-16T20:18:40+08:00
+tags = ["行业周期", "thesis"]
 draft = false
 +++
 

@@ -1,8 +1,8 @@
 +++
 title = "Business cycles and currency returns"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:52:50+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:16:57+08:00
+tags = ["行业周期", "thesis"]
 draft = false
 +++
 

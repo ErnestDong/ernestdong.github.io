@@ -1,8 +1,8 @@
 +++
 title = "Breakup and default risks in the great lockdown"
 author = ["Ernest Dong"]
-lastmod = 2022-01-14T14:57:42+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:20:48+08:00
+tags = ["疫情", "thesis"]
 draft = false
 +++
 

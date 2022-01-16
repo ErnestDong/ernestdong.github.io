@@ -1,7 +1,8 @@
 +++
 title = "Quantifying liquidity and default risks of corporate bonds over the business cycle"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:14:42+08:00
+lastmod = 2022-01-16T20:25:05+08:00
+tags = ["行业周期", "流动性", "thesis"]
 draft = false
 +++
 

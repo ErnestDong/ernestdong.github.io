@@ -1,8 +1,8 @@
 +++
 title = "How news and its context drive risk and returns around the world"
 author = ["Ernest Dong"]
-lastmod = 2022-01-14T14:57:26+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:19:14+08:00
+tags = ["计量模型", "thesis"]
 draft = false
 +++
 

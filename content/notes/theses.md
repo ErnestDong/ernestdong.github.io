@@ -1,7 +1,7 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-16T11:31:24+08:00
+lastmod = 2022-01-16T20:28:15+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -33,39 +33,3 @@ draft = false
 3.  Journal of Financial Economics
 4.  Review of Financial Studies
 5.  Journal of Banking and Finance
-
-
-## week 8 {#week-8}
-
-
-### 疫情的影响 {#疫情的影响}
-
-[Breakup and default risks in the great lockdown]({{<relref "thesis/bonaccolto2021breakup.md#" >}})
-
-
-### 预测违约指标 {#预测违约指标}
-
-
-#### 评级 {#评级}
-
-[Are ratings the worst form of credit assessment except for all the others?]({{<relref "thesis/blochlinger2018ratings.md#" >}})
-
-
-#### 利差 {#利差}
-
-[The myth of the credit spread puzzle]({{<relref "thesis/feldhutter2018myth.md#" >}})
-
-[Is the credit spread puzzle a myth?]({{<relref "thesis/bai2020credit.md#" >}})
-
-
-### 机器学习的应用 {#机器学习的应用}
-
-
-#### 机器学习模型分析 {#机器学习模型分析}
-
-[A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees]({{<relref "thesis/golbayani2020comparative.md#" >}})
-
-
-#### 文本分析新闻的影响 {#文本分析新闻的影响}
-
-[How news and its context drive risk and returns around the world]({{<relref "thesis/calomiris2019news.md#" >}})

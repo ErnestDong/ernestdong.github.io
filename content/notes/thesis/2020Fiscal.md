@@ -1,8 +1,8 @@
 +++
 title = "Fiscal policy driven bond risk premia"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:53:03+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:17:37+08:00
+tags = ["财政政策", "thesis"]
 draft = false
 +++
 

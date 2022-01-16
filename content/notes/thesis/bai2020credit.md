@@ -1,8 +1,8 @@
 +++
 title = "Is the credit spread puzzle a myth?"
 author = ["Ernest Dong"]
-lastmod = 2022-01-16T11:30:26+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:09:52+08:00
+tags = ["利差", "thesis"]
 draft = false
 +++
 

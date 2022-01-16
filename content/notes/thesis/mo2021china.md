@@ -1,7 +1,8 @@
 +++
 title = "China's no-bailout reform: impact on bond yields and rating standards"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:24:54+08:00
+lastmod = 2022-01-16T20:12:32+08:00
+tags = ["产业政策", "thesis"]
 draft = false
 +++
 

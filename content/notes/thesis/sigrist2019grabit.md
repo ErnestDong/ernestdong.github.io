@@ -1,8 +1,8 @@
 +++
 title = "Grabit: gradient tree-boosted tobit models for default prediction"
 author = ["Ernest Dong"]
-lastmod = 2022-01-06T11:26:41+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:14:58+08:00
+tags = ["计量模型", "thesis"]
 draft = false
 +++
 

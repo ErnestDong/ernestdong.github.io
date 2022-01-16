@@ -1,8 +1,8 @@
 +++
 title = "Corporate governance of banks and financial stability"
 author = ["Ernest Dong"]
-lastmod = 2022-01-01T19:13:26+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:20:32+08:00
+tags = ["公司治理", "thesis"]
 draft = false
 +++
 

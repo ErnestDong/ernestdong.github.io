@@ -1,7 +1,8 @@
 +++
 title = "Firm default prediction: a bayesian model-averaging approach"
 author = ["Ernest Dong"]
-lastmod = 2021-12-09T22:24:43+08:00
+lastmod = 2022-01-16T20:12:05+08:00
+tags = ["计量模型", "thesis"]
 draft = false
 +++
 

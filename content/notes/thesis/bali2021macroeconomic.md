@@ -1,8 +1,8 @@
 +++
 title = "The macroeconomic uncertainty premium in the corporate bond market"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:53:20+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:23:38+08:00
+tags = ["货币政策", "thesis"]
 draft = false
 +++
 

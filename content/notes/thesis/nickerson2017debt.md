@@ -1,8 +1,8 @@
 +++
 title = "Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?"
 author = ["Ernest Dong"]
-lastmod = 2021-12-23T16:51:49+08:00
-tags = ["thesis"]
+lastmod = 2022-01-16T20:11:23+08:00
+tags = ["风险传染", "thesis"]
 draft = false
 +++
 
