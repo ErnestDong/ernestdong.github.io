@@ -5,122 +5,500 @@
     <link>https://ernestdong.github.io/</link>
     <description>Recent content on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Jan 2022 11:31:24 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jan 2022 20:28:15 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业论文</title>
       <link>https://ernestdong.github.io/notes/theses/</link>
-      <pubDate>Sun, 16 Jan 2022 11:31:24 +0800</pubDate>
+      <pubDate>Sun, 16 Jan 2022 20:28:15 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/theses/</guid>
       <description>Presentation Presentation Notes TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的</description>
     </item>
     
     <item>
-      <title>The myth of the credit spread puzzle</title>
-      <link>https://ernestdong.github.io/notes/thesis/feldhutter2018myth/</link>
-      <pubDate>Sun, 16 Jan 2022 11:30:42 +0800</pubDate>
+      <title>已读已汇报文献</title>
+      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
+      <pubDate>Sun, 16 Jan 2022 20:28:01 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/notes/thesis/feldhutter2018myth/</guid>
-      <description>The myth of the credit spread puzzle 主题 莫顿模型无法解释实际投资级债券信用利差的水平，存在很大的低估，公司债券的利差大约是违约、税收和流动性不足所能解释的两倍 作者</description>
+      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
+      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdq</description>
     </item>
     
     <item>
-      <title>Is the credit spread puzzle a myth?</title>
-      <link>https://ernestdong.github.io/notes/thesis/bai2020credit/</link>
-      <pubDate>Sun, 16 Jan 2022 11:30:26 +0800</pubDate>
+      <title>政府隐性担保, 债务违约与利率决定</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E6%B1%AA%E8%8E%892015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D/</link>
+      <pubDate>Sun, 16 Jan 2022 20:27:09 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/notes/thesis/bai2020credit/</guid>
-      <description>Is the credit spread puzzle a myth? 主题 当Feldhütter and Schaefer (2018)他们的模型被校准为债务的市场价值（根据理论要求）而不是账面价值时，他们的结果是相反的</description>
+      <guid>https://ernestdong.github.io/notes/thesis/%E6%B1%AA%E8%8E%892015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D/</guid>
+      <description>政府隐性担保, 债务违约与利率决定 主题 募集资金用途隐含了债券资金的风险-收益，会对利率有一定影响（中西部经济较差的地区显著，因为投资者更为谨慎</description>
     </item>
     
     <item>
-      <title>Are ratings the worst form of credit assessment except for all the others?</title>
-      <link>https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/</link>
-      <pubDate>Sat, 15 Jan 2022 12:35:05 +0800</pubDate>
+      <title>政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%9F%A9%E9%B9%8F%E9%A3%9E2015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E4%B8%80%E5%AE%9A%E8%83%BD%E9%99%8D%E4%BD%8E%E5%80%BA%E5%88%B8%E7%9A%84%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:26:43 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/</guid>
-      <description>Are ratings the worst form of credit assessment except for all the others? 主题 提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好 在一个理论模型中表明，最 powerful 的违约预测</description>
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%9F%A9%E9%B9%8F%E9%A3%9E2015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E4%B8%80%E5%AE%9A%E8%83%BD%E9%99%8D%E4%BD%8E%E5%80%BA%E5%88%B8%E7%9A%84%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC%E5%90%97/</guid>
+      <description>政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究 主题 对国企，政府的激励是经济发展，隐性担保保护其不能倒 对</description>
     </item>
     
     <item>
-      <title>A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees</title>
-      <link>https://ernestdong.github.io/notes/thesis/golbayani2020comparative/</link>
-      <pubDate>Fri, 14 Jan 2022 14:57:56 +0800</pubDate>
+      <title>Stock liquidity and default risk</title>
+      <link>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</link>
+      <pubDate>Sun, 16 Jan 2022 20:26:25 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/notes/thesis/golbayani2020comparative/</guid>
-      <description>A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees 主题 利用机器学习预测评级 评级是一个昂贵的复杂过程，通常需要数月时间，降低这种财务和时间成本的一种解决方案是</description>
+      <guid>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</guid>
+      <description>Stock liquidity and default risk 主题 更高的流动性能够帮助企业抵御破产风险 数据 expected default frequency (EDF)衡量违约风险 分析方法 股票流动性可能会影响违约风险。股票流动性对违约风险</description>
     </item>
     
     <item>
-      <title>Breakup and default risks in the great lockdown</title>
-      <link>https://ernestdong.github.io/notes/thesis/bonaccolto2021breakup/</link>
-      <pubDate>Fri, 14 Jan 2022 14:57:42 +0800</pubDate>
+      <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
+      <link>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</link>
+      <pubDate>Sun, 16 Jan 2022 20:25:05 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/notes/thesis/bonaccolto2021breakup/</guid>
-      <description>Breakup and default risks in the great lockdown 主题 利用CDS以不同货币计价并具有不同违约条款的合约报价，以估计欧元区解体的风险以及 COVID-19 冲击后解体和违约风险的传播。 欧洲有两种</description>
-    </item>
-    
-    <item>
-      <title>How news and its context drive risk and returns around the world</title>
-      <link>https://ernestdong.github.io/notes/thesis/calomiris2019news/</link>
-      <pubDate>Fri, 14 Jan 2022 14:57:26 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/calomiris2019news/</guid>
-      <description>How news and its context drive risk and returns around the world 主题 新力控股重债压身，投资者关系管理没有做好，谣言四起加速其最后违约，股票一天暴跌 90% 数据 结合了三种类型的数据——市场</description>
-    </item>
-    
-    <item>
-      <title>Grabit: gradient tree-boosted tobit models for default prediction</title>
-      <link>https://ernestdong.github.io/notes/thesis/sigrist2019grabit/</link>
-      <pubDate>Thu, 06 Jan 2022 11:26:41 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/sigrist2019grabit/</guid>
-      <description>Grabit: gradient tree-boosted tobit models for default prediction 主题 建立新的二元分类模型 Grabit，该模型是通过将梯度树提升应用于 Tobit 模型而获得的 Grabit 算法在 python 包 KTBoost 中实现，该包可从 pypi 存储库中公</description>
-    </item>
-    
-    <item>
-      <title>Opening the black box–quantile neural networks for loss given default prediction</title>
-      <link>https://ernestdong.github.io/notes/thesis/kellner2022opening/</link>
-      <pubDate>Thu, 06 Jan 2022 11:26:25 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/kellner2022opening/</guid>
-      <description>Opening the black box&amp;ndash;quantile neural networks for loss given default prediction 主题 针对贷款数据集进行分位数回归 与中位数相比，更高的分位数是由对宏观经济的更高敏感性以及整体更高的非线性和相互作用驱动</description>
+      <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
+      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle 主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of</description>
     </item>
     
     <item>
       <title>Exploring the sources of default clustering</title>
       <link>https://ernestdong.github.io/notes/thesis/azizpour2018exploring/</link>
-      <pubDate>Sat, 01 Jan 2022 19:13:41 +0800</pubDate>
+      <pubDate>Sun, 16 Jan 2022 20:24:46 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/azizpour2018exploring/</guid>
       <description>Exploring the sources of default clustering 主题 违约聚类的一个主要来源是公司共同暴露于共同或相关的风险因素，如利率、股票收益和 GDP 增长。这些因素的变动导致公司有条件违约率的相</description>
     </item>
     
     <item>
+      <title>中国的信用评级真的影响发债成本吗?</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52015%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E7%9C%9F%E7%9A%84%E5%BD%B1%E5%93%8D%E5%8F%91%E5%80%BA%E6%88%90%E6%9C%AC%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:24:26 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52015%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E7%9C%9F%E7%9A%84%E5%BD%B1%E5%93%8D%E5%8F%91%E5%80%BA%E6%88%90%E6%9C%AC%E5%90%97/</guid>
+      <description>中国的信用评级真的影响发债成本吗? 主题 超日债违约后的反思，信用评级机构在很大程度上已经失去了公信力，需通过改革消除评级机构的利益冲突和激励扭</description>
+    </item>
+    
+    <item>
+      <title>中国系统性金融风险的度量——基于实体经济的视角</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E4%BD%95%E9%9D%922018%E4%B8%AD%E5%9B%BD%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E7%9A%84%E5%BA%A6%E9%87%8F%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%BB%8F%E6%B5%8E%E7%9A%84%E8%A7%86%E8%A7%92/</link>
+      <pubDate>Sun, 16 Jan 2022 20:24:02 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E4%BD%95%E9%9D%922018%E4%B8%AD%E5%9B%BD%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E7%9A%84%E5%BA%A6%E9%87%8F%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%BB%8F%E6%B5%8E%E7%9A%84%E8%A7%86%E8%A7%92/</guid>
+      <description>中国系统性金融风险的度量——基于实体经济的视角 主题 2015年股灾后的反思，利用主成分分析法，不拘泥于某个特定指标。 数据 系统性风险测度指标涵盖</description>
+    </item>
+    
+    <item>
+      <title>The macroeconomic uncertainty premium in the corporate bond market</title>
+      <link>https://ernestdong.github.io/notes/thesis/bali2021macroeconomic/</link>
+      <pubDate>Sun, 16 Jan 2022 20:23:38 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/bali2021macroeconomic/</guid>
+      <description>The macroeconomic uncertainty premium in the corporate bond market 主题 宏观经济不确定性在公司债券横截面中的作用，发现投资级债券(每月0.40%)和非投资级债券(每月0.81%)都存在显著的</description>
+    </item>
+    
+    <item>
+      <title>A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees</title>
+      <link>https://ernestdong.github.io/notes/thesis/golbayani2020comparative/</link>
+      <pubDate>Sun, 16 Jan 2022 20:23:15 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/golbayani2020comparative/</guid>
+      <description>A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees 主题 利用机器学习预测评级 评级是一个昂贵的复杂过程，通常需要数月时间，降低这种财务和时间成本的一种解决方案是</description>
+    </item>
+    
+    <item>
+      <title>中国创新型货币政策如何发挥作用: 抵押品渠道</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E4%B8%AD%E5%9B%BD%E5%88%9B%E6%96%B0%E5%9E%8B%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%A6%82%E4%BD%95%E5%8F%91%E6%8C%A5%E4%BD%9C%E7%94%A8/</link>
+      <pubDate>Sun, 16 Jan 2022 20:22:50 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E4%B8%AD%E5%9B%BD%E5%88%9B%E6%96%B0%E5%9E%8B%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%A6%82%E4%BD%95%E5%8F%91%E6%8C%A5%E4%BD%9C%E7%94%A8/</guid>
+      <description>中国创新型货币政策如何发挥作用: 抵押品渠道 主题 MLF 扩大担保品范围的货币政策是否降低了在银行间市场上可作为新增担保品的债券二级市场利差 二级市场上</description>
+    </item>
+    
+    <item>
+      <title>债务杠杆与系统性风险传染机制——基于CCA模型的分析</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E8%8B%9F%E6%96%87%E5%9D%872016%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E5%9F%BA%E4%BA%8E/</link>
+      <pubDate>Sun, 16 Jan 2022 20:22:07 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E8%8B%9F%E6%96%87%E5%9D%872016%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E5%9F%BA%E4%BA%8E/</guid>
+      <description>债务杠杆与系统性风险传染机制——基于CCA模型的分析 主题 债务杠杆如何导致宏观的系统性风险 数据 采用国民经济各部门各项债务之和度量其财务危机临界</description>
+    </item>
+    
+    <item>
+      <title>The myth of the credit spread puzzle</title>
+      <link>https://ernestdong.github.io/notes/thesis/feldhutter2018myth/</link>
+      <pubDate>Sun, 16 Jan 2022 20:21:42 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/feldhutter2018myth/</guid>
+      <description>The myth of the credit spread puzzle 主题 莫顿模型无法解释实际投资级债券信用利差的水平，存在很大的低估，公司债券的利差大约是违约、税收和流动性不足所能解释的两倍 作者</description>
+    </item>
+    
+    <item>
+      <title>软预算约束与中国地方政府债务违约风险: 来自金融市场的证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62016%E8%BD%AF%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</link>
+      <pubDate>Sun, 16 Jan 2022 20:21:19 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62016%E8%BD%AF%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</guid>
+      <description>软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 主题 中国的地方政府债务存在普遍的软预算约束问题。 将城投债利差分解为流动性溢价和信用风</description>
+    </item>
+    
+    <item>
+      <title>高管任职经历的得与失?——来自债券市场的经验证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E6%9E%97%E6%99%9A%E5%8F%912018%E9%AB%98%E7%AE%A1%E4%BB%BB%E8%81%8C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%BE%97%E4%B8%8E%E5%A4%B1/</link>
+      <pubDate>Sun, 16 Jan 2022 20:21:04 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E6%9E%97%E6%99%9A%E5%8F%912018%E9%AB%98%E7%AE%A1%E4%BB%BB%E8%81%8C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%BE%97%E4%B8%8E%E5%A4%B1/</guid>
+      <description>高管任职经历的得与失?——来自债券市场的经验证据 主题 (毛新述 and 周小伟) 研究了高管担任过人大代表或政协委员的企业更倾向于通过发行债券而不是银行</description>
+    </item>
+    
+    <item>
+      <title>Breakup and default risks in the great lockdown</title>
+      <link>https://ernestdong.github.io/notes/thesis/bonaccolto2021breakup/</link>
+      <pubDate>Sun, 16 Jan 2022 20:20:48 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/bonaccolto2021breakup/</guid>
+      <description>Breakup and default risks in the great lockdown 主题 利用CDS以不同货币计价并具有不同违约条款的合约报价，以估计欧元区解体的风险以及 COVID-19 冲击后解体和违约风险的传播。 欧洲有两种</description>
+    </item>
+    
+    <item>
       <title>Corporate governance of banks and financial stability</title>
       <link>https://ernestdong.github.io/notes/thesis/anginer2018corporate/</link>
-      <pubDate>Sat, 01 Jan 2022 19:13:26 +0800</pubDate>
+      <pubDate>Sun, 16 Jan 2022 20:20:32 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/anginer2018corporate/</guid>
       <description>Corporate governance of banks and financial stability 主题 对于股东，银行可以从风险不敏感存款保险形式的明确国家担保中受益，也可以从流动性和资本支持形式的潜在隐性担保中受益，以防止其</description>
     </item>
     
     <item>
+      <title>多重信用评级与债券融资成本——来自中国债券市场的经验证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%99%88%E5%85%B3%E4%BA%AD2021%E5%A4%9A%E9%87%8D%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E4%B8%8E%E5%80%BA%E5%88%B8%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC/</link>
+      <pubDate>Sun, 16 Jan 2022 20:20:16 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%99%88%E5%85%B3%E4%BA%AD2021%E5%A4%9A%E9%87%8D%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E4%B8%8E%E5%80%BA%E5%88%B8%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC/</guid>
+      <description>多重信用评级与债券融资成本——来自中国债券市场的经验证据 主题 当多重信用评级的评级意见不一致时，平均评级的信息含量最高 在我国债券市场，评级机构</description>
+    </item>
+    
+    <item>
+      <title>基于马尔科夫区制转移模型的中国金融风险预警研究</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%98%A5%E4%B8%BD2014%E5%9F%BA%E4%BA%8E%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%8C%BA%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%AD%E5%9B%BD%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%A2%84%E8%AD%A6%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Sun, 16 Jan 2022 20:19:59 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%98%A5%E4%B8%BD2014%E5%9F%BA%E4%BA%8E%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%8C%BA%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%AD%E5%9B%BD%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%A2%84%E8%AD%A6%E7%A0%94%E7%A9%B6/</guid>
+      <description>基于马尔科夫区制转移模型的中国金融风险预警研究 主题 2014年3月预测了2014-2015年金融风险，认为金融风险很低。没有纳入杠杆率考虑 数据</description>
+    </item>
+    
+    <item>
+      <title>投资人付费&#34;vs.&#34;发行人付费&#34;:谁的信用评级质量更高?</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E5%90%B4%E8%82%B2%E8%BE%892020/</link>
+      <pubDate>Sun, 16 Jan 2022 20:19:43 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E5%90%B4%E8%82%B2%E8%BE%892020/</guid>
+      <description>投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更高? (1) 与“发行人付费”模式相比，采用“投资人付费”模式</description>
+    </item>
+    
+    <item>
+      <title>私有信息, 评级偏差和中国评级机构的市场声誉</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52021%E7%A7%81%E6%9C%89%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Sun, 16 Jan 2022 20:19:29 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52021%E7%A7%81%E6%9C%89%E4%BF%A1%E6%81%AF/</guid>
+      <description>私有信息, 评级偏差和中国评级机构的市场声誉 主题 评级包含了三方面的信息：公开信息、评级机构的私有信息和竞争付费导致的评级机构的评级偏差 既有文献</description>
+    </item>
+    
+    <item>
+      <title>How news and its context drive risk and returns around the world</title>
+      <link>https://ernestdong.github.io/notes/thesis/calomiris2019news/</link>
+      <pubDate>Sun, 16 Jan 2022 20:19:14 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/calomiris2019news/</guid>
+      <description>How news and its context drive risk and returns around the world 主题 新力控股重债压身，投资者关系管理没有做好，谣言四起加速其最后违约，股票一天暴跌 90% 数据 结合了三种类型的数据——市场</description>
+    </item>
+    
+    <item>
+      <title>散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E5%AE%81%E6%A1%A62018%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC/</link>
+      <pubDate>Sun, 16 Jan 2022 20:18:56 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E5%AE%81%E6%A1%A62018%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC/</guid>
+      <description>散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析 主题 合格投资者大“散户” 其认为机构没有对高收益的偏好，只有散户有。事实应该</description>
+    </item>
+    
+    <item>
+      <title>The relevance of credit ratings in transparent bond markets</title>
+      <link>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</link>
+      <pubDate>Sun, 16 Jan 2022 20:18:40 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</guid>
+      <description>The relevance of credit ratings in transparent bond markets 主题 信息更透明，评级机构的作用 本文考察了通过TRACE系统对公司债券交易的公开披露如何影响 信用评级的信息含量 评级和利差的相</description>
+    </item>
+    
+    <item>
+      <title>财政扩张,信用违约和民营企业融资困境</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/</link>
+      <pubDate>Sun, 16 Jan 2022 20:18:25 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/</guid>
+      <description>财政扩张,信用违约和民营企业融资困境 四万亿的财政扩张的挤出效应，随后去杠杆更高的借贷成本 和更高的外部融资风险溢价，导致民营企业融资成本大幅上</description>
+    </item>
+    
+    <item>
+      <title>Are ratings the worst form of credit assessment except for all the others?</title>
+      <link>https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/</link>
+      <pubDate>Sun, 16 Jan 2022 20:18:10 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/</guid>
+      <description>Are ratings the worst form of credit assessment except for all the others? 主题 提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好 在一个理论模型中表明，最 powerful 的违约预测</description>
+    </item>
+    
+    <item>
+      <title>Do measures of systemic risk predict u.s. corporate bond default rates?</title>
+      <link>https://ernestdong.github.io/notes/thesis/2020do/</link>
+      <pubDate>Sun, 16 Jan 2022 20:17:54 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/2020do/</guid>
+      <description>Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect abstract 使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债</description>
+    </item>
+    
+    <item>
+      <title>Fiscal policy driven bond risk premia</title>
+      <link>https://ernestdong.github.io/notes/thesis/2020fiscal/</link>
+      <pubDate>Sun, 16 Jan 2022 20:17:37 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/2020fiscal/</guid>
+      <description>Fiscal policy driven bond risk premia 主题 较高的政府支出水平和不确定性预示着未来的债券超额回报会更高。 更高水平的政府支出导致收益率曲线正向移动和变陡，而更高的不确定性</description>
+    </item>
+    
+    <item>
+      <title>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E6%9D%A0%E6%9D%86%E7%8E%87%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E8%B5%84%E4%BA%A7%E4%BB%B7%E6%A0%BC/</link>
+      <pubDate>Sun, 16 Jan 2022 20:17:16 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E6%9D%A0%E6%9D%86%E7%8E%87%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E8%B5%84%E4%BA%A7%E4%BB%B7%E6%A0%BC/</guid>
+      <description>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 主题 折算率下调是一个比较领先的指标 利用中证登提高合格质押债券的准入门槛这个自然实验</description>
+    </item>
+    
+    <item>
+      <title>Business cycles and currency returns</title>
+      <link>https://ernestdong.github.io/notes/thesis/colacito2020business/</link>
+      <pubDate>Sun, 16 Jan 2022 20:16:57 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/colacito2020business/</guid>
+      <description>Business cycles and currency returns 主题 单独行业的周期非常多，纳入到模型中一方面可能维度爆炸多重共线性，另一方面也很可能遗漏重要的行业周期因素。但是可以把行业分成顺周</description>
+    </item>
+    
+    <item>
+      <title>信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%BA%AA%E5%BF%97%E5%AE%8F2017%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7/</link>
+      <pubDate>Sun, 16 Jan 2022 20:16:42 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%BA%AA%E5%BF%97%E5%AE%8F2017%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7/</guid>
+      <description>信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究 主题 在违约风险加大的经济下行周期，中国信用债信用利差反而大幅收窄；同一发行人在不</description>
+    </item>
+    
+    <item>
+      <title>中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E5%8F%B2%E6%B0%B8%E4%B8%9C2021%E4%B8%AD%E5%80%BA%E4%BC%B0%E5%80%BC%E8%AF%86%E5%88%AB%E4%BA%86%E5%80%BA%E5%88%B8%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:16:27 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E5%8F%B2%E6%B0%B8%E4%B8%9C2021%E4%B8%AD%E5%80%BA%E4%BC%B0%E5%80%BC%E8%AF%86%E5%88%AB%E4%BA%86%E5%80%BA%E5%88%B8%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E5%90%97/</guid>
+      <description>中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 债券信用风险识别：针对信用评级 信用评级对信用利差的影响 投资者付费评级相较于发行人付费</description>
+    </item>
+    
+    <item>
+      <title>客户集中度与公司债二级市场信用利差</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E9%9B%84%E5%85%832017%E5%AE%A2%E6%88%B7%E9%9B%86%E4%B8%AD%E5%BA%A6%E4%B8%8E%E5%85%AC%E5%8F%B8%E5%80%BA%E4%BA%8C%E7%BA%A7%E5%B8%82%E5%9C%BA%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</link>
+      <pubDate>Sun, 16 Jan 2022 20:16:13 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E9%9B%84%E5%85%832017%E5%AE%A2%E6%88%B7%E9%9B%86%E4%B8%AD%E5%BA%A6%E4%B8%8E%E5%85%AC%E5%8F%B8%E5%80%BA%E4%BA%8C%E7%BA%A7%E5%B8%82%E5%9C%BA%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</guid>
+      <description>客户集中度与公司债二级市场信用利差 主题 恒大倒下对南通三建 客户集中度是把“双刃剑”。一方面集中的客户有助于稳定供应链，改善供应链管理效率，提高</description>
+    </item>
+    
+    <item>
+      <title>金融资产配置与违约风险:蓄水池效应,还是逐利效应?</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%82%93%E8%B7%AF%E5%88%98%E6%AC%A2%E4%BE%AF%E7%B2%B2%E7%84%B62020%E9%87%91%E8%9E%8D%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</link>
+      <pubDate>Sun, 16 Jan 2022 20:15:59 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%82%93%E8%B7%AF%E5%88%98%E6%AC%A2%E4%BE%AF%E7%B2%B2%E7%84%B62020%E9%87%91%E8%9E%8D%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</guid>
+      <description>金融资产配置与违约风险:蓄水池效应,还是逐利效应? 金融资产的作用 企业的金融资产配置存在促进主业发展的“蓄水池效应”和损害主业投资的“逐利效应</description>
+    </item>
+    
+    <item>
+      <title>政府隐性担保风险定价: 基于我国债券交易市场的探讨</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/</link>
+      <pubDate>Sun, 16 Jan 2022 20:15:45 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/</guid>
+      <description>政府隐性担保风险定价: 基于我国债券交易市场的探讨 主题 数学看不懂 数据 由于我国企业债市场交易量较小，本文参考使用三次样条折现函数法对利率期限结构</description>
+    </item>
+    
+    <item>
+      <title>经济学研究</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Sun, 16 Jan 2022 20:15:29 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%A0%94%E7%A9%B6/</guid>
+      <description>二个注意事项 第一个注意事项 要注意 任何一个经济理论、行为假设都有其边界，不能盲目运用 。此点非常重要，许多经济学家，将书本上一些理论简单地完全套</description>
+    </item>
+    
+    <item>
+      <title>中国委托贷款弥补了正规信贷不足吗?</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%92%B1%E9%9B%AA%E6%9D%BE2018%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:15:14 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%92%B1%E9%9B%AA%E6%9D%BE2018%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97/</guid>
+      <description>中国委托贷款弥补了正规信贷不足吗? 委托贷款 逆信贷周期 更多流向体制外企业 违约概率高于银行不良率</description>
+    </item>
+    
+    <item>
+      <title>Grabit: gradient tree-boosted tobit models for default prediction</title>
+      <link>https://ernestdong.github.io/notes/thesis/sigrist2019grabit/</link>
+      <pubDate>Sun, 16 Jan 2022 20:14:58 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/sigrist2019grabit/</guid>
+      <description>Grabit: gradient tree-boosted tobit models for default prediction 主题 建立新的二元分类模型 Grabit，该模型是通过将梯度树提升应用于 Tobit 模型而获得的 Grabit 算法在 python 包 KTBoost 中实现，该包可从 pypi 存储库中公</description>
+    </item>
+    
+    <item>
+      <title>信任被定价了吗?——来自债券市场的证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E6%9D%A8%E5%9B%BD%E8%B6%852019%E4%BF%A1%E4%BB%BB%E8%A2%AB%E5%AE%9A%E4%BB%B7%E4%BA%86%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:14:40 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E6%9D%A8%E5%9B%BD%E8%B6%852019%E4%BF%A1%E4%BB%BB%E8%A2%AB%E5%AE%9A%E4%BB%B7%E4%BA%86%E5%90%97/</guid>
+      <description>信任被定价了吗?——来自债券市场的证据 主题 利用最高法“失信被执行人”数据构建各地区失信程度指标，发现失信及失信程度的增加会降低债券信用评级，</description>
+    </item>
+    
+    <item>
+      <title>Opening the black box–quantile neural networks for loss given default prediction</title>
+      <link>https://ernestdong.github.io/notes/thesis/kellner2022opening/</link>
+      <pubDate>Sun, 16 Jan 2022 20:14:20 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/kellner2022opening/</guid>
+      <description>Opening the black box&amp;ndash;quantile neural networks for loss given default prediction 主题 针对贷款数据集进行分位数回归 与中位数相比，更高的分位数是由对宏观经济的更高敏感性以及整体更高的非线性和相互作用驱动</description>
+    </item>
+    
+    <item>
+      <title>Impact of covid-19 on corporate solvency and possible policy responses in the eu</title>
+      <link>https://ernestdong.github.io/notes/thesis/mirza2020impact/</link>
+      <pubDate>Sun, 16 Jan 2022 20:13:56 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/mirza2020impact/</guid>
+      <description>Impact of covid-19 on corporate solvency and possible policy responses in the eu 主题 利用多种模型压力测试，研究疫情对欧盟非金融上市公司的偿付能力的影响。 数据 WC/TA、RE/TA、EBIT/TA</description>
+    </item>
+    
+    <item>
       <title>Credit default swaps, exacting creditors and corporate liquidity management</title>
       <link>https://ernestdong.github.io/notes/thesis/subrahmanyam2017credit/</link>
-      <pubDate>Sat, 01 Jan 2022 19:13:04 +0800</pubDate>
+      <pubDate>Sun, 16 Jan 2022 20:13:38 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/subrahmanyam2017credit/</guid>
       <description>Credit default swaps, exacting creditors and corporate liquidity management 主题 虽然 CDS 目前（信用风险缓释合约 CRMA 、信用风险缓释凭证 CRMW ）应用很小，但是交叉违约条款导致违约的也挺常见。 引入 CDS 交易后，高现金</description>
     </item>
     
     <item>
+      <title>城投债的担保可信吗?——来自债券评级和发行定价的证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E8%BE%89%E5%8B%872016%E5%9F%8E%E6%8A%95%E5%80%BA%E7%9A%84%E6%8B%85%E4%BF%9D%E5%8F%AF%E4%BF%A1%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:13:10 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E8%BE%89%E5%8B%872016%E5%9F%8E%E6%8A%95%E5%80%BA%E7%9A%84%E6%8B%85%E4%BF%9D%E5%8F%AF%E4%BF%A1%E5%90%97/</guid>
+      <description>城投债的担保可信吗?——来自债券评级和发行定价的证据 主题 12 东飞 01 担而不保的现象。 从决定发行企业债到发行成功，中间需要经过聘请承销商进行发行材</description>
+    </item>
+    
+    <item>
+      <title>Common risk factors in the cross-section of corporate bond returns</title>
+      <link>https://ernestdong.github.io/notes/thesis/bai2019common/</link>
+      <pubDate>Sun, 16 Jan 2022 20:12:50 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/bai2019common/</guid>
+      <description>Common risk factors in the cross-section of corporate bond returns 主题 考察了公司债券收益的横截面决定因素，发现下行风险是未来债券收益的最强预测因素。 尽管公司债券和股票都反映了公司的基本面</description>
+    </item>
+    
+    <item>
+      <title>China&#39;s no-bailout reform: impact on bond yields and rating standards</title>
+      <link>https://ernestdong.github.io/notes/thesis/mo2021china/</link>
+      <pubDate>Sun, 16 Jan 2022 20:12:32 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/mo2021china/</guid>
+      <description>China&amp;rsquo;s no-bailout reform: impact on bond yields and rating standards 主题 债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响 国企发行了80%的债券，但违约中只占了15%，因</description>
+    </item>
+    
+    <item>
+      <title>Firm default prediction: a bayesian model-averaging approach</title>
+      <link>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</link>
+      <pubDate>Sun, 16 Jan 2022 20:12:05 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</guid>
+      <description>Firm default prediction: a bayesian model-averaging approach 主题 利用贝叶斯模型预测违约 传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty 选择贝叶斯是因为 Techniques incorporating uncertainty in linear models do not immediately translate to nonlinear hazard models 数据</description>
+    </item>
+    
+    <item>
+      <title>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</title>
+      <link>https://ernestdong.github.io/notes/thesis/nickerson2017debt/</link>
+      <pubDate>Sun, 16 Jan 2022 20:11:23 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/nickerson2017debt/</guid>
+      <description>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products? 主题 结构化产品之间存在关联性，风险通过结构化产品如 MBS 、CDO 传染 我们记录了评级机构假设的违约相关性，将他们</description>
+    </item>
+    
+    <item>
       <title>Corporate immunity to the covid-19 pandemic</title>
       <link>https://ernestdong.github.io/notes/thesis/ding2021corporate/</link>
-      <pubDate>Sat, 01 Jan 2022 19:12:37 +0800</pubDate>
+      <pubDate>Sun, 16 Jan 2022 20:11:08 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/thesis/ding2021corporate/</guid>
       <description>Corporate immunity to the covid-19 pandemic 主题 研究 2020 年之前的五个公司特征与股价对 COVID-19 大流行的反应之间的关系。五个公司特征包括 财务状况，例如现金持有量、信用额度、总债务、债务</description>
+    </item>
+    
+    <item>
+      <title>违约与杠杆周期——一个带有救助的金融加速器模型</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%99%86%E7%A3%8A2020%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F/</link>
+      <pubDate>Sun, 16 Jan 2022 20:10:53 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%99%86%E7%A3%8A2020%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F/</guid>
+      <description>违约与杠杆周期——一个带有救助的金融加速器模型 主题 地方政府为在短期内维持大量信贷投放的持续性，有内在激励为部分潜在的违约企业在可能发生违约时</description>
+    </item>
+    
+    <item>
+      <title>债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E9%BB%84%E5%B0%8F%E7%90%B32017%E5%80%BA%E5%88%B8%E8%BF%9D%E7%BA%A6%E5%AF%B9%E6%B6%89%E4%BA%8B%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E6%9C%BA%E6%9E%84%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%B8%82%E5%9C%BA%E8%BF%9D%E7%BA%A6%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sun, 16 Jan 2022 20:10:36 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E9%BB%84%E5%B0%8F%E7%90%B32017%E5%80%BA%E5%88%B8%E8%BF%9D%E7%BA%A6%E5%AF%B9%E6%B6%89%E4%BA%8B%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E6%9C%BA%E6%9E%84%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%B8%82%E5%9C%BA%E8%BF%9D%E7%BA%A6%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90/</guid>
+      <description>债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析 涉事评级机构不仅没有因为债券违约事件而收紧信用评级标准，反而为了争取市场</description>
+    </item>
+    
+    <item>
+      <title>定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E5%BE%90%E5%85%892019%E5%AE%9A%E5%90%91%E6%94%AF%E6%8C%81%E6%94%BF%E7%AD%96%E8%83%BD%E7%BC%93%E8%A7%A3%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F%E5%90%97/</link>
+      <pubDate>Sun, 16 Jan 2022 20:10:22 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E5%BE%90%E5%85%892019%E5%AE%9A%E5%90%91%E6%94%AF%E6%8C%81%E6%94%BF%E7%AD%96%E8%83%BD%E7%BC%93%E8%A7%A3%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F%E5%90%97/</guid>
+      <description>定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究 主题 民营企业债务融资支持工具旨在为经营正常、流动性遇到暂时</description>
+    </item>
+    
+    <item>
+      <title>环境信息透明度与企业信用评级——基于债券评级市场的经验证据</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E5%B8%B8%E8%8E%B9%E8%8E%B92019%E7%8E%AF%E5%A2%83%E4%BF%A1%E6%81%AF%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E4%BC%81%E4%B8%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7/</link>
+      <pubDate>Sun, 16 Jan 2022 20:10:08 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E5%B8%B8%E8%8E%B9%E8%8E%B92019%E7%8E%AF%E5%A2%83%E4%BF%A1%E6%81%AF%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E4%BC%81%E4%B8%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7/</guid>
+      <description>环境信息透明度与企业信用评级——基于债券评级市场的经验证据 主题 绿色债券和 ESG 投资 企业环境信息等非财务信息向信用评级机构传递出与企业信用风险相关</description>
+    </item>
+    
+    <item>
+      <title>Is the credit spread puzzle a myth?</title>
+      <link>https://ernestdong.github.io/notes/thesis/bai2020credit/</link>
+      <pubDate>Sun, 16 Jan 2022 20:09:52 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/bai2020credit/</guid>
+      <description>Is the credit spread puzzle a myth? 主题 当Feldhütter and Schaefer (2018)他们的模型被校准为债务的市场价值（根据理论要求）而不是账面价值时，他们的结果是相反的</description>
+    </item>
+    
+    <item>
+      <title>货币政策不确定性,违约风险与宏观经济波动</title>
+      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A2019%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/</link>
+      <pubDate>Sun, 16 Jan 2022 20:09:37 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A2019%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/</guid>
+      <description>货币政策不确定性,违约风险与宏观经济波动 货币政策不确定性的增加会带来违约风险的上升 货币政策不确定性的度量 通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法</description>
     </item>
     
     <item>
@@ -130,195 +508,6 @@
       
       <guid>https://ernestdong.github.io/posts/doom-thesis/</guid>
       <description>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。 emacs = jabref + onenote + tex studio 和学术搜索集成 org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web</description>
-    </item>
-    
-    <item>
-      <title>The macroeconomic uncertainty premium in the corporate bond market</title>
-      <link>https://ernestdong.github.io/notes/thesis/bali2021macroeconomic/</link>
-      <pubDate>Thu, 23 Dec 2021 16:53:20 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/bali2021macroeconomic/</guid>
-      <description>The macroeconomic uncertainty premium in the corporate bond market 主题 宏观经济不确定性在公司债券横截面中的作用，发现投资级债券(每月0.40%)和非投资级债券(每月0.81%)都存在显著的</description>
-    </item>
-    
-    <item>
-      <title>Fiscal policy driven bond risk premia</title>
-      <link>https://ernestdong.github.io/notes/thesis/2020fiscal/</link>
-      <pubDate>Thu, 23 Dec 2021 16:53:03 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/2020fiscal/</guid>
-      <description>Fiscal policy driven bond risk premia 主题 较高的政府支出水平和不确定性预示着未来的债券超额回报会更高。 更高水平的政府支出导致收益率曲线正向移动和变陡，而更高的不确定性</description>
-    </item>
-    
-    <item>
-      <title>Business cycles and currency returns</title>
-      <link>https://ernestdong.github.io/notes/thesis/colacito2020business/</link>
-      <pubDate>Thu, 23 Dec 2021 16:52:50 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/colacito2020business/</guid>
-      <description>Business cycles and currency returns 主题 单独行业的周期非常多，纳入到模型中一方面可能维度爆炸多重共线性，另一方面也很可能遗漏重要的行业周期因素。但是可以把行业分成顺周</description>
-    </item>
-    
-    <item>
-      <title>经济学研究</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%A0%94%E7%A9%B6/</link>
-      <pubDate>Thu, 23 Dec 2021 16:52:35 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%A0%94%E7%A9%B6/</guid>
-      <description>二个注意事项 第一个注意事项 要注意 任何一个经济理论、行为假设都有其边界，不能盲目运用 。此点非常重要，许多经济学家，将书本上一些理论简单地完全套</description>
-    </item>
-    
-    <item>
-      <title>Impact of covid-19 on corporate solvency and possible policy responses in the eu</title>
-      <link>https://ernestdong.github.io/notes/thesis/mirza2020impact/</link>
-      <pubDate>Thu, 23 Dec 2021 16:52:20 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/mirza2020impact/</guid>
-      <description>Impact of covid-19 on corporate solvency and possible policy responses in the eu 主题 利用多种模型压力测试，研究疫情对欧盟非金融上市公司的偿付能力的影响。 数据 WC/TA、RE/TA、EBIT/TA</description>
-    </item>
-    
-    <item>
-      <title>Common risk factors in the cross-section of corporate bond returns</title>
-      <link>https://ernestdong.github.io/notes/thesis/bai2019common/</link>
-      <pubDate>Thu, 23 Dec 2021 16:52:05 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/bai2019common/</guid>
-      <description>Common risk factors in the cross-section of corporate bond returns 主题 考察了公司债券收益的横截面决定因素，发现下行风险是未来债券收益的最强预测因素。 尽管公司债券和股票都反映了公司的基本面</description>
-    </item>
-    
-    <item>
-      <title>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products?</title>
-      <link>https://ernestdong.github.io/notes/thesis/nickerson2017debt/</link>
-      <pubDate>Thu, 23 Dec 2021 16:51:49 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/nickerson2017debt/</guid>
-      <description>Debt correlations in the wake of the financial crisis: what are appropriate default correlations for structured products? 主题 结构化产品之间存在关联性，风险通过结构化产品如 MBS 、CDO 传染 我们记录了评级机构假设的违约相关性，将他们</description>
-    </item>
-    
-    <item>
-      <title>Stock liquidity and default risk</title>
-      <link>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</link>
-      <pubDate>Thu, 09 Dec 2021 22:25:36 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/brogaard2017stock/</guid>
-      <description>Stock liquidity and default risk 主题 更高的流动性能够帮助企业抵御破产风险 数据 expected default frequency (EDF)衡量违约风险 分析方法 股票流动性可能会影响违约风险。股票流动性对违约风险</description>
-    </item>
-    
-    <item>
-      <title>The relevance of credit ratings in transparent bond markets</title>
-      <link>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</link>
-      <pubDate>Thu, 09 Dec 2021 22:25:15 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</guid>
-      <description>The relevance of credit ratings in transparent bond markets 主题 信息更透明，评级机构的作用 本文考察了通过TRACE系统对公司债券交易的公开披露如何影响 信用评级的信息含量 评级和利差的相</description>
-    </item>
-    
-    <item>
-      <title>Do measures of systemic risk predict u.s. corporate bond default rates?</title>
-      <link>https://ernestdong.github.io/notes/thesis/2020do/</link>
-      <pubDate>Thu, 09 Dec 2021 22:25:04 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/2020do/</guid>
-      <description>Do measures of systemic risk predict U.S. corporate bond default rates? - ScienceDirect abstract 使用单变量和多变量混合数据抽样(MIDAS)和 Lasso 估计方法，研究12个月系统风险指标是否可以预测美国年度平均公司债</description>
-    </item>
-    
-    <item>
-      <title>China&#39;s no-bailout reform: impact on bond yields and rating standards</title>
-      <link>https://ernestdong.github.io/notes/thesis/mo2021china/</link>
-      <pubDate>Thu, 09 Dec 2021 22:24:54 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/mo2021china/</guid>
-      <description>China&amp;rsquo;s no-bailout reform: impact on bond yields and rating standards 主题 债券打破刚兑后对违约率的分析，以及出现违约后对收益率和评级标准的影响 国企发行了80%的债券，但违约中只占了15%，因</description>
-    </item>
-    
-    <item>
-      <title>Firm default prediction: a bayesian model-averaging approach</title>
-      <link>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</link>
-      <pubDate>Thu, 09 Dec 2021 22:24:43 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/traczynski2017firm/</guid>
-      <description>Firm default prediction: a bayesian model-averaging approach 主题 利用贝叶斯模型预测违约 传统分析方法严重依赖于首先识别出违约的因子，存在 model uncertainty 选择贝叶斯是因为 Techniques incorporating uncertainty in linear models do not immediately translate to nonlinear hazard models 数据</description>
-    </item>
-    
-    <item>
-      <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
-      <link>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</link>
-      <pubDate>Thu, 09 Dec 2021 22:14:42 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
-      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle 主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of</description>
-    </item>
-    
-    <item>
-      <title>中国系统性金融风险的度量——基于实体经济的视角</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E4%BD%95%E9%9D%922018%E4%B8%AD%E5%9B%BD%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E7%9A%84%E5%BA%A6%E9%87%8F%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%BB%8F%E6%B5%8E%E7%9A%84%E8%A7%86%E8%A7%92/</link>
-      <pubDate>Fri, 03 Dec 2021 10:57:55 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E4%BD%95%E9%9D%922018%E4%B8%AD%E5%9B%BD%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E7%9A%84%E5%BA%A6%E9%87%8F%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%BB%8F%E6%B5%8E%E7%9A%84%E8%A7%86%E8%A7%92/</guid>
-      <description>中国系统性金融风险的度量——基于实体经济的视角 主题 2015年股灾后的反思，利用主成分分析法，不拘泥于某个特定指标。 数据 系统性风险测度指标涵盖</description>
-    </item>
-    
-    <item>
-      <title>债务杠杆与系统性风险传染机制——基于CCA模型的分析</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E8%8B%9F%E6%96%87%E5%9D%872016%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E5%9F%BA%E4%BA%8E/</link>
-      <pubDate>Fri, 03 Dec 2021 10:57:46 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E8%8B%9F%E6%96%87%E5%9D%872016%E5%80%BA%E5%8A%A1%E6%9D%A0%E6%9D%86%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93%E6%9C%BA%E5%88%B6%E5%9F%BA%E4%BA%8E/</guid>
-      <description>债务杠杆与系统性风险传染机制——基于CCA模型的分析 主题 债务杠杆如何导致宏观的系统性风险 数据 采用国民经济各部门各项债务之和度量其财务危机临界</description>
-    </item>
-    
-    <item>
-      <title>基于马尔科夫区制转移模型的中国金融风险预警研究</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%98%A5%E4%B8%BD2014%E5%9F%BA%E4%BA%8E%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%8C%BA%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%AD%E5%9B%BD%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%A2%84%E8%AD%A6%E7%A0%94%E7%A9%B6/</link>
-      <pubDate>Fri, 03 Dec 2021 10:57:38 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%98%A5%E4%B8%BD2014%E5%9F%BA%E4%BA%8E%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%8C%BA%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%AD%E5%9B%BD%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%A2%84%E8%AD%A6%E7%A0%94%E7%A9%B6/</guid>
-      <description>基于马尔科夫区制转移模型的中国金融风险预警研究 主题 2014年3月预测了2014-2015年金融风险，认为金融风险很低。没有纳入杠杆率考虑 数据</description>
-    </item>
-    
-    <item>
-      <title>城投债的担保可信吗?——来自债券评级和发行定价的证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E8%BE%89%E5%8B%872016%E5%9F%8E%E6%8A%95%E5%80%BA%E7%9A%84%E6%8B%85%E4%BF%9D%E5%8F%AF%E4%BF%A1%E5%90%97/</link>
-      <pubDate>Fri, 03 Dec 2021 10:57:28 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E8%BE%89%E5%8B%872016%E5%9F%8E%E6%8A%95%E5%80%BA%E7%9A%84%E6%8B%85%E4%BF%9D%E5%8F%AF%E4%BF%A1%E5%90%97/</guid>
-      <description>城投债的担保可信吗?——来自债券评级和发行定价的证据 主题 12 东飞 01 担而不保的现象。 从决定发行企业债到发行成功，中间需要经过聘请承销商进行发行材</description>
-    </item>
-    
-    <item>
-      <title>政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%9F%A9%E9%B9%8F%E9%A3%9E2015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E4%B8%80%E5%AE%9A%E8%83%BD%E9%99%8D%E4%BD%8E%E5%80%BA%E5%88%B8%E7%9A%84%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC%E5%90%97/</link>
-      <pubDate>Sun, 28 Nov 2021 10:46:28 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%9F%A9%E9%B9%8F%E9%A3%9E2015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E4%B8%80%E5%AE%9A%E8%83%BD%E9%99%8D%E4%BD%8E%E5%80%BA%E5%88%B8%E7%9A%84%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC%E5%90%97/</guid>
-      <description>政府隐性担保一定能降低债券的融资成本吗?——关于国有企业和地方融资平台债券的实证研究 主题 对国企，政府的激励是经济发展，隐性担保保护其不能倒 对</description>
-    </item>
-    
-    <item>
-      <title>私有信息, 评级偏差和中国评级机构的市场声誉</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52021%E7%A7%81%E6%9C%89%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Sun, 28 Nov 2021 10:46:17 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52021%E7%A7%81%E6%9C%89%E4%BF%A1%E6%81%AF/</guid>
-      <description>私有信息, 评级偏差和中国评级机构的市场声誉 主题 评级包含了三方面的信息：公开信息、评级机构的私有信息和竞争付费导致的评级机构的评级偏差 既有文献</description>
-    </item>
-    
-    <item>
-      <title>散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E5%AE%81%E6%A1%A62018%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC/</link>
-      <pubDate>Sun, 28 Nov 2021 10:46:05 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%92%9F%E5%AE%81%E6%A1%A62018%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC/</guid>
-      <description>散户投资者如何影响债券价格?——基于交易所同一只信用债的价格差分析 主题 合格投资者大“散户” 其认为机构没有对高收益的偏好，只有散户有。事实应该</description>
-    </item>
-    
-    <item>
-      <title>政府隐性担保风险定价: 基于我国债券交易市场的探讨</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/</link>
-      <pubDate>Sun, 28 Nov 2021 10:45:53 +0800</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A%E6%A3%AE2016%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D%E9%A3%8E%E9%99%A9%E5%AE%9A%E4%BB%B7/</guid>
-      <description>政府隐性担保风险定价: 基于我国债券交易市场的探讨 主题 数学看不懂 数据 由于我国企业债市场交易量较小，本文参考使用三次样条折现函数法对利率期限结构</description>
     </item>
     
     <item>
@@ -337,186 +526,6 @@
       
       <guid>https://ernestdong.github.io/notes/%E5%80%BA%E5%88%B8%E5%B8%82%E5%9C%BA%E5%8E%86%E5%8F%B2%E8%BF%9D%E7%BA%A6%E6%B1%87%E6%80%BB/</guid>
       <description>违约汇总 部分违约债券 2014年 11 超日债 金融危机背景下改变销售政策导致应收帐款难以转化为现金，光伏补贴减少营收下降，仍大举投资导致债务负担过重</description>
-    </item>
-    
-    <item>
-      <title>中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E5%8F%B2%E6%B0%B8%E4%B8%9C2021%E4%B8%AD%E5%80%BA%E4%BC%B0%E5%80%BC%E8%AF%86%E5%88%AB%E4%BA%86%E5%80%BA%E5%88%B8%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E5%90%97/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E5%8F%B2%E6%B0%B8%E4%B8%9C2021%E4%B8%AD%E5%80%BA%E4%BC%B0%E5%80%BC%E8%AF%86%E5%88%AB%E4%BA%86%E5%80%BA%E5%88%B8%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E5%90%97/</guid>
-      <description>中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 债券信用风险识别：针对信用评级 信用评级对信用利差的影响 投资者付费评级相较于发行人付费</description>
-    </item>
-    
-    <item>
-      <title>中国创新型货币政策如何发挥作用: 抵押品渠道</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E4%B8%AD%E5%9B%BD%E5%88%9B%E6%96%B0%E5%9E%8B%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%A6%82%E4%BD%95%E5%8F%91%E6%8C%A5%E4%BD%9C%E7%94%A8/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E4%B8%AD%E5%9B%BD%E5%88%9B%E6%96%B0%E5%9E%8B%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%A6%82%E4%BD%95%E5%8F%91%E6%8C%A5%E4%BD%9C%E7%94%A8/</guid>
-      <description>中国创新型货币政策如何发挥作用: 抵押品渠道 主题 MLF 扩大担保品范围的货币政策是否降低了在银行间市场上可作为新增担保品的债券二级市场利差 二级市场上</description>
-    </item>
-    
-    <item>
-      <title>中国委托贷款弥补了正规信贷不足吗?</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%92%B1%E9%9B%AA%E6%9D%BE2018%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%92%B1%E9%9B%AA%E6%9D%BE2018%E4%B8%AD%E5%9B%BD%E5%A7%94%E6%89%98%E8%B4%B7%E6%AC%BE%E5%BC%A5%E8%A1%A5%E4%BA%86%E6%AD%A3%E8%A7%84%E4%BF%A1%E8%B4%B7%E4%B8%8D%E8%B6%B3%E5%90%97/</guid>
-      <description>中国委托贷款弥补了正规信贷不足吗? 委托贷款 逆信贷周期 更多流向体制外企业 违约概率高于银行不良率</description>
-    </item>
-    
-    <item>
-      <title>中国的信用评级真的影响发债成本吗?</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52015%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E7%9C%9F%E7%9A%84%E5%BD%B1%E5%93%8D%E5%8F%91%E5%80%BA%E6%88%90%E6%9C%AC%E5%90%97/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E5%AF%87%E5%AE%97%E6%9D%A52015%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E7%9C%9F%E7%9A%84%E5%BD%B1%E5%93%8D%E5%8F%91%E5%80%BA%E6%88%90%E6%9C%AC%E5%90%97/</guid>
-      <description>中国的信用评级真的影响发债成本吗? 主题 超日债违约后的反思，信用评级机构在很大程度上已经失去了公信力，需通过改革消除评级机构的利益冲突和激励扭</description>
-    </item>
-    
-    <item>
-      <title>信任被定价了吗?——来自债券市场的证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E6%9D%A8%E5%9B%BD%E8%B6%852019%E4%BF%A1%E4%BB%BB%E8%A2%AB%E5%AE%9A%E4%BB%B7%E4%BA%86%E5%90%97/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E6%9D%A8%E5%9B%BD%E8%B6%852019%E4%BF%A1%E4%BB%BB%E8%A2%AB%E5%AE%9A%E4%BB%B7%E4%BA%86%E5%90%97/</guid>
-      <description>信任被定价了吗?——来自债券市场的证据 主题 利用最高法“失信被执行人”数据构建各地区失信程度指标，发现失信及失信程度的增加会降低债券信用评级，</description>
-    </item>
-    
-    <item>
-      <title>信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%BA%AA%E5%BF%97%E5%AE%8F2017%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%BA%AA%E5%BF%97%E5%AE%8F2017%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E8%BF%98%E6%98%AF%E5%B8%82%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%80%A7%E6%BA%A2%E4%BB%B7/</guid>
-      <description>信用风险溢价还是市场流动性溢价:基于中国信用债定价的实证研究 现象 2016年前，经济下行反而信用利差收窄 研究 国外研究 利差模型：结构模型、简约模</description>
-    </item>
-    
-    <item>
-      <title>债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%BB%84%E5%B0%8F%E7%90%B32017%E5%80%BA%E5%88%B8%E8%BF%9D%E7%BA%A6%E5%AF%B9%E6%B6%89%E4%BA%8B%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E6%9C%BA%E6%9E%84%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%B8%82%E5%9C%BA%E8%BF%9D%E7%BA%A6%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%BB%84%E5%B0%8F%E7%90%B32017%E5%80%BA%E5%88%B8%E8%BF%9D%E7%BA%A6%E5%AF%B9%E6%B6%89%E4%BA%8B%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E6%9C%BA%E6%9E%84%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9F%BA%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BF%A1%E7%94%A8%E5%80%BA%E5%B8%82%E5%9C%BA%E8%BF%9D%E7%BA%A6%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90/</guid>
-      <description>债券违约对涉事信用评级机构的影响——基于中国信用债市场违约事件的分析 涉事评级机构不仅没有因为债券违约事件而收紧信用评级标准，反而为了争取市场</description>
-    </item>
-    
-    <item>
-      <title>多重信用评级与债券融资成本——来自中国债券市场的经验证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%99%88%E5%85%B3%E4%BA%AD2021%E5%A4%9A%E9%87%8D%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E4%B8%8E%E5%80%BA%E5%88%B8%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%99%88%E5%85%B3%E4%BA%AD2021%E5%A4%9A%E9%87%8D%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7%E4%B8%8E%E5%80%BA%E5%88%B8%E8%9E%8D%E8%B5%84%E6%88%90%E6%9C%AC/</guid>
-      <description>多重信用评级与债券融资成本——来自中国债券市场的经验证据 主题 当多重信用评级的评级意见不一致时，平均评级的信息含量最高 在我国债券市场，评级机构</description>
-    </item>
-    
-    <item>
-      <title>定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E5%BE%90%E5%85%892019%E5%AE%9A%E5%90%91%E6%94%AF%E6%8C%81%E6%94%BF%E7%AD%96%E8%83%BD%E7%BC%93%E8%A7%A3%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F%E5%90%97/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E5%BE%90%E5%85%892019%E5%AE%9A%E5%90%91%E6%94%AF%E6%8C%81%E6%94%BF%E7%AD%96%E8%83%BD%E7%BC%93%E8%A7%A3%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F%E5%90%97/</guid>
-      <description>定向支持政策能缓解民营企业的融资约束吗?——基于民营企业债务融资支持工具政策的研究 主题 民营企业债务融资支持工具旨在为经营正常、流动性遇到暂时</description>
-    </item>
-    
-    <item>
-      <title>客户集中度与公司债二级市场信用利差</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E9%9B%84%E5%85%832017%E5%AE%A2%E6%88%B7%E9%9B%86%E4%B8%AD%E5%BA%A6%E4%B8%8E%E5%85%AC%E5%8F%B8%E5%80%BA%E4%BA%8C%E7%BA%A7%E5%B8%82%E5%9C%BA%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E9%9B%84%E5%85%832017%E5%AE%A2%E6%88%B7%E9%9B%86%E4%B8%AD%E5%BA%A6%E4%B8%8E%E5%85%AC%E5%8F%B8%E5%80%BA%E4%BA%8C%E7%BA%A7%E5%B8%82%E5%9C%BA%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</guid>
-      <description>客户集中度与公司债二级市场信用利差 主题 恒大倒下对南通三建 客户集中度是把“双刃剑”。一方面集中的客户有助于稳定供应链，改善供应链管理效率，提高</description>
-    </item>
-    
-    <item>
-      <title>投资人付费&#34;vs.&#34;发行人付费&#34;:谁的信用评级质量更高?</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E5%90%B4%E8%82%B2%E8%BE%892020/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E5%90%B4%E8%82%B2%E8%BE%892020/</guid>
-      <description>:Custom_ID: 吴育辉 2020 :URL: :AUTHOR: 吴育辉, , 翟玲玲, , 张润楠, , &amp;amp; 魏志华, 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdquo;:谁的信用评级质量更</description>
-    </item>
-    
-    <item>
-      <title>政府隐性担保, 债务违约与利率决定</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E6%B1%AA%E8%8E%892015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E6%B1%AA%E8%8E%892015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D/</guid>
-      <description>政府隐性担保, 债务违约与利率决定 主题 募集资金用途隐含了债券资金的风险-收益，会对利率有一定影响（中西部经济较差的地区显著，因为投资者更为谨慎</description>
-    </item>
-    
-    <item>
-      <title>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E6%9D%A0%E6%9D%86%E7%8E%87%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E8%B5%84%E4%BA%A7%E4%BB%B7%E6%A0%BC/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62019%E6%9D%A0%E6%9D%86%E7%8E%87%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E8%B5%84%E4%BA%A7%E4%BB%B7%E6%A0%BC/</guid>
-      <description>杠杆率如何影响资产价格?——来自中国债券市场自然实验的证据 主题 折算率下调是一个比较领先的指标 利用中证登提高合格质押债券的准入门槛这个自然实验</description>
-    </item>
-    
-    <item>
-      <title>环境信息透明度与企业信用评级——基于债券评级市场的经验证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E5%B8%B8%E8%8E%B9%E8%8E%B92019%E7%8E%AF%E5%A2%83%E4%BF%A1%E6%81%AF%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E4%BC%81%E4%B8%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E5%B8%B8%E8%8E%B9%E8%8E%B92019%E7%8E%AF%E5%A2%83%E4%BF%A1%E6%81%AF%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E4%BC%81%E4%B8%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E7%BA%A7/</guid>
-      <description>环境信息透明度与企业信用评级——基于债券评级市场的经验证据 主题 绿色债券和 ESG 投资 企业环境信息等非财务信息向信用评级机构传递出与企业信用风险相关</description>
-    </item>
-    
-    <item>
-      <title>财政扩张,信用违约和民营企业融资困境</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/</guid>
-      <description>财政扩张,信用违约和民营企业融资困境 四万亿的财政扩张的挤出效应，随后去杠杆更高的借贷成本 和更高的外部融资风险溢价，导致民营企业融资成本大幅上</description>
-    </item>
-    
-    <item>
-      <title>货币政策不确定性,违约风险与宏观经济波动</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A2019%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E5%8D%9A2019%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/</guid>
-      <description>货币政策不确定性,违约风险与宏观经济波动 货币政策不确定性的增加会带来违约风险的上升 货币政策不确定性的度量 通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法</description>
-    </item>
-    
-    <item>
-      <title>软预算约束与中国地方政府债务违约风险: 来自金融市场的证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62016%E8%BD%AF%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%B0%B8%E9%92%A62016%E8%BD%AF%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</guid>
-      <description>软预算约束与中国地方政府债务违约风险: 来自金融市场的证据 主题 中国的地方政府债务存在普遍的软预算约束问题。 将城投债利差分解为流动性溢价和信用风</description>
-    </item>
-    
-    <item>
-      <title>违约与杠杆周期——一个带有救助的金融加速器模型</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%99%86%E7%A3%8A2020%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%99%86%E7%A3%8A2020%E8%BF%9D%E7%BA%A6%E4%B8%8E%E6%9D%A0%E6%9D%86%E5%91%A8%E6%9C%9F/</guid>
-      <description>违约与杠杆周期——一个带有救助的金融加速器模型 主题 地方政府为在短期内维持大量信贷投放的持续性，有内在激励为部分潜在的违约企业在可能发生违约时</description>
-    </item>
-    
-    <item>
-      <title>金融资产配置与违约风险:蓄水池效应,还是逐利效应?</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E9%82%93%E8%B7%AF%E5%88%98%E6%AC%A2%E4%BE%AF%E7%B2%B2%E7%84%B62020%E9%87%91%E8%9E%8D%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E9%82%93%E8%B7%AF%E5%88%98%E6%AC%A2%E4%BE%AF%E7%B2%B2%E7%84%B62020%E9%87%91%E8%9E%8D%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9/</guid>
-      <description>金融资产配置与违约风险:蓄水池效应,还是逐利效应? 金融资产的作用 企业的金融资产配置存在促进主业发展的“蓄水池效应”和损害主业投资的“逐利效应</description>
-    </item>
-    
-    <item>
-      <title>高管任职经历的得与失?——来自债券市场的经验证据</title>
-      <link>https://ernestdong.github.io/notes/thesis/%E6%9E%97%E6%99%9A%E5%8F%912018%E9%AB%98%E7%AE%A1%E4%BB%BB%E8%81%8C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%BE%97%E4%B8%8E%E5%A4%B1/</link>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis/%E6%9E%97%E6%99%9A%E5%8F%912018%E9%AB%98%E7%AE%A1%E4%BB%BB%E8%81%8C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%BE%97%E4%B8%8E%E5%A4%B1/</guid>
-      <description>高管任职经历的得与失?——来自债券市场的经验证据 主题 (毛新述 and 周小伟) 研究了高管担任过人大代表或政协委员的企业更倾向于通过发行债券而不是银行</description>
     </item>
     
     <item>
@@ -553,15 +562,6 @@
       
       <guid>https://ernestdong.github.io/readme/</guid>
       <description>Hi, my name is Ernest Dong 👋 and I ❤️ open-source Senior Student at PKU major in Risk Management and Insurance Field of interests: Machine Learning, Risk Management in Finance. Skills 🛠️ Languages: Python, C/C++, R DS/ML/DL: NumPy, SciPy, Pandas, Scikit-Learn, PyTorch Education 🎓 academic degree University Major duration Master’s degree Peking University Insurance 1 2022 - 2024 Bachelor&amp;rsquo;s degree Peking</description>
-    </item>
-    
-    <item>
-      <title>已读已汇报文献</title>
-      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
-      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdq</description>
     </item>
     
   </channel>

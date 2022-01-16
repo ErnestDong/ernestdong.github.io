@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>行业周期 on Ernest Dong</title>
+    <link>https://ernestdong.github.io/tags/%E8%A1%8C%E4%B8%9A%E5%91%A8%E6%9C%9F/</link>
+    <description>Recent content in 行业周期 on Ernest Dong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 16 Jan 2022 20:25:05 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/%E8%A1%8C%E4%B8%9A%E5%91%A8%E6%9C%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantifying liquidity and default risks of corporate bonds over the business cycle</title>
+      <link>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</link>
+      <pubDate>Sun, 16 Jan 2022 20:25:05 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/chen2018quantifying/</guid>
+      <description>Quantifying liquidity and default risks of corporate bonds over the business cycle 主题 (Longstaff, Mithal, and Neis 2005) 估计“non-default components” 占利差AAA 或 AA 的约 50%，Baa 的30%，且 non-default components of</description>
+    </item>
+    
+    <item>
+      <title>The relevance of credit ratings in transparent bond markets</title>
+      <link>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</link>
+      <pubDate>Sun, 16 Jan 2022 20:18:40 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/badoer2019relevance/</guid>
+      <description>The relevance of credit ratings in transparent bond markets 主题 信息更透明，评级机构的作用 本文考察了通过TRACE系统对公司债券交易的公开披露如何影响 信用评级的信息含量 评级和利差的相</description>
+    </item>
+    
+    <item>
+      <title>Business cycles and currency returns</title>
+      <link>https://ernestdong.github.io/notes/thesis/colacito2020business/</link>
+      <pubDate>Sun, 16 Jan 2022 20:16:57 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/colacito2020business/</guid>
+      <description>Business cycles and currency returns 主题 单独行业的周期非常多，纳入到模型中一方面可能维度爆炸多重共线性，另一方面也很可能遗漏重要的行业周期因素。但是可以把行业分成顺周</description>
+    </item>
+    
+  </channel>
+</rss>
