@@ -29,7 +29,7 @@
   
   
   
-  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.93f530596bf3d2d8fa3b06df91ced7fab5c4ce778013607ce61aa0feca4b9d34d8b1de8b6223253b085809501855899b421d016e1f4d493df7471d52f897fbc5.css" integrity="sha512-k/UwWWvz0tj6Owbfkc7X&#43;rXEzneAE2B85hqg/spLnTTYsd6LYiMlOwhYCVAYVYmbQh0Bbh9NST33Rx1S&#43;Jf7xQ=="> 
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.f7b0b81ffd948bc2b51bc47986281e591e9b39c46e6a18845e310537e786f77866b48fb756426e711bfa065a4ec7260ede6260c54bd2ed0827d693b01d7af483.css" integrity="sha512-97C4H/2Ui8K1G8R5higeWR6bOcRuahiEXjEFN&#43;eG93hmtI&#43;3VkJucRv6BlpOxyYO3mJgxUvS7Qgn1pOwHXr0gw=="> 
 
   
    <link rel="stylesheet" href="https://ernestdong.github.io/css/custom.css"> 
@@ -43,6 +43,10 @@
   
 <link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
 
+  
+  
+    <link href="https://ernestdong.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Ernest Dong" />
+  
   
   
 </head>
@@ -75,8 +79,12 @@
       
         <li><a href="/readme/index.html">About</a></li>
       
-        <li><a href="/files/resume.pdf">Resume</a></li>
-      
+        <li>
+          <input type="text" placeholder="Search" id="search" style="border-radius: 10px;outline: none;padding-right: 20px">
+          <button onclick="window.location='https://github.com/ErnestDong/ernestdong.github.io/search?q='+document.getElementById('search').value"  style="margin-left: -20px;border-radius: 10px;">
+            <i class="fas fa-search"></i>
+          </button>
+        </li>
     </ul>
   </div>
 </header>
@@ -230,8 +238,6 @@
         <li><a href="/tags">Tags</a></li>
          
         <li><a href="/readme/index.html">About</a></li>
-         
-        <li><a href="/files/resume.pdf">Resume</a></li>
         
       </ul>
     </nav>
