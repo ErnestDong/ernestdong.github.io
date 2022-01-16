@@ -9,23 +9,23 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Are ratings the worst form of credit assessment except for all the others? | Ernest Dong</title>
-  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/'>
+  <title> The myth of the credit spread puzzle | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/feldhutter2018myth/'>
   <meta name="description" content="A Sisyphus Rolling Up Rock">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="Are ratings the worst form of credit assessment except for all the others?" />
-<meta property="og:description" content="Are ratings the worst form of credit assessment except for all the others? 主题 提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好 在一个理论模型中表明，最 powerful 的违约预测" />
+  <meta property="og:title" content="The myth of the credit spread puzzle" />
+<meta property="og:description" content="The myth of the credit spread puzzle 主题 莫顿模型无法解释实际投资级债券信用利差的水平，存在很大的低估，公司债券的利差大约是违约、税收和流动性不足所能解释的两倍 作者" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/blochlinger2018ratings/" /><meta property="article:section" content="notes" />
+<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/feldhutter2018myth/" /><meta property="article:section" content="notes" />
 
-<meta property="article:modified_time" content="2022-01-15T12:35:05+08:00" />
+<meta property="article:modified_time" content="2022-01-16T11:30:42+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Are ratings the worst form of credit assessment except for all the others?"/>
-<meta name="twitter:description" content="Are ratings the worst form of credit assessment except for all the others? 主题 提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好 在一个理论模型中表明，最 powerful 的违约预测"/>
+<meta name="twitter:title" content="The myth of the credit spread puzzle"/>
+<meta name="twitter:description" content="The myth of the credit spread puzzle 主题 莫顿模型无法解释实际投资级债券信用利差的水平，存在很大的低估，公司债券的利差大约是违约、税收和流动性不足所能解释的两倍 作者"/>
 
   
   
@@ -115,14 +115,14 @@
       <ul>
         
         <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/golbayani2020comparative/" aria-label="Previous">
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/bai2020credit/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="https://ernestdong.github.io/notes/thesis/bai2020credit/" aria-label="Next">
+          <a class="icon" href="https://ernestdong.github.io/notes/theses/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -149,12 +149,18 @@
   <ul>
     <li><a href="#主题">主题</a></li>
     <li><a href="#数据">数据</a></li>
-    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#分析方法">分析方法</a>
+      <ul>
+        <li><a href="#历史违约率的两个关键点">历史违约率的两个关键点</a></li>
+        <li><a href="#违约的定义">违约的定义</a></li>
+        <li><a href="#现有方法">现有方法</a></li>
+      </ul>
+    </li>
     <li><a href="#模型">模型</a>
       <ul>
-        <li><a href="#如何将-z-和-d-联系起来">如何将 Z 和 D 联系起来</a></li>
-        <li><a href="#定义-powerful">定义 powerful</a></li>
-        <li><a href="#模型结论">模型结论</a></li>
+        <li><a href="#核心假设">核心假设</a></li>
+        <li><a href="#数据优势">数据优势</a></li>
+        <li><a href="#模型">模型</a></li>
       </ul>
     </li>
     <li><a href="#结论">结论</a></li>
@@ -170,47 +176,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&text=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&text=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&title=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&is_video=false&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&is_video=false&description=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=The%20myth%20of%20the%20credit%20spread%20puzzle&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&title=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&title=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&name=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f%20%e4%b8%bb%e9%a2%98%20%e6%8f%90%e5%87%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e4%bc%81%e4%b8%9a%e8%bf%9d%e7%ba%a6%ef%bc%8c%e6%a8%a1%e5%9e%8b%e5%8c%85%e6%8b%ac%e4%ba%86%20Altman%20Z%20%e8%af%84%e5%88%86%e5%92%8c%20Merton%20%e8%bf%9d%e7%ba%a6%e8%b7%9d%e7%a6%bb%ef%bc%8c%e4%b8%94%e6%af%94%e8%af%84%e7%ba%a7%e6%9b%b4%e5%a5%bd%20%e5%9c%a8%e4%b8%80%e4%b8%aa%e7%90%86%e8%ae%ba%e6%a8%a1%e5%9e%8b%e4%b8%ad%e8%a1%a8%e6%98%8e%ef%bc%8c%e6%9c%80%20powerful%20%e7%9a%84%e8%bf%9d%e7%ba%a6%e9%a2%84%e6%b5%8b" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&name=The%20myth%20of%20the%20credit%20spread%20puzzle&description=The%20myth%20of%20the%20credit%20spread%20puzzle%20%e4%b8%bb%e9%a2%98%20%e8%8e%ab%e9%a1%bf%e6%a8%a1%e5%9e%8b%e6%97%a0%e6%b3%95%e8%a7%a3%e9%87%8a%e5%ae%9e%e9%99%85%e6%8a%95%e8%b5%84%e7%ba%a7%e5%80%ba%e5%88%b8%e4%bf%a1%e7%94%a8%e5%88%a9%e5%b7%ae%e7%9a%84%e6%b0%b4%e5%b9%b3%ef%bc%8c%e5%ad%98%e5%9c%a8%e5%be%88%e5%a4%a7%e7%9a%84%e4%bd%8e%e4%bc%b0%ef%bc%8c%e5%85%ac%e5%8f%b8%e5%80%ba%e5%88%b8%e7%9a%84%e5%88%a9%e5%b7%ae%e5%a4%a7%e7%ba%a6%e6%98%af%e8%bf%9d%e7%ba%a6%e3%80%81%e7%a8%8e%e6%94%b6%e5%92%8c%e6%b5%81%e5%8a%a8%e6%80%a7%e4%b8%8d%e8%b6%b3%e6%89%80%e8%83%bd%e8%a7%a3%e9%87%8a%e7%9a%84%e4%b8%a4%e5%80%8d%20%e4%bd%9c%e8%80%85" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&t=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&t=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -224,7 +230,7 @@
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
       <header>
         <h1 class="posttitle" itemprop="name headline">
-          Are ratings the worst form of credit assessment except for all the others?
+          The myth of the credit spread puzzle
         </h1>
         <div class="meta">
           <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -234,7 +240,7 @@
           </span>
           <div class="postdate">
             
-            <time datetime="2022-01-15 12:35:05 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-15</time>
+            <time datetime="2022-01-16 11:30:42 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
             
           </div>
           
@@ -242,7 +248,7 @@
           <div class="article-read-time">
             <i class="far fa-clock"></i>
             
-            2 minute read
+            3 minute read
           </div>
           
           
@@ -260,33 +266,43 @@
 
       
       <div class="content" itemprop="articleBody">
-        <p><a href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/are-ratings-the-worst-form-of-credit-assessment-except-for-all-the-others/94B1DAE28B06D9E48B3BB4A8352C14A3">Are ratings the worst form of credit assessment except for all the others?</a></p>
+        <p><a href="https://academic.oup.com/rfs/article/31/8/2897/4953344?login=true">The myth of the credit spread puzzle</a></p>
 <h2 id="主题">主题</h2>
-<p>提出一个新的模型预测企业违约，模型包括了 Altman Z 评分和 Merton 违约距离，且比评级更好</p>
-<p>在一个理论模型中表明，最 powerful 的违约预测因素必须同时纳入市场和会计数据。</p>
-<p>过滤掉宏观因素，因为监管规定导致了非周期</p>
+<p>莫顿模型无法解释实际投资级债券信用利差的水平，存在很大的低估，公司债券的利差大约是违约、税收和流动性不足所能解释的两倍</p>
+<p>作者提出的方法可以对投资级违约概率进行更精确和更少偏差的估计</p>
 <h2 id="数据">数据</h2>
-<p>使用 1982-1999 年的数据训练模型，2000-2010 年的数据作为测试集</p>
+<p>包含 256,698 个公司债券收益率与工业公司发行的不可赎回债券掉期利率的差值</p>
 <h2 id="分析方法">分析方法</h2>
-<p>首先作者开发了理论 <a href="#%E6%A8%A1%E5%9E%8B">模型</a>，然后提出假设：违约概率分布在剔除掉 Through-the-Cycle 因素影响下应当是稳定的</p>
-<h2 id="模型">模型</h2>
-<h3 id="如何将-z-和-d-联系起来">如何将 Z 和 D 联系起来</h3>
-<h4 id="假设">假设</h4>
+<h3 id="历史违约率的两个关键点">历史违约率的两个关键点</h3>
 <ul>
-<li>利用 public 信息，对于资产价值对数的估计是无偏的，</li>
-<li>资产价值、误差和收益率 mutually 独立</li>
-<li>公开信息的产生服从一定的概率分布</li>
+<li>30 年的样本期间，观察到的平均率存在很大的抽样误差：违约是相关的</li>
+<li>投资级违约率分布高度正偏：大多数情况下，很少违约，但偶尔会看到很多违约</li>
 </ul>
-<h4 id="证明">证明</h4>
-<p>违约概率是违约距离 D 和 Z 的函数</p>
-<h3 id="定义-powerful">定义 powerful</h3>
-<p>条件概率 P{Y=1|G} 是由信息集 G 生成的所有预测器中最强大的预测器，即任何其他 G-可测的预测器的 Lorenz 曲线必须位于条件概率的 Lorenz 曲线之上</p>
-<h3 id="模型结论">模型结论</h3>
-<p>莫顿的违约距离和 Altman Z 都是作者模型的特例，是信息完全前提下分别知道两个角度的数据得到的结论</p>
-<p>违约距离和 relative rankings of S 有关</p>
+<h3 id="违约的定义">违约的定义</h3>
+<p>违约边界：公司价值/债务面值，小于则违约</p>
+<h3 id="现有方法">现有方法</h3>
+<p>从单个事后违约频率中提取事前违约概率，但由于违约频率低和违约相关，大样本估计也存在偏差</p>
+<h2 id="模型">模型</h2>
+<h3 id="核心假设">核心假设</h3>
+<ul>
+<li>资产动态遵循几何布朗运动，当资产价值第一次低于违约边界时发生违约</li>
+<li>违约边界的位置（按每家公司的债务面值衡量）在所有公司中都是一个常数。</li>
+</ul>
+<h3 id="数据优势">数据优势</h3>
+<p>使用来自广泛评级和期限的已实现累积违约率。
+可以汇总的关键假设是具有不同评级和不同期限债券的公司将共享一个共同的违约边界。</p>
+<p>由于低信用质量债券更频繁地违约，提供了更多关于违约边界位置的信息</p>
+<p>从不同公司评级对获得的违约边界估计不完全相关，因此将它们组合起来是有效的</p>
+<h3 id="模型">模型</h3>
+<p>扩展Chen, Collin-Dufresne, and Goldstein (<a href="#citeproc_bib_item_1">2009</a>)拟合 BBB 级债券的模型，使之拟合不同评级不同期限的利差</p>
+<p>\(\underset{\{d\}}{\min} \sum_{a=AAA}^{C}\sum_{T=1}^{20}\frac{1}{T}\Big|\overline{\pi}^P_{aT}(d)-\hat{\pi}^P_{aT}\Big|.\)</p>
+<p>最小化 7 个评级和 20 个期限的利差误差的加权平均值，获得违约边界 \(d=0.8944\)。
+即当一家公司的(公司)价值低于债务面值的89.44%时，该公司就会违约。</p>
 <h2 id="结论">结论</h2>
-<p>作者的模型是可以被实证检验的，基于当前借款人群体的相对 ranking，在任何情况下，至少仍与标普评级一样强大。</p>
+<p>提高精度的部分原因是结合了 20 个期限和 7 个评级的信息，并且来自不同评级/期限对的违约概率估计不完全相关。</p>
+<p>不支持“信用价差之谜”，所谓的 puzzle 是由于模型的不正确应用产生的</p>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Chen, Long, Pierre Collin-Dufresne, and Robert S Goldstein. 2009. “On the Relation between the Credit Spread Puzzle and the Equity Premium Puzzle.” <i>The Review of Financial Studies</i> 22 (9): 3367–3409.</div>
 </div>
       </div>
     </article>
@@ -326,12 +342,18 @@
   <ul>
     <li><a href="#主题">主题</a></li>
     <li><a href="#数据">数据</a></li>
-    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#分析方法">分析方法</a>
+      <ul>
+        <li><a href="#历史违约率的两个关键点">历史违约率的两个关键点</a></li>
+        <li><a href="#违约的定义">违约的定义</a></li>
+        <li><a href="#现有方法">现有方法</a></li>
+      </ul>
+    </li>
     <li><a href="#模型">模型</a>
       <ul>
-        <li><a href="#如何将-z-和-d-联系起来">如何将 Z 和 D 联系起来</a></li>
-        <li><a href="#定义-powerful">定义 powerful</a></li>
-        <li><a href="#模型结论">模型结论</a></li>
+        <li><a href="#核心假设">核心假设</a></li>
+        <li><a href="#数据优势">数据优势</a></li>
+        <li><a href="#模型">模型</a></li>
       </ul>
     </li>
     <li><a href="#结论">结论</a></li>
@@ -349,47 +371,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&text=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&text=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&title=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&is_video=false&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&is_video=false&description=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=The%20myth%20of%20the%20credit%20spread%20puzzle&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&title=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&title=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&name=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f%20%e4%b8%bb%e9%a2%98%20%e6%8f%90%e5%87%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e4%bc%81%e4%b8%9a%e8%bf%9d%e7%ba%a6%ef%bc%8c%e6%a8%a1%e5%9e%8b%e5%8c%85%e6%8b%ac%e4%ba%86%20Altman%20Z%20%e8%af%84%e5%88%86%e5%92%8c%20Merton%20%e8%bf%9d%e7%ba%a6%e8%b7%9d%e7%a6%bb%ef%bc%8c%e4%b8%94%e6%af%94%e8%af%84%e7%ba%a7%e6%9b%b4%e5%a5%bd%20%e5%9c%a8%e4%b8%80%e4%b8%aa%e7%90%86%e8%ae%ba%e6%a8%a1%e5%9e%8b%e4%b8%ad%e8%a1%a8%e6%98%8e%ef%bc%8c%e6%9c%80%20powerful%20%e7%9a%84%e8%bf%9d%e7%ba%a6%e9%a2%84%e6%b5%8b" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&name=The%20myth%20of%20the%20credit%20spread%20puzzle&description=The%20myth%20of%20the%20credit%20spread%20puzzle%20%e4%b8%bb%e9%a2%98%20%e8%8e%ab%e9%a1%bf%e6%a8%a1%e5%9e%8b%e6%97%a0%e6%b3%95%e8%a7%a3%e9%87%8a%e5%ae%9e%e9%99%85%e6%8a%95%e8%b5%84%e7%ba%a7%e5%80%ba%e5%88%b8%e4%bf%a1%e7%94%a8%e5%88%a9%e5%b7%ae%e7%9a%84%e6%b0%b4%e5%b9%b3%ef%bc%8c%e5%ad%98%e5%9c%a8%e5%be%88%e5%a4%a7%e7%9a%84%e4%bd%8e%e4%bc%b0%ef%bc%8c%e5%85%ac%e5%8f%b8%e5%80%ba%e5%88%b8%e7%9a%84%e5%88%a9%e5%b7%ae%e5%a4%a7%e7%ba%a6%e6%98%af%e8%bf%9d%e7%ba%a6%e3%80%81%e7%a8%8e%e6%94%b6%e5%92%8c%e6%b5%81%e5%8a%a8%e6%80%a7%e4%b8%8d%e8%b6%b3%e6%89%80%e8%83%bd%e8%a7%a3%e9%87%8a%e7%9a%84%e4%b8%a4%e5%80%8d%20%e4%bd%9c%e8%80%85" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&t=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2ffeldhutter2018myth%2f&t=The%20myth%20of%20the%20credit%20spread%20puzzle" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

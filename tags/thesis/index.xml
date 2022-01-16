@@ -5,23 +5,32 @@
     <link>https://ernestdong.github.io/tags/thesis/</link>
     <description>Recent content in thesis on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 15 Jan 2022 16:45:38 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/thesis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jan 2022 11:31:24 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/thesis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业论文</title>
       <link>https://ernestdong.github.io/notes/theses/</link>
-      <pubDate>Sat, 15 Jan 2022 16:45:38 +0800</pubDate>
+      <pubDate>Sun, 16 Jan 2022 11:31:24 +0800</pubDate>
       
       <guid>https://ernestdong.github.io/notes/theses/</guid>
       <description>Presentation Presentation Notes TODO Tasks 你先开始找文献，先从知网的中文核心期刊看起，慢慢从他们的英文参考文献中了解相关英文文献的关键词，然后再逐渐找些英文文献，这样文献的</description>
     </item>
     
     <item>
-      <title>已读已汇报文献</title>
-      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
-      <pubDate>Sat, 15 Jan 2022 16:45:19 +0800</pubDate>
+      <title>The myth of the credit spread puzzle</title>
+      <link>https://ernestdong.github.io/notes/thesis/feldhutter2018myth/</link>
+      <pubDate>Sun, 16 Jan 2022 11:30:42 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
-      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdq</description>
+      <guid>https://ernestdong.github.io/notes/thesis/feldhutter2018myth/</guid>
+      <description>The myth of the credit spread puzzle 主题 莫顿模型无法解释实际投资级债券信用利差的水平，存在很大的低估，公司债券的利差大约是违约、税收和流动性不足所能解释的两倍 作者</description>
+    </item>
+    
+    <item>
+      <title>Is the credit spread puzzle a myth?</title>
+      <link>https://ernestdong.github.io/notes/thesis/bai2020credit/</link>
+      <pubDate>Sun, 16 Jan 2022 11:30:26 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/bai2020credit/</guid>
+      <description>Is the credit spread puzzle a myth? 主题 当Feldhütter and Schaefer (2018)他们的模型被校准为债务的市场价值（根据理论要求）而不是账面价值时，他们的结果是相反的</description>
     </item>
     
     <item>
@@ -364,6 +373,15 @@
       
       <guid>https://ernestdong.github.io/notes/thesis/%E6%9E%97%E6%99%9A%E5%8F%912018%E9%AB%98%E7%AE%A1%E4%BB%BB%E8%81%8C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%BE%97%E4%B8%8E%E5%A4%B1/</guid>
       <description>高管任职经历的得与失?——来自债券市场的经验证据 主题 (毛新述 and 周小伟) 研究了高管担任过人大代表或政协委员的企业更倾向于通过发行债券而不是银行</description>
+    </item>
+    
+    <item>
+      <title>已读已汇报文献</title>
+      <link>https://ernestdong.github.io/notes/thesis_archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis_archive/</guid>
+      <description>week 1 微观指标 评级度量风险 中债估值识别了债券信用风险吗?——基于跳跃视角的实证分析 投资人付费&amp;quot;vs.&amp;ldquo;发行人付费&amp;rdq</description>
     </item>
     
   </channel>
