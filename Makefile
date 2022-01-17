@@ -1,8 +1,8 @@
 main:
 	hugo server
 resume: src/resume.tex
-	-xelatex -output-directory static src/resume
-	-cd static; latexmk -c
+	-xelatex -output-directory static/files src/resume
+	-cd static/files; rm resume.log resume.aux resume.out
 pre: src/pre/main.tex
 	-cd src/pre; latexmk main
 	-cd src/pre; latexmk -c
