@@ -1,7 +1,7 @@
 +++
 title = "毕业论文"
 author = ["Ernest Dong"]
-lastmod = 2022-01-16T20:28:15+08:00
+lastmod = 2022-01-21T17:59:56+08:00
 tags = ["thesis"]
 draft = false
 +++
@@ -33,3 +33,37 @@ draft = false
 3.  Journal of Financial Economics
 4.  Review of Financial Studies
 5.  Journal of Banking and Finance
+
+
+## week 9 {#week-9}
+
+
+### 系统性风险传染 {#系统性风险传染}
+
+[Financial factors and the propagation of the great depression]({{<relref "thesis/cortes2021financial.md#" >}})
+
+
+### 指标 {#指标}
+
+
+#### 波动性 {#波动性}
+
+[Volatility and the cross-section of corporate bond returns]({{<relref "thesis/chung2019volatility.md#" >}})
+
+
+#### 财务指标与市场指标的优劣 {#财务指标与市场指标的优劣}
+
+[Performance of default-risk measures: the sample matters]({{<relref "thesis/abinzano2020performance.md#" >}})
+
+
+### 计量模型 {#计量模型}
+
+
+#### logit 模型的改进 {#logit-模型的改进}
+
+[Predicting us bank failures with midas logit models]({{<relref "thesis/audrino2019predicting.md#" >}})
+
+
+#### 波动率不为常数 {#波动率不为常数}
+
+[Banks’ risk dynamics and distance to default]({{<relref "thesis/nagel2020banks.md#" >}})
