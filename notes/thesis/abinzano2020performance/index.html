@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="/js/cactus.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Performance of default-risk measures: the sample matters | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/abinzano2020performance/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Performance of default-risk measures: the sample matters" />
+<meta property="og:description" content="Performance of default-risk measures: the sample matters 主题 样本内公司特征的影响因测量而异。总体发现，在以高账面市值比和/或高资产无形性为特征的样本中，准确预测违约的拟合优度较差，这" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/abinzano2020performance/" /><meta property="article:section" content="notes" />
+
+<meta property="article:modified_time" content="2022-01-21T17:53:37+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Performance of default-risk measures: the sample matters"/>
+<meta name="twitter:description" content="Performance of default-risk measures: the sample matters 主题 样本内公司特征的影响因测量而异。总体发现，在以高账面市值比和/或高资产无形性为特征的样本中，准确预测违约的拟合优度较差，这"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.f7b0b81ffd948bc2b51bc47986281e591e9b39c46e6a18845e310537e786f77866b48fb756426e711bfa065a4ec7260ede6260c54bd2ed0827d693b01d7af483.css" integrity="sha512-97C4H/2Ui8K1G8R5higeWR6bOcRuahiEXjEFN&#43;eG93hmtI&#43;3VkJucRv6BlpOxyYO3mJgxUvS7Qgn1pOwHXr0gw=="> 
+
+  
+   <link rel="stylesheet" href="https://ernestdong.github.io/css/custom.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+
+<body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0  ";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
+  <div class="content index py4">
+
+    <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/notes">Notes</a></li>
+        
+        <li><a href="/posts">Posts</a></li>
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/chung2019volatility/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/nagel2020banks/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&text=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&title=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&is_video=false&description=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&title=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&title=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&name=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters&description=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters%20%e4%b8%bb%e9%a2%98%20%e6%a0%b7%e6%9c%ac%e5%86%85%e5%85%ac%e5%8f%b8%e7%89%b9%e5%be%81%e7%9a%84%e5%bd%b1%e5%93%8d%e5%9b%a0%e6%b5%8b%e9%87%8f%e8%80%8c%e5%bc%82%e3%80%82%e6%80%bb%e4%bd%93%e5%8f%91%e7%8e%b0%ef%bc%8c%e5%9c%a8%e4%bb%a5%e9%ab%98%e8%b4%a6%e9%9d%a2%e5%b8%82%e5%80%bc%e6%af%94%e5%92%8c%2f%e6%88%96%e9%ab%98%e8%b5%84%e4%ba%a7%e6%97%a0%e5%bd%a2%e6%80%a7%e4%b8%ba%e7%89%b9%e5%be%81%e7%9a%84%e6%a0%b7%e6%9c%ac%e4%b8%ad%ef%bc%8c%e5%87%86%e7%a1%ae%e9%a2%84%e6%b5%8b%e8%bf%9d%e7%ba%a6%e7%9a%84%e6%8b%9f%e5%90%88%e4%bc%98%e5%ba%a6%e8%be%83%e5%b7%ae%ef%bc%8c%e8%bf%99" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&t=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+  </span>
+</div>
+
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Performance of default-risk measures: the sample matters
+        </h1>
+        <div class="meta">
+          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">
+              Ernest Dong
+            </span>
+          </span>
+          <div class="postdate">
+            
+            <time datetime="2022-01-21 17:53:37 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-21</time>
+            
+          </div>
+          
+          
+          <div class="article-read-time">
+            <i class="far fa-clock"></i>
+            
+            3 minute read
+          </div>
+          
+          
+          
+          <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/%E8%B4%A2%E5%8A%A1%E6%8C%87%E6%A0%87" rel="tag">财务指标</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+          </div>
+          
+        </div>
+      </header>
+
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0378426620302211">Performance of default-risk measures: the sample matters</a></p>
+<h2 id="主题">主题</h2>
+<p>样本内公司特征的影响因测量而异。总体发现，在以高账面市值比和/或高资产无形性为特征的样本中，准确预测违约的拟合优度较差，这两者都表明定价困难。</p>
+<h2 id="数据">数据</h2>
+<p>Z：营运资金/总资产、留存收益/总资产、权益的市场价值/总负债的账面价值、销售额/总资产、息税前利润/总资产</p>
+<p>O：总资产与 GNP 价格水平指数之比的对数、总负债/总资产、营运资金/总资产、流动负债/流动资产、净收入/总资产、运营现金流/总负债、过去两年的净收入是否为负、总负债是否大于总资产、净收入</p>
+<p>Zmijewski：净收入/总资产、总负债/总资产、流动资产/流动负债</p>
+<p>H&amp;H：资产回报率的标准差、资产预期回报率、资本比率</p>
+<h2 id="分析方法">分析方法</h2>
+<p>对不同模型拟合优度做累积准确度曲线 (CAP) 图和准确度比 (AR)</p>
+<p>一般而言，CDS 利差可以实现更高的准确性，紧随其后的是 BSM 和债券利差。但是，由于整个样本中无法使用某些度量，因此无法断定哪个是最好的。</p>
+<p>根据规模、账面市值比、波动率、流动性讲样本排序，以 AR 为因变量回归，发现</p>
+<ol>
+<li>规模越大，三个市场模型越不精确</li>
+<li>BTM 对 BSM 和 CDS 利差为负且显着，而对债券利差为正，但后者显著性不高</li>
+<li>波动性对 BSM、CDS 利差和债券利差的准确率显著。市场模型考虑了股权的波动性而会计模型没有。</li>
+<li>在债券利差的情况下，流动性系数为负且显著。公司的非流动资产越多，估值越难，因此评估其越难的事实是一致的</li>
+</ol>
+<h2 id="模型">模型</h2>
+<p>考虑四种会计测度</p>
+<ol>
+<li>Altman Z</li>
+<li>Olsen O</li>
+<li>Zmijewski 模型</li>
+<li>Hannan Hanweck 模型</li>
+</ol>
+<p>和三种基于市场的衡量标准：</p>
+<ol>
+<li>CDS 利差</li>
+<li>债券利差</li>
+<li>BSM 模型如 KMV 等</li>
+</ol>
+<p>以及信用评级</p>
+<h2 id="结论">结论</h2>
+<p>基于市场的模型提供了比其他措施更好的拟合优度，与债券利差和 BSM 不同，CDS 是唯一能够保持高度准确性的工具，无论预测范围和违约类型如何。</p>
+<p>在选择一种或另一种度量时，除了预测范围之外，或者即使打算预测所有违约事件或仅预测严重违约事件，所使用的样本和构成部分的公司的特征其中是相关的。</p>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+</div>
+      </div>
+    </article>
+
+    
+  
+
+
+
+
+
+
+    <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&text=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&title=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&is_video=false&description=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&title=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&title=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&name=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters&description=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters%20%e4%b8%bb%e9%a2%98%20%e6%a0%b7%e6%9c%ac%e5%86%85%e5%85%ac%e5%8f%b8%e7%89%b9%e5%be%81%e7%9a%84%e5%bd%b1%e5%93%8d%e5%9b%a0%e6%b5%8b%e9%87%8f%e8%80%8c%e5%bc%82%e3%80%82%e6%80%bb%e4%bd%93%e5%8f%91%e7%8e%b0%ef%bc%8c%e5%9c%a8%e4%bb%a5%e9%ab%98%e8%b4%a6%e9%9d%a2%e5%b8%82%e5%80%bc%e6%af%94%e5%92%8c%2f%e6%88%96%e9%ab%98%e8%b5%84%e4%ba%a7%e6%97%a0%e5%bd%a2%e6%80%a7%e4%b8%ba%e7%89%b9%e5%be%81%e7%9a%84%e6%a0%b7%e6%9c%ac%e4%b8%ad%ef%bc%8c%e5%87%86%e7%a1%ae%e9%a2%84%e6%b5%8b%e8%bf%9d%e7%ba%a6%e7%9a%84%e6%8b%9f%e5%90%88%e4%bc%98%e5%ba%a6%e8%be%83%e5%b7%ae%ef%bc%8c%e8%bf%99" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fabinzano2020performance%2f&t=Performance%20of%20default-risk%20measures%3a%20the%20sample%20matters" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
+</script>
+
+
+</html>

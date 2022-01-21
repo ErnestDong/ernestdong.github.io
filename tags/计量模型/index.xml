@@ -5,7 +5,25 @@
     <link>https://ernestdong.github.io/tags/%E8%AE%A1%E9%87%8F%E6%A8%A1%E5%9E%8B/</link>
     <description>Recent content in 计量模型 on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Jan 2022 20:23:15 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/%E8%AE%A1%E9%87%8F%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jan 2022 17:59:08 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/%E8%AE%A1%E9%87%8F%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Banks’ risk dynamics and distance to default</title>
+      <link>https://ernestdong.github.io/notes/thesis/nagel2020banks/</link>
+      <pubDate>Fri, 21 Jan 2022 17:59:08 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/nagel2020banks/</guid>
+      <description>Banks’ risk dynamics and distance to default 主题 典型的银行资产是具有 concave 形收益的高风险债务债权（例如抵押贷款）。由于收益非线性，在借款人资产价值受到负面冲击后，银</description>
+    </item>
+    
+    <item>
+      <title>Predicting us bank failures with midas logit models</title>
+      <link>https://ernestdong.github.io/notes/thesis/audrino2019predicting/</link>
+      <pubDate>Fri, 21 Jan 2022 17:52:47 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/notes/thesis/audrino2019predicting/</guid>
+      <description>Predicting us bank failures with midas logit models 主题 在 logit 回归中使用 Mixed-data sampling (MIDAS) 修正 过去的文献从 CAMELS 出发研究银行倒闭： capital assets management earnings liquidity sensitivity to market risk 结果不好可以尝试这种方式改进 数据 Bank Level 50 quarters of data for</description>
+    </item>
+    
     <item>
       <title>A comparative study of forecasting corporate credit ratings using neural networks, support vector machines, and decision trees</title>
       <link>https://ernestdong.github.io/notes/thesis/golbayani2020comparative/</link>

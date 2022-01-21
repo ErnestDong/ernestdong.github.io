@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="/js/cactus.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Volatility and the cross-section of corporate bond returns | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/notes/thesis/chung2019volatility/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Volatility and the cross-section of corporate bond returns" />
+<meta property="og:description" content="Volatility and the cross-section of corporate bond returns 主题 在利差中考虑了波动性 一方面，债券和股票收益都受到波动性冲击的影响，因为投资者对这两种资产的财富取决于相同的公司价值。另一" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/notes/thesis/chung2019volatility/" /><meta property="article:section" content="notes" />
+
+<meta property="article:modified_time" content="2022-01-21T17:53:24+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Volatility and the cross-section of corporate bond returns"/>
+<meta name="twitter:description" content="Volatility and the cross-section of corporate bond returns 主题 在利差中考虑了波动性 一方面，债券和股票收益都受到波动性冲击的影响，因为投资者对这两种资产的财富取决于相同的公司价值。另一"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.f7b0b81ffd948bc2b51bc47986281e591e9b39c46e6a18845e310537e786f77866b48fb756426e711bfa065a4ec7260ede6260c54bd2ed0827d693b01d7af483.css" integrity="sha512-97C4H/2Ui8K1G8R5higeWR6bOcRuahiEXjEFN&#43;eG93hmtI&#43;3VkJucRv6BlpOxyYO3mJgxUvS7Qgn1pOwHXr0gw=="> 
+
+  
+   <link rel="stylesheet" href="https://ernestdong.github.io/css/custom.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+
+<body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0  ";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
+  <div class="content index py4">
+
+    <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/notes">Notes</a></li>
+        
+        <li><a href="/posts">Posts</a></li>
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/cortes2021financial/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://ernestdong.github.io/notes/thesis/abinzano2020performance/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&text=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&title=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&is_video=false&description=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&title=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&title=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&name=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns&description=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns%20%e4%b8%bb%e9%a2%98%20%e5%9c%a8%e5%88%a9%e5%b7%ae%e4%b8%ad%e8%80%83%e8%99%91%e4%ba%86%e6%b3%a2%e5%8a%a8%e6%80%a7%20%e4%b8%80%e6%96%b9%e9%9d%a2%ef%bc%8c%e5%80%ba%e5%88%b8%e5%92%8c%e8%82%a1%e7%a5%a8%e6%94%b6%e7%9b%8a%e9%83%bd%e5%8f%97%e5%88%b0%e6%b3%a2%e5%8a%a8%e6%80%a7%e5%86%b2%e5%87%bb%e7%9a%84%e5%bd%b1%e5%93%8d%ef%bc%8c%e5%9b%a0%e4%b8%ba%e6%8a%95%e8%b5%84%e8%80%85%e5%af%b9%e8%bf%99%e4%b8%a4%e7%a7%8d%e8%b5%84%e4%ba%a7%e7%9a%84%e8%b4%a2%e5%af%8c%e5%8f%96%e5%86%b3%e4%ba%8e%e7%9b%b8%e5%90%8c%e7%9a%84%e5%85%ac%e5%8f%b8%e4%bb%b7%e5%80%bc%e3%80%82%e5%8f%a6%e4%b8%80" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&t=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+  </span>
+</div>
+
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          Volatility and the cross-section of corporate bond returns
+        </h1>
+        <div class="meta">
+          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">
+              Ernest Dong
+            </span>
+          </span>
+          <div class="postdate">
+            
+            <time datetime="2022-01-21 17:53:24 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-21</time>
+            
+          </div>
+          
+          
+          <div class="article-read-time">
+            <i class="far fa-clock"></i>
+            
+            3 minute read
+          </div>
+          
+          
+          
+          <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
+            
+          </div>
+          
+        </div>
+      </header>
+
+      
+      <div class="content" itemprop="articleBody">
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X19300248">Volatility and the cross-section of corporate bond returns</a></p>
+<h2 id="主题">主题</h2>
+<p>在利差中考虑了波动性</p>
+<p>一方面，债券和股票收益都受到波动性冲击的影响，因为投资者对这两种资产的财富取决于相同的公司价值。另一方面，债券和股票在许多方面都不同，例如风险特征、合同规定和投资客户。因此，债券和股票价格对波动性冲击的反应可能不同，波动性风险对其预期回报的影响也不同。</p>
+<h2 id="数据">数据</h2>
+<p>1994 年 1 月至 2016 年 12 月期间 2,309 家公司发行的 13,264 份债券的 489,206 个债券月观察结果。</p>
+<p>流动性按照单个债券的 Amihud 非流动性计算，\(ILLIQ_{it}=\frac{1}{D_{it}}\suum_{k=1}^{D_{it}}\frac{|r_{ikt}|}{V_{ikt}}\) 加权，r 是债券 i 在第 t 月 第 k 天的回报，Volume 是每日交易量，D 是有债券交易数据的天数</p>
+<p>股票市场超额收益，规模因子，账面市值比，长期投资级债券和长期政府债券的月收益率之差作为违约利差，期限，ILLIQ，VIX。</p>
+<h2 id="分析方法">分析方法</h2>
+<p>债券收益与 VIX 贝塔之间的负相关关系对是稳健的，因为对总体波动性高度敏感的资产可以很好地对冲下行市场风险，债券投资者需要对冲股票波动风险。</p>
+<h2 id="模型">模型</h2>
+<p>利用  Fama-French 模型估计债券的 β ，因变量是超过 1 个月国库券利率的债券收益</p>
+<p>VIX 贝塔系数可能和其他自变量相关，波动性风险效应可以作为流动性效应的代理，作者进行了稳健性分析，结论是依靠其他变量无法完全解释</p>
+<h2 id="结论">结论</h2>
+<p>总波动风险在预期公司债券收益的横截面中定价。波动性风险溢价为负值，这在控制股票和债券的常规风险因素、流动性和信息效应以及债券/发行人特征方面具有经济意义和稳健性。</p>
+<p>波动风险的影响是普遍存在的，并不集中在某些类型的公司债券中。评级较低的债券往往具有较高的总体波动风险敞口，并具有较大的波动风险溢价。</p>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+</div>
+      </div>
+    </article>
+
+    
+  
+
+
+
+
+
+
+    <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#数据">数据</a></li>
+    <li><a href="#分析方法">分析方法</a></li>
+    <li><a href="#模型">模型</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&text=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&title=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&is_video=false&description=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&title=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&title=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&name=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns&description=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns%20%e4%b8%bb%e9%a2%98%20%e5%9c%a8%e5%88%a9%e5%b7%ae%e4%b8%ad%e8%80%83%e8%99%91%e4%ba%86%e6%b3%a2%e5%8a%a8%e6%80%a7%20%e4%b8%80%e6%96%b9%e9%9d%a2%ef%bc%8c%e5%80%ba%e5%88%b8%e5%92%8c%e8%82%a1%e7%a5%a8%e6%94%b6%e7%9b%8a%e9%83%bd%e5%8f%97%e5%88%b0%e6%b3%a2%e5%8a%a8%e6%80%a7%e5%86%b2%e5%87%bb%e7%9a%84%e5%bd%b1%e5%93%8d%ef%bc%8c%e5%9b%a0%e4%b8%ba%e6%8a%95%e8%b5%84%e8%80%85%e5%af%b9%e8%bf%99%e4%b8%a4%e7%a7%8d%e8%b5%84%e4%ba%a7%e7%9a%84%e8%b4%a2%e5%af%8c%e5%8f%96%e5%86%b3%e4%ba%8e%e7%9b%b8%e5%90%8c%e7%9a%84%e5%85%ac%e5%8f%b8%e4%bb%b7%e5%80%bc%e3%80%82%e5%8f%a6%e4%b8%80" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fchung2019volatility%2f&t=Volatility%20and%20the%20cross-section%20of%20corporate%20bond%20returns" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
+</script>
+
+
+</html>
