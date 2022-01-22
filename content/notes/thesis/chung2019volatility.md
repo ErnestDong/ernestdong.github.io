@@ -2,7 +2,7 @@
 title = "Volatility and the cross-section of corporate bond returns"
 author = ["Ernest Dong"]
 lastmod = 2022-01-21T17:53:24+08:00
-tags = ["thesis"]
+tags = ["thesis", "波动性"]
 draft = false
 +++
 
