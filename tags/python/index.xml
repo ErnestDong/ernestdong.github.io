@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Ernest Dong</title>
+    <link>https://ernestdong.github.io/tags/python/</link>
+    <description>Recent content in python on Ernest Dong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 29 Jan 2022 12:28:11 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python and mathematics</title>
+      <link>https://ernestdong.github.io/posts/python_and_mathematics/</link>
+      <pubDate>Sat, 29 Jan 2022 12:28:11 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/python_and_mathematics/</guid>
+      <description>Get Start Concentrate on python and math 1 (pyvenv-activate &amp;#34;~/Code/thesis/.venv/&amp;#34;) 1 2 3 4 5 6 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns import statsmodels.api as sm import statsmodels.formula.api as smf numpy numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底</description>
+    </item>
+    
+  </channel>
+</rss>
