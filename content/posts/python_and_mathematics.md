@@ -1,14 +1,14 @@
 +++
 title = "python and mathematics"
 author = ["Ernest Dong"]
+lastmod = 2022-01-29T12:28:11+08:00
+tags = ["python"]
 draft = false
-date = 2021-11-20
-pin = true
-tags = ["coding"]
 +++
-一些有关 python 和数学的笔记
-<!--more-->
+
 ## Get Start {#get-start}
+
+Concentrate on [python]({{<relref "python.md#" >}}) and math
 
 ```emacs-lisp
 (pyvenv-activate "~/Code/thesis/.venv/")
@@ -266,6 +266,33 @@ print(df.A)
     print(df.groupby("A").sum())
     ```
 
+
+### 其他 {#其他}
+
+
+#### `dropna` {#dropna}
+
+`df.dropna()` 删除掉空值
+
+
+#### `cut` {#cut}
+
+```python
+df = pd.DataFrame({0:[i for i in range(100)]})
+cutted = pd.cut(df[0], bins=[-1, 50, 101])
+print(cutted)
+```
+
+
+#### `value_counts` {#value-counts}
+
+```python
+print(cutted.value_counts())
+```
+
+
+#### 透视表 {#透视表}
+
 <!--list-separator-->
 
 -  `pivot_table`
@@ -294,29 +321,20 @@ print(df.A)
 
         aggfunc 参数可以设置我们对数据聚合时进行的函数操作，默认是 mean
 
+<!--list-separator-->
 
-### 其他 {#其他}
+-  `pivot`
 
-
-#### `dropna` {#dropna}
-
-`df.dropna()` 删除掉空值
-
-
-#### `cut` {#cut}
-
-```python
-df = pd.DataFrame({0:[i for i in range(100)]})
-cutted = pd.cut(df[0], bins=[-1, 50, 101])
-print(cutted)
-```
+    ```python
+    df.pivot(index="row as", columns="column as", value="show what value")
+    ```
 
 
-#### `value_counts` {#value-counts}
+#### `stack` {#stack}
 
-```python
-print(cutted.value_counts())
-```
+将一个 multiIndex 的多列变成一个更加 multiIndex 的一列
+
+`unstack` 是相反的过程
 
 
 ## stats-models {#stats-models}
@@ -326,7 +344,7 @@ print(cutted.value_counts())
 文档：<https://www.statsmodels.org/stable/gettingstarted.html>
 
 
-### OLS 回归 {#ols-回归}
+### 回归 {#回归}
 
 ```python
 df = sm.datasets.get_rdataset("Guerry", "HistData").data # data loader, use pandas
@@ -346,6 +364,23 @@ print(result.params)
 print(result.rsquared)
 print(result.pvalue)
 ```
+
+
+### formula {#formula}
+
+```python
+import statsmodels.formula.api as smf
+
+smf.ols(formula="A~B+np.log(C)-1", data=df).fit().summary()
+```
+
+支持 R 风格的公式
+
+-   \\~ 代表 \\=
+-   - 明晰不要某个变量：-1代表无截距项
+-   : 代表两个的交互项
+-   \* 代表两个的交互项，此外还有他们两个单独的项
+-   可以使用 np 的函数等
 
 
 ### 其他 {#其他}
@@ -389,7 +424,7 @@ plt.savefig(filename)
 return filename
 ```
 
-<>
+{{< figure src="/ox-hugo/example.png" >}}
 
 
 #### 具体 {#具体}
@@ -413,3 +448,34 @@ plt.style.use("seaborn")
 # or
 sns.set()
 ```
+
+
+### `relplot` {#relplot}
+
+```python
+sns.relplot(x="something",
+            y="something else",
+            data=df,
+            kind="scatter, line, and so on",
+            size="something that decides scatter size/ line width",
+            hue="something that decides scatter/line color",
+            style="something that decides scatter/line style")
+```
+
+```python
+import seaborn as sns
+cars = sns.load_dataset('mpg')
+sns.relplot(x='weight',
+            y='horsepower',
+            col="origin",
+            data=cars,
+            hue='origin',
+            style='origin');
+```
+
+{{< figure src="/ox-hugo/cbe7f0b2b9bc5222986766ebf1c36d120931a42f.png" >}}
+
+
+### cheatsheet {#cheatsheet}
+
+[cheat sheet](https://github.com/ErnestDong/seaborn/blob/master/SB%20Tut.ipynb)
