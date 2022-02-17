@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernestdong.github.io/notes/theses/" /><meta property="article:section" content="notes" />
 
-<meta property="article:modified_time" content="2022-01-21T17:59:56+08:00" />
+<meta property="article:modified_time" content="2022-02-17T09:09:05+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -122,12 +122,6 @@
         
         
         <li>
-          <a class="icon" href="https://ernestdong.github.io/posts/python_and_mathematics/" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
           <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
             <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
           </a>
@@ -154,11 +148,19 @@
       </ul>
     </li>
     <li><a href="#journals">journals</a></li>
-    <li><a href="#week-9">week 9</a>
+    <li><a href="#try">Try</a>
       <ul>
-        <li><a href="#系统性风险传染">系统性风险传染</a></li>
-        <li><a href="#指标">指标</a></li>
-        <li><a href="#计量模型">计量模型</a></li>
+        <li><a href="#微观指标">微观指标</a></li>
+        <li><a href="#中观指标">中观指标</a></li>
+        <li><a href="#宏观指标">宏观指标</a></li>
+        <li><a href="#回归结果">回归结果</a></li>
+      </ul>
+    </li>
+    <li><a href="#try-machine-learning">Try Machine Learning</a>
+      <ul>
+        <li><a href="#visualize">visualize</a></li>
+        <li><a href="#numbers">numbers</a></li>
+        <li><a href="#roc-and-auc">ROC &amp; AUC</a></li>
       </ul>
     </li>
   </ul>
@@ -237,7 +239,7 @@
           </span>
           <div class="postdate">
             
-            <time datetime="2022-01-21 17:59:56 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-21</time>
+            <time datetime="2022-02-17 09:09:05 &#43;0800 &#43;0800" itemprop="datePublished">2022-02-17</time>
             
           </div>
           
@@ -245,7 +247,7 @@
           <div class="article-read-time">
             <i class="far fa-clock"></i>
             
-            2 minute read
+            5 minute read
           </div>
           
           
@@ -272,8 +274,8 @@
 <p>看摘要、数据、模型、结论</p>
 <h3 id="link">link</h3>
 <p><a href="/notes/thesis_archive/">thesis archive</a>
-<a href="https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&amp;tn=SE%5Fbaiduxueshu%5Fc1gjeupa&amp;sc%5Ff%5Fpara=sc%5Ftasktype%3D%7BfirstAdvancedSearch%7D&amp;sc%5Fhit=1&amp;bcp=2&amp;ie=utf-8&amp;tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E3%80%8B%29">经济研究</a>
-<a href="https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%29&amp;tn=SE%5Fbaiduxueshu%5Fc1gjeupa&amp;sc%5Fhit=1&amp;bcp=2&amp;ie=utf-8&amp;filter=sc%5Fyear%3D%7B2017%2C%2B%7D&amp;tag%5Ffilter=%20%20%20jnls%3A%28%E3%80%8A%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%E3%80%8B%29">金融研究</a></p>
+<a href="https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%29&amp;tn=SE_baiduxueshu_c1gjeupa&amp;sc_f_para=sc_tasktype%3D%7BfirstAdvancedSearch%7D&amp;sc_hit=1&amp;bcp=2&amp;ie=utf-8&amp;tag_filter=%20%20%20jnls%3A%28%E3%80%8A%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E3%80%8B%29">经济研究</a>
+<a href="https://xueshu.baidu.com/s?wd=%28%E8%BF%9D%E7%BA%A6%20%7C%20%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9%29%20journal%3A%28%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%29&amp;tn=SE_baiduxueshu_c1gjeupa&amp;sc_hit=1&amp;bcp=2&amp;ie=utf-8&amp;filter=sc_year%3D%7B2017%2C%2B%7D&amp;tag_filter=%20%20%20jnls%3A%28%E3%80%8A%E7%BB%8F%E6%B5%8E%E7%A0%94%E7%A9%B6%E3%80%8B%29">金融研究</a></p>
 <h2 id="journals">journals</h2>
 <ol>
 <li>Journal of Finance</li>
@@ -282,19 +284,116 @@
 <li>Review of Financial Studies</li>
 <li>Journal of Banking and Finance</li>
 </ol>
-<h2 id="week-9">week 9</h2>
-<h3 id="系统性风险传染">系统性风险传染</h3>
-<p><a href="/notes/thesis/cortes2021financial/">Financial factors and the propagation of the great depression</a></p>
-<h3 id="指标">指标</h3>
+<h2 id="try">Try</h2>
+<h3 id="微观指标">微观指标</h3>
+<p>我国金融机构和非金融机构之间存在很大的监管差异，违约因素差别较大，历史上我国在金融机构出现风险时往往会接管，如安邦、包商等。因此我们在数据中排除掉保险、银行类的金融机构</p>
+<p>城投？</p>
+<h4 id="公司">公司</h4>
+<ul>
+<li>公司性质</li>
+<li>大股东占比</li>
+<li>是否上市</li>
+<li><strong>公司治理</strong> ：持有基金占比</li>
+</ul>
+<h4 id="经营">经营</h4>
+<ul>
+<li>营收亏损</li>
+<li>客户集中度：应收/应付</li>
+<li>质押：标准券</li>
+</ul>
+<h4 id="财务">财务</h4>
+<ul>
+<li>Altman Z 指标</li>
+<li>现金短债比</li>
+</ul>
+<h4 id="评级">评级</h4>
+<p>评级很多是违约风险很大时候连续几天内下调，所以从后往前看评级对违约很显著，但是调整成评级前一个月的评级就很差，说明评级绝对值准建立在违约风险已经很大的前提下</p>
+<p>评级下调会有假阳性</p>
+<h3 id="中观指标">中观指标</h3>
+<h4 id="行业与行业政策">行业与行业政策</h4>
+<p>行业 = 行业
+行业政策 = 行业 × 时间</p>
+<p>违约量少。与其说是行业景气循还，不如说是行业政策导致融资环境变化</p>
+<h4 id="流动性">流动性</h4>
+<p>成交金额</p>
+<h4 id="地理">地理</h4>
+<p>省/市</p>
+<p>地理上的传染尚不明晰，看似地理上的传染更多是因为股权、担保的关系，可能城投债违约后显现出来</p>
+<h4 id="风险传染">风险传染</h4>
+<ul>
+<li>大股东</li>
+<li>地区</li>
+<li>应收应付</li>
+<li>宏观经济</li>
+</ul>
+<h3 id="宏观指标">宏观指标</h3>
+<p>宏观政策对违约，更多是以稳为主，认为违约是一种正常现象，但不希望大规模的集中违约，影响实体经济，如恒大是“少数企业”的激进，但去年 12 月超预期降准释放流动性，且房贷政策有所放松。</p>
 <h4 id="波动性">波动性</h4>
-<p><a href="/notes/thesis/chung2019volatility/">Volatility and the cross-section of corporate bond returns</a></p>
-<h4 id="财务指标与市场指标的优劣">财务指标与市场指标的优劣</h4>
-<p><a href="/notes/thesis/abinzano2020performance/">Performance of default-risk measures: the sample matters</a></p>
-<h3 id="计量模型">计量模型</h3>
-<h4 id="logit-模型的改进">logit 模型的改进</h4>
-<p><a href="/notes/thesis/audrino2019predicting/">Predicting us bank failures with midas logit models</a></p>
-<h4 id="波动率不为常数">波动率不为常数</h4>
-<p><a href="/notes/thesis/nagel2020banks/">Banks’ risk dynamics and distance to default</a></p>
+<p>上证历史波动率</p>
+<h4 id="财政政策">财政政策</h4>
+<p>政府支出/GDP</p>
+<h4 id="货币政策">货币政策</h4>
+<p>SHIBOR 利率</p>
+<h4 id="疫情">疫情</h4>
+<p>时间</p>
+<h4 id="贸易战">贸易战</h4>
+<p>时间 2018-2020</p>
+<h3 id="回归结果">回归结果</h3>
+<p><a href="/files/logitres.html">result</a>
+Accuracy: 0.99
+Error rate: 0.01
+Precision: 0.86
+Recall: 0.72
+f1_score: 0.78</p>
+<h2 id="try-machine-learning">Try Machine Learning</h2>
+<h3 id="visualize">visualize</h3>
+<p><a href="/ox-hugo/mldecision_tree.png">decision tree</a></p>
+<h3 id="numbers">numbers</h3>
+<p>准确率（Accuracy）= (tp+tn)/(tp+fp+fn+tn)
+精确率（Precision）= tp/(tp+fp)，即阳性的样本中有几个是预测正确的。
+召回率（Recall）= tp/(tp+fn)，即事实为真的样本中有几个是预测正确的。
+F1 = 2 / ( (1/ Precision) + (1/ Recall) )，即精确率与召回率的调和平均数。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>accuracy</th>
+<th>error rate</th>
+<th>precision</th>
+<th>recall</th>
+<th>f1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logistic</td>
+<td>0.99</td>
+<td>0.01</td>
+<td>0.86</td>
+<td>0.72</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td>Decision Tree</td>
+<td>0.99</td>
+<td>0.01</td>
+<td>0.93</td>
+<td>0.73</td>
+<td>0.82</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>0.99</td>
+<td>0.01</td>
+<td>0.85</td>
+<td>0.70</td>
+<td>0.76</td>
+</tr>
+</tbody>
+</table>
+<h3 id="roc-and-auc">ROC &amp; AUC</h3>
+<p><a href="/ox-hugo/roc.png">ROCs</a>
+AUC值越大的分类器，正确率越高。</p>
 
       </div>
     </article>
@@ -337,11 +436,19 @@
       </ul>
     </li>
     <li><a href="#journals">journals</a></li>
-    <li><a href="#week-9">week 9</a>
+    <li><a href="#try">Try</a>
       <ul>
-        <li><a href="#系统性风险传染">系统性风险传染</a></li>
-        <li><a href="#指标">指标</a></li>
-        <li><a href="#计量模型">计量模型</a></li>
+        <li><a href="#微观指标">微观指标</a></li>
+        <li><a href="#中观指标">中观指标</a></li>
+        <li><a href="#宏观指标">宏观指标</a></li>
+        <li><a href="#回归结果">回归结果</a></li>
+      </ul>
+    </li>
+    <li><a href="#try-machine-learning">Try Machine Learning</a>
+      <ul>
+        <li><a href="#visualize">visualize</a></li>
+        <li><a href="#numbers">numbers</a></li>
+        <li><a href="#roc-and-auc">ROC &amp; AUC</a></li>
       </ul>
     </li>
   </ul>
