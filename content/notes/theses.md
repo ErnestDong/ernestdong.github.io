@@ -149,7 +149,7 @@ f1_score: 0.78
 
 ### visualize {#visualize}
 
-[decision tree](/ox-hugo/mldecision_tree.png)
+![decision tree](/ox-hugo/mldecision_tree.png)
 
 
 ### numbers {#numbers}
