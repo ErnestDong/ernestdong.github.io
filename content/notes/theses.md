@@ -169,4 +169,5 @@ F1 = 2 / ( (1/ Precision) + (1/ Recall) )，即精确率与召回率的调和平
 ### ROC &amp; AUC {#roc-and-auc}
 
 ![ROCs](/ox-hugo/roc.png)
-AUC值越大的分类器，正确率越高。
+设定任意阈值，得到的 TP ratio 和 RP ratio 。随后不断更改阈值，得到 ROC 曲线。
+一般来说，如果ROC是光滑的，那么基本可以判断没有太大的 overfitting，AUC面积越大一般认为模型越好。
