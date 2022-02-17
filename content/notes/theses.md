@@ -168,5 +168,5 @@ F1 = 2 / ( (1/ Precision) + (1/ Recall) )，即精确率与召回率的调和平
 
 ### ROC &amp; AUC {#roc-and-auc}
 
-[ROCs](/ox-hugo/roc.png)
+![ROCs](/ox-hugo/roc.png)
 AUC值越大的分类器，正确率越高。
