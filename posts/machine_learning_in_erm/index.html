@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="/js/cactus.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> machine_learning_in_ERM | Ernest Dong</title>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/posts/machine_learning_in_erm/'>
+  <meta name="description" content="A Sisyphus Rolling Up Rock">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="machine_learning_in_ERM" />
+<meta property="og:description" content="一些机器学习算法 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernestdong.github.io/posts/machine_learning_in_erm/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-14T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-03-14T00:00:00+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="machine_learning_in_ERM"/>
+<meta name="twitter:description" content="一些机器学习算法 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ernestdong.github.io/css/styles.f7b0b81ffd948bc2b51bc47986281e591e9b39c46e6a18845e310537e786f77866b48fb756426e711bfa065a4ec7260ede6260c54bd2ed0827d693b01d7af483.css" integrity="sha512-97C4H/2Ui8K1G8R5higeWR6bOcRuahiEXjEFN&#43;eG93hmtI&#43;3VkJucRv6BlpOxyYO3mJgxUvS7Qgn1pOwHXr0gw=="> 
+
+  
+   <link rel="stylesheet" href="https://ernestdong.github.io/css/custom.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://ernestdong.github.io/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/notes">Notes</a></li>
+        
+        <li><a href="/posts">Posts</a></li>
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://ernestdong.github.io/notes/theses/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一些机器学习算法">一些机器学习算法</a>
+      <ul>
+        <li><a href="#线性回归与决策树">线性回归与决策树</a></li>
+        <li><a href="#集成学习">集成学习</a></li>
+        <li><a href="#支持向量机">支持向量机</a></li>
+        <li><a href="#k-means">K means</a></li>
+        <li><a href="#深度学习-神经网络">深度学习/神经网络</a></li>
+      </ul>
+    </li>
+    <li><a href="#机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</a></li>
+    <li><a href="#机器学习预测信用评级">机器学习预测信用评级</a>
+      <ul>
+        <li><a href="#数据说明">数据说明</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&text=machine_learning_in_ERM" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=machine_learning_in_ERM" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&is_video=false&description=machine_learning_in_ERM" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=machine_learning_in_ERM&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=machine_learning_in_ERM" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=machine_learning_in_ERM" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=machine_learning_in_ERM&description=%e4%b8%80%e4%ba%9b%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&t=machine_learning_in_ERM" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        machine_learning_in_ERM
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2022-03-14 00:00:00 &#43;0800 &#43;0800" itemprop="datePublished">2022-03-14</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          11 minute read
+        </div>
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/python" rel="tag">python</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <h2 id="一些机器学习算法">一些机器学习算法</h2>
+<figure><img src="/images/xkcd/1838.png"/>
+</figure>
+
+<p>什么是学习？ <a href="https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0">维基百科</a>上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
+机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：</p>
+<figure><img src="/ox-hugo/mathworks.svg"
+         alt="Figure 1: 一些常见的机器学习算法"/><figcaption>
+            <p><span class="figure-number">Figure 1: </span>一些常见的机器学习算法</p>
+        </figcaption>
+</figure>
+
+<p>机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, vc-git-region-history-font-lock-keywords, scikit-learn），几行代码就可以实现一个模型， <del>之后便是漫无止境地调参</del> 。</p>
+<p>本文主要参考了Pedregosa et al. (2011)的文档，在编码过程中阅读文档是有帮助的。</p>
+<h3 id="线性回归与决策树">线性回归与决策树</h3>
+<p>我们先看一些简单直接的例子。</p>
+<p>按照上面的定义，我们在计量经济学中学习的 OLS/GLS/Logit 模型也是通过机器来学习拟合样本的分布，也是一种机器学习。统计学中的 lasso/ridge 等回归方式也在模型泛化中有许多应用。</p>
+<p>决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
+他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
+该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
+这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">这里</a>。</p>
+<figure><img src="/ox-hugo/decision_tree.png"
+         alt="Figure 2: 决策树可视化例子"/><figcaption>
+            <p><span class="figure-number">Figure 2: </span>决策树可视化例子</p>
+        </figcaption>
+</figure>
+
+<p>决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.datasets <span style="color:#ff79c6">import</span> load_iris <span style="color:#6272a4"># 载入数据集</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn <span style="color:#ff79c6">import</span> tree
+</span></span><span style="display:flex;"><span>iris <span style="color:#ff79c6">=</span> load_iris() <span style="color:#6272a4"># 载入数据集</span>
+</span></span><span style="display:flex;"><span>X, y <span style="color:#ff79c6">=</span> iris<span style="color:#ff79c6">.</span>data, iris<span style="color:#ff79c6">.</span>target <span style="color:#6272a4"># 载入数据集</span>
+</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> tree<span style="color:#ff79c6">.</span>DecisionTreeClassifier() <span style="color:#6272a4"># clf 是一个决策树分类器</span>
+</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> clf<span style="color:#ff79c6">.</span>fit(X, y) <span style="color:#6272a4"># 把 X, y 放入分类器中训练</span>
+</span></span><span style="display:flex;"><span>tree<span style="color:#ff79c6">.</span>plot_tree(clf) <span style="color:#6272a4"># 可视化</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="集成学习">集成学习</h3>
+<p>ensemble learning 是单个模型并不能很完美的解决某个分类或者回归问题（弱监督模型，在某些方面表现较好）的时候，那么就训练出多个弱监督模型，每个模型可能是相同的也可以是不同的，然后预测的时候将数据分别输入每个模型，最后将每个模型的输出综合起来作为该未知数据的输出即便某一个弱分类器得到了错误的预测，其他的弱分类器也可以将错误纠正回来。简而言之，采样-学习-组合。</p>
+<p>如何训练和输出呢？</p>
+<h4 id="bagging">bagging</h4>
+<p>Bagging是bootstrap aggregating的简写。在 bagging 方法中，从整体数据集中采取有放回抽样得到N个数据集，在每个数据集上学习出一个模型。</p>
+<p>随机森林就是采用了 bagging 的方式训练了许多棵决策树，是为“森林”。在输出时，每一棵树都将其结果“投票”，哪个类别多，输入样本就属于哪个类别。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.ensemble <span style="color:#ff79c6">import</span> RandomForestClassifier
+</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> RandomForestClassifier(max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>) <span style="color:#6272a4"># max_depth is optional</span>
+</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>fit(X, y)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(clf<span style="color:#ff79c6">.</span>predict([[<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>]])) <span style="color:#6272a4"># if x=[0,0,0,0], predict y</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。</p>
+<figure><img src="https://tfugcs.andfun.cn/original/2X/7/74f5a02b7692010da60a746d5469471c68b2ff3c.gif"
+         alt="Figure 3: random forest"/><figcaption>
+            <p><span class="figure-number">Figure 3: </span>random forest</p>
+        </figcaption>
+</figure>
+
+<h4 id="boosting">boosting</h4>
+<p><a href="#bagging">bagging</a> 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
+调参时可以树的深度很少就能达到很高的精度。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.ensemble <span style="color:#ff79c6">import</span> GradientBoostingClassifier
+</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> GradientBoostingClassifier()
+</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>fit(X,y)
+</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>score()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="支持向量机">支持向量机</h3>
+<p>Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在空间中，找到一个可以划分开样本点、并且间隔最大的的（超）平面。直观上间隔最大是为了让模型更稳健。</p>
+<p><a id="figure--SVM 图示"></a></p>
+<figure><img src="https://pic2.zhimg.com/80/v2-f9e1e7fd08460a5fab044c71ed8b0bb1_1440w.jpg"
+         alt="Figure 4: SVM 图示"/><figcaption>
+            <p><span class="figure-number">Figure 4: </span>SVM 图示</p>
+        </figcaption>
+</figure>
+
+<p>最简单的线性的硬间隔可分的如图 [4](#figure&ndash;SVM 图示) 所示，当然这是比较理想的情况。当样本分布更复杂的时候，我们会选择软间隔，即将之前的硬间隔最大化条件放宽一点，允许部分点出错，在优化函数中加入惩罚项。</p>
+<p>如果还是不可以，我们会运用核函数来推导到非线形的情况，简单说就是将低维的样本点映射到高维空间，使样本线性可分。例如内积平方的核函数，\(K(v_1,V_2)=(x_1x_2+y_1y_2)^2\)，可以看作是三维空间中 \((x_i^2,\sqrt{2}x_iy_i,y_i^2)\) 两个点之间的距离</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.pipeline <span style="color:#ff79c6">import</span> make_pipeline
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.preprocessing <span style="color:#ff79c6">import</span> StandardScaler
+</span></span><span style="display:flex;"><span>X <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>], [<span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>], [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">1</span>], [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>]])
+</span></span><span style="display:flex;"><span>y <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">2</span>])
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.svm <span style="color:#ff79c6">import</span> SVC
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. For large datasets consider using LinearSVC or SGDClassifier instead, possibly after a Nystroem transformer.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> make_pipeline(StandardScaler(), SVC(gamma<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;auto&#39;</span>))
+</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>fit(X, y)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(clf<span style="color:#ff79c6">.</span>predict([[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">0.8</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>]]))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="k-means">K means</h3>
+<blockquote>
+<p>有四个牧师去郊区布道，一开始牧师们随意选了几个布道点，并且把这几个布道点的情况公告给了郊区所有的村民，于是每个村民到离自己家最近的布道点去听课。</p>
+<p>听课之后，大家觉得距离太远了，于是每个牧师统计了一下自己的课上所有的村民的地址，搬到了所有地址的中心地带，并且在海报上更新了自己的布道点的位置。</p>
+<p>牧师每一次移动不可能离所有人都更近，有的人发现A牧师移动以后自己还不如去B牧师处听课更近，于是每个村民又去了离自己最近的布道点……</p>
+<p>就这样，牧师每个礼拜更新自己的位置，村民根据自己的情况选择布道点，最终稳定了下来。</p>
+</blockquote>
+<p>之前提到的算法都需要对数据进行一定的标注，标好某些数据属于某个分类，也就是常说的“监督学习”。K-means 是一种无监督学习，我们不需要声明训练中的哪些数据是哪个分类。</p>
+<p>K-means 的方法是，选择初始化的 k 个样本作为初始聚类中心 \(a_i\)  ，针对数据集中每个样本 \(x_i\)
+计算它到 k 个聚类中心的距离，并将其分到距离最小的聚类中心所对应的类中；重新计算每个类别的质心作为聚类中心 \(a_i\) ，再重复上面的过程，直至聚类中心“稳定”下来。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.cluster <span style="color:#ff79c6">import</span> KMeans
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
+</span></span><span style="display:flex;"><span>X <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>], [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">4</span>], [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>],
+</span></span><span style="display:flex;"><span>              [<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">2</span>], [<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">4</span>], [<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">0</span>]])
+</span></span><span style="display:flex;"><span>kmeans <span style="color:#ff79c6">=</span> KMeans(n_clusters<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>, random_state<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>)<span style="color:#ff79c6">.</span>fit(X)
+</span></span><span style="display:flex;"><span>kmeans<span style="color:#ff79c6">.</span>predict([[<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>], [<span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">3</span>]])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="深度学习-神经网络">深度学习/神经网络</h3>
+<h4 id="bp-神经网络">BP 神经网络</h4>
+<p>是深度学习的入门算法，所谓 BP 是反向传播 Backpropagation。它的信息处理能力来源于简单非线性函数的多次复合。</p>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png"/>
+</figure>
+
+<p>神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 <code>relu</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, <code>sigmoid</code>, <code>softsign</code> ，然后再进行传导。</p>
+<h4 id="cnn">CNN</h4>
+<h4 id="rnn">RNN</h4>
+<h4 id="gan-and-rl">GAN &amp; RL</h4>
+<p>TBA</p>
+<h2 id="机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</h2>
+<h2 id="机器学习预测信用评级">机器学习预测信用评级</h2>
+<h3 id="数据说明">数据说明</h3>
+<p>A list of 2029 credit ratings issued by major agencies such as Standard and Poors to big US firms (traded on NYSE or Nasdaq) from 2010 to 2016.</p>
+<p>There are 30 features for every company of which 25 are financial indicators. They can be divided in:</p>
+<ol>
+<li>Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding</li>
+<li>Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed</li>
+<li>Debt Ratios: debtRatio, debtEquityRatio</li>
+<li>Operating Performance Ratios:` assetTurnover</li>
+<li>Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio</li>
+</ol>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>\(x=1\)</p>
+<p>我们可以在这里可视化地理解一下
+<a href="https://playground.tensorflow.org/">https://playground.tensorflow.org/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/notes">Notes</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一些机器学习算法">一些机器学习算法</a>
+      <ul>
+        <li><a href="#线性回归与决策树">线性回归与决策树</a></li>
+        <li><a href="#集成学习">集成学习</a></li>
+        <li><a href="#支持向量机">支持向量机</a></li>
+        <li><a href="#k-means">K means</a></li>
+        <li><a href="#深度学习-神经网络">深度学习/神经网络</a></li>
+      </ul>
+    </li>
+    <li><a href="#机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</a></li>
+    <li><a href="#机器学习预测信用评级">机器学习预测信用评级</a>
+      <ul>
+        <li><a href="#数据说明">数据说明</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&text=machine_learning_in_ERM" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=machine_learning_in_ERM" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&is_video=false&description=machine_learning_in_ERM" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=machine_learning_in_ERM&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=machine_learning_in_ERM" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=machine_learning_in_ERM" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=machine_learning_in_ERM&description=%e4%b8%80%e4%ba%9b%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&t=machine_learning_in_ERM" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ernest Dong 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/notes">Notes</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/readme/index.html">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>
