@@ -4,9 +4,10 @@
 #+HUGO_SECTION: posts
 #+DATE: <2022-03-14>
 #+BIBLIOGRAPHY: ref.bib
-* 一些机器学习算法
+#+STARTUP: nofold
+* 前言
 #+begin_src emacs-lisp :exports results :results file
-;; (setq xkcd-cache-dir "/Users/dcy/Code/ernest/static/images/xkcd/")
+(setq xkcd-cache-dir "/Users/dcy/Code/ernest/static/images/xkcd/")
 ;; (xkcd-get 1838)
 (concat xkcd-cache-dir "1838.png")
 #+end_src
@@ -17,37 +18,92 @@
 
 什么是学习？ [[https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0][维基百科]]上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
 机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：
-
 #+CAPTION: 一些常见的机器学习算法
 [[./lib/mathworks.svg]]
 
 机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, vc-git-region-history-font-lock-keywords, scikit-learn），几行代码就可以实现一个模型， +之后便是漫无止境地调参+ 。
 
 本文主要参考了[cite/text:@scikit-learn]的文档，在编码过程中阅读文档是有帮助的。
+
+* 机器学习在企业风险管理中的应用
+[cite/text:@mai2019deep] 利用 CNN 预测企业破产，在处理文本数据时利用 word embedding 量化，AUC 曲线如图
+[[https://ars.els-cdn.com/content/image/1-s2.0-S0377221718308774-gr5.jpg]]
+
+[cite/text:@golbayani2020comparative]
+使用决策树、随机森林、支持向量机和多层感知器应用于相同的数据集，预测公司未来评级。他们统计了机器学习在债券评级和公司信用评级方面的文章，很多认为 SVM 和神经网络是比较准确的。但是他们使用 Notches Distance 来对机器学习绩效来打分，认为基于决策树的两种方法更有效。
+
+[cite/text:@kellner2022opening] 利用神经网络预测违约损失 Loss Given Default
+将传统的分位数回归的回归元作为第一层，通过神经网络揭示其中的非线性关系，比如交叉项及其他非线性关系，神经网络最后一层是传统的分位数回归。利用 first order feature importance，量化输入变量的整体重要性。同时排除掉二阶的和交互的在分位数中接近于零。因此 QRNN 和分位数 QR 的分位数损失非常相似
+通过允许分位数回归神经网络实现的分位数中的非线性和相互作用来扩展这种方法。这种方法大大增强了建模的灵活性。额外的灵活性在更好地分布拟合和超时样本方面带来了回报，分位数预测精度提高了 30%。同时更加 robust 。
+
+当前机器学习最火热的两个应用方向是计算机视觉 CV 和自然语言处理 NLP ，亦有一些文献利用自然语言处理分析文本数据做研究。
+* 机器学习预测信用评级
+** 数据说明
+数据来自 [[https://www.kaggle.com/datasets/agewerc/corporate-credit-rating][kaggle]]
+(下载好的在 [[/files/corporate_rating.csv][这里]])
+
+A list of 2029 credit ratings issued by major agencies such as Standard and Poors to big US firms (traded on NYSE or Nasdaq) from 2010 to 2016.
+
+There are 30 features for every company of which 25 are financial indicators. They can be divided in:
+
+1. Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding
+2. Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed
+3. Debt Ratios: debtRatio, debtEquityRatio
+4. Operating Performance Ratios:` assetTurnover
+5. Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio
+   #+begin_src jupyter-python
+import pandas as pd
+# df = pd.read_csv("./corporate_rating.csv", encoding="utf-8")
+df = pd.read_csv("/Users/dcy/Code/erm/corporate_rating.csv", encoding="utf-8")
+df.info()
+   #+end_src
+评级分布如下图
+#+begin_src jupyter-python :kernel python3 :session main :exports both
+df["Rating"].value_counts().plot(kind="bar")
+#+end_src
+
+#+RESULTS:
+:RESULTS:
+: <AxesSubplot:>
+[[file:./.ob-jupyter/8e8723ae5b99e7da84b8c731ebbaa30fb88cf6ee.png]]
+:END:
+让我们处理一下数据
+#+begin_src jupyter-python
+Y = df["Rating"]
+# Y = Y.replace({"CCC":"C", "CC": "C", "D":"C", "AAA":"AA" })
+df["Date"] = df["Date"].apply(lambda x:x.split("/")[-1])
+dummies = ["Rating Agency Name", "Sector", "Date"]
+X = df[[i for i in df.columns if df[i].dtype != "object"]]
+for dummy in dummies:
+    X = pd.concat([X, pd.get_dummies(df[dummy], drop_first=True, prefix=dummy)], axis=1)
+#+end_src
 ** 线性回归与决策树
 我们先看一些简单直接的例子。
 
-按照上面的定义，我们在计量经济学中学习的 OLS/GLS/Logit 模型也是通过机器来学习拟合样本的分布，也是一种机器学习。统计学中的 lasso/ridge 等回归方式也在模型泛化中有许多应用。
+按照维基百科的定义，我们在计量经济学中学习的 OLS/GLS/Logit 模型也是通过机器来学习拟合样本的分布，也是一种机器学习。统计学中的 lasso/ridge 等回归方式也在模型泛化中有许多应用。
+#+begin_src jupyter-python :kernel python3 :session main :exports both
+from sklearn.linear_model import LogisticRegression
 
+logit = LogisticRegression(multi_class="multinomial", solver="saga")
+logit.fit(X, Y)
+Ypredict = logit.predict(X)
+logit.score(X,Y) # score 为模型的准确率
+
+#+end_src
 决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
 该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
 这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看[[https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html][这里]]。
-#+CAPTION: 决策树可视化例子
-[[~/Desktop/thesis/data/decision_tree.png]]
 
 决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。
-#+begin_src python
-from sklearn.datasets import load_iris # 载入数据集
-from sklearn import tree
-iris = load_iris() # 载入数据集
-X, y = iris.data, iris.target # 载入数据集
-clf = tree.DecisionTreeClassifier() # clf 是一个决策树分类器
-clf = clf.fit(X, y) # 把 X, y 放入分类器中训练
-tree.plot_tree(clf) # 可视化
+#+begin_src jupyter-python
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.2, random_state=42)
+dt = DecisionTreeClassifier(max_depth=3)
+dt.fit(Xtrain, Ytrain)
+dt.score(Xtest, Ytest)
 #+end_src
-
-#+RESULTS:
 
 ** 集成学习
 ensemble learning 是单个模型并不能很完美的解决某个分类或者回归问题（弱监督模型，在某些方面表现较好）的时候，那么就训练出多个弱监督模型，每个模型可能是相同的也可以是不同的，然后预测的时候将数据分别输入每个模型，最后将每个模型的输出综合起来作为该未知数据的输出即便某一个弱分类器得到了错误的预测，其他的弱分类器也可以将错误纠正回来。简而言之，采样-学习-组合。
@@ -58,11 +114,12 @@ Bagging是bootstrap aggregating的简写。在 bagging 方法中，从整体数�
 
 随机森林就是采用了 bagging 的方式训练了许多棵决策树，是为“森林”。在输出时，每一棵树都将其结果“投票”，哪个类别多，输入样本就属于哪个类别。
 
-#+begin_src python
+#+begin_src jupyter-python
 from sklearn.ensemble import RandomForestClassifier
-clf = RandomForestClassifier(max_depth=2) # max_depth is optional
-clf.fit(X, y)
-print(clf.predict([[0, 0, 0, 0]])) # if x=[0,0,0,0], predict y
+
+rf = RandomForestClassifier(n_estimators=100, max_depth=4)
+rf.fit(Xtrain, Ytrain)
+rf.score(Xtest, Ytest)
 #+end_src
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
 
@@ -71,11 +128,11 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 *** boosting
 [[bagging]] 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
 调参时可以树的深度很少就能达到很高的精度。
-#+begin_src python
+#+begin_src jupyter-python
 from sklearn.ensemble import GradientBoostingClassifier
-clf = GradientBoostingClassifier()
-clf.fit(X,y)
-clf.score()
+gboost = GradientBoostingClassifier()
+gboost.fit(Xtrain,Ytrain)
+gboost.score(Xtest, Ytest)
 #+end_src
 
 ** 支持向量机
@@ -90,17 +147,12 @@ Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在�
 如果还是不可以，我们会运用核函数来推导到非线形的情况，简单说就是将低维的样本点映射到高维空间，使样本线性可分。例如内积平方的核函数，\(K(v_1,V_2)=(x_1x_2+y_1y_2)^2\)，可以看作是三维空间中 \((x_i^2,\sqrt{2}x_iy_i,y_i^2)\) 两个点之间的距离
 
 
-#+begin_src python
-import numpy as np
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
-X = np.array([[-1, -1], [-2, -1], [1, 1], [2, 1]])
-y = np.array([1, 1, 2, 2])
+#+begin_src jupyter-python
 from sklearn.svm import SVC
 """The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. For large datasets consider using LinearSVC or SGDClassifier instead, possibly after a Nystroem transformer."""
-clf = make_pipeline(StandardScaler(), SVC(gamma='auto'))
-clf.fit(X, y)
-print(clf.predict([[-0.8, -1]]))
+svm = SVC(kernel="rbf")
+svm.fit(Xtrain, Ytrain)
+svm.score(Xtest, Ytest)
 #+end_src
 
 ** K means
@@ -175,19 +227,7 @@ class Net(nn.Module):
 + 生成对抗网络：随机取样作为输入，其输出结果需要尽量模仿训练集中的真实样本，使判别网络无法判断生成网络的输出结果是否真实
 + 强化学习：博弈论……
 #+begin_quote
-强化学习（RL）是机器学习的一个领域，涉及软件代理如何在环境中采取行动以最大化一些累积奖励的概念。该问题由于其一般性，在许多其他学科中得到研究，如博弈论，控制理论，运筹学，信息论，基于仿真的优化，多智能体系统，群智能，统计和遗传算法。。在运筹学和控制文献中，强化学习被称为近似动态规划或神经动态规划。Wikipedia
+强化学习（RL）是机器学习的一个领域，涉及软件代理如何在环境中采取行动以最大化一些累积奖励的概念。该问题由于其一般性，在许多其他学科中得到研究，如博弈论，控制理论，运筹学，信息论，基于仿真的优化，多智能体系统，群智能，统计和遗传算法。。在运筹学和控制文献中，强化学习被称为近似动态规划或神经动态规划。--Wikipedia
 #+end_quote
 
-* 机器学习在企业风险管理中的应用
-
-* 机器学习预测信用评级
-** 数据说明
-A list of 2029 credit ratings issued by major agencies such as Standard and Poors to big US firms (traded on NYSE or Nasdaq) from 2010 to 2016.
-
-There are 30 features for every company of which 25 are financial indicators. They can be divided in:
-
-1. Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding
-2. Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed
-3. Debt Ratios: debtRatio, debtEquityRatio
-4. Operating Performance Ratios:` assetTurnover
-5. Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio
+#+print_bibliography:
