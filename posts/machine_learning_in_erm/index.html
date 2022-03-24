@@ -16,7 +16,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:title" content="machine_learning_in_ERM" />
-<meta property="og:description" content="一些机器学习算法 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利" />
+<meta property="og:description" content="前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernestdong.github.io/posts/machine_learning_in_erm/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-14T00:00:00+08:00" />
@@ -25,7 +25,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="machine_learning_in_ERM"/>
-<meta name="twitter:description" content="一些机器学习算法 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利"/>
+<meta name="twitter:description" content="前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力"/>
 
   
   
@@ -104,19 +104,16 @@
     <div id="toc">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#一些机器学习算法">一些机器学习算法</a>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</a></li>
+    <li><a href="#机器学习预测信用评级">机器学习预测信用评级</a>
       <ul>
+        <li><a href="#数据说明">数据说明</a></li>
         <li><a href="#线性回归与决策树">线性回归与决策树</a></li>
         <li><a href="#集成学习">集成学习</a></li>
         <li><a href="#支持向量机">支持向量机</a></li>
         <li><a href="#k-means">K means</a></li>
         <li><a href="#深度学习-神经网络">深度学习/神经网络</a></li>
-      </ul>
-    </li>
-    <li><a href="#机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</a></li>
-    <li><a href="#机器学习预测信用评级">机器学习预测信用评级</a>
-      <ul>
-        <li><a href="#数据说明">数据说明</a></li>
       </ul>
     </li>
   </ul>
@@ -166,7 +163,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=machine_learning_in_ERM&description=%e4%b8%80%e4%ba%9b%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=machine_learning_in_ERM&description=%e5%89%8d%e8%a8%80%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9%e7%94%a8%e7%ae%97%e6%b3%95%e5%92%8c%e7%ae%97%e5%8a%9b" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -199,7 +196,7 @@
         <div class="article-read-time">
           <i class="far fa-clock"></i>
           
-          11 minute read
+          17 minute read
         </div>
         
         
@@ -218,12 +215,11 @@
   
     
     <div class="content" itemprop="articleBody">
-      <h2 id="一些机器学习算法">一些机器学习算法</h2>
+      <h2 id="前言">前言</h2>
 <figure><img src="/images/xkcd/1838.png"/>
 </figure>
 
-<p>什么是学习？ <a href="https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0">维基百科</a>上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
-机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：</p>
+<p>什么是学习？ <a href="https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0">维基百科</a>上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：</p>
 <figure><img src="/ox-hugo/mathworks.svg"
          alt="Figure 1: 一些常见的机器学习算法"/><figcaption>
             <p><span class="figure-number">Figure 1: </span>一些常见的机器学习算法</p>
@@ -231,21 +227,155 @@
 </figure>
 
 <p>机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, vc-git-region-history-font-lock-keywords, scikit-learn），几行代码就可以实现一个模型， <del>之后便是漫无止境地调参</del> 。</p>
-<p>本文主要参考了Pedregosa et al. (2011)的文档，在编码过程中阅读文档是有帮助的。</p>
-<h3 id="线性回归与决策树">线性回归与决策树</h3>
-<p>我们先看一些简单直接的例子。</p>
-<p>按照上面的定义，我们在计量经济学中学习的 OLS/GLS/Logit 模型也是通过机器来学习拟合样本的分布，也是一种机器学习。统计学中的 lasso/ridge 等回归方式也在模型泛化中有许多应用。</p>
-<p>决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
-他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
-该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
-这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">这里</a>。</p>
-<figure><img src="/ox-hugo/decision_tree.png"
-         alt="Figure 2: 决策树可视化例子"/><figcaption>
-            <p><span class="figure-number">Figure 2: </span>决策树可视化例子</p>
-        </figcaption>
+<p>本文主要参考了Pedregosa et al. (<a href="#citeproc_bib_item_4">2011</a>)的文档，在编码过程中阅读文档是有帮助的。</p>
+<h2 id="机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</h2>
+<p>Mai et al. (<a href="#citeproc_bib_item_3">2019</a>) 利用 CNN 预测企业破产，在处理文本数据时利用 word embedding 量化，AUC 曲线如图
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0377221718308774-gr5.jpg" alt=""></p>
+<p>Golbayani, Florescu, and Chatterjee (<a href="#citeproc_bib_item_1">2020</a>)
+使用决策树、随机森林、支持向量机和多层感知器应用于相同的数据集，预测公司未来评级。他们统计了机器学习在债券评级和公司信用评级方面的文章，很多认为 SVM 和神经网络是比较准确的。但是他们使用 Notches Distance 来对机器学习绩效来打分，认为基于决策树的两种方法更有效。</p>
+<p>Kellner, Nagl, and Rösch (<a href="#citeproc_bib_item_2">2022</a>) 利用神经网络预测违约损失 Loss Given Default
+将传统的分位数回归的回归元作为第一层，通过神经网络揭示其中的非线性关系，比如交叉项及其他非线性关系，神经网络最后一层是传统的分位数回归。利用 first order feature importance，量化输入变量的整体重要性。同时排除掉二阶的和交互的在分位数中接近于零。因此 QRNN 和分位数 QR 的分位数损失非常相似通过允许分位数回归神经网络实现的分位数中的非线性和相互作用来扩展这种方法。这种方法大大增强了建模的灵活性。额外的灵活性在更好地分布拟合和超时样本方面带来了回报，分位数预测精度提高了 30%。同时更加 robust 。</p>
+<p>当前机器学习最火热的两个应用方向是计算机视觉 CV 和自然语言处理 NLP ，亦有一些文献利用自然语言处理分析文本数据做研究。</p>
+<h2 id="机器学习预测信用评级">机器学习预测信用评级</h2>
+<h3 id="数据说明">数据说明</h3>
+<p>数据来自 <a href="https://www.kaggle.com/datasets/agewerc/corporate-credit-rating">kaggle</a>
+(下载好的在 <a href="/files/corporate_rating.csv">这里</a>)</p>
+<p>A list of 2029 credit ratings issued by major agencies such as Standard and Poors to big US firms (traded on NYSE or Nasdaq) from 2010 to 2016.</p>
+<p>There are 30 features for every company of which 25 are financial indicators. They can be divided in:</p>
+<ol>
+<li>
+<p>Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding</p>
+</li>
+<li>
+<p>Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed</p>
+</li>
+<li>
+<p>Debt Ratios: debtRatio, debtEquityRatio</p>
+</li>
+<li>
+<p>Operating Performance Ratios:` assetTurnover</p>
+</li>
+<li>
+<p>Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> pandas <span style="color:#ff79c6">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># df = pd.read_csv(&#34;./corporate_rating.csv&#34;, encoding=&#34;utf-8&#34;)</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>read_csv(<span style="color:#f1fa8c">&#34;/Users/dcy/Code/erm/corporate_rating.csv&#34;</span>, encoding<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;utf-8&#34;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#ff79c6">.</span>info()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>   &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</span></span><span style="display:flex;"><span>   RangeIndex: 2029 entries, 0 to 2028
+</span></span><span style="display:flex;"><span>   Data columns (total 31 columns):
+</span></span><span style="display:flex;"><span>    #   Column                              Non-Null Count  Dtype
+</span></span><span style="display:flex;"><span>   ---  ------                              --------------  -----
+</span></span><span style="display:flex;"><span>    0   Rating                              2029 non-null   object
+</span></span><span style="display:flex;"><span>    1   Name                                2029 non-null   object
+</span></span><span style="display:flex;"><span>    2   Symbol                              2029 non-null   object
+</span></span><span style="display:flex;"><span>    3   Rating Agency Name                  2029 non-null   object
+</span></span><span style="display:flex;"><span>    4   Date                                2029 non-null   object
+</span></span><span style="display:flex;"><span>    5   Sector                              2029 non-null   object
+</span></span><span style="display:flex;"><span>    6   currentRatio                        2029 non-null   float64
+</span></span><span style="display:flex;"><span>    7   quickRatio                          2029 non-null   float64
+</span></span><span style="display:flex;"><span>    8   cashRatio                           2029 non-null   float64
+</span></span><span style="display:flex;"><span>    9   daysOfSalesOutstanding              2029 non-null   float64
+</span></span><span style="display:flex;"><span>    10  netProfitMargin                     2029 non-null   float64
+</span></span><span style="display:flex;"><span>    11  pretaxProfitMargin                  2029 non-null   float64
+</span></span><span style="display:flex;"><span>    12  grossProfitMargin                   2029 non-null   float64
+</span></span><span style="display:flex;"><span>    13  operatingProfitMargin               2029 non-null   float64
+</span></span><span style="display:flex;"><span>    14  returnOnAssets                      2029 non-null   float64
+</span></span><span style="display:flex;"><span>    15  returnOnCapitalEmployed             2029 non-null   float64
+</span></span><span style="display:flex;"><span>    16  returnOnEquity                      2029 non-null   float64
+</span></span><span style="display:flex;"><span>    17  assetTurnover                       2029 non-null   float64
+</span></span><span style="display:flex;"><span>    18  fixedAssetTurnover                  2029 non-null   float64
+</span></span><span style="display:flex;"><span>    19  debtEquityRatio                     2029 non-null   float64
+</span></span><span style="display:flex;"><span>    20  debtRatio                           2029 non-null   float64
+</span></span><span style="display:flex;"><span>    21  effectiveTaxRate                    2029 non-null   float64
+</span></span><span style="display:flex;"><span>    22  freeCashFlowOperatingCashFlowRatio  2029 non-null   float64
+</span></span><span style="display:flex;"><span>    23  freeCashFlowPerShare                2029 non-null   float64
+</span></span><span style="display:flex;"><span>    24  cashPerShare                        2029 non-null   float64
+</span></span><span style="display:flex;"><span>    25  companyEquityMultiplier             2029 non-null   float64
+</span></span><span style="display:flex;"><span>    26  ebitPerRevenue                      2029 non-null   float64
+</span></span><span style="display:flex;"><span>    27  enterpriseValueMultiple             2029 non-null   float64
+</span></span><span style="display:flex;"><span>    28  operatingCashFlowPerShare           2029 non-null   float64
+</span></span><span style="display:flex;"><span>    29  operatingCashFlowSalesRatio         2029 non-null   float64
+</span></span><span style="display:flex;"><span>    30  payablesTurnover                    2029 non-null   float64
+</span></span><span style="display:flex;"><span>   dtypes: float64(25), object(6)
+</span></span><span style="display:flex;"><span>   memory usage: 491.5+ KB
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>评级分布如下图</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#34;Rating&#34;</span>]<span style="color:#ff79c6">.</span>value_counts()<span style="color:#ff79c6">.</span>plot(kind<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;bar&#34;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&lt;AxesSubplot:&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><figure><img src="/ox-hugo/8e8723ae5b99e7da84b8c731ebbaa30fb88cf6ee.png"/>
 </figure>
 
-<p>决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。</p>
+<p>让我们处理一下数据</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -257,13 +387,74 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.datasets <span style="color:#ff79c6">import</span> load_iris <span style="color:#6272a4"># 载入数据集</span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn <span style="color:#ff79c6">import</span> tree
-</span></span><span style="display:flex;"><span>iris <span style="color:#ff79c6">=</span> load_iris() <span style="color:#6272a4"># 载入数据集</span>
-</span></span><span style="display:flex;"><span>X, y <span style="color:#ff79c6">=</span> iris<span style="color:#ff79c6">.</span>data, iris<span style="color:#ff79c6">.</span>target <span style="color:#6272a4"># 载入数据集</span>
-</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> tree<span style="color:#ff79c6">.</span>DecisionTreeClassifier() <span style="color:#6272a4"># clf 是一个决策树分类器</span>
-</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> clf<span style="color:#ff79c6">.</span>fit(X, y) <span style="color:#6272a4"># 把 X, y 放入分类器中训练</span>
-</span></span><span style="display:flex;"><span>tree<span style="color:#ff79c6">.</span>plot_tree(clf) <span style="color:#6272a4"># 可视化</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Y <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#34;Rating&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Y = Y.replace({&#34;CCC&#34;:&#34;C&#34;, &#34;CC&#34;: &#34;C&#34;, &#34;D&#34;:&#34;C&#34;, &#34;AAA&#34;:&#34;AA&#34; })</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#34;Date&#34;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#34;Date&#34;</span>]<span style="color:#ff79c6">.</span>apply(<span style="color:#ff79c6">lambda</span> x:x<span style="color:#ff79c6">.</span>split(<span style="color:#f1fa8c">&#34;/&#34;</span>)[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>])
+</span></span><span style="display:flex;"><span>dummies <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;Rating Agency Name&#34;</span>, <span style="color:#f1fa8c">&#34;Sector&#34;</span>, <span style="color:#f1fa8c">&#34;Date&#34;</span>]
+</span></span><span style="display:flex;"><span>X <span style="color:#ff79c6">=</span> df[[i <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> df<span style="color:#ff79c6">.</span>columns <span style="color:#ff79c6">if</span> df[i]<span style="color:#ff79c6">.</span>dtype <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#34;object&#34;</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> dummy <span style="color:#ff79c6">in</span> dummies:
+</span></span><span style="display:flex;"><span>    X <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>concat([X, pd<span style="color:#ff79c6">.</span>get_dummies(df[dummy], drop_first<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>, prefix<span style="color:#ff79c6">=</span>dummy)], axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="线性回归与决策树">线性回归与决策树</h3>
+<p>我们先看一些简单直接的例子。</p>
+<p>按照维基百科的定义，我们在计量经济学中学习的 OLS/GLS/Logit 模型也是通过机器来学习拟合样本的分布，也是一种机器学习。统计学中的 lasso/ridge 等回归方式也在模型泛化中有许多应用。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.linear_model <span style="color:#ff79c6">import</span> LogisticRegression
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logit <span style="color:#ff79c6">=</span> LogisticRegression(multi_class<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;multinomial&#34;</span>, solver<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;saga&#34;</span>)
+</span></span><span style="display:flex;"><span>logit<span style="color:#ff79c6">.</span>fit(X, Y)
+</span></span><span style="display:flex;"><span>Ypredict <span style="color:#ff79c6">=</span> logit<span style="color:#ff79c6">.</span>predict(X)
+</span></span><span style="display:flex;"><span>logit<span style="color:#ff79c6">.</span>score(X,Y) <span style="color:#6272a4"># score 为模型的准确率</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/Users/dcy/Code/erm/.venv/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:352: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+</span></span><span style="display:flex;"><span>  warnings.warn(
+</span></span><span style="display:flex;"><span>0.2444553967471661
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">这里</a>。</p>
+<p>决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.model_selection <span style="color:#ff79c6">import</span> train_test_split
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.tree <span style="color:#ff79c6">import</span> DecisionTreeClassifier
+</span></span><span style="display:flex;"><span>Xtrain, Xtest, Ytrain, Ytest <span style="color:#ff79c6">=</span> train_test_split(X, Y, test_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.2</span>, random_state<span style="color:#ff79c6">=</span><span style="color:#bd93f9">42</span>)
+</span></span><span style="display:flex;"><span>dt <span style="color:#ff79c6">=</span> DecisionTreeClassifier(max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>)
+</span></span><span style="display:flex;"><span>dt<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
+</span></span><span style="display:flex;"><span>dt<span style="color:#ff79c6">.</span>score(Xtest, Ytest)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.4064039408866995
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="集成学习">集成学习</h3>
@@ -278,24 +469,33 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.ensemble <span style="color:#ff79c6">import</span> RandomForestClassifier
-</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> RandomForestClassifier(max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>) <span style="color:#6272a4"># max_depth is optional</span>
-</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>fit(X, y)
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(clf<span style="color:#ff79c6">.</span>predict([[<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>]])) <span style="color:#6272a4"># if x=[0,0,0,0], predict y</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rf <span style="color:#ff79c6">=</span> RandomForestClassifier(n_estimators<span style="color:#ff79c6">=</span><span style="color:#bd93f9">100</span>, max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span>rf<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
+</span></span><span style="display:flex;"><span>rf<span style="color:#ff79c6">.</span>score(Xtest, Ytest)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.42610837438423643
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。</p>
 <figure><img src="https://tfugcs.andfun.cn/original/2X/7/74f5a02b7692010da60a746d5469471c68b2ff3c.gif"
-         alt="Figure 3: random forest"/><figcaption>
-            <p><span class="figure-number">Figure 3: </span>random forest</p>
+         alt="Figure 2: random forest"/><figcaption>
+            <p><span class="figure-number">Figure 2: </span>random forest</p>
         </figcaption>
 </figure>
 
 <h4 id="boosting">boosting</h4>
-<p><a href="#bagging">bagging</a> 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
-调参时可以树的深度很少就能达到很高的精度。</p>
+<p><a href="#bagging">bagging</a> 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。调参时可以树的深度很少就能达到很高的精度。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -305,46 +505,52 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.ensemble <span style="color:#ff79c6">import</span> GradientBoostingClassifier
-</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> GradientBoostingClassifier()
-</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>fit(X,y)
-</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>score()
+</span></span><span style="display:flex;"><span>gboost <span style="color:#ff79c6">=</span> GradientBoostingClassifier()
+</span></span><span style="display:flex;"><span>gboost<span style="color:#ff79c6">.</span>fit(Xtrain,Ytrain)
+</span></span><span style="display:flex;"><span>gboost<span style="color:#ff79c6">.</span>score(Xtest, Ytest)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.5172413793103449
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="支持向量机">支持向量机</h3>
 <p>Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在空间中，找到一个可以划分开样本点、并且间隔最大的的（超）平面。直观上间隔最大是为了让模型更稳健。</p>
 <p><a id="figure--SVM 图示"></a></p>
 <figure><img src="https://pic2.zhimg.com/80/v2-f9e1e7fd08460a5fab044c71ed8b0bb1_1440w.jpg"
-         alt="Figure 4: SVM 图示"/><figcaption>
-            <p><span class="figure-number">Figure 4: </span>SVM 图示</p>
+         alt="Figure 3: SVM 图示"/><figcaption>
+            <p><span class="figure-number">Figure 3: </span>SVM 图示</p>
         </figcaption>
 </figure>
 
-<p>最简单的线性的硬间隔可分的如图 [4](#figure&ndash;SVM 图示) 所示，当然这是比较理想的情况。当样本分布更复杂的时候，我们会选择软间隔，即将之前的硬间隔最大化条件放宽一点，允许部分点出错，在优化函数中加入惩罚项。</p>
+<p>最简单的线性的硬间隔可分的如图 [3](#figure&ndash;SVM 图示) 所示，当然这是比较理想的情况。当样本分布更复杂的时候，我们会选择软间隔，即将之前的硬间隔最大化条件放宽一点，允许部分点出错，在优化函数中加入惩罚项。</p>
 <p>如果还是不可以，我们会运用核函数来推导到非线形的情况，简单说就是将低维的样本点映射到高维空间，使样本线性可分。例如内积平方的核函数，\(K(v_1,V_2)=(x_1x_2+y_1y_2)^2\)，可以看作是三维空间中 \((x_i^2,\sqrt{2}x_iy_i,y_i^2)\) 两个点之间的距离</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.pipeline <span style="color:#ff79c6">import</span> make_pipeline
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.preprocessing <span style="color:#ff79c6">import</span> StandardScaler
-</span></span><span style="display:flex;"><span>X <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>], [<span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>], [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">1</span>], [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>]])
-</span></span><span style="display:flex;"><span>y <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>array([<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">2</span>])
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.svm <span style="color:#ff79c6">import</span> SVC
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.svm <span style="color:#ff79c6">import</span> SVC
 </span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. For large datasets consider using LinearSVC or SGDClassifier instead, possibly after a Nystroem transformer.&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>clf <span style="color:#ff79c6">=</span> make_pipeline(StandardScaler(), SVC(gamma<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;auto&#39;</span>))
-</span></span><span style="display:flex;"><span>clf<span style="color:#ff79c6">.</span>fit(X, y)
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(clf<span style="color:#ff79c6">.</span>predict([[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">0.8</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>]]))
+</span></span><span style="display:flex;"><span>svm <span style="color:#ff79c6">=</span> SVC(kernel<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;rbf&#34;</span>)
+</span></span><span style="display:flex;"><span>svm<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
+</span></span><span style="display:flex;"><span>svm<span style="color:#ff79c6">.</span>score(Xtest, Ytest)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.33251231527093594
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="k-means">K means</h3>
@@ -381,33 +587,83 @@
 <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png"/>
 </figure>
 
-<p>神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 <code>relu</code> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, <code>sigmoid</code>, <code>softsign</code> ，然后再进行传导。</p>
-<h4 id="cnn">CNN</h4>
-<h4 id="rnn">RNN</h4>
-<h4 id="gan-and-rl">GAN &amp; RL</h4>
-<p>TBA</p>
-<h2 id="机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</h2>
-<h2 id="机器学习预测信用评级">机器学习预测信用评级</h2>
-<h3 id="数据说明">数据说明</h3>
-<p>A list of 2029 credit ratings issued by major agencies such as Standard and Poors to big US firms (traded on NYSE or Nasdaq) from 2010 to 2016.</p>
-<p>There are 30 features for every company of which 25 are financial indicators. They can be divided in:</p>
-<ol>
-<li>Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding</li>
-<li>Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed</li>
-<li>Debt Ratios: debtRatio, debtEquityRatio</li>
-<li>Operating Performance Ratios:` assetTurnover</li>
-<li>Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio</li>
-</ol>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>\(x=1\)</p>
+<p>神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 <code>relu</code> , <code>sigmoid</code>, <code>softsign</code> ，然后再进行传导。</p>
 <p>我们可以在这里可视化地理解一下
-<a href="https://playground.tensorflow.org/">https://playground.tensorflow.org/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+<a href="https://playground.tensorflow.org/">https://playground.tensorflow.org/</a></p>
+<h4 id="cnn">CNN</h4>
+<p>用卷积核扫描，类似“锐化”
+<img src="https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg" alt=""></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> torch <span style="color:#ff79c6">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> torchvision
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> torchvision <span style="color:#ff79c6">import</span> datasets, transforms
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> torch.nn.functional <span style="color:#ff79c6">as</span> F
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Net</span>(nn<span style="color:#ff79c6">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>()<span style="color:#ff79c6">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>layer <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>Sequential(
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Conv2d(in_channels<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>, out_channels<span style="color:#ff79c6">=</span><span style="color:#bd93f9">32</span>, kernel_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>MaxPool2d(kernel_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Conv2d(<span style="color:#bd93f9">32</span>, <span style="color:#bd93f9">64</span>, <span style="color:#bd93f9">2</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>MaxPool2d(<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">2</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Flatten(),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Linear(<span style="color:#bd93f9">64</span> <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">6</span> <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">10</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Softmax(),
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>        x <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>layer(x)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> x
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="rnn-and-gan-and-rl">RNN &amp; GAN &amp; RL</h4>
+<ul>
+<li>循环神经网络：常用在 NLP 中</li>
+<li>生成对抗网络：随机取样作为输入，其输出结果需要尽量模仿训练集中的真实样本，使判别网络无法判断生成网络的输出结果是否真实</li>
+<li>强化学习：博弈论……</li>
+</ul>
+<blockquote>
+<p>强化学习（RL）是机器学习的一个领域，涉及软件代理如何在环境中采取行动以最大化一些累积奖励的概念。该问题由于其一般性，在许多其他学科中得到研究，如博弈论，控制理论，运筹学，信息论，基于仿真的优化，多智能体系统，群智能，统计和遗传算法。。在运筹学和控制文献中，强化学习被称为近似动态规划或神经动态规划。&ndash;Wikipedia</p>
+</blockquote>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Golbayani, Parisa, Ionu Florescu, and Rupak Chatterjee. 2020. “A Comparative Study of Forecasting Corporate Credit Ratings Using Neural Networks, Support Vector Machines, and Decision Trees.” <i>The North American Journal of Economics and Finance</i> 54: 101251. <a href="https://www.sciencedirect.com/science/article/pii/S1062940820301480">https://www.sciencedirect.com/science/article/pii/S1062940820301480</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Kellner, Ralf, Maximilian Nagl, and Daniel Rösch. 2022. “Opening the Black Box–Quantile Neural Networks for Loss given Default Prediction.” <i>Journal of Banking &#38; Finance</i> 134: 106334. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0378426621002855">https://www.sciencedirect.com/science/article/abs/pii/S0378426621002855</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Mai, Feng, Shaonan Tian, Chihoon Lee, and Ling Ma. 2019. “Deep Learning Models for Bankruptcy Prediction Using Textual Disclosures.” <i>European Journal of Operational Research</i> 274 (2): 743–58. <a href="https://www.sciencedirect.com/science/article/pii/S0377221718308774">https://www.sciencedirect.com/science/article/pii/S0377221718308774</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Pedregosa, F., G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, et al. 2011. “Scikit-Learn: Machine Learning in Python.” <i>Journal of Machine Learning Research</i> 12: 2825–30.</div>
+</div>
 
     </div>
   </article>
@@ -443,19 +699,16 @@
     <div id="toc-footer" style="display: none">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#一些机器学习算法">一些机器学习算法</a>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</a></li>
+    <li><a href="#机器学习预测信用评级">机器学习预测信用评级</a>
       <ul>
+        <li><a href="#数据说明">数据说明</a></li>
         <li><a href="#线性回归与决策树">线性回归与决策树</a></li>
         <li><a href="#集成学习">集成学习</a></li>
         <li><a href="#支持向量机">支持向量机</a></li>
         <li><a href="#k-means">K means</a></li>
         <li><a href="#深度学习-神经网络">深度学习/神经网络</a></li>
-      </ul>
-    </li>
-    <li><a href="#机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</a></li>
-    <li><a href="#机器学习预测信用评级">机器学习预测信用评级</a>
-      <ul>
-        <li><a href="#数据说明">数据说明</a></li>
       </ul>
     </li>
   </ul>
@@ -507,7 +760,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=machine_learning_in_ERM&description=%e4%b8%80%e4%ba%9b%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=machine_learning_in_ERM&description=%e5%89%8d%e8%a8%80%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9%e7%94%a8%e7%ae%97%e6%b3%95%e5%92%8c%e7%ae%97%e5%8a%9b" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
