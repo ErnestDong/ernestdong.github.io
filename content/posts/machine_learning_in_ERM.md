@@ -10,7 +10,8 @@ draft = false
 
 {{< figure src="/images/xkcd/1838.png" >}}
 
-什么是学习？ [维基百科](https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0)上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：
+什么是学习？ [维基百科](https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0)上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
+机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：
 
 {{< figure src="/ox-hugo/mathworks.svg" caption="<span class=\"figure-number\">Figure 1: </span>一些常见的机器学习算法" >}}
 
@@ -28,7 +29,8 @@ Golbayani, Florescu, and Chatterjee (<a href="#citeproc_bib_item_1">2020</a>)
 使用决策树、随机森林、支持向量机和多层感知器应用于相同的数据集，预测公司未来评级。他们统计了机器学习在债券评级和公司信用评级方面的文章，很多认为 SVM 和神经网络是比较准确的。但是他们使用 Notches Distance 来对机器学习绩效来打分，认为基于决策树的两种方法更有效。
 
 Kellner, Nagl, and Rösch (<a href="#citeproc_bib_item_2">2022</a>) 利用神经网络预测违约损失 Loss Given Default
-将传统的分位数回归的回归元作为第一层，通过神经网络揭示其中的非线性关系，比如交叉项及其他非线性关系，神经网络最后一层是传统的分位数回归。利用 first order feature importance，量化输入变量的整体重要性。同时排除掉二阶的和交互的在分位数中接近于零。因此 QRNN 和分位数 QR 的分位数损失非常相似通过允许分位数回归神经网络实现的分位数中的非线性和相互作用来扩展这种方法。这种方法大大增强了建模的灵活性。额外的灵活性在更好地分布拟合和超时样本方面带来了回报，分位数预测精度提高了 30%。同时更加 robust 。
+将传统的分位数回归的回归元作为第一层，通过神经网络揭示其中的非线性关系，比如交叉项及其他非线性关系，神经网络最后一层是传统的分位数回归。利用 first order feature importance，量化输入变量的整体重要性。同时排除掉二阶的和交互的在分位数中接近于零。因此 QRNN 和分位数 QR 的分位数损失非常相似
+通过允许分位数回归神经网络实现的分位数中的非线性和相互作用来扩展这种方法。这种方法大大增强了建模的灵活性。额外的灵活性在更好地分布拟合和超时样本方面带来了回报，分位数预测精度提高了 30%。同时更加 robust 。
 
 当前机器学习最火热的两个应用方向是计算机视觉 CV 和自然语言处理 NLP ，亦有一些文献利用自然语言处理分析文本数据做研究。
 
@@ -143,10 +145,13 @@ logit.score(X,Y) # score 为模型的准确率
 ```text
 /Users/dcy/Code/erm/.venv/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:352: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
   warnings.warn(
-0.2444553967471661
+0.24593395761458847
 ```
 
-决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看[这里](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)。
+决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
+他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
+该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
+这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看[这里](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)。
 
 决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。
 
@@ -186,7 +191,7 @@ rf.score(Xtest, Ytest)
 ```
 
 ```text
-0.42610837438423643
+0.41625615763546797
 ```
 
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
@@ -196,17 +201,19 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 
 #### boosting {#boosting}
 
-[bagging](#bagging) 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。调参时可以树的深度很少就能达到很高的精度。
+[bagging](#bagging) 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
+调参时可以树的深度很少就能达到很高的精度。
 
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
-gboost = GradientBoostingClassifier()
-gboost.fit(Xtrain,Ytrain)
-gboost.score(Xtest, Ytest)
+
+gb = GradientBoostingClassifier()
+gb.fit(Xtrain, Ytrain)
+gb.score(Xtest, Ytest)
 ```
 
 ```text
-0.5172413793103449
+0.5197044334975369
 ```
 
 

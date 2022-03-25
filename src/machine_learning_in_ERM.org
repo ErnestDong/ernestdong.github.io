@@ -130,9 +130,10 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 调参时可以树的深度很少就能达到很高的精度。
 #+begin_src jupyter-python
 from sklearn.ensemble import GradientBoostingClassifier
-gboost = GradientBoostingClassifier()
-gboost.fit(Xtrain,Ytrain)
-gboost.score(Xtest, Ytest)
+
+gb = GradientBoostingClassifier()
+gb.fit(Xtrain, Ytrain)
+gb.score(Xtest, Ytest)
 #+end_src
 
 ** 支持向量机
