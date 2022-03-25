@@ -55,6 +55,7 @@ There are 30 features for every company of which 25 are financial indicators. Th
 
     ```python
     import pandas as pd
+
     # df = pd.read_csv("./corporate_rating.csv", encoding="utf-8")
     df = pd.read_csv("/Users/dcy/Code/erm/corporate_rating.csv", encoding="utf-8")
     df.info()
@@ -101,7 +102,7 @@ There are 30 features for every company of which 25 are financial indicators. Th
        memory usage: 491.5+ KB
     ```
 
-评级分布如下图
+评级分布如下图。我们可以看到评级 CC, C, D 的企业数量较少。三大评级公司所谓的“D”是违约“Default”，因此我们保留下来 D 级，而合并 `CCC` `CC` `C` 。一方面是由于 CCC 以下数量少，另一方面是由于大多数“评级下调加速到期”条款限定在了降至 CCC 的垃圾级。类似的，由于 AAA 企业数量很少都是非常优质的企业（ ~~不像目前国内评级新发债一半为 AAA~~ ），而 AA 和 A 数量都不小，我们仍然单独把他们拿出来。
 
 ```python
 df["Rating"].value_counts().plot(kind="bar")
@@ -111,19 +112,66 @@ df["Rating"].value_counts().plot(kind="bar")
 <AxesSubplot:>
 ```
 
-{{< figure src="/ox-hugo/8e8723ae5b99e7da84b8c731ebbaa30fb88cf6ee.png" >}}
+{{< figure src="/ox-hugo/8771b618ea52295a2f7caab8d2f1dd088f05512a.png" >}}
 
 让我们处理一下数据
 
 ```python
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score, recall_score, precision_score
+
+
+def get_score(Xtest, Ytrue, model):
+    Ypred = model(Xtest)
+    average = "weighted"
+    return {
+        "precision": precision_score(Ytrue, Ypred, average=average, zero_division=0),
+        "recall": recall_score(Ytrue, Ypred, average=average),
+        "f1": f1_score(Ytrue, Ypred, average=average),
+    }
+
+
 Y = df["Rating"]
-# Y = Y.replace({"CCC":"C", "CC": "C", "D":"C", "AAA":"AA" })
-df["Date"] = df["Date"].apply(lambda x:x.split("/")[-1])
+Y = Y.replace({"CCC": "C", "CC": "C"})
+df["Date"] = df["Date"].apply(lambda x: x.split("/")[-1])
 dummies = ["Rating Agency Name", "Sector", "Date"]
 X = df[[i for i in df.columns if df[i].dtype != "object"]]
 for dummy in dummies:
     X = pd.concat([X, pd.get_dummies(df[dummy], drop_first=True, prefix=dummy)], axis=1)
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.2, random_state=42)
+result = {}
+X.columns
 ```
+
+```text
+Index(['currentRatio', 'quickRatio', 'cashRatio', 'daysOfSalesOutstanding',
+       'netProfitMargin', 'pretaxProfitMargin', 'grossProfitMargin',
+       'operatingProfitMargin', 'returnOnAssets', 'returnOnCapitalEmployed',
+       'returnOnEquity', 'assetTurnover', 'fixedAssetTurnover',
+       'debtEquityRatio', 'debtRatio', 'effectiveTaxRate',
+       'freeCashFlowOperatingCashFlowRatio', 'freeCashFlowPerShare',
+       'cashPerShare', 'companyEquityMultiplier', 'ebitPerRevenue',
+       'enterpriseValueMultiple', 'operatingCashFlowPerShare',
+       'operatingCashFlowSalesRatio', 'payablesTurnover',
+       'Rating Agency Name_Egan-Jones Ratings Company',
+       'Rating Agency Name_Fitch Ratings',
+       'Rating Agency Name_Moody's Investors Service',
+       'Rating Agency Name_Standard & Poor's Ratings Services',
+       'Sector_Capital Goods', 'Sector_Consumer Durables',
+       'Sector_Consumer Non-Durables', 'Sector_Consumer Services',
+       'Sector_Energy', 'Sector_Finance', 'Sector_Health Care',
+       'Sector_Miscellaneous', 'Sector_Public Utilities', 'Sector_Technology',
+       'Sector_Transportation', 'Date_2009', 'Date_2010', 'Date_2011',
+       'Date_2012', 'Date_2013', 'Date_2014', 'Date_2015', 'Date_2016'],
+      dtype='object')
+```
+
+`get_score` 中定义了三重维度来度量预测的准确性，如下表。precision 是 \\(tp / (tp + fp)\\) ，即预测阳性中真实为正的概率；recall 是 \\(tp / (tp + fn)\\) ，即样本中的正例有多少被预测正确了；而 f1 则是二者的调和平均
+
+|          | True | False |
+|----------|------|-------|
+| Positive | TP   | FP    |
+| Negative | TN   | FN    |
 
 
 ### 线性回归与决策树 {#线性回归与决策树}
@@ -136,17 +184,19 @@ for dummy in dummies:
 from sklearn.linear_model import LogisticRegression
 
 logit = LogisticRegression(multi_class="multinomial", solver="saga")
-logit.fit(X, Y)
-Ypredict = logit.predict(X)
-logit.score(X,Y) # score 为模型的准确率
-
+logit.fit(Xtrain, Ytrain)
+result["logit"] = get_score(Xtest, Ytest, logit.predict)
+result["logit"]
 ```
 
 ```text
 /Users/dcy/Code/erm/.venv/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:352: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
   warnings.warn(
-0.24593395761458847
 ```
+
+|           |   |                     |        |   |                     |    |   |                     |
+|-----------|---|---------------------|--------|---|---------------------|----|---|---------------------|
+| precision | : | 0.18550491761115834 | recall | : | 0.24876847290640394 | f1 | : | 0.15916212879187308 |
 
 决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
@@ -156,17 +206,17 @@ logit.score(X,Y) # score 为模型的准确率
 决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。
 
 ```python
-from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.2, random_state=42)
+
 dt = DecisionTreeClassifier(max_depth=3)
 dt.fit(Xtrain, Ytrain)
-dt.score(Xtest, Ytest)
+result["decision tree"] = get_score(Xtest, Ytest, dt.predict)
+result["decision tree"]
 ```
 
-```text
-0.4064039408866995
-```
+|           |   |                     |        |   |                    |    |   |                    |
+|-----------|---|---------------------|--------|---|--------------------|----|---|--------------------|
+| precision | : | 0.36776900542565055 | recall | : | 0.4064039408866995 | f1 | : | 0.3624046923337102 |
 
 
 ### 集成学习 {#集成学习}
@@ -187,12 +237,13 @@ from sklearn.ensemble import RandomForestClassifier
 
 rf = RandomForestClassifier(n_estimators=100, max_depth=4)
 rf.fit(Xtrain, Ytrain)
-rf.score(Xtest, Ytest)
+result["random forest"] = get_score(Xtest, Ytest, rf.predict)
+result["random forest"]
 ```
 
-```text
-0.41625615763546797
-```
+|           |   |                    |        |   |                     |    |   |                     |
+|-----------|---|--------------------|--------|---|---------------------|----|---|---------------------|
+| precision | : | 0.3919110557041591 | recall | : | 0.41379310344827586 | f1 | : | 0.36500366349281715 |
 
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
 
@@ -209,12 +260,13 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 gb = GradientBoostingClassifier()
 gb.fit(Xtrain, Ytrain)
-gb.score(Xtest, Ytest)
+result["gradient boosting"] = get_score(Xtest, Ytest, gb.predict)
+result["gradient boosting"]
 ```
 
-```text
-0.5197044334975369
-```
+|           |   |                    |        |   |                    |    |   |                  |
+|-----------|---|--------------------|--------|---|--------------------|----|---|------------------|
+| precision | : | 0.5070414153810067 | recall | : | 0.5147783251231527 | f1 | : | 0.49967675671139 |
 
 
 ### 支持向量机 {#支持向量机}
@@ -231,15 +283,16 @@ Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在�
 
 ```python
 from sklearn.svm import SVC
-"""The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. For large datasets consider using LinearSVC or SGDClassifier instead, possibly after a Nystroem transformer."""
+
 svm = SVC(kernel="rbf")
 svm.fit(Xtrain, Ytrain)
-svm.score(Xtest, Ytest)
+result["svm"] = get_score(Xtest, Ytest, svm.predict)
+result["svm"]
 ```
 
-```text
-0.33251231527093594
-```
+|           |   |                     |        |   |                     |    |   |                     |
+|-----------|---|---------------------|--------|---|---------------------|----|---|---------------------|
+| precision | : | 0.11083743842364532 | recall | : | 0.33251231527093594 | f1 | : | 0.16625615763546797 |
 
 
 ### K means {#k-means}
@@ -269,23 +322,137 @@ kmeans.predict([[0, 0], [12, 3]])
 
 ### 深度学习/神经网络 {#深度学习-神经网络}
 
+深度学习以神经网络为基础。神经网络是一种模仿生物神经系统结构和功能的数学模型，对函数进行估计和近似。
+
 
 #### BP 神经网络 {#bp-神经网络}
 
-是深度学习的入门算法，所谓 BP 是反向传播 Backpropagation。它的信息处理能力来源于简单非线性函数的多次复合。
+是深度学习的入门算法，所谓 BP 是误差反向传播 Backpropagation，刺激正向传播后通过最小化误差反向传播更新权值（最小化的方式是“梯度下降”）。它的信息处理能力来源于简单非线性函数的多次复合。
+
+我们用最小二乘法来理解“梯度下降”和“反向传播”
+
+```python
+import torch
+x = torch.rand([500,1]) # X 是一个 tensor ，可以把他想象成 500x1 的向量
+y_true = 3*x+8
+learning_rate = 0.05 # learning rate 是每次梯度下降的“步长”
+w = torch.rand([1,1], requires_grad=True) # w 和 b 我们要 pytorch 自动求导
+b = torch.tensor(0, requires_grad=True, dtype=torch.float32)
+for i in range(500):
+    y_pred = torch.matmul(x,w)+b # 预测是多少
+    loss = (y_true-y_pred).pow(2).mean() # 损失
+    if w.grad is not None: # 把上一次的梯度清零
+        w.grad.data.zero_()
+    if b.grad is not None:
+        b.grad.data.zero_()
+    loss.backward() # 误差反向传播，得到 w 和 b 的梯度
+    w.data = w.data - w.grad*learning_rate # 梯度下降找到新的 w 和 b
+    b.data = b.data - b.grad*learning_rate
+    if i % 50 == 0:
+        print(w.item(), b.item(), loss.item())
+```
+
+```text
+1.1438429355621338 0.9152284860610962 84.2229995727539
+4.056358337402344 7.430293083190918 0.09792550653219223
+3.7576041221618652 7.598195552825928 0.0499381422996521
+3.5413405895233154 7.712901592254639 0.025496680289506912
+3.3868088722229004 7.794857501983643 0.013017723336815834
+3.2763900756835938 7.85341739654541 0.00664640823379159
+3.197490930557251 7.895261764526367 0.00339340977370739
+3.1411142349243164 7.925160884857178 0.0017325413646176457
+3.1008312702178955 7.946524143218994 0.0008845749543979764
+3.0720486640930176 7.961789131164551 0.0004516405169852078
+```
+
+上述的代码在 pytorch 中对应的有：
+
+| `for` 循环里面的模型 | `nn.Module` 封装好了许多模型 |
+|---------------|----------------------|
+| `loss` 的定义 | torch 中也有多种计算方式 |
+| `loss` 的计算 | 优化器 `nn.optim` 中提供了许多优化器 |
+
+通过 pytorch 我们可以写成
+
+```python
+import torch
+from torch import nn
+from torch import optim
+
+x = torch.rand([50,1])
+y = 3*x+8
+
+class Lr(nn.Module):
+    def __init__(self):
+        super(Lr, self).__init__()
+        self.layer = nn.Linear(1,1)
+    def forward(self, x):
+        return self.layer(x)
+model = Lr()
+criterion = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.05)
+for i in range(500):
+    out = model(x)
+    loss = criterion(y, out)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+list(model.parameters())
+```
 
 {{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png" >}}
 
-神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 `relu` , `sigmoid`, `softsign` ，然后再进行传导。
+神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 `relu` , `sigmoid`, `softsign` ，然后再进行传导。即针对 \\(X\\) 输入，神经元输出会是 \\(f(W^TX+b)\\) 。
 
 我们可以在这里可视化地理解一下
 <https://playground.tensorflow.org/>
 
+这是我用两层神经网络的代码
+
+```python
+from torch import nn
+import torch
+
+Ytrain_nn = pd.get_dummies(Ytrain)
+encode = Ytrain_nn.columns
+Ytrain_nn = torch.tensor(Ytrain_nn.values, dtype=torch.float32)
+Xtrain_nn = torch.tensor(Xtrain.values, dtype=torch.float32)
+
+
+net = nn.Sequential(
+    nn.Linear(Xtrain_nn.shape[1], 20),
+    nn.LogSigmoid(),
+    nn.Linear(20, len(encode)),
+    nn.LogSigmoid(),
+    nn.Softmax(dim=1),
+)
+optimizer = torch.optim.SGD(net.parameters(), lr=0.1)
+loss_func = torch.nn.L1Loss()
+
+for t in range(5000):
+    prediction = net(Xtrain_nn)
+    loss = loss_func(Ytrain_nn, prediction)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+Xtest_nn = torch.tensor(Xtest.values, dtype=torch.float32)
+prediction = pd.DataFrame(net(Xtest_nn).detach().numpy())
+Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
+result["neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+result["neural network"]
+```
+
+|           |   |                    |        |   |                     |    |   |                    |
+|-----------|---|--------------------|--------|---|---------------------|----|---|--------------------|
+| precision | : | 0.3631888854679803 | recall | : | 0.34236453201970446 | f1 | : | 0.2038645902920217 |
+
 
 #### CNN {#cnn}
 
-用卷积核扫描，类似“锐化”
+用卷积a核扫描，类似“锐化”。尽管有文献(<a href="#citeproc_bib_item_3">Mai et al. 2019</a>)用了 CNN ，但我绕不过弯如何将这种经典的计算机视觉算法应用到企业风险管理中，欢迎大家找我讨论。
 ![](https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg)
+
+卷积神经网络先用卷积层扫描，然后利用“池化”的
 
 ```python
 import torch
@@ -323,6 +490,143 @@ class Net(nn.Module):
 -   强化学习：博弈论……
 
 > 强化学习（RL）是机器学习的一个领域，涉及软件代理如何在环境中采取行动以最大化一些累积奖励的概念。该问题由于其一般性，在许多其他学科中得到研究，如博弈论，控制理论，运筹学，信息论，基于仿真的优化，多智能体系统，群智能，统计和遗传算法。。在运筹学和控制文献中，强化学习被称为近似动态规划或神经动态规划。--Wikipedia
+
+
+### 对比 {#对比}
+
+| model             | precision           | recall              | f1                  |
+|-------------------|---------------------|---------------------|---------------------|
+| logit             | 0.18550491761115834 | 0.24876847290640394 | 0.15916212879187308 |
+| decision tree     | 0.36776900542565055 | 0.4064039408866995  | 0.3624046923337102  |
+| random forest     | 0.3919110557041591  | 0.41379310344827586 | 0.36500366349281715 |
+| gradient boosting | 0.5070414153810067  | 0.5147783251231527  | 0.49967675671139    |
+| svm               | 0.11083743842364532 | 0.33251231527093594 | 0.16625615763546797 |
+| neural network    | 0.3631888854679803  | 0.34236453201970446 | 0.2038645902920217  |
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle, RegularPolygon
+from matplotlib.path import Path
+from matplotlib.projections.polar import PolarAxes
+from matplotlib.projections import register_projection
+from matplotlib.spines import Spine
+from matplotlib.transforms import Affine2D
+
+
+def radar_factory(num_vars, frame='circle'):
+    """Create a radar chart with `num_vars` axes.
+
+    This function creates a RadarAxes projection and registers it.
+
+    Parameters
+    ----------
+    num_vars : int
+        Number of variables for radar chart.
+    frame : {'circle' | 'polygon'}
+        Shape of frame surrounding axes.
+
+    """
+    # calculate evenly-spaced axis angles
+    theta = np.linspace(0, 2*np.pi, num_vars, endpoint=False)
+
+    class RadarAxes(PolarAxes):
+
+        name = 'radar'
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            # rotate plot such that the first axis is at the top
+            self.set_theta_zero_location('N')
+
+        def fill(self, *args, closed=True, **kwargs):
+            """Override fill so that line is closed by default"""
+            return super().fill(closed=closed, *args, **kwargs)
+
+        def plot(self, *args, **kwargs):
+            """Override plot so that line is closed by default"""
+            lines = super().plot(*args, **kwargs)
+            for line in lines:
+                self._close_line(line)
+
+        def _close_line(self, line):
+            x, y = line.get_data()
+            # FIXME: markers at x[0], y[0] get doubled-up
+            if x[0] != x[-1]:
+                x = np.concatenate((x, [x[0]]))
+                y = np.concatenate((y, [y[0]]))
+                line.set_data(x, y)
+
+        def set_varlabels(self, labels):
+            self.set_thetagrids(np.degrees(theta), labels)
+
+        def _gen_axes_patch(self):
+            # The Axes patch must be centered at (0.5, 0.5) and of radius 0.5
+            # in axes coordinates.
+            if frame == 'circle':
+                return Circle((0.5, 0.5), 0.5)
+            elif frame == 'polygon':
+                return RegularPolygon((0.5, 0.5), num_vars,
+                                      radius=.5, edgecolor="k")
+            else:
+                raise ValueError("unknown value for 'frame': %s" % frame)
+
+        def draw(self, renderer):
+            """ Draw. If frame is polygon, make gridlines polygon-shaped """
+            if frame == 'polygon':
+                gridlines = self.yaxis.get_gridlines()
+                for gl in gridlines:
+                    gl.get_path()._interpolation_steps = num_vars
+            super().draw(renderer)
+
+
+        def _gen_axes_spines(self):
+            if frame == 'circle':
+                return super()._gen_axes_spines()
+            elif frame == 'polygon':
+                # spine_type must be 'left'/'right'/'top'/'bottom'/'circle'.
+                spine = Spine(axes=self,
+                              spine_type='circle',
+                              path=Path.unit_regular_polygon(num_vars))
+                # unit_regular_polygon gives a polygon of radius 1 centered at
+                # (0, 0) but we want a polygon of radius 0.5 centered at (0.5,
+                # 0.5) in axes coordinates.
+                spine.set_transform(Affine2D().scale(.5).translate(.5, .5)
+                                    + self.transAxes)
+
+
+                return {'polar': spine}
+            else:
+                raise ValueError("unknown value for 'frame': %s" % frame)
+
+    register_projection(RadarAxes)
+    return theta
+
+
+spoke_labels = ["precision", "recall", "f1"]
+results = result.items()
+labels = [i[0] for i in results]
+N = len(spoke_labels)
+theta = radar_factory(N, frame="circle")
+case_data = [[j[1][i]  for i in spoke_labels]for j in results]
+
+fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(projection="radar"))
+fig.subplots_adjust(top=0.85, bottom=0.05)
+
+ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
+
+for d in case_data:
+    line = ax.plot(theta, d)
+    ax.fill(theta, d, alpha=0.1)
+ax.set_varlabels(spoke_labels)
+plt.legend(labels)
+plt.show()
+```
+
+{{< figure src="/ox-hugo/1346f6542cb894df6a08e03552b46eace9df74c9.png" >}}
+
+
+## reference {#reference}
 
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Golbayani, Parisa, Ionu Florescu, and Rupak Chatterjee. 2020. “A Comparative Study of Forecasting Corporate Credit Ratings Using Neural Networks, Support Vector Machines, and Decision Trees.” <i>The North American Journal of Economics and Finance</i> 54: 101251. <a href="https://www.sciencedirect.com/science/article/pii/S1062940820301480">https://www.sciencedirect.com/science/article/pii/S1062940820301480</a>.</div>
