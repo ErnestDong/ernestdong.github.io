@@ -4,3 +4,4 @@ TODO
 /resources/*
 public/
 *.lock
+/src/.ob-jupyter/*.png

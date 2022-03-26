@@ -4,6 +4,7 @@
 #+HUGO_SECTION: posts
 #+DATE: <2022-03-14>
 #+BIBLIOGRAPHY: ref.bib
+#+PROPERTY: header-args:jupyter-python :tangle ~/code/erm/main.py
 * 前言
 #+begin_src emacs-lisp :exports results :results file
 (setq xkcd-cache-dir "/Users/dcy/Code/ernest/static/images/xkcd/")
@@ -57,6 +58,7 @@ import pandas as pd
 df = pd.read_csv("/Users/dcy/Code/erm/corporate_rating.csv", encoding="utf-8")
 df.info()
    #+end_src
+
 评级分布如下图。我们可以看到评级 CC, C, D 的企业数量较少。三大评级公司所谓的“D”是违约“Default”，因此我们保留下来 D 级，而合并 =CCC= =CC= =C= 。一方面是由于 CCC 以下数量少，另一方面是由于大多数“评级下调加速到期”条款限定在了降至 CCC 的垃圾级。类似的，由于 AAA 企业数量很少都是非常优质的企业（ +不像目前国内评级新发债一半为 AAA+ ），而 AA 和 A 数量都不小，我们仍然单独把他们拿出来。
 #+begin_src jupyter-python :kernel python3 :session main :exports both
 df["Rating"].value_counts().plot(kind="bar")
@@ -205,6 +207,7 @@ kmeans.predict([[0, 0], [12, 3]])
 
 *** BP 神经网络
 是深度学习的入门算法，所谓 BP 是误差反向传播 Backpropagation，刺激正向传播后通过最小化误差反向传播更新权值（最小化的方式是“梯度下降”）。它的信息处理能力来源于简单非线性函数的多次复合。
+**** 梯度下降与反向传播
 
 我们用最小二乘法来理解“梯度下降”和“反向传播”
 #+begin_src jupyter-python :session reg
@@ -259,13 +262,15 @@ for i in range(500):
 list(model.parameters())
 #+end_src
 
+**** 激活函数
 
 [[https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png]]
 
-神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 =relu= , =sigmoid=, =softsign= ，然后再进行传导。即针对 \(X\) 输入，神经元输出会是 \(f(W^TX+b)\) 。
+神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导（这样的话通过神经网络线性函数的叠加仍然是一个线性函数），而是要经历一个非线性的“激活函数”，如 =relu= , =sigmoid=, =softsign= ，然后再进行传导。即针对 \(X\) 输入，神经元输出会是 \(f(W^TX+b)\) 。
 
 我们可以在这里可视化地理解一下
 https://playground.tensorflow.org/
+**** 一个尝试
 
 这是我用两层神经网络的代码
 #+begin_src jupyter-python
@@ -277,16 +282,15 @@ encode = Ytrain_nn.columns
 Ytrain_nn = torch.tensor(Ytrain_nn.values, dtype=torch.float32)
 Xtrain_nn = torch.tensor(Xtrain.values, dtype=torch.float32)
 
-
+hidden_layer = 40
 net = nn.Sequential(
-    nn.Linear(Xtrain_nn.shape[1], 20),
-    nn.LogSigmoid(),
-    nn.Linear(20, len(encode)),
-    nn.LogSigmoid(),
+    nn.Linear(Xtrain_nn.shape[1], hidden_layer),
+    nn.ReLU(),
+    nn.Linear(hidden_layer, len(encode)),
     nn.Softmax(dim=1),
 )
 optimizer = torch.optim.SGD(net.parameters(), lr=0.1)
-loss_func = torch.nn.L1Loss()
+loss_func = torch.nn.MSELoss()
 
 for t in range(5000):
     prediction = net(Xtrain_nn)
@@ -297,40 +301,48 @@ for t in range(5000):
 Xtest_nn = torch.tensor(Xtest.values, dtype=torch.float32)
 prediction = pd.DataFrame(net(Xtest_nn).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
-result["neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
-result["neural network"]
+result["bp neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+result["bp neural network"]
 #+end_src
+
 *** CNN
-用卷积a核扫描，类似“锐化”。尽管有文献[cite:@mai2019deep]用了 CNN ，但我绕不过弯如何将这种经典的计算机视觉算法应用到企业风险管理中，欢迎大家找我讨论。
+所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 [[https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg]]
 
-卷积神经网络先用卷积层扫描，然后利用“池化”的
-#+begin_src python
-import torch
-from torch import nn
-import torchvision
-from torchvision import datasets, transforms
-import torch.nn.functional as F
+尽管有文献[cite:@mai2019deep]用了 CNN ，但我绕不过弯如何将这种经典的计算机视觉算法应用到企业风险管理中，欢迎大家找我讨论。
+
+卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 =pytorch= 中常用 =Conv2d= 。而我们的数据则是一条条的，望文生义应该用 =Conv1d= （其实会用在自然语言处理中，但 RNN 应用更多）。
+#+begin_src jupyter-python
+output_channel = 40
 
 
-class Net(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.layer = nn.Sequential(
-            nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2),
-            nn.Conv2d(32, 64, 2),
-            nn.ReLU(),
-            nn.MaxPool2d(2, 2),
-            nn.Flatten(),
-            nn.Linear(64 * 6 * 6, 10),
-            nn.Softmax(),
+class CNN(nn.Module):
+    def __init__(self) -> None:
+        super(CNN, self).__init__()
+        self.conv = nn.Sequential(
+            nn.Conv1d(1, output_channel, 15), nn.Sigmoid(), nn.MaxPool1d(9)
         )
+        self.fc = nn.Linear(output_channel, len(encode) + 1)
 
     def forward(self, x):
-        x = self.layer(x)
+        x = self.conv(x)
+        x = x.view(x.size(0), -1)
+        x = self.fc(x)
         return x
+
+
+optimizer = torch.optim.Adam(net.parameters(), lr=0.1)
+loss_func = torch.nn.MSELoss()
+for t in range(5000):
+    prediction = net(Xtrain_nn)
+    loss = loss_func(Ytrain_nn, prediction)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+prediction = pd.DataFrame(net(Xtest_nn).detach().numpy())
+Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
+result["cnn"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+result["cnn"]
 #+end_src
 
 *** RNN & GAN & RL
@@ -340,7 +352,6 @@ class Net(nn.Module):
 #+begin_quote
 强化学习（RL）是机器学习的一个领域，涉及软件代理如何在环境中采取行动以最大化一些累积奖励的概念。该问题由于其一般性，在许多其他学科中得到研究，如博弈论，控制理论，运筹学，信息论，基于仿真的优化，多智能体系统，群智能，统计和遗传算法。。在运筹学和控制文献中，强化学习被称为近似动态规划或神经动态规划。--Wikipedia
 #+end_quote
-
 
 ** 对比
 #+begin_src jupyter-python :exports results
@@ -475,5 +486,4 @@ plt.show()
 #+end_src
 
 * reference
-
 #+print_bibliography:

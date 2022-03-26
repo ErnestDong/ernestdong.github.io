@@ -112,7 +112,7 @@ df["Rating"].value_counts().plot(kind="bar")
 <AxesSubplot:>
 ```
 
-{{< figure src="/ox-hugo/8771b618ea52295a2f7caab8d2f1dd088f05512a.png" >}}
+{{< figure src="/ox-hugo/8e8723ae5b99e7da84b8c731ebbaa30fb88cf6ee.png" >}}
 
 让我们处理一下数据
 
@@ -241,9 +241,9 @@ result["random forest"] = get_score(Xtest, Ytest, rf.predict)
 result["random forest"]
 ```
 
-|           |   |                    |        |   |                     |    |   |                     |
-|-----------|---|--------------------|--------|---|---------------------|----|---|---------------------|
-| precision | : | 0.4085806232022915 | recall | : | 0.42857142857142855 | f1 | : | 0.38188437000444897 |
+|           |   |                    |        |   |                     |    |   |                    |
+|-----------|---|--------------------|--------|---|---------------------|----|---|--------------------|
+| precision | : | 0.3872333773612973 | recall | : | 0.41625615763546797 | f1 | : | 0.3678206735514258 |
 
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
 
@@ -266,7 +266,7 @@ result["gradient boosting"]
 
 |           |   |                    |        |   |                    |    |   |                    |
 |-----------|---|--------------------|--------|---|--------------------|----|---|--------------------|
-| precision | : | 0.5120890067926741 | recall | : | 0.5172413793103449 | f1 | : | 0.5021587259150085 |
+| precision | : | 0.5125448578071228 | recall | : | 0.5172413793103449 | f1 | : | 0.5022027579022398 |
 
 
 ### 支持向量机 {#支持向量机}
@@ -329,158 +329,180 @@ kmeans.predict([[0, 0], [12, 3]])
 
 是深度学习的入门算法，所谓 BP 是误差反向传播 Backpropagation，刺激正向传播后通过最小化误差反向传播更新权值（最小化的方式是“梯度下降”）。它的信息处理能力来源于简单非线性函数的多次复合。
 
-我们用最小二乘法来理解“梯度下降”和“反向传播”
+<!--list-separator-->
+
+-  梯度下降与反向传播
+
+    我们用最小二乘法来理解“梯度下降”和“反向传播”
+
+    ```python
+    import torch
+    x = torch.rand([500,1]) # X 是一个 tensor ，可以把他想象成 500x1 的向量
+    y_true = 3*x+8
+    learning_rate = 0.05 # learning rate 是每次梯度下降的“步长”
+    w = torch.rand([1,1], requires_grad=True) # w 和 b 我们要 pytorch 自动求导
+    b = torch.tensor(0, requires_grad=True, dtype=torch.float32)
+    for i in range(500):
+        y_pred = torch.matmul(x,w)+b # 预测是多少
+        loss = (y_true-y_pred).pow(2).mean() # 损失
+        if w.grad is not None: # 把上一次的梯度清零
+            w.grad.data.zero_()
+        if b.grad is not None:
+            b.grad.data.zero_()
+        loss.backward() # 误差反向传播，得到 w 和 b 的梯度
+        w.data = w.data - w.grad*learning_rate # 梯度下降找到新的 w 和 b
+        b.data = b.data - b.grad*learning_rate
+        if i % 50 == 0:
+            print(w.item(), b.item(), loss.item())
+    ```
+
+    ```text
+    0.6302720308303833 0.9378393292427063 88.58399963378906
+    3.73396635055542 7.61052131652832 0.04361069202423096
+    3.5403988361358643 7.720907211303711 0.02329474501311779
+    3.395594596862793 7.79570198059082 0.012483072467148304
+    3.289588689804077 7.850446701049805 0.006689354777336121
+    3.211989402770996 7.890522003173828 0.0035846647806465626
+    3.155183792114258 7.919858455657959 0.0019209327874705195
+    3.113600492477417 7.941333293914795 0.0010293929371982813
+    3.083160161972046 7.9570536613464355 0.0005516344681382179
+    3.06087589263916 7.96856164932251 0.000295607082080096
+    ```
+
+    上述的代码在 pytorch 中对应的有：
+
+    | `for` 循环里面的模型 | `nn.Module` 封装好了许多模型 |
+    |---------------|----------------------|
+    | `loss` 的定义 | torch 中也有多种计算方式 |
+    | `loss` 的计算 | 优化器 `nn.optim` 中提供了许多优化器 |
+
+    通过 pytorch 我们可以写成
+
+    ```python
+    import torch
+    from torch import nn
+    from torch import optim
+
+    x = torch.rand([50,1])
+    y = 3*x+8
+
+    class Lr(nn.Module):
+        def __init__(self):
+            super(Lr, self).__init__()
+            self.layer = nn.Linear(1,1)
+        def forward(self, x):
+            return self.layer(x)
+    model = Lr()
+    criterion = nn.MSELoss()
+    optimizer = optim.SGD(model.parameters(), lr=0.05)
+    for i in range(500):
+        out = model(x)
+        loss = criterion(y, out)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    list(model.parameters())
+    ```
+
+<!--list-separator-->
+
+-  激活函数
+
+    {{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png" >}}
+
+    神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导（这样的话通过神经网络线性函数的叠加仍然是一个线性函数），而是要经历一个非线性的“激活函数”，如 `relu` , `sigmoid`, `softsign` ，然后再进行传导。即针对 \\(X\\) 输入，神经元输出会是 \\(f(W^TX+b)\\) 。
+
+    我们可以在这里可视化地理解一下
+    <https://playground.tensorflow.org/>
+
+<!--list-separator-->
+
+-  一个尝试
+
+    这是我用两层神经网络的代码
+
+    ```python
+    from torch import nn
+    import torch
+
+    Ytrain_nn = pd.get_dummies(Ytrain)
+    encode = Ytrain_nn.columns
+    Ytrain_nn = torch.tensor(Ytrain_nn.values, dtype=torch.float32)
+    Xtrain_nn = torch.tensor(Xtrain.values, dtype=torch.float32)
+
+    hidden_layer = 40
+    net = nn.Sequential(
+        nn.Linear(Xtrain_nn.shape[1], hidden_layer),
+        nn.ReLU(),
+        nn.Linear(hidden_layer, len(encode)),
+        nn.Softmax(dim=1),
+    )
+    optimizer = torch.optim.SGD(net.parameters(), lr=0.1)
+    loss_func = torch.nn.MSELoss()
+
+    for t in range(5000):
+        prediction = net(Xtrain_nn)
+        loss = loss_func(Ytrain_nn, prediction)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    Xtest_nn = torch.tensor(Xtest.values, dtype=torch.float32)
+    prediction = pd.DataFrame(net(Xtest_nn).detach().numpy())
+    Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
+    result["bp neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+    result["bp neural network"]
+    ```
+
+    |           |   |                     |        |   |                     |    |   |                    |
+    |-----------|---|---------------------|--------|---|---------------------|----|---|--------------------|
+    | precision | : | 0.38003434009945386 | recall | : | 0.39901477832512317 | f1 | : | 0.3798648303017281 |
+
+
+#### CNN {#cnn}
+
+所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
+![](https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg)
+
+尽管有文献(<a href="#citeproc_bib_item_3">Mai et al. 2019</a>)用了 CNN ，但我绕不过弯如何将这种经典的计算机视觉算法应用到企业风险管理中，欢迎大家找我讨论。
+
+卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 `pytorch` 中常用 `Conv2d` 。而我们的数据则是一条条的，望文生义应该用 `Conv1d` （其实会用在自然语言处理中，但 RNN 应用更多）。
 
 ```python
-import torch
-x = torch.rand([500,1]) # X 是一个 tensor ，可以把他想象成 500x1 的向量
-y_true = 3*x+8
-learning_rate = 0.05 # learning rate 是每次梯度下降的“步长”
-w = torch.rand([1,1], requires_grad=True) # w 和 b 我们要 pytorch 自动求导
-b = torch.tensor(0, requires_grad=True, dtype=torch.float32)
-for i in range(500):
-    y_pred = torch.matmul(x,w)+b # 预测是多少
-    loss = (y_true-y_pred).pow(2).mean() # 损失
-    if w.grad is not None: # 把上一次的梯度清零
-        w.grad.data.zero_()
-    if b.grad is not None:
-        b.grad.data.zero_()
-    loss.backward() # 误差反向传播，得到 w 和 b 的梯度
-    w.data = w.data - w.grad*learning_rate # 梯度下降找到新的 w 和 b
-    b.data = b.data - b.grad*learning_rate
-    if i % 50 == 0:
-        print(w.item(), b.item(), loss.item())
-```
+output_channel = 40
 
-```text
-0.6645129323005676 0.9493619799613953 90.80377197265625
-3.8832550048828125 7.4981489181518555 0.06703712046146393
-3.6431102752685547 7.640604019165039 0.035211943089962006
-3.466404914855957 7.7393598556518555 0.01851997897028923
-3.3382508754730225 7.810976028442383 0.009740740992128849
-3.245309591293335 7.862914085388184 0.00512322224676609
-3.1779048442840576 7.9005818367004395 0.002694573951885104
-3.1290218830108643 7.927899360656738 0.001417228253558278
-3.0935699939727783 7.9477105140686035 0.0007453978178091347
-3.067859411239624 7.96207857131958 0.0003920439339708537
-```
 
-上述的代码在 pytorch 中对应的有：
+class CNN(nn.Module):
+    def __init__(self) -> None:
+        super(CNN, self).__init__()
+        self.conv = nn.Sequential(
+            nn.Conv1d(1, output_channel, 15), nn.Sigmoid(), nn.MaxPool1d(9)
+        )
+        self.fc = nn.Linear(output_channel, len(encode) + 1)
 
-| `for` 循环里面的模型 | `nn.Module` 封装好了许多模型 |
-|---------------|----------------------|
-| `loss` 的定义 | torch 中也有多种计算方式 |
-| `loss` 的计算 | 优化器 `nn.optim` 中提供了许多优化器 |
-
-通过 pytorch 我们可以写成
-
-```python
-import torch
-from torch import nn
-from torch import optim
-
-x = torch.rand([50,1])
-y = 3*x+8
-
-class Lr(nn.Module):
-    def __init__(self):
-        super(Lr, self).__init__()
-        self.layer = nn.Linear(1,1)
     def forward(self, x):
-        return self.layer(x)
-model = Lr()
-criterion = nn.MSELoss()
-optimizer = optim.SGD(model.parameters(), lr=0.05)
-for i in range(500):
-    out = model(x)
-    loss = criterion(y, out)
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-list(model.parameters())
-```
-
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png" >}}
-
-神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导，而是要经历一个非线性的“激活函数”，如 `relu` , `sigmoid`, `softsign` ，然后再进行传导。即针对 \\(X\\) 输入，神经元输出会是 \\(f(W^TX+b)\\) 。
-
-我们可以在这里可视化地理解一下
-<https://playground.tensorflow.org/>
-
-这是我用两层神经网络的代码
-
-```python
-from torch import nn
-import torch
-
-Ytrain_nn = pd.get_dummies(Ytrain)
-encode = Ytrain_nn.columns
-Ytrain_nn = torch.tensor(Ytrain_nn.values, dtype=torch.float32)
-Xtrain_nn = torch.tensor(Xtrain.values, dtype=torch.float32)
+        x = self.conv(x)
+        x = x.view(x.size(0), -1)
+        x = self.fc(x)
+        return x
 
 
-net = nn.Sequential(
-    nn.Linear(Xtrain_nn.shape[1], 20),
-    nn.LogSigmoid(),
-    nn.Linear(20, len(encode)),
-    nn.LogSigmoid(),
-    nn.Softmax(dim=1),
-)
-optimizer = torch.optim.SGD(net.parameters(), lr=0.1)
-loss_func = torch.nn.L1Loss()
-
+optimizer = torch.optim.Adam(net.parameters(), lr=0.1)
+loss_func = torch.nn.MSELoss()
 for t in range(5000):
     prediction = net(Xtrain_nn)
     loss = loss_func(Ytrain_nn, prediction)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-Xtest_nn = torch.tensor(Xtest.values, dtype=torch.float32)
 prediction = pd.DataFrame(net(Xtest_nn).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
-result["neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
-result["neural network"]
+result["cnn"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+result["cnn"]
 ```
 
-|           |   |                     |        |   |                     |    |   |                    |
-|-----------|---|---------------------|--------|---|---------------------|----|---|--------------------|
-| precision | : | 0.31600495046104604 | recall | : | 0.33497536945812806 | f1 | : | 0.2266499906009226 |
-
-
-#### CNN {#cnn}
-
-用卷积a核扫描，类似“锐化”。尽管有文献(<a href="#citeproc_bib_item_3">Mai et al. 2019</a>)用了 CNN ，但我绕不过弯如何将这种经典的计算机视觉算法应用到企业风险管理中，欢迎大家找我讨论。
-![](https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg)
-
-卷积神经网络先用卷积层扫描，然后利用“池化”的
-
-```python
-import torch
-from torch import nn
-import torchvision
-from torchvision import datasets, transforms
-import torch.nn.functional as F
-
-
-class Net(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.layer = nn.Sequential(
-            nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2),
-            nn.Conv2d(32, 64, 2),
-            nn.ReLU(),
-            nn.MaxPool2d(2, 2),
-            nn.Flatten(),
-            nn.Linear(64 * 6 * 6, 10),
-            nn.Softmax(),
-        )
-
-    def forward(self, x):
-        x = self.layer(x)
-        return x
-```
+|           |   |                     |        |   |                    |    |   |                    |
+|-----------|---|---------------------|--------|---|--------------------|----|---|--------------------|
+| precision | : | 0.22790121171274105 | recall | : | 0.3472906403940887 | f1 | : | 0.1961910343242354 |
 
 
 #### RNN &amp; GAN &amp; RL {#rnn-and-gan-and-rl}
@@ -498,10 +520,11 @@ class Net(nn.Module):
 |-------------------|---------------------|---------------------|---------------------|
 | logit             | 0.18550491761115834 | 0.24876847290640394 | 0.15916212879187308 |
 | decision tree     | 0.36776900542565055 | 0.4064039408866995  | 0.3624046923337102  |
-| random forest     | 0.4085806232022915  | 0.42857142857142855 | 0.38188437000444897 |
-| gradient boosting | 0.5120890067926741  | 0.5172413793103449  | 0.5021587259150085  |
+| random forest     | 0.3872333773612973  | 0.41625615763546797 | 0.3678206735514258  |
+| gradient boosting | 0.5125448578071228  | 0.5172413793103449  | 0.5022027579022398  |
 | svm               | 0.11083743842364532 | 0.33251231527093594 | 0.16625615763546797 |
-| neural network    | 0.31600495046104604 | 0.33497536945812806 | 0.2266499906009226  |
+| bp neural network | 0.38003434009945386 | 0.39901477832512317 | 0.3798648303017281  |
+| cnn               | 0.22790121171274105 | 0.3472906403940887  | 0.1961910343242354  |
 
 ```python
 import numpy as np
@@ -622,7 +645,7 @@ plt.legend(labels)
 plt.show()
 ```
 
-{{< figure src="/ox-hugo/79c597f11b9c4b4b5296f763c17bb7e31442b07c.png" >}}
+{{< figure src="/ox-hugo/75c61286a7c29cef5702db9114b3309a30cd0cde.png" >}}
 
 
 ## reference {#reference}
