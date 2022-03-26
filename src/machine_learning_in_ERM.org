@@ -366,7 +366,7 @@ result["cnn"]
 | gradient boosting |  0.5120890067926741 |  0.5172413793103449 |  0.5021587259150085 |
 | svm               | 0.11083743842364532 | 0.33251231527093594 | 0.16625615763546797 |
 | neural network    | 0.39702704300717645 | 0.35714285714285715 | 0.22700597081472818 |
-#+begin_src jupyter-python
+#+begin_src jupyter-python :exports none
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, RegularPolygon

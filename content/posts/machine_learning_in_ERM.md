@@ -243,7 +243,7 @@ result["random forest"]
 
 |           |   |                    |        |   |                     |    |   |                    |
 |-----------|---|--------------------|--------|---|---------------------|----|---|--------------------|
-| precision | : | 0.3872333773612973 | recall | : | 0.41625615763546797 | f1 | : | 0.3678206735514258 |
+| precision | : | 0.3934276135581304 | recall | : | 0.41625615763546797 | f1 | : | 0.3674241434988284 |
 
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
 
@@ -357,16 +357,16 @@ kmeans.predict([[0, 0], [12, 3]])
     ```
 
     ```text
-    0.6302720308303833 0.9378393292427063 88.58399963378906
-    3.73396635055542 7.61052131652832 0.04361069202423096
-    3.5403988361358643 7.720907211303711 0.02329474501311779
-    3.395594596862793 7.79570198059082 0.012483072467148304
-    3.289588689804077 7.850446701049805 0.006689354777336121
-    3.211989402770996 7.890522003173828 0.0035846647806465626
-    3.155183792114258 7.919858455657959 0.0019209327874705195
-    3.113600492477417 7.941333293914795 0.0010293929371982813
-    3.083160161972046 7.9570536613464355 0.0005516344681382179
-    3.06087589263916 7.96856164932251 0.000295607082080096
+    1.0784255266189575 0.9242197871208191 85.89563751220703
+    4.092112064361572 7.3918328285217285 0.10101281106472015
+    3.795759916305542 7.563060760498047 0.05322948843240738
+    3.577928066253662 7.682675361633301 0.028075775131583214
+    3.4197239875793457 7.769541263580322 0.01480852346867323
+    3.3048272132873535 7.832627773284912 0.0078107318840920925
+    3.2213828563690186 7.878444671630859 0.004119763150811195
+    3.160780191421509 7.911719799041748 0.0021729508880525827
+    3.1167666912078857 7.935886859893799 0.001146096852608025
+    3.0848028659820557 7.953437328338623 0.0006045129848644137
     ```
 
     上述的代码在 pytorch 中对应的有：
@@ -453,9 +453,9 @@ kmeans.predict([[0, 0], [12, 3]])
     result["bp neural network"]
     ```
 
-    |           |   |                     |        |   |                     |    |   |                    |
-    |-----------|---|---------------------|--------|---|---------------------|----|---|--------------------|
-    | precision | : | 0.38003434009945386 | recall | : | 0.39901477832512317 | f1 | : | 0.3798648303017281 |
+    |           |   |                    |        |   |                   |    |   |                    |
+    |-----------|---|--------------------|--------|---|-------------------|----|---|--------------------|
+    | precision | : | 0.3028236581989117 | recall | : | 0.312807881773399 | f1 | : | 0.2968028370723334 |
 
 
 #### CNN {#cnn}
@@ -502,7 +502,7 @@ result["cnn"]
 
 |           |   |                     |        |   |                    |    |   |                    |
 |-----------|---|---------------------|--------|---|--------------------|----|---|--------------------|
-| precision | : | 0.22790121171274105 | recall | : | 0.3472906403940887 | f1 | : | 0.1961910343242354 |
+| precision | : | 0.21973946019260848 | recall | : | 0.3374384236453202 | f1 | : | 0.2039035427519074 |
 
 
 #### RNN &amp; GAN &amp; RL {#rnn-and-gan-and-rl}
@@ -520,132 +520,11 @@ result["cnn"]
 |-------------------|---------------------|---------------------|---------------------|
 | logit             | 0.18550491761115834 | 0.24876847290640394 | 0.15916212879187308 |
 | decision tree     | 0.36776900542565055 | 0.4064039408866995  | 0.3624046923337102  |
-| random forest     | 0.3872333773612973  | 0.41625615763546797 | 0.3678206735514258  |
+| random forest     | 0.3934276135581304  | 0.41625615763546797 | 0.3674241434988284  |
 | gradient boosting | 0.5125448578071228  | 0.5172413793103449  | 0.5022027579022398  |
 | svm               | 0.11083743842364532 | 0.33251231527093594 | 0.16625615763546797 |
-| bp neural network | 0.38003434009945386 | 0.39901477832512317 | 0.3798648303017281  |
-| cnn               | 0.22790121171274105 | 0.3472906403940887  | 0.1961910343242354  |
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, RegularPolygon
-from matplotlib.path import Path
-from matplotlib.projections.polar import PolarAxes
-from matplotlib.projections import register_projection
-from matplotlib.spines import Spine
-from matplotlib.transforms import Affine2D
-
-
-def radar_factory(num_vars, frame='circle'):
-    """Create a radar chart with `num_vars` axes.
-
-    This function creates a RadarAxes projection and registers it.
-
-    Parameters
-    ----------
-    num_vars : int
-        Number of variables for radar chart.
-    frame : {'circle' | 'polygon'}
-        Shape of frame surrounding axes.
-
-    """
-    # calculate evenly-spaced axis angles
-    theta = np.linspace(0, 2*np.pi, num_vars, endpoint=False)
-
-    class RadarAxes(PolarAxes):
-
-        name = 'radar'
-
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            # rotate plot such that the first axis is at the top
-            self.set_theta_zero_location('N')
-
-        def fill(self, *args, closed=True, **kwargs):
-            """Override fill so that line is closed by default"""
-            return super().fill(closed=closed, *args, **kwargs)
-
-        def plot(self, *args, **kwargs):
-            """Override plot so that line is closed by default"""
-            lines = super().plot(*args, **kwargs)
-            for line in lines:
-                self._close_line(line)
-
-        def _close_line(self, line):
-            x, y = line.get_data()
-            if x[0] != x[-1]:
-                x = np.concatenate((x, [x[0]]))
-                y = np.concatenate((y, [y[0]]))
-                line.set_data(x, y)
-
-        def set_varlabels(self, labels):
-            self.set_thetagrids(np.degrees(theta), labels)
-
-        def _gen_axes_patch(self):
-            # The Axes patch must be centered at (0.5, 0.5) and of radius 0.5
-            # in axes coordinates.
-            if frame == 'circle':
-                return Circle((0.5, 0.5), 0.5)
-            elif frame == 'polygon':
-                return RegularPolygon((0.5, 0.5), num_vars,
-                                      radius=.5, edgecolor="k")
-            else:
-                raise ValueError("unknown value for 'frame': %s" % frame)
-
-        def draw(self, renderer):
-            """ Draw. If frame is polygon, make gridlines polygon-shaped """
-            if frame == 'polygon':
-                gridlines = self.yaxis.get_gridlines()
-                for gl in gridlines:
-                    gl.get_path()._interpolation_steps = num_vars
-            super().draw(renderer)
-
-
-        def _gen_axes_spines(self):
-            if frame == 'circle':
-                return super()._gen_axes_spines()
-            elif frame == 'polygon':
-                # spine_type must be 'left'/'right'/'top'/'bottom'/'circle'.
-                spine = Spine(axes=self,
-                              spine_type='circle',
-                              path=Path.unit_regular_polygon(num_vars))
-                # unit_regular_polygon gives a polygon of radius 1 centered at
-                # (0, 0) but we want a polygon of radius 0.5 centered at (0.5,
-                # 0.5) in axes coordinates.
-                spine.set_transform(Affine2D().scale(.5).translate(.5, .5)
-                                    + self.transAxes)
-
-
-                return {'polar': spine}
-            else:
-                raise ValueError("unknown value for 'frame': %s" % frame)
-
-    register_projection(RadarAxes)
-    return theta
-
-
-spoke_labels = ["precision", "recall", "f1"]
-results = result.items()
-labels = [i[0] for i in results]
-N = len(spoke_labels)
-theta = radar_factory(N, frame="circle")
-case_data = [[j[1][i]  for i in spoke_labels]for j in results]
-
-fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(projection="radar"))
-fig.subplots_adjust(top=0.85, bottom=0.05)
-
-ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
-
-for d in case_data:
-    line = ax.plot(theta, d)
-    ax.fill(theta, d, alpha=0.1)
-ax.set_varlabels(spoke_labels)
-plt.legend(labels)
-plt.show()
-```
-
-{{< figure src="/ox-hugo/75c61286a7c29cef5702db9114b3309a30cd0cde.png" >}}
+| bp neural network | 0.3028236581989117  | 0.312807881773399   | 0.2968028370723334  |
+| cnn               | 0.21973946019260848 | 0.3374384236453202  | 0.2039035427519074  |
 
 
 ## reference {#reference}
