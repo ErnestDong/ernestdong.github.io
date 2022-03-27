@@ -67,27 +67,10 @@ sns.set(style="white", context="paper", font="VictorMono Nerd Font Mono")
 df["Rating"].value_counts().plot(kind="bar")
 #+end_src
 
-#+RESULTS:
-:RESULTS:
-: <AxesSubplot:>
-[[file:./.ob-jupyter/3d35918888125caf7bec2a135968b47e5e1dc2e2.png]]
-:END:
-
 让我们处理一下数据
 #+begin_src jupyter-python
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, recall_score, precision_score
-
-
-def get_score(Xtest, Ytrue, model):
-    Ypred = model(Xtest)
-    average = "weighted"
-    return {
-        "precision": precision_score(Ytrue, Ypred, average=average, zero_division=0),
-        "recall": recall_score(Ytrue, Ypred, average=average),
-        "f1": f1_score(Ytrue, Ypred, average=average),
-    }
-
 
 Y = df["Rating"]
 Y = Y.replace({"CCC": "C", "CC": "C"})
@@ -110,22 +93,34 @@ X.columns
 鉴于评级有七个，完完全全的准确率可能没有那么高，我们做一个随机的测试，作为基准。
 
 #+begin_src jupyter-python :kernel python3 :session main :exports both
+from scipy.stats import pearsonr
+def get_score(Xtest, Ytrue, model):
+    Ypred = model(Xtest)
+    average = "weighted"
+    rating_map = {i: ord(i[0]) * 100 - len(i) for i in Y.unique()}
+    return {
+        "precision": precision_score(Ytrue, Ypred, average=average, zero_division=0),
+        "recall": recall_score(Ytrue, Ypred, average=average),
+        "f1": f1_score(Ytrue, Ypred, average=average),
+        "\(R^2\)": pearsonr([rating_map[i] for i in Ypred], [rating_map[i] for i in Ytest])[0]
+    }
+
+
 import random
+
 ratings = Y.unique()
 tmp = {}
-for i in range(1000):
+monte_num = 100
+for i in range(100):
     Ypredict = Xtest.index.map(lambda x: random.choice(ratings))
-    monte =  get_score(Xtest, Ytest, lambda _: Ypredict)
+    monte = get_score(Xtest, Ytest, lambda _: Ypredict)
     for j in monte:
         if j not in tmp:
             tmp[j] = 0
         tmp[j] += monte[j]
-result["random"] = {i: tmp[i]/1000 for i in tmp}
+result["random"] = {i: tmp[i] / 100 for i in tmp}
 result["random"]
 #+end_src
-
-#+RESULTS:
-| precision | : | 0.22821333975270203 | recall | : | 0.12526354679803015 | f1 | : | 0.15241017227947495 |
 
 ** 线性回归与决策树
 我们先看一些简单直接的例子。
@@ -397,21 +392,17 @@ result["CNN"]
 
 ** 对比
 #+begin_src jupyter-python :exports results
-[["model", "precision", "recall", "f1"]]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
+feature = ["precision", "recall", "f1", "\(R^2\)"]
+[feature]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
 #+end_src
 
 #+RESULTS:
-| model             | precision | recall |     f1 |
-| random            |    0.2269 | 0.1246 | 0.1516 |
-| logit             |    0.1842 | 0.2463 |  0.158 |
-| decision tree     |    0.3678 | 0.4064 | 0.3624 |
-| random forest     |    0.3895 | 0.4089 | 0.3509 |
-| gradient boosting |    0.5125 | 0.5172 | 0.5022 |
-| svm               |    0.3872 | 0.3941 | 0.3311 |
-| bp neural network |    0.2527 |  0.335 | 0.2415 |
-| CNN               |    0.4399 | 0.4754 | 0.4509 |
+| model             | precision | recall |     f1 | \(R^2\) |
+| random            |    0.2275 | 0.1251 | 0.1521 | -0.0012 |
+| bp neural network |     0.299 | 0.3547 | 0.2716 | -0.0612 |
+| CNN               |    0.3944 | 0.4261 | 0.4039 |  0.3987 |
 #+begin_src jupyter-python
-feature = ["precision", "recall", "f1"]
+import numpy as np
 
 N = len(feature)
 angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
@@ -428,8 +419,6 @@ plt.legend(bbox_to_anchor=(1.2, 0), ncol=3)
 plt.show()
 #+end_src
 
-#+RESULTS:
-[[file:./.ob-jupyter/b60b575975c925c99be0e79b9f8d3c52c5d63828.png]]
 
 
 * reference
