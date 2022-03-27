@@ -393,14 +393,19 @@ result["CNN"]
 ** 对比
 #+begin_src jupyter-python :exports results
 feature = ["precision", "recall", "f1", "\(R^2\)"]
-[feature]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
+[["model"]+feature]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
 #+end_src
 
 #+RESULTS:
 | model             | precision | recall |     f1 | \(R^2\) |
-| random            |    0.2275 | 0.1251 | 0.1521 | -0.0012 |
-| bp neural network |     0.299 | 0.3547 | 0.2716 | -0.0612 |
-| CNN               |    0.3944 | 0.4261 | 0.4039 |  0.3987 |
+| random            |    0.2305 | 0.1256 | 0.1533 |  0.0097 |
+| logit             |    0.1968 | 0.2537 | 0.1616 | -0.0162 |
+| decision tree     |    0.3678 | 0.4064 | 0.3624 |  0.4867 |
+| random forest     |    0.3738 | 0.4089 | 0.3553 |  0.3152 |
+| gradient boosting |    0.5121 | 0.5172 | 0.5022 |  0.5267 |
+| svm               |    0.3872 | 0.3941 | 0.3311 |  0.3348 |
+| bp neural network |    0.2654 |  0.303 | 0.2604 | -0.0509 |
+| CNN               |    0.4083 | 0.4483 | 0.4194 |  0.4408 |
 #+begin_src jupyter-python
 import numpy as np
 
