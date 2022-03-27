@@ -61,8 +61,17 @@ df.info()
 
 评级分布如下图。我们可以看到评级 CC, C, D 的企业数量较少。三大评级公司所谓的“D”是违约“Default”，因此我们保留下来 D 级，而合并 =CCC= =CC= =C= 。一方面是由于 CCC 以下数量少，另一方面是由于大多数“评级下调加速到期”条款限定在了降至 CCC 的垃圾级。类似的，由于 AAA 企业数量很少都是非常优质的企业（ +不像目前国内评级新发债一半为 AAA+ ），而 AA 和 A 数量都不小，我们仍然单独把他们拿出来。
 #+begin_src jupyter-python :kernel python3 :session main :exports both
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set(style="white", context="paper", font="VictorMono Nerd Font Mono")
 df["Rating"].value_counts().plot(kind="bar")
 #+end_src
+
+#+RESULTS:
+:RESULTS:
+: <AxesSubplot:>
+[[file:./.ob-jupyter/3d35918888125caf7bec2a135968b47e5e1dc2e2.png]]
+:END:
 
 让我们处理一下数据
 #+begin_src jupyter-python
@@ -388,135 +397,40 @@ result["CNN"]
 
 ** 对比
 #+begin_src jupyter-python :exports results
-[["model", "precision", "recall", "f1"]]+list([i[0]]+ list(i[1].values()) for i in result.items())
+[["model", "precision", "recall", "f1"]]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
 #+end_src
 
 #+RESULTS:
-| model             |           precision |              recall |                  f1 |
-| logit             | 0.18550491761115834 | 0.24876847290640394 | 0.15916212879187308 |
-| decision tree     | 0.36776900542565055 |  0.4064039408866995 |  0.3624046923337102 |
-| random forest     |  0.3995654779172242 |  0.4211822660098522 |  0.3751941036092139 |
-| gradient boosting |  0.5120890067926741 |  0.5172413793103449 |  0.5021587259150085 |
-| svm               | 0.11083743842364532 | 0.33251231527093594 | 0.16625615763546797 |
-| neural network    | 0.39702704300717645 | 0.35714285714285715 | 0.22700597081472818 |
-#+begin_src jupyter-python :exports none
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, RegularPolygon
-from matplotlib.path import Path
-from matplotlib.projections.polar import PolarAxes
-from matplotlib.projections import register_projection
-from matplotlib.spines import Spine
-from matplotlib.transforms import Affine2D
+| model             | precision | recall |     f1 |
+| random            |    0.2269 | 0.1246 | 0.1516 |
+| logit             |    0.1842 | 0.2463 |  0.158 |
+| decision tree     |    0.3678 | 0.4064 | 0.3624 |
+| random forest     |    0.3895 | 0.4089 | 0.3509 |
+| gradient boosting |    0.5125 | 0.5172 | 0.5022 |
+| svm               |    0.3872 | 0.3941 | 0.3311 |
+| bp neural network |    0.2527 |  0.335 | 0.2415 |
+| CNN               |    0.4399 | 0.4754 | 0.4509 |
+#+begin_src jupyter-python
+feature = ["precision", "recall", "f1"]
 
-
-def radar_factory(num_vars, frame='circle'):
-    """Create a radar chart with `num_vars` axes.
-
-    This function creates a RadarAxes projection and registers it.
-
-    Parameters
-    ----------
-    num_vars : int
-        Number of variables for radar chart.
-    frame : {'circle' | 'polygon'}
-        Shape of frame surrounding axes.
-
-    """
-    # calculate evenly-spaced axis angles
-    theta = np.linspace(0, 2*np.pi, num_vars, endpoint=False)
-
-    class RadarAxes(PolarAxes):
-
-        name = 'radar'
-
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            # rotate plot such that the first axis is at the top
-            self.set_theta_zero_location('N')
-
-        def fill(self, *args, closed=True, **kwargs):
-            """Override fill so that line is closed by default"""
-            return super().fill(closed=closed, *args, **kwargs)
-
-        def plot(self, *args, **kwargs):
-            """Override plot so that line is closed by default"""
-            lines = super().plot(*args, **kwargs)
-            for line in lines:
-                self._close_line(line)
-
-        def _close_line(self, line):
-            x, y = line.get_data()
-            if x[0] != x[-1]:
-                x = np.concatenate((x, [x[0]]))
-                y = np.concatenate((y, [y[0]]))
-                line.set_data(x, y)
-
-        def set_varlabels(self, labels):
-            self.set_thetagrids(np.degrees(theta), labels)
-
-        def _gen_axes_patch(self):
-            # The Axes patch must be centered at (0.5, 0.5) and of radius 0.5
-            # in axes coordinates.
-            if frame == 'circle':
-                return Circle((0.5, 0.5), 0.5)
-            elif frame == 'polygon':
-                return RegularPolygon((0.5, 0.5), num_vars,
-                                      radius=.5, edgecolor="k")
-            else:
-                raise ValueError("unknown value for 'frame': %s" % frame)
-
-        def draw(self, renderer):
-            """ Draw. If frame is polygon, make gridlines polygon-shaped """
-            if frame == 'polygon':
-                gridlines = self.yaxis.get_gridlines()
-                for gl in gridlines:
-                    gl.get_path()._interpolation_steps = num_vars
-            super().draw(renderer)
-
-
-        def _gen_axes_spines(self):
-            if frame == 'circle':
-                return super()._gen_axes_spines()
-            elif frame == 'polygon':
-                # spine_type must be 'left'/'right'/'top'/'bottom'/'circle'.
-                spine = Spine(axes=self,
-                              spine_type='circle',
-                              path=Path.unit_regular_polygon(num_vars))
-                # unit_regular_polygon gives a polygon of radius 1 centered at
-                # (0, 0) but we want a polygon of radius 0.5 centered at (0.5,
-                # 0.5) in axes coordinates.
-                spine.set_transform(Affine2D().scale(.5).translate(.5, .5)
-                                    + self.transAxes)
-
-
-                return {'polar': spine}
-            else:
-                raise ValueError("unknown value for 'frame': %s" % frame)
-
-    register_projection(RadarAxes)
-    return theta
-
-
-spoke_labels = ["precision", "recall", "f1"]
-results = result.items()
-labels = [i[0] for i in results]
-N = len(spoke_labels)
-theta = radar_factory(N, frame="circle")
-case_data = [[j[1][i]  for i in spoke_labels]for j in results]
-
-fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(projection="radar"))
-fig.subplots_adjust(top=0.85, bottom=0.05)
-
-ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
-
-for d in case_data:
-    line = ax.plot(theta, d)
-    ax.fill(theta, d, alpha=0.1)
-ax.set_varlabels(spoke_labels)
-plt.legend(labels)
+N = len(feature)
+angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
+angles = np.concatenate((angles, [angles[0]]))
+fig = plt.figure()
+ax = fig.add_subplot(111, polar=True)
+for model in result:
+    values = [i for i in result[model].values()] + [result[model]["precision"]]
+    ax.plot(angles, values, label=model)
+    ax.fill(angles, values, alpha=0.1)
+ax.set_thetagrids(angles[:-1] * 180 / np.pi, feature)
+ax.grid(True)
+plt.legend(bbox_to_anchor=(1.2, 0), ncol=3)
 plt.show()
 #+end_src
+
+#+RESULTS:
+[[file:./.ob-jupyter/b60b575975c925c99be0e79b9f8d3c52c5d63828.png]]
+
 
 * reference
 #+print_bibliography:
