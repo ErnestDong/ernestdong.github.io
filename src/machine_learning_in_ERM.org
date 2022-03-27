@@ -97,6 +97,27 @@ X.columns
 |          | True | False |
 | Positive | TP   | FP    |
 | Negative | TN   | FN    |
+
+鉴于评级有七个，完完全全的准确率可能没有那么高，我们做一个随机的测试，作为基准。
+
+#+begin_src jupyter-python :kernel python3 :session main :exports both
+import random
+ratings = Y.unique()
+tmp = {}
+for i in range(1000):
+    Ypredict = Xtest.index.map(lambda x: random.choice(ratings))
+    monte =  get_score(Xtest, Ytest, lambda _: Ypredict)
+    for j in monte:
+        if j not in tmp:
+            tmp[j] = 0
+        tmp[j] += monte[j]
+result["random"] = {i: tmp[i]/1000 for i in tmp}
+result["random"]
+#+end_src
+
+#+RESULTS:
+| precision | : | 0.22821333975270203 | recall | : | 0.12526354679803015 | f1 | : | 0.15241017227947495 |
+
 ** 线性回归与决策树
 我们先看一些简单直接的例子。
 
@@ -172,11 +193,14 @@ Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在�
 #+begin_src jupyter-python
 from sklearn.svm import SVC
 
-svm = SVC(kernel="rbf")
+svm = SVC(kernel="rbf", gamma="auto")
 svm.fit(Xtrain, Ytrain)
 result["svm"] = get_score(Xtest, Ytest, svm.predict)
 result["svm"]
 #+end_src
+
+#+RESULTS:
+| precision | : | 0.3871822535819534 | recall | : | 0.39408866995073893 | f1 | : | 0.3310900991255093 |
 
 ** K means
 #+begin_quote
@@ -207,6 +231,8 @@ kmeans.predict([[0, 0], [12, 3]])
 
 *** BP 神经网络
 是深度学习的入门算法，所谓 BP 是误差反向传播 Backpropagation，刺激正向传播后通过最小化误差反向传播更新权值（最小化的方式是“梯度下降”）。它的信息处理能力来源于简单非线性函数的多次复合。
+
+样本还是太少，训练结果不佳。
 **** 梯度下降与反向传播
 
 我们用最小二乘法来理解“梯度下降”和“反向传播”
@@ -289,10 +315,10 @@ net = nn.Sequential(
     nn.Linear(hidden_layer, len(encode)),
     nn.Softmax(dim=1),
 )
-optimizer = torch.optim.SGD(net.parameters(), lr=0.1)
+optimizer = torch.optim.SGD(net.parameters(), lr=0.001)
 loss_func = torch.nn.MSELoss()
 
-for t in range(5000):
+for t in range(10000):
     prediction = net(Xtrain_nn)
     loss = loss_func(Ytrain_nn, prediction)
     optimizer.zero_grad()
@@ -309,40 +335,47 @@ result["bp neural network"]
 所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 [[https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg]]
 
-尽管有文献[cite:@mai2019deep]用了 CNN ，但我绕不过弯如何将这种经典的计算机视觉算法应用到企业风险管理中，欢迎大家找我讨论。
-
 卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 =pytorch= 中常用 =Conv2d= 。而我们的数据则是一条条的，望文生义应该用 =Conv1d= （其实会用在自然语言处理中，但 RNN 应用更多）。
+
+从这里开始利用 CPU 训练比较慢，有 NVIDIA GPU 的同学可以尝试在 GPU 上训练
 #+begin_src jupyter-python
-output_channel = 40
-
-
 class CNN(nn.Module):
     def __init__(self) -> None:
         super(CNN, self).__init__()
         self.conv = nn.Sequential(
-            nn.Conv1d(1, output_channel, 15), nn.Sigmoid(), nn.MaxPool1d(9)
+            nn.Conv1d(Xtrain_nn.shape[1], 20, 3, padding=3),
+            nn.Tanh(),
+            nn.AvgPool1d(2),
         )
-        self.fc = nn.Linear(output_channel, len(encode) + 1)
+        self.fc = nn.Sequential(
+            nn.Linear(40, len(encode)),
+            nn.ReLU(),
+            nn.Softmax(dim=1),
+        )
 
     def forward(self, x):
-        x = self.conv(x)
-        x = x.view(x.size(0), -1)
-        x = self.fc(x)
-        return x
+        out = self.conv(x)
+        out = out.view(out.size(0), -1)
+        out = self.fc(out)
+        return out
 
 
-optimizer = torch.optim.Adam(net.parameters(), lr=0.1)
-loss_func = torch.nn.MSELoss()
-for t in range(5000):
-    prediction = net(Xtrain_nn)
+Xtrain_cnn = Xtrain_nn.unsqueeze(2)
+Xtest_cnn = Xtest_nn.unsqueeze(2)
+net = CNN()
+optimizer = torch.optim.Adamax(net.parameters())
+loss_func = torch.nn.L1Loss()
+for t in range(10000):
+    prediction = net(Xtrain_cnn)
     loss = loss_func(Ytrain_nn, prediction)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-prediction = pd.DataFrame(net(Xtest_nn).detach().numpy())
+prediction = pd.DataFrame(net(Xtest_cnn).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
-result["cnn"] = get_score(Xtest, Ytest, lambda _: Ypredict)
-result["cnn"]
+result["CNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+result["CNN"]
+
 #+end_src
 
 *** RNN & GAN & RL
