@@ -230,7 +230,7 @@
 </figure>
 
 <p>机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, vc-git-region-history-font-lock-keywords, scikit-learn），几行代码就可以实现一个模型， <del>之后便是漫无止境地调参</del> 。</p>
-<p>本文主要参考了Pedregosa et al. (<a href="#citeproc_bib_item_4">2011</a>)的文档，在编码过程中阅读文档是有帮助的。</p>
+<p>本文主要参考了 Pedregosa et al. (<a href="#citeproc_bib_item_4">2011</a>)的文档，在编码过程中阅读文档是有帮助的。</p>
 <h2 id="机器学习在企业风险管理中的应用">机器学习在企业风险管理中的应用</h2>
 <p>Mai et al. (<a href="#citeproc_bib_item_3">2019</a>) 利用 CNN 预测企业破产，在处理文本数据时利用 word embedding 量化，AUC 曲线如图
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0377221718308774-gr5.jpg" alt=""></p>
@@ -650,7 +650,7 @@
 </table>
 <p>决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
-该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
+该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有 2 信息熵/基尼系数等。
 这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">这里</a>。</p>
 <p>决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -709,7 +709,7 @@
 <p>ensemble learning 是单个模型并不能很完美的解决某个分类或者回归问题（弱监督模型，在某些方面表现较好）的时候，那么就训练出多个弱监督模型，每个模型可能是相同的也可以是不同的，然后预测的时候将数据分别输入每个模型，最后将每个模型的输出综合起来作为该未知数据的输出即便某一个弱分类器得到了错误的预测，其他的弱分类器也可以将错误纠正回来。简而言之，采样-学习-组合。</p>
 <p>如何训练和输出呢？</p>
 <h4 id="bagging">bagging</h4>
-<p>Bagging是bootstrap aggregating的简写。在 bagging 方法中，从整体数据集中采取有放回抽样得到N个数据集，在每个数据集上学习出一个模型。</p>
+<p>Bagging 是 bootstrap aggregating 的简写。在 bagging 方法中，从整体数据集中采取有放回抽样得到 N 个数据集，在每个数据集上学习出一个模型。</p>
 <p>随机森林就是采用了 bagging 的方式训练了许多棵决策树，是为“森林”。在输出时，每一棵树都将其结果“投票”，哪个类别多，输入样本就属于哪个类别。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -763,7 +763,7 @@
 </tr>
 </tbody>
 </table>
-<p>Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。</p>
+<p>Bagging 主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。</p>
 <figure><img src="https://tfugcs.andfun.cn/original/2X/7/74f5a02b7692010da60a746d5469471c68b2ff3c.gif"
          alt="Figure 2: random forest"/><figcaption>
             <p><span class="figure-number">Figure 2: </span>random forest</p>
@@ -771,7 +771,7 @@
 </figure>
 
 <h4 id="boosting">boosting</h4>
-<p><a href="#bagging">bagging</a> 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
+<p><a href="#bagging">bagging</a> 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有 AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
 调参时可以树的深度很少就能达到很高的精度。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -892,11 +892,11 @@
 <blockquote>
 <p>有四个牧师去郊区布道，一开始牧师们随意选了几个布道点，并且把这几个布道点的情况公告给了郊区所有的村民，于是每个村民到离自己家最近的布道点去听课。</p>
 <p>听课之后，大家觉得距离太远了，于是每个牧师统计了一下自己的课上所有的村民的地址，搬到了所有地址的中心地带，并且在海报上更新了自己的布道点的位置。</p>
-<p>牧师每一次移动不可能离所有人都更近，有的人发现A牧师移动以后自己还不如去B牧师处听课更近，于是每个村民又去了离自己最近的布道点……</p>
+<p>牧师每一次移动不可能离所有人都更近，有的人发现 A 牧师移动以后自己还不如去 B 牧师处听课更近，于是每个村民又去了离自己最近的布道点……</p>
 <p>就这样，牧师每个礼拜更新自己的位置，村民根据自己的情况选择布道点，最终稳定了下来。</p>
 </blockquote>
 <p>之前提到的算法都需要对数据进行一定的标注，标好某些数据属于某个分类，也就是常说的“监督学习”。K-means 是一种无监督学习，我们不需要声明训练中的哪些数据是哪个分类。</p>
-<p>K-means 的方法是，选择初始化的 k 个样本作为初始聚类中心 \(a_i\)  ，针对数据集中每个样本 \(x_i\)
+<p>K-means 的方法是，选择初始化的 k 个样本作为初始聚类中心 \(a_i\) ，针对数据集中每个样本 \(x_i\)
 计算它到 k 个聚类中心的距离，并将其分到距离最小的聚类中心所对应的类中；重新计算每个类别的质心作为聚类中心 \(a_i\) ，再重复上面的过程，直至聚类中心“稳定”下来。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1315,11 +1315,11 @@
 <table>
 <thead>
 <tr>
+<th>model</th>
 <th>precision</th>
 <th>recall</th>
 <th>f1</th>
 <th>\(R^2\)</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
