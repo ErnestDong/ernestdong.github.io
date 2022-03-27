@@ -1,4 +1,4 @@
-#+TITLE: machine_learning_in_ERM
+#+TITLE: 机器学习在企业风险管理中的应用举例
 #+filetags: :python:
 #+HUGO_BASE_DIR: ../
 #+HUGO_SECTION: posts
