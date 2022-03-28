@@ -79,7 +79,7 @@ dummies = ["Rating Agency Name", "Sector", "Date"]
 X = df[[i for i in df.columns if df[i].dtype != "object"]]
 for dummy in dummies:
     X = pd.concat([X, pd.get_dummies(df[dummy], drop_first=True, prefix=dummy)], axis=1)
-Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.2, random_state=42)
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.3, random_state=42)
 result = {}
 X.columns
 #+end_src
@@ -206,6 +206,19 @@ result["svm"]
 #+RESULTS:
 | precision | : | 0.3871822535819534 | recall | : | 0.39408866995073893 | f1 | : | 0.3310900991255093 |
 
+** KNN
+这里的 NN 不是后文的 [[CNN]] 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居
+
+#+begin_src jupyter-python
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+KNN = KNeighborsClassifier(n_neighbors=3)
+KNN.fit(Xtrain, Ytrain)
+result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
+result["KNN"]
+#+end_src
+
 ** K means
 #+begin_quote
 有四个牧师去郊区布道，一开始牧师们随意选了几个布道点，并且把这几个布道点的情况公告给了郊区所有的村民，于是每个村民到离自己家最近的布道点去听课。
@@ -232,11 +245,9 @@ kmeans.predict([[0, 0], [12, 3]])
 
 ** 深度学习/神经网络
 深度学习以神经网络为基础。神经网络是一种模仿生物神经系统结构和功能的数学模型，对函数进行估计和近似。
+*** 多层感知机
+是深度学习的入门算法，误差反向传播 Backpropagation，刺激正向传播后通过梯度下降的方式最小化误差反向传播更新权值（最小化的方式是“梯度下降”）。它的信息处理能力来源于简单非线性函数的多次复合。
 
-*** BP 神经网络
-是深度学习的入门算法，所谓 BP 是误差反向传播 Backpropagation，刺激正向传播后通过最小化误差反向传播更新权值（最小化的方式是“梯度下降”）。它的信息处理能力来源于简单非线性函数的多次复合。
-
-样本还是太少，训练结果不佳。
 **** 梯度下降与反向传播
 
 我们用最小二乘法来理解“梯度下降”和“反向传播”
@@ -339,6 +350,8 @@ result["bp neural network"]
 所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 [[https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg]]
 
+[[https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF][卷积]]有其数学定义 \(f*g)(n) = \int_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\)，简单地理解就是两个函数 =f= 和 =g= ，先对g函数进行翻转，相当于在数轴上把 =g= 函数从右边“卷”到左边去。然后再把 =g= 函数平移到 =n= ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。
+
 卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 =pytorch= 中常用 =Conv2d= 。而我们的数据则是一条条的，望文生义应该用 =Conv1d= （其实会用在自然语言处理中，但 RNN 应用更多）。
 
 从这里开始利用 CPU 训练比较慢，有 NVIDIA GPU 的同学可以尝试在 GPU 上训练
@@ -362,28 +375,73 @@ class CNN(nn.Module):
         out = out.view(out.size(0), -1)
         out = self.fc(out)
         return out
-
-
 Xtrain_cnn = Xtrain_nn.unsqueeze(2)
 Xtest_cnn = Xtest_nn.unsqueeze(2)
 net = CNN()
 optimizer = torch.optim.Adamax(net.parameters())
 loss_func = torch.nn.L1Loss()
-for t in range(10000):
+epochnum = 10000
+for epoch in range(epochnum):
     prediction = net(Xtrain_cnn)
     loss = loss_func(Ytrain_nn, prediction)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
+    if epoch % (epochnum / 10) == 0:
+        print("epoch:", epoch, "loss:", loss.item())
 prediction = pd.DataFrame(net(Xtest_cnn).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["CNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["CNN"]
-
 #+end_src
 
-*** RNN & GAN & RL
-+ 循环神经网络：常用在 NLP 中
+增加网络层数可能会导致梯度离散和梯度爆炸的情况，反而效果不好。残差网络 ResNet 利用在网络间加入 shortcut ，使更深层次的训练结果至少不差于更浅层次（如果更差就直接走 shortcut ）
+*** RNN
+[[https://pic1.zhimg.com/80/v2-ea6d9bcb018d897518a8f076e7f9fdcc_1440w.jpg]]
+循环神经网络：常用在 NLP 中并大放异彩，也会应用在股价等时间序列中。他会短期地“记住”参数，就如同我说这句话的时候你短期地记住了上一句话，会更新“自我”而非直接向前传递，在该层中“循环”。即对于隐藏层而言，\(h_t = f_w(h_{t-1}, x_t)\) 。随着输入的更新，有一个短暂的 memory ，记住刚刚的参数。
+#+begin_src jupyter-python
+class RNN(nn.Module):
+    def __init__(self) -> None:
+        super(RNN, self).__init__()
+        self.rnn = nn.RNN(
+            input_size=Xtrain.shape[1],
+            hidden_size=32,
+            num_layers=1,
+            batch_first=True,
+        )
+        self.fc = nn.Sequential(nn.Linear(32, len(encode)), nn.Softmax(dim=1))
+
+    def forward(self, x):
+        out, h = self.rnn(x)
+        out = self.fc(out)
+        return out, h
+
+
+net = RNN()
+optimizer = torch.optim.Adam(net.parameters())
+loss_func = nn.MSELoss()
+h_state = None
+epochnum = 3000
+for epoch in range(epochnum):
+    out, h_state = net(Xtrain_nn)
+    loss = loss_func(out, Ytrain_nn)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    if epoch % (epochnum / 10) == 0:
+        print("epoch:", epoch, "loss:", loss.item())
+
+prediction = pd.DataFrame(net(Xtest_nn)[0].detach().numpy())
+Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
+result["RNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
+result["RNN"]
+#+end_src
+
+但是 RNN 的的梯度非常容易“爆炸”（特别大）或“离散”（特别小以致于不更新），预测可能会出错。
+针对此，LSTM （Long Short Term Memory）模型设计了三个“门”：输入门 =i= ，遗忘门 =f= ，输出门 =o= ，有一篇非常好的[[https://colah.github.io/posts/2015-08-Understanding-LSTMs/][blog]]详细描述了这些门是如何工作的，简而言之他加入了长期记忆的部分。
+
+*** GAN & RL
+
 + 生成对抗网络：随机取样作为输入，其输出结果需要尽量模仿训练集中的真实样本，使判别网络无法判断生成网络的输出结果是否真实
 + 强化学习：博弈论……
 #+begin_quote
@@ -423,7 +481,6 @@ ax.grid(True)
 plt.legend(bbox_to_anchor=(1.2, 0), ncol=3)
 plt.show()
 #+end_src
-
 
 
 * reference
