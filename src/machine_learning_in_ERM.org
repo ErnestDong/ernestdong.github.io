@@ -79,7 +79,7 @@ dummies = ["Rating Agency Name", "Sector", "Date"]
 X = df[[i for i in df.columns if df[i].dtype != "object"]]
 for dummy in dummies:
     X = pd.concat([X, pd.get_dummies(df[dummy], drop_first=True, prefix=dummy)], axis=1)
-Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.3, random_state=42)
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=42)
 result = {}
 X.columns
 #+end_src
@@ -317,7 +317,7 @@ https://playground.tensorflow.org/
 #+begin_src jupyter-python
 from torch import nn
 import torch
-
+torch.manual_seed(42)
 Ytrain_nn = pd.get_dummies(Ytrain)
 encode = Ytrain_nn.columns
 Ytrain_nn = torch.tensor(Ytrain_nn.values, dtype=torch.float32)
@@ -345,6 +345,7 @@ Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["bp neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["bp neural network"]
 #+end_src
+
 
 *** CNN
 所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
@@ -454,19 +455,9 @@ feature = ["precision", "recall", "f1", "\(R^2\)"]
 [["model"]+feature]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
 #+end_src
 
-#+RESULTS:
-| model             | precision | recall |     f1 | \(R^2\) |
-| random            |    0.2305 | 0.1256 | 0.1533 |  0.0097 |
-| logit             |    0.1968 | 0.2537 | 0.1616 | -0.0162 |
-| decision tree     |    0.3678 | 0.4064 | 0.3624 |  0.4867 |
-| random forest     |    0.3738 | 0.4089 | 0.3553 |  0.3152 |
-| gradient boosting |    0.5121 | 0.5172 | 0.5022 |  0.5267 |
-| svm               |    0.3872 | 0.3941 | 0.3311 |  0.3348 |
-| bp neural network |    0.2654 |  0.303 | 0.2604 | -0.0509 |
-| CNN               |    0.4083 | 0.4483 | 0.4194 |  0.4408 |
 #+begin_src jupyter-python
 import numpy as np
-
+np.random.seed(42)
 N = len(feature)
 angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
 angles = np.concatenate((angles, [angles[0]]))
