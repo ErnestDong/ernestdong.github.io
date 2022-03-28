@@ -416,7 +416,7 @@
 </span></span><span style="display:flex;"><span>X <span style="color:#ff79c6">=</span> df[[i <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> df<span style="color:#ff79c6">.</span>columns <span style="color:#ff79c6">if</span> df[i]<span style="color:#ff79c6">.</span>dtype <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#34;object&#34;</span>]]
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> dummy <span style="color:#ff79c6">in</span> dummies:
 </span></span><span style="display:flex;"><span>    X <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>concat([X, pd<span style="color:#ff79c6">.</span>get_dummies(df[dummy], drop_first<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>, prefix<span style="color:#ff79c6">=</span>dummy)], axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>)
-</span></span><span style="display:flex;"><span>Xtrain, Xtest, Ytrain, Ytest <span style="color:#ff79c6">=</span> train_test_split(X, Y, test_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.2</span>, random_state<span style="color:#ff79c6">=</span><span style="color:#bd93f9">42</span>)
+</span></span><span style="display:flex;"><span>Xtrain, Xtest, Ytrain, Ytest <span style="color:#ff79c6">=</span> train_test_split(X, Y, test_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.25</span>, random_state<span style="color:#ff79c6">=</span><span style="color:#bd93f9">42</span>)
 </span></span><span style="display:flex;"><span>result <span style="color:#ff79c6">=</span> {}
 </span></span><span style="display:flex;"><span>X<span style="color:#ff79c6">.</span>columns
 </span></span></code></pre></td></tr></table>
@@ -571,16 +571,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.2291426216442681</td>
+<td>0.22962584236333888</td>
 <td>recall</td>
 <td>:</td>
-<td>0.12637931034482758</td>
+<td>0.12257874015748028</td>
 <td>f1</td>
 <td>:</td>
-<td>0.15313989787033264</td>
+<td>0.15065475861203415</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>-0.0004702265280632151</td>
+<td>-0.00913432394894782</td>
 </tr>
 </tbody>
 </table>
@@ -636,16 +636,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.1816033131082542</td>
+<td>0.1729264715614792</td>
 <td>recall</td>
 <td>:</td>
-<td>0.24630541871921183</td>
+<td>0.24015748031496062</td>
 <td>f1</td>
 <td>:</td>
-<td>0.1559569786170771</td>
+<td>0.15287788473455627</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>-0.01724572060747917</td>
+<td>-0.015271344028252207</td>
 </tr>
 </tbody>
 </table>
@@ -693,16 +693,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.36776900542565055</td>
+<td>0.3498883972871522</td>
 <td>recall</td>
 <td>:</td>
-<td>0.4064039408866995</td>
+<td>0.3799212598425197</td>
 <td>f1</td>
 <td>:</td>
-<td>0.3624046923337102</td>
+<td>0.3528756642882673</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.4866754450444671</td>
+<td>0.3632276367156315</td>
 </tr>
 </tbody>
 </table>
@@ -751,16 +751,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.3927537202232561</td>
+<td>0.38897767056471355</td>
 <td>recall</td>
 <td>:</td>
-<td>0.4211822660098522</td>
+<td>0.4153543307086614</td>
 <td>f1</td>
 <td>:</td>
-<td>0.3740724602601751</td>
+<td>0.368219573367848</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.3820627712402812</td>
+<td>0.34717232898609457</td>
 </tr>
 </tbody>
 </table>
@@ -813,16 +813,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.5125448578071228</td>
+<td>0.5309218601759191</td>
 <td>recall</td>
 <td>:</td>
-<td>0.5172413793103449</td>
+<td>0.5255905511811023</td>
 <td>f1</td>
 <td>:</td>
-<td>0.5022027579022398</td>
+<td>0.5096162941265188</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.5315214131849312</td>
+<td>0.543985737160968</td>
 </tr>
 </tbody>
 </table>
@@ -876,16 +876,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.3871822535819534</td>
+<td>0.4136927083234441</td>
 <td>recall</td>
 <td>:</td>
-<td>0.39408866995073893</td>
+<td>0.4094488188976378</td>
 <td>f1</td>
 <td>:</td>
-<td>0.3310900991255093</td>
+<td>0.351708147106921</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.3347635170409561</td>
+<td>0.3431290118925812</td>
 </tr>
 </tbody>
 </table>
@@ -932,16 +932,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.35725704588796053</td>
+<td>0.3625400456087721</td>
 <td>recall</td>
 <td>:</td>
-<td>0.35467980295566504</td>
+<td>0.35236220472440943</td>
 <td>f1</td>
 <td>:</td>
-<td>0.345078335500001</td>
+<td>0.34202311550427716</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.3094468706100665</td>
+<td>0.29873782865224163</td>
 </tr>
 </tbody>
 </table>
@@ -1038,16 +1038,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1.3500721454620361 0.9019246101379395 81.71212005615234
-</span></span><span style="display:flex;"><span>4.145700454711914 7.395895957946777 0.11222566664218903
-</span></span><span style="display:flex;"><span>3.825909376144409 7.571678638458252 0.05784251540899277
-</span></span><span style="display:flex;"><span>3.59328031539917 7.692329406738281 0.02984677255153656
-</span></span><span style="display:flex;"><span>3.4261727333068848 7.778990268707275 0.015400995500385761
-</span></span><span style="display:flex;"><span>3.306133985519409 7.841241836547852 0.007946940138936043
-</span></span><span style="display:flex;"><span>3.2199058532714844 7.885958671569824 0.004100635647773743
-</span></span><span style="display:flex;"><span>3.1579651832580566 7.918080806732178 0.002115917159244418
-</span></span><span style="display:flex;"><span>3.113471508026123 7.941154956817627 0.0010918190237134695
-</span></span><span style="display:flex;"><span>3.081509590148926 7.957729816436768 0.0005633722175844014
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.7086876630783081 0.9375368356704712 88.53038787841797
+</span></span><span style="display:flex;"><span>3.812344789505005 7.560173511505127 0.05628584697842598
+</span></span><span style="display:flex;"><span>3.5893115997314453 7.6879777908325195 0.029267048463225365
+</span></span><span style="display:flex;"><span>3.425413131713867 7.7747650146484375 0.01525119598954916
+</span></span><span style="display:flex;"><span>3.3070952892303467 7.837408542633057 0.007947461679577827
+</span></span><span style="display:flex;"><span>3.221684694290161 7.88262939453125 0.004141456447541714
+</span></span><span style="display:flex;"><span>3.1600286960601807 7.9152727127075195 0.0021581321489065886
+</span></span><span style="display:flex;"><span>3.11552095413208 7.93883752822876 0.0011246171779930592
+</span></span><span style="display:flex;"><span>3.0833919048309326 7.955848217010498 0.000586044741794467
+</span></span><span style="display:flex;"><span>3.060197591781616 7.968128681182861 0.0003053786640521139
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上述的代码在 pytorch 中对应的有：</p>
@@ -1176,7 +1176,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> torch <span style="color:#ff79c6">import</span> nn
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> torch
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#ff79c6">.</span>manual_seed(<span style="color:#bd93f9">42</span>)
 </span></span><span style="display:flex;"><span>Ytrain_nn <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>get_dummies(Ytrain)
 </span></span><span style="display:flex;"><span>encode <span style="color:#ff79c6">=</span> Ytrain_nn<span style="color:#ff79c6">.</span>columns
 </span></span><span style="display:flex;"><span>Ytrain_nn <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>tensor(Ytrain_nn<span style="color:#ff79c6">.</span>values, dtype<span style="color:#ff79c6">=</span>torch<span style="color:#ff79c6">.</span>float32)
@@ -1226,16 +1226,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.2665165918539232</td>
+<td>0.27389121797460775</td>
 <td>recall</td>
 <td>:</td>
-<td>0.3448275862068966</td>
+<td>0.33858267716535434</td>
 <td>f1</td>
 <td>:</td>
-<td>0.25647952538845953</td>
+<td>0.27631891749192855</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>-0.12638744698169058</td>
+<td>-0.0591120710799986</td>
 </tr>
 </tbody>
 </table>
@@ -1341,16 +1341,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.24451440572738647
-</span></span><span style="display:flex;"><span>epoch: 1000 loss: 0.14410538971424103
-</span></span><span style="display:flex;"><span>epoch: 2000 loss: 0.08648943156003952
-</span></span><span style="display:flex;"><span>epoch: 3000 loss: 0.05926516279578209
-</span></span><span style="display:flex;"><span>epoch: 4000 loss: 0.052194759249687195
-</span></span><span style="display:flex;"><span>epoch: 5000 loss: 0.050435613840818405
-</span></span><span style="display:flex;"><span>epoch: 6000 loss: 0.04976961016654968
-</span></span><span style="display:flex;"><span>epoch: 7000 loss: 0.04921454191207886
-</span></span><span style="display:flex;"><span>epoch: 8000 loss: 0.048469629138708115
-</span></span><span style="display:flex;"><span>epoch: 9000 loss: 0.048068415373563766
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.24517522752285004
+</span></span><span style="display:flex;"><span>epoch: 1000 loss: 0.15429307520389557
+</span></span><span style="display:flex;"><span>epoch: 2000 loss: 0.13127736747264862
+</span></span><span style="display:flex;"><span>epoch: 3000 loss: 0.07982835918664932
+</span></span><span style="display:flex;"><span>epoch: 4000 loss: 0.055595122277736664
+</span></span><span style="display:flex;"><span>epoch: 5000 loss: 0.05239807069301605
+</span></span><span style="display:flex;"><span>epoch: 6000 loss: 0.05039357766509056
+</span></span><span style="display:flex;"><span>epoch: 7000 loss: 0.048878513276576996
+</span></span><span style="display:flex;"><span>epoch: 8000 loss: 0.047704149037599564
+</span></span><span style="display:flex;"><span>epoch: 9000 loss: 0.046559300273656845
 </span></span></code></pre></td></tr></table>
 </div>
 </div><table>
@@ -1374,16 +1374,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.4331056115896163</td>
+<td>0.4308013335051745</td>
 <td>recall</td>
 <td>:</td>
-<td>0.4605911330049261</td>
+<td>0.47244094488188976</td>
 <td>f1</td>
 <td>:</td>
-<td>0.43647743607751205</td>
+<td>0.44504613282710614</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.45073977799090026</td>
+<td>0.43825492027319096</td>
 </tr>
 </tbody>
 </table>
@@ -1481,16 +1481,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.13117720186710358
-</span></span><span style="display:flex;"><span>epoch: 300 loss: 0.07627128809690475
-</span></span><span style="display:flex;"><span>epoch: 600 loss: 0.04519018158316612
-</span></span><span style="display:flex;"><span>epoch: 900 loss: 0.030690530315041542
-</span></span><span style="display:flex;"><span>epoch: 1200 loss: 0.023306887596845627
-</span></span><span style="display:flex;"><span>epoch: 1500 loss: 0.019688859581947327
-</span></span><span style="display:flex;"><span>epoch: 1800 loss: 0.01723768562078476
-</span></span><span style="display:flex;"><span>epoch: 2100 loss: 0.0157152246683836
-</span></span><span style="display:flex;"><span>epoch: 2400 loss: 0.014175068587064743
-</span></span><span style="display:flex;"><span>epoch: 2700 loss: 0.013602104038000107
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.12640981376171112
+</span></span><span style="display:flex;"><span>epoch: 300 loss: 0.0742696076631546
+</span></span><span style="display:flex;"><span>epoch: 600 loss: 0.040871135890483856
+</span></span><span style="display:flex;"><span>epoch: 900 loss: 0.02839021012187004
+</span></span><span style="display:flex;"><span>epoch: 1200 loss: 0.022038087248802185
+</span></span><span style="display:flex;"><span>epoch: 1500 loss: 0.019553400576114655
+</span></span><span style="display:flex;"><span>epoch: 1800 loss: 0.016630198806524277
+</span></span><span style="display:flex;"><span>epoch: 2100 loss: 0.015321574173867702
+</span></span><span style="display:flex;"><span>epoch: 2400 loss: 0.013955126516520977
+</span></span><span style="display:flex;"><span>epoch: 2700 loss: 0.013256195932626724
 </span></span></code></pre></td></tr></table>
 </div>
 </div><table>
@@ -1514,16 +1514,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.31664376857323895</td>
+<td>0.3205155032053251</td>
 <td>recall</td>
 <td>:</td>
-<td>0.3226600985221675</td>
+<td>0.32677165354330706</td>
 <td>f1</td>
 <td>:</td>
-<td>0.31702272540008913</td>
+<td>0.3232728330904296</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.20050860397088402</td>
+<td>0.18747270503735788</td>
 </tr>
 </tbody>
 </table>
@@ -1551,73 +1551,73 @@
 <tbody>
 <tr>
 <td>random</td>
-<td>0.2291</td>
-<td>0.1264</td>
-<td>0.1531</td>
-<td>-0.0005</td>
+<td>0.2296</td>
+<td>0.1226</td>
+<td>0.1507</td>
+<td>-0.0091</td>
 </tr>
 <tr>
 <td>logit</td>
-<td>0.1816</td>
-<td>0.2463</td>
-<td>0.156</td>
-<td>-0.0172</td>
+<td>0.1729</td>
+<td>0.2402</td>
+<td>0.1529</td>
+<td>-0.0153</td>
 </tr>
 <tr>
 <td>decision tree</td>
-<td>0.3678</td>
-<td>0.4064</td>
-<td>0.3624</td>
-<td>0.4867</td>
+<td>0.3499</td>
+<td>0.3799</td>
+<td>0.3529</td>
+<td>0.3632</td>
 </tr>
 <tr>
 <td>random forest</td>
-<td>0.3928</td>
-<td>0.4212</td>
-<td>0.3741</td>
-<td>0.3821</td>
+<td>0.389</td>
+<td>0.4154</td>
+<td>0.3682</td>
+<td>0.3472</td>
 </tr>
 <tr>
 <td>gradient boosting</td>
-<td>0.5125</td>
-<td>0.5172</td>
-<td>0.5022</td>
-<td>0.5315</td>
+<td>0.5309</td>
+<td>0.5256</td>
+<td>0.5096</td>
+<td>0.544</td>
 </tr>
 <tr>
 <td>svm</td>
-<td>0.3872</td>
-<td>0.3941</td>
-<td>0.3311</td>
-<td>0.3348</td>
+<td>0.4137</td>
+<td>0.4094</td>
+<td>0.3517</td>
+<td>0.3431</td>
 </tr>
 <tr>
 <td>KNN</td>
-<td>0.3573</td>
-<td>0.3547</td>
-<td>0.3451</td>
-<td>0.3094</td>
+<td>0.3625</td>
+<td>0.3524</td>
+<td>0.342</td>
+<td>0.2987</td>
 </tr>
 <tr>
 <td>bp neural network</td>
-<td>0.2665</td>
-<td>0.3448</td>
-<td>0.2565</td>
-<td>-0.1264</td>
+<td>0.2739</td>
+<td>0.3386</td>
+<td>0.2763</td>
+<td>-0.0591</td>
 </tr>
 <tr>
 <td>CNN</td>
-<td>0.4331</td>
-<td>0.4606</td>
-<td>0.4365</td>
-<td>0.4507</td>
+<td>0.4308</td>
+<td>0.4724</td>
+<td>0.445</td>
+<td>0.4383</td>
 </tr>
 <tr>
 <td>RNN</td>
-<td>0.3166</td>
-<td>0.3227</td>
-<td>0.317</td>
-<td>0.2005</td>
+<td>0.3205</td>
+<td>0.3268</td>
+<td>0.3233</td>
+<td>0.1875</td>
 </tr>
 </tbody>
 </table>
@@ -1641,7 +1641,7 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>seed(<span style="color:#bd93f9">42</span>)
 </span></span><span style="display:flex;"><span>N <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(feature)
 </span></span><span style="display:flex;"><span>angles <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>linspace(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">*</span> np<span style="color:#ff79c6">.</span>pi, N, endpoint<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
 </span></span><span style="display:flex;"><span>angles <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>concatenate((angles, [angles[<span style="color:#bd93f9">0</span>]]))
@@ -1657,7 +1657,7 @@
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>show()
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/32201b2baf9035eb6fe8b916de8cabb29a172168.png"/>
+</div><figure><img src="/ox-hugo/3eddb71baefa952e4ddbd71bded9cf5bcbf430f5.png"/>
 </figure>
 
 <h2 id="reference">reference</h2>
