@@ -401,30 +401,36 @@ result["CNN"]
 [[https://pic1.zhimg.com/80/v2-ea6d9bcb018d897518a8f076e7f9fdcc_1440w.jpg]]
 循环神经网络：常用在 NLP 中并大放异彩，也会应用在股价等时间序列中。他会短期地“记住”参数，就如同我说这句话的时候你短期地记住了上一句话，会更新“自我”而非直接向前传递，在该层中“循环”。即对于隐藏层而言，\(h_t = f_w(h_{t-1}, x_t)\) 。随着输入的更新，有一个短暂的 memory ，记住刚刚的参数。
 #+begin_src jupyter-python
-class RNN(nn.Module):
-    def __init__(self) -> None:
-        super(RNN, self).__init__()
-        self.rnn = nn.RNN(
-            input_size=Xtrain.shape[1],
+
+class LSTM(nn.Module):
+    def __init__(self):
+        super(LSTM, self).__init__()
+        self.lstm = nn.LSTM(
+            input_size=1,
             hidden_size=32,
             num_layers=1,
             batch_first=True,
+            bidirectional=True,
         )
-        self.fc = nn.Sequential(nn.Linear(32, len(encode)), nn.Softmax(dim=1))
+        self.fc = nn.Linear(32* 2, num_classes)
 
     def forward(self, x):
-        out, h = self.rnn(x)
-        out = self.fc(out)
-        return out, h
+        # x, _ = x
+        out, _ = self.lstm(x)
+        out = self.fc(out[:, -1, :])
+        return out
 
 
-net = RNN()
+input_size = 1
+hidden_size = 32
+num_layers = 1
+num_classes = 7
+net = LSTM()
 optimizer = torch.optim.Adam(net.parameters())
 loss_func = nn.MSELoss()
-h_state = None
 epochnum = 3000
 for epoch in range(epochnum):
-    out, h_state = net(Xtrain_nn)
+    out = net(Xtrain_nn.unsqueeze(2))
     loss = loss_func(out, Ytrain_nn)
     optimizer.zero_grad()
     loss.backward()
@@ -432,7 +438,7 @@ for epoch in range(epochnum):
     if epoch % (epochnum / 10) == 0:
         print("epoch:", epoch, "loss:", loss.item())
 
-prediction = pd.DataFrame(net(Xtest_nn)[0].detach().numpy())
+prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(2)).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["RNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["RNN"]
