@@ -114,6 +114,7 @@
     <li><a href="#org-roam-bibtex">org-roam-bibtex</a></li>
     <li><a href="#all-the-icons-completion">all-the-icons-completion</a></li>
     <li><a href="#复制-pdf-之后粘贴去掉空格">复制 PDF 之后粘贴去掉空格</a></li>
+    <li><a href="#deft-with-pinyin">deft with pinyin</a></li>
   </ul>
 </nav>
     </div>
@@ -298,7 +299,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>第一行是文献的链接，方便查看</p>
-<p><img src="https://emacs-china.org/uploads/default/optimized/3X/8/0/806d478a0db9daf90b7e9cf07542df8efcded0a1%5F2%5F1380x862.png" alt="example"></p>
+<p><img src="https://emacs-china.org/uploads/default/optimized/3X/8/0/806d478a0db9daf90b7e9cf07542df8efcded0a1_2_1380x862.png" alt="example"></p>
 <h2 id="all-the-icons-completion">all-the-icons-completion</h2>
 <p>all-the-icons-completion 增加类似 all-the-icons-ivy-rich 的 icon</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -347,6 +348,34 @@
 </span></span><span style="display:flex;"><span>  (<span style="color:#50fa7b">insert</span> <span style="color:#8be9fd;font-style:italic">buf</span>))
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="deft-with-pinyin">deft with pinyin</h2>
+<p>用拼音搜索 <code>deft</code></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#8be9fd;font-style:italic">after!</span> <span style="color:#8be9fd;font-style:italic">deft</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#8be9fd;font-style:italic">setq</span> <span style="color:#8be9fd;font-style:italic">deft-incremental-search</span> nil)
+</span></span><span style="display:flex;"><span>  (<span style="color:#8be9fd;font-style:italic">defun</span> <span style="color:#8be9fd;font-style:italic">deft-search-forward</span> (<span style="color:#8be9fd;font-style:italic">str</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;Function to use when matching files against filter strings STR.
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">This function calls </span><span style="color:#f1fa8c">`search-forward&#39;</span><span style="color:#f1fa8c"> when </span><span style="color:#f1fa8c">`deft-incremental-search&#39;</span><span style="color:#f1fa8c">
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">is non-nil and </span><span style="color:#f1fa8c">`re-search-forward&#39;</span><span style="color:#f1fa8c"> otherwise.&#34;</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#8be9fd;font-style:italic">let</span> ((<span style="color:#8be9fd;font-style:italic">case-fold-search</span> <span style="color:#8be9fd;font-style:italic">deft-case-fold-search</span>))
+</span></span><span style="display:flex;"><span>      (<span style="color:#8be9fd;font-style:italic">if</span> <span style="color:#8be9fd;font-style:italic">deft-incremental-search</span>
+</span></span><span style="display:flex;"><span>          (<span style="color:#50fa7b">search-forward</span> <span style="color:#8be9fd;font-style:italic">str</span> nil t)
+</span></span><span style="display:flex;"><span>        (<span style="color:#50fa7b">re-search-forward</span> (<span style="color:#8be9fd;font-style:italic">pinyinlib-build-regexp-string</span> <span style="color:#8be9fd;font-style:italic">str</span>) nil t)))))
+</span></span></code></pre></td></tr></table>
+</div>
 </div>
     </div>
   </article>
@@ -386,6 +415,7 @@
     <li><a href="#org-roam-bibtex">org-roam-bibtex</a></li>
     <li><a href="#all-the-icons-completion">all-the-icons-completion</a></li>
     <li><a href="#复制-pdf-之后粘贴去掉空格">复制 PDF 之后粘贴去掉空格</a></li>
+    <li><a href="#deft-with-pinyin">deft with pinyin</a></li>
   </ul>
 </nav>
     </div>
