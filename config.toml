@@ -1,8 +1,12 @@
 title = "Ernest Dong"
 baseURL = "https://ernestdong.github.io"
-theme = "cactus" #"researcher"
+theme = "cactus"
 enableEmoji = true
 hasCJKLanguage = true
+enableGitInfo = true
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
 [params]
   description = "A Sisyphus Rolling Up Rock"
   favicon = "/images/favicon.ico"
@@ -38,7 +42,7 @@ hasCJKLanguage = true
     weight = 2
   [[menu.main]]
     name = "Posts"
-    url = "/posts"
+    url = "/post"
     weight = 3
   [[menu.main]]
     name = "Tags"
