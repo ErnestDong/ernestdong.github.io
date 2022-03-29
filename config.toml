@@ -5,7 +5,7 @@ enableEmoji = true
 hasCJKLanguage = true
 enableGitInfo = true
 [frontmatter]
-  date = ["date", "publishDate", "lastmod"]
+  date = ["date", "lastmod"]
   lastmod = ["lastmod", ":git", "date", "publishDate"]
 [params]
   description = "A Sisyphus Rolling Up Rock"

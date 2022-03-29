@@ -7,15 +7,19 @@
     {{ $pages = .Pages }}
   {{ end }}
 
-  {{ range (sort $pages "Date" "desc") }}
-    {{ $pageYear := (.Date.Format "2006") }}
+  {{ range (sort $pages (cond (gt "Date" 0) "Date" "Lastmod") "desc" "desc") }}
+    {{ $pageYear := cond (gt .Date 0) (.Date.Format "2006") (.Lastmod.Format "2006") }}
     {{ if (ne $pageYear ($.Scratch.Get "year")) }}
     {{ $.Scratch.Set "year" $pageYear }}
     <h2>{{ $pageYear }}</h2>
     {{ end }}
     <li class="post-item">
       <div class="meta">
-        <time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}</time>
+        {{if gt .Date 0}}
+          <time>{{ .Date.Format "2006-01-02"}}</time>
+        {{ else }}
+          <time>{{ .Lastmod.Format "2006-01-02" }}</time>
+        {{ end }}
       </div>
       <span>    
         <a class="" href="{{ .Permalink }}">{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}</a>

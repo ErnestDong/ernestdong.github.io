@@ -2,7 +2,6 @@
 title = "机器学习在企业风险管理中的应用举例"
 author = ["Ernest Dong"]
 tags = ["python"]
-draft = false
 +++
 
 ## 前言 {#前言}
