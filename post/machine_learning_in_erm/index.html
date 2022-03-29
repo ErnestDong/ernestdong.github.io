@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> 机器学习在企业风险管理中的应用举例 | Ernest Dong</title>
-  <link rel = 'canonical' href = 'https://ernestdong.github.io/posts/machine_learning_in_erm/'>
+  <link rel = 'canonical' href = 'https://ernestdong.github.io/post/machine_learning_in_erm/'>
   <meta name="description" content="A Sisyphus Rolling Up Rock">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -18,9 +18,9 @@
   <meta property="og:title" content="机器学习在企业风险管理中的应用举例" />
 <meta property="og:description" content="前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ernestdong.github.io/posts/machine_learning_in_erm/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-14T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-03-14T00:00:00+08:00" />
+<meta property="og:url" content="https://ernestdong.github.io/post/machine_learning_in_erm/" /><meta property="article:section" content="post" />
+
+<meta property="article:modified_time" content="2022-03-29T23:07:15+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -51,9 +51,45 @@
 </head>
 
 <body class="max-width mx-auto px3 ltr">
+  <style type="text/css">
+    body {
+      counter-reset: h2counter;
+    }
+
+    h1 {
+      counter-reset: h2counter;
+    }
+
+    h2 {
+      counter-reset: h3counter;
+    }
+
+    h3 {
+      counter-reset: h4counter;
+    }
+
+    h4 {
+      counter-reset: h5counter;
+    }
+
+    h2:before {
+      content: counter(h2counter) "\0000a0\0000a0  ";
+      counter-increment: h2counter;
+    }
+
+    h3:before {
+      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    h4:before {
+      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+      counter-increment: h4counter;
+    }
+  </style>
   <div class="content index py4">
 
-  <div id="header-post">
+    <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
@@ -65,7 +101,7 @@
         
         <li><a href="/notes">Notes</a></li>
         
-        <li><a href="/posts">Posts</a></li>
+        <li><a href="/post">Posts</a></li>
         
         <li><a href="/tags">Tags</a></li>
         
@@ -77,12 +113,12 @@
     <span id="actions">
       <ul>
         
+        
         <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/theses/" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          <a class="icon" href="https://ernestdong.github.io/readme/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
-        
         
         <li>
           <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
@@ -131,47 +167,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&text=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&text=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&is_video=false&description=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&is_video=false&description=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&description=%e5%89%8d%e8%a8%80%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9%e7%94%a8%e7%ae%97%e6%b3%95%e5%92%8c%e7%ae%97%e5%8a%9b" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&name=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&description=%e5%89%8d%e8%a8%80%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9%e7%94%a8%e7%ae%97%e6%b3%95%e5%92%8c%e7%ae%97%e5%8a%9b" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&t=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&t=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -182,43 +218,46 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        机器学习在企业风险管理中的应用举例
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          机器学习在企业风险管理中的应用举例
+        </h1>
+        <div class="meta">
+          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">
+              Ernest Dong
+            </span>
+          </span>
+          <div class="postdate">
+            
+            <time>2022-03-29</time>
+            
+          </div>
           
-          <time datetime="2022-03-14 00:00:00 &#43;0800 &#43;0800" itemprop="datePublished">2022-03-14</time>
           
-        </div>
-        
-        
-        <div class="article-read-time">
-          <i class="far fa-clock"></i>
+          <div class="article-read-time">
+            <i class="far fa-clock"></i>
+            
+            29 minute read
+          </div>
           
-          29 minute read
-        </div>
-        
-        
-        
-        <div class="article-tag">
+          
+          
+          <div class="article-tag">
             <i class="fas fa-tag"></i>
             
             
             <a class="tag-link" href="/tags/python" rel="tag">python</a>
             
+          </div>
+          
         </div>
-        
-      </div>
-    </header>
+      </header>
 
-  
-    
-    <div class="content" itemprop="articleBody">
-      <h2 id="前言">前言</h2>
+      
+      <div class="content" itemprop="articleBody">
+        <h2 id="前言">前言</h2>
 <figure><img src="/images/xkcd/1838.png"/>
 </figure>
 
@@ -1700,18 +1739,17 @@
   <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Pedregosa, F., G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, et al. 2011. “Scikit-Learn: Machine Learning in Python.” <i>Journal of Machine Learning Research</i> 12: 2825–30.</div>
 </div>
 
-    </div>
-  </article>
-
+      </div>
+    </article>
+    
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+    <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -1721,7 +1759,7 @@
          
           <li><a href="/notes">Notes</a></li>
          
-          <li><a href="/posts">Posts</a></li>
+          <li><a href="/post">Posts</a></li>
          
           <li><a href="/tags">Tags</a></li>
          
@@ -1763,47 +1801,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&text=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&text=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&is_video=false&description=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&is_video=false&description=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&title=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&name=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&description=%e5%89%8d%e8%a8%80%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9%e7%94%a8%e7%ae%97%e6%b3%95%e5%92%8c%e7%ae%97%e5%8a%9b" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&name=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b&description=%e5%89%8d%e8%a8%80%20%e4%bb%80%e4%b9%88%e6%98%af%e5%ad%a6%e4%b9%a0%ef%bc%9f%20%e7%bb%b4%e5%9f%ba%e7%99%be%e7%a7%91%e4%b8%8a%e8%af%b4%e5%ad%a6%e4%b9%a0%e6%98%af%e8%8e%b7%e5%be%97%e6%96%b0%e7%9a%84%e7%90%86%e8%a7%a3%e3%80%81%e7%9f%a5%e8%af%86%e3%80%81%e8%a1%8c%e4%b8%ba%e3%80%81%e6%8a%80%e8%83%bd%e3%80%81%e4%bb%b7%e5%80%bc%e8%a7%82%e3%80%81%e6%80%81%e5%ba%a6%e5%92%8c%e5%81%8f%e5%a5%bd%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%e5%9c%a8%e8%ae%a1%e7%ae%97%e6%8a%80%e6%9c%af%e5%bf%ab%e9%80%9f%e5%8f%91%e5%b1%95%e7%9a%84%e4%bb%8a%e5%a4%a9%ef%bc%8c%e6%9f%93%e6%9c%ba%e5%99%a8%e5%8e%bb%e5%88%a9%e7%94%a8%e7%ae%97%e6%b3%95%e5%92%8c%e7%ae%97%e5%8a%9b" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fmachine_learning_in_erm%2f&t=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fpost%2fmachine_learning_in_erm%2f&t=%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%a3%8e%e9%99%a9%e7%ae%a1%e7%90%86%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8%e4%b8%be%e4%be%8b" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>
@@ -1829,7 +1867,7 @@
 </div>
 
 
-  <footer id="footer">
+    <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -1841,7 +1879,7 @@
          
         <li><a href="/notes">Notes</a></li>
          
-        <li><a href="/posts">Posts</a></li>
+        <li><a href="/post">Posts</a></li>
          
         <li><a href="/tags">Tags</a></li>
          
@@ -1864,7 +1902,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -1877,8 +1915,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

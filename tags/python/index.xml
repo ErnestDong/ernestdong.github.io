@@ -5,23 +5,23 @@
     <link>https://ernestdong.github.io/tags/python/</link>
     <description>Recent content in python on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Mar 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jan 2022 12:28:11 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>机器学习在企业风险管理中的应用举例</title>
-      <link>https://ernestdong.github.io/posts/machine_learning_in_erm/</link>
-      <pubDate>Mon, 14 Mar 2022 00:00:00 +0800</pubDate>
+      <title>python and mathematics</title>
+      <link>https://ernestdong.github.io/post/python_and_mathematics/</link>
+      <pubDate>Sat, 29 Jan 2022 12:28:11 +0800</pubDate>
       
-      <guid>https://ernestdong.github.io/posts/machine_learning_in_erm/</guid>
-      <description>前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力</description>
+      <guid>https://ernestdong.github.io/post/python_and_mathematics/</guid>
+      <description>Get Start Concentrate on python and math 1 (pyvenv-activate &amp;#34;~/Code/thesis/.venv/&amp;#34;) 1 2 3 4 5 6 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns import statsmodels.api as sm import statsmodels.formula.api as smf numpy numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底</description>
     </item>
     
     <item>
-      <title>python and mathematics</title>
-      <link>https://ernestdong.github.io/posts/python_and_mathematics/</link>
-      <pubDate>Sat, 29 Jan 2022 12:28:11 +0800</pubDate>
+      <title>机器学习在企业风险管理中的应用举例</title>
+      <link>https://ernestdong.github.io/post/machine_learning_in_erm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ernestdong.github.io/posts/python_and_mathematics/</guid>
-      <description>Get Start Concentrate on python and math 1 (pyvenv-activate &amp;#34;~/Code/thesis/.venv/&amp;#34;) 1 2 3 4 5 6 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns import statsmodels.api as sm import statsmodels.formula.api as smf numpy numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底</description>
+      <guid>https://ernestdong.github.io/post/machine_learning_in_erm/</guid>
+      <description>前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力</description>
     </item>
     
   </channel>
