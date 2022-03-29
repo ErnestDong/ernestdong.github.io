@@ -20,6 +20,7 @@
     - [[#org-roam-bibtex][org-roam-bibtex]]
     - [[#all-the-icons-completion][all-the-icons-completion]]
     - [[#复制-pdf-之后粘贴去掉空格][复制 PDF 之后粘贴去掉空格]]
+    - [[#deft-with-pinyin][deft with pinyin]]
 
 * Interesting Tools :fun:
 ** 用 Pass 管理密码
@@ -234,3 +235,18 @@ all-the-icons-completion 增加类似 all-the-icons-ivy-rich 的 icon
   (insert buf))
 #+end_src
 
+
+*** deft with pinyin
+用拼音搜索 =deft=
+#+begin_src emacs-lisp
+(after! deft
+  (setq deft-incremental-search nil)
+  (defun deft-search-forward (str)
+    "Function to use when matching files against filter strings STR.
+This function calls `search-forward' when `deft-incremental-search'
+is non-nil and `re-search-forward' otherwise."
+    (let ((case-fold-search deft-case-fold-search))
+      (if deft-incremental-search
+          (search-forward str nil t)
+        (re-search-forward (pinyinlib-build-regexp-string str) nil t)))))
+#+end_src

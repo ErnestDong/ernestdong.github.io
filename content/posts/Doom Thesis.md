@@ -64,7 +64,7 @@ org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web of science
 
 第一行是文献的链接，方便查看
 
-![example](https://emacs-china.org/uploads/default/optimized/3X/8/0/806d478a0db9daf90b7e9cf07542df8efcded0a1%5F2%5F1380x862.png)
+![example](https://emacs-china.org/uploads/default/optimized/3X/8/0/806d478a0db9daf90b7e9cf07542df8efcded0a1_2_1380x862.png)
 
 
 ## all-the-icons-completion {#all-the-icons-completion}
@@ -96,4 +96,22 @@ all-the-icons-completion 增加类似 all-the-icons-ivy-rich 的 icon
   (setq buf (s-replace " " "" (thing-at-point 'line)))
   (kill-whole-line)
   (insert buf))
+```
+
+
+## deft with pinyin {#deft-with-pinyin}
+
+用拼音搜索 `deft`
+
+```emacs-lisp
+(after! deft
+  (setq deft-incremental-search nil)
+  (defun deft-search-forward (str)
+    "Function to use when matching files against filter strings STR.
+This function calls `search-forward' when `deft-incremental-search'
+is non-nil and `re-search-forward' otherwise."
+    (let ((case-fold-search deft-case-fold-search))
+      (if deft-incremental-search
+          (search-forward str nil t)
+        (re-search-forward (pinyinlib-build-regexp-string str) nil t)))))
 ```
