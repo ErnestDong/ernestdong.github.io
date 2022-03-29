@@ -63,9 +63,20 @@ df.info()
 #+begin_src jupyter-python :kernel python3 :session main :exports both
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.set(style="white", context="paper", font="VictorMono Nerd Font Mono")
+
+sns.set(
+    style="white",
+    context="paper",
+    rc={"text.usetex": True},
+)
 df["Rating"].value_counts().plot(kind="bar")
 #+end_src
+
+#+RESULTS:
+:RESULTS:
+: <AxesSubplot:>
+[[file:./.ob-jupyter/18b330c536f54c5e1fa3a066b737d82627c6a40f.png]]
+:END:
 
 让我们处理一下数据
 #+begin_src jupyter-python
@@ -94,6 +105,8 @@ X.columns
 
 #+begin_src jupyter-python :kernel python3 :session main :exports both
 from scipy.stats import pearsonr
+
+
 def get_score(Xtest, Ytrue, model):
     Ypred = model(Xtest)
     average = "weighted"
@@ -102,12 +115,15 @@ def get_score(Xtest, Ytrue, model):
         "precision": precision_score(Ytrue, Ypred, average=average, zero_division=0),
         "recall": recall_score(Ytrue, Ypred, average=average),
         "f1": f1_score(Ytrue, Ypred, average=average),
-        "\(R^2\)": pearsonr([rating_map[i] for i in Ypred], [rating_map[i] for i in Ytest])[0]
+        "\(R^2\)": pearsonr(
+            [rating_map[i] for i in Ypred], [rating_map[i] for i in Ytest]
+        )[0],
     }
 
 
 import random
 
+random.seed(42)
 ratings = Y.unique()
 tmp = {}
 monte_num = 100
@@ -475,9 +491,12 @@ for model in result:
     ax.fill(angles, values, alpha=0.1)
 ax.set_thetagrids(angles[:-1] * 180 / np.pi, feature)
 ax.grid(True)
-plt.legend(bbox_to_anchor=(1.2, 0), ncol=3)
+plt.legend(bbox_to_anchor=(1.2, -0.1), ncol=3)
 plt.show()
 #+end_src
+
+#+RESULTS:
+[[file:./.ob-jupyter/9070f4b76eb923ed9526bb81e7d69e91dc9b8839.png]]
 
 
 * reference
