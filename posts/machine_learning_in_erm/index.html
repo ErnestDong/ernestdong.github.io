@@ -369,11 +369,21 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> matplotlib.pyplot <span style="color:#ff79c6">as</span> plt
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> seaborn <span style="color:#ff79c6">as</span> sns
-</span></span><span style="display:flex;"><span>sns<span style="color:#ff79c6">.</span>set(style<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;white&#34;</span>, context<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;paper&#34;</span>, font<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;VictorMono Nerd Font Mono&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sns<span style="color:#ff79c6">.</span>set(
+</span></span><span style="display:flex;"><span>    style<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;white&#34;</span>,
+</span></span><span style="display:flex;"><span>    context<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;paper&#34;</span>,
+</span></span><span style="display:flex;"><span>    rc<span style="color:#ff79c6">=</span>{<span style="color:#f1fa8c">&#34;text.usetex&#34;</span>: <span style="color:#ff79c6">True</span>},
+</span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#34;Rating&#34;</span>]<span style="color:#ff79c6">.</span>value_counts()<span style="color:#ff79c6">.</span>plot(kind<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;bar&#34;</span>)
 </span></span></code></pre></td></tr></table>
 </div>
@@ -385,7 +395,7 @@
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&lt;AxesSubplot:&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/3d35918888125caf7bec2a135968b47e5e1dc2e2.png"/>
+</div><figure><img src="/ox-hugo/2475fbd207d00348d4aff2b5db9de9f766ebc7a8.png"/>
 </figure>
 
 <p>让我们处理一下数据</p>
@@ -519,9 +529,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> scipy.stats <span style="color:#ff79c6">import</span> pearsonr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_score</span>(Xtest, Ytrue, model):
 </span></span><span style="display:flex;"><span>    Ypred <span style="color:#ff79c6">=</span> model(Xtest)
 </span></span><span style="display:flex;"><span>    average <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;weighted&#34;</span>
@@ -530,12 +547,15 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;precision&#34;</span>: precision_score(Ytrue, Ypred, average<span style="color:#ff79c6">=</span>average, zero_division<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>),
 </span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;recall&#34;</span>: recall_score(Ytrue, Ypred, average<span style="color:#ff79c6">=</span>average),
 </span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;f1&#34;</span>: f1_score(Ytrue, Ypred, average<span style="color:#ff79c6">=</span>average),
-</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;\(R^2\)&#34;</span>: pearsonr([rating_map[i] <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> Ypred], [rating_map[i] <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> Ytest])[<span style="color:#bd93f9">0</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;\(R^2\)&#34;</span>: pearsonr(
+</span></span><span style="display:flex;"><span>            [rating_map[i] <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> Ypred], [rating_map[i] <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> Ytest]
+</span></span><span style="display:flex;"><span>        )[<span style="color:#bd93f9">0</span>],
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> random
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>random<span style="color:#ff79c6">.</span>seed(<span style="color:#bd93f9">42</span>)
 </span></span><span style="display:flex;"><span>ratings <span style="color:#ff79c6">=</span> Y<span style="color:#ff79c6">.</span>unique()
 </span></span><span style="display:flex;"><span>tmp <span style="color:#ff79c6">=</span> {}
 </span></span><span style="display:flex;"><span>monte_num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
@@ -571,16 +591,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.2308122309724278</td>
+<td>0.23640721599080028</td>
 <td>recall</td>
 <td>:</td>
-<td>0.1240748031496063</td>
+<td>0.12547244094488194</td>
 <td>f1</td>
 <td>:</td>
-<td>0.15202805474470663</td>
+<td>0.1544436285781241</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>-0.006981425208756762</td>
+<td>0.008907176874420717</td>
 </tr>
 </tbody>
 </table>
@@ -636,16 +656,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.18152641834788635</td>
+<td>0.17534840593774884</td>
 <td>recall</td>
 <td>:</td>
-<td>0.2440944881889764</td>
+<td>0.24015748031496062</td>
 <td>f1</td>
 <td>:</td>
-<td>0.15470492292394605</td>
+<td>0.1528577471877528</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>-0.01775335686060572</td>
+<td>-0.017402571904091595</td>
 </tr>
 </tbody>
 </table>
@@ -751,16 +771,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.40673539636143735</td>
+<td>0.38106206952171523</td>
 <td>recall</td>
 <td>:</td>
-<td>0.43503937007874016</td>
+<td>0.41141732283464566</td>
 <td>f1</td>
 <td>:</td>
-<td>0.39258337709756824</td>
+<td>0.35927998033111685</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.4104515214454678</td>
+<td>0.35412958726154276</td>
 </tr>
 </tbody>
 </table>
@@ -1038,16 +1058,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.6483058929443359 0.9364914298057556 88.3597640991211
-</span></span><span style="display:flex;"><span>3.7323620319366455 7.611013412475586 0.04605748504400253
-</span></span><span style="display:flex;"><span>3.5292539596557617 7.726438522338867 0.023703332990407944
-</span></span><span style="display:flex;"><span>3.3802661895751953 7.803456783294678 0.012236231938004494
-</span></span><span style="display:flex;"><span>3.273216724395752 7.858786106109619 0.0063166506588459015
-</span></span><span style="display:flex;"><span>3.196303367614746 7.898539066314697 0.0032608318142592907
-</span></span><span style="display:flex;"><span>3.1410415172576904 7.9271016120910645 0.001683316775597632
-</span></span><span style="display:flex;"><span>3.101337432861328 7.947622776031494 0.0008689892129041255
-</span></span><span style="display:flex;"><span>3.072809934616089 7.962368011474609 0.00044859485933557153
-</span></span><span style="display:flex;"><span>3.052311658859253 7.972962379455566 0.00023156491806730628
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0.7414389848709106 0.9362940192222595 88.32803344726562
+</span></span><span style="display:flex;"><span>3.82428240776062 7.550921440124512 0.062223728746175766
+</span></span><span style="display:flex;"><span>3.5843725204467773 7.688414096832275 0.030915575101971626
+</span></span><span style="display:flex;"><span>3.412304639816284 7.780168056488037 0.015389589592814445
+</span></span><span style="display:flex;"><span>3.2908997535705566 7.844898223876953 0.007660864852368832
+</span></span><span style="display:flex;"><span>3.2052431106567383 7.890568733215332 0.0038135419599711895
+</span></span><span style="display:flex;"><span>3.144808530807495 7.922791004180908 0.0018983681220561266
+</span></span><span style="display:flex;"><span>3.1021690368652344 7.945526123046875 0.0009449924691580236
+</span></span><span style="display:flex;"><span>3.07208514213562 7.961565017700195 0.000470418221084401
+</span></span><span style="display:flex;"><span>3.050859212875366 7.972883224487305 0.00023416739713866264
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上述的代码在 pytorch 中对应的有：</p>
@@ -1563,17 +1583,17 @@
 <tbody>
 <tr>
 <td>random</td>
-<td>0.2308</td>
-<td>0.1241</td>
-<td>0.152</td>
-<td>-0.007</td>
+<td>0.2364</td>
+<td>0.1255</td>
+<td>0.1544</td>
+<td>0.0089</td>
 </tr>
 <tr>
 <td>logit</td>
-<td>0.1815</td>
-<td>0.2441</td>
-<td>0.1547</td>
-<td>-0.0178</td>
+<td>0.1753</td>
+<td>0.2402</td>
+<td>0.1529</td>
+<td>-0.0174</td>
 </tr>
 <tr>
 <td>decision tree</td>
@@ -1584,10 +1604,10 @@
 </tr>
 <tr>
 <td>random forest</td>
-<td>0.4067</td>
-<td>0.435</td>
-<td>0.3926</td>
-<td>0.4105</td>
+<td>0.3811</td>
+<td>0.4114</td>
+<td>0.3593</td>
+<td>0.3541</td>
 </tr>
 <tr>
 <td>gradient boosting</td>
@@ -1665,11 +1685,11 @@
 </span></span><span style="display:flex;"><span>    ax<span style="color:#ff79c6">.</span>fill(angles, values, alpha<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.1</span>)
 </span></span><span style="display:flex;"><span>ax<span style="color:#ff79c6">.</span>set_thetagrids(angles[:<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">180</span> <span style="color:#ff79c6">/</span> np<span style="color:#ff79c6">.</span>pi, feature)
 </span></span><span style="display:flex;"><span>ax<span style="color:#ff79c6">.</span>grid(<span style="color:#ff79c6">True</span>)
-</span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>legend(bbox_to_anchor<span style="color:#ff79c6">=</span>(<span style="color:#bd93f9">1.2</span>, <span style="color:#bd93f9">0</span>), ncol<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>legend(bbox_to_anchor<span style="color:#ff79c6">=</span>(<span style="color:#bd93f9">1.2</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">0.1</span>), ncol<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>show()
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/7db706ca0aabe4722a0838f8516609a8dd3805c8.png"/>
+</div><figure><img src="/ox-hugo/47269770db1eeb71bf57cab1b225e80fe8169ef3.png"/>
 </figure>
 
 <h2 id="reference">reference</h2>
