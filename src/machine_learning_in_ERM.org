@@ -426,7 +426,7 @@ hidden_size = 32
 num_layers = 1
 num_classes = 7
 net = LSTM()
-optimizer = torch.optim.Adam(net.parameters())
+optimizer = torch.optim.Adamax(net.parameters())
 loss_func = nn.MSELoss()
 epochnum = 3000
 for epoch in range(epochnum):
