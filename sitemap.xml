@@ -3,13 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ernestdong.github.io/</loc>
-    <lastmod>2022-03-30T12:22:27+08:00</lastmod>
+    <lastmod>2022-03-30T17:54:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ernestdong.github.io/posts/</loc>
+    <lastmod>2022-03-30T17:54:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ernestdong.github.io/tags/python/</loc>
+    <lastmod>2022-03-30T17:54:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ernestdong.github.io/tags/</loc>
+    <lastmod>2022-03-30T17:54:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ernestdong.github.io/posts/machine_learning_in_erm/</loc>
+    <lastmod>2022-03-30T17:54:09+08:00</lastmod>
   </url><url>
     <loc>https://ernestdong.github.io/notes/</loc>
     <lastmod>2022-02-17T09:09:05+08:00</lastmod>
-  </url><url>
-    <loc>https://ernestdong.github.io/tags/</loc>
-    <lastmod>2022-03-30T12:22:27+08:00</lastmod>
   </url><url>
     <loc>https://ernestdong.github.io/tags/thesis/</loc>
     <lastmod>2022-02-17T09:09:05+08:00</lastmod>
@@ -19,12 +28,6 @@
   </url><url>
     <loc>https://ernestdong.github.io/notes/thesis_archive/</loc>
     <lastmod>2022-02-17T09:08:52+08:00</lastmod>
-  </url><url>
-    <loc>https://ernestdong.github.io/posts/</loc>
-    <lastmod>2022-03-30T12:22:27+08:00</lastmod>
-  </url><url>
-    <loc>https://ernestdong.github.io/tags/python/</loc>
-    <lastmod>2022-03-30T12:22:27+08:00</lastmod>
   </url><url>
     <loc>https://ernestdong.github.io/posts/python_and_mathematics/</loc>
     <lastmod>2022-01-29T12:28:11+08:00</lastmod>
@@ -282,8 +285,5 @@
     <lastmod>2000-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ernestdong.github.io/categories/</loc>
-  </url><url>
-    <loc>https://ernestdong.github.io/posts/machine_learning_in_erm/</loc>
-    <lastmod>2022-03-30T12:22:27+08:00</lastmod>
   </url>
 </urlset>

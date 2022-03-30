@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-<head>
+  <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -50,68 +50,78 @@
   
 </head>
 
-
-<body class="max-width mx-auto px3 ltr">
   <style type="text/css">
-    body {
-      counter-reset: h2counter;
-    }
+   body {
+     counter-reset: h2counter;
+   }
 
-    h1 {
-      counter-reset: h2counter;
-    }
+   h1 {
+     counter-reset: h2counter;
+   }
 
-    h2 {
-      counter-reset: h3counter;
-    }
+   h2 {
+     counter-reset: h3counter;
+   }
 
-    h3 {
-      counter-reset: h4counter;
-    }
+   h3 {
+     counter-reset: h4counter;
+   }
 
-    h4 {
-      counter-reset: h5counter;
-    }
+   h4 {
+     counter-reset: h5counter;
+   }
 
-    h2:before {
-      content: counter(h2counter) "\0000a0\0000a0  ";
-      counter-increment: h2counter;
-    }
+   h2:before {
+     content: counter(h2counter) "\0000a0\0000a0  ";
+     counter-increment: h2counter;
+   }
 
-    h3:before {
-      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
-      counter-increment: h3counter;
-    }
+   h3:before {
+     content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+     counter-increment: h3counter;
+   }
 
-    h4:before {
-      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
-      counter-increment: h4counter;
-    }
+   h4:before {
+     content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+     counter-increment: h4counter;
+   }
+   #nav{
+     fontsize:1.5em;
+   }
+
   </style>
-  <div class="content index py4">
 
-    <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        
-        <li><a href="/">Home</a></li>
-        
-        <li><a href="/notes">Notes</a></li>
-        
-        <li><a href="/posts">Posts</a></li>
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        <li><a href="/readme/index.html">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-  </span>
+<body>
+  <div class="py2" style="margin-left: 10%;margin-right: 10%">
+    <div id="header">
+      <a href="https://ernestdong.github.io">
+      
+        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+      
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+      </a>
+      <div id="nav" style="fontsize:1.5em">
+        <ul>
+          
+          <li><a href="/"  style="fontsize:1.5em!important;">Home</a></li>
+          
+          <li><a href="/notes"  style="fontsize:1.5em!important;">Notes</a></li>
+          
+          <li><a href="/posts"  style="fontsize:1.5em!important;">Posts</a></li>
+          
+          <li><a href="/tags"  style="fontsize:1.5em!important;">Tags</a></li>
+          
+          <li><a href="/readme/index.html"  style="fontsize:1.5em!important;">About</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-width mx-auto px3 ltr">
+    <div class="content index">
+      <div id="header-post">
   <div id="toc">
     <nav id="TableOfContents">
   <ul>
@@ -125,49 +135,49 @@
 </div>
 
 
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      <header>
-        <h1 class="posttitle" itemprop="name headline">
-          Fiscal policy driven bond risk premia
-        </h1>
-        <div class="meta">
-          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">
-              Ernest Dong
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+          <h1 class="posttitle" itemprop="name headline">
+            Fiscal policy driven bond risk premia
+          </h1>
+          <div class="meta">
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                Ernest Dong
+              </span>
             </span>
-          </span>
-          <div class="postdate">
+            <div class="postdate">
+              
+              <time datetime="2022-01-16 20:17:37 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+              
+            </div>
             
-            <time datetime="2022-01-16 20:17:37 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+            
+            <div class="article-read-time">
+              <i class="far fa-clock"></i>
+              
+              3 minute read
+            </div>
+            
+            
+            
+            <div class="article-tag">
+              <i class="fas fa-tag"></i>
+              
+              
+              <a class="tag-link" href="/%20/tags/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96" rel="tag">财政政策</a>
+              
+               ,  
+              <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
+              
+            </div>
             
           </div>
-          
-          
-          <div class="article-read-time">
-            <i class="far fa-clock"></i>
-            
-            3 minute read
-          </div>
-          
-          
-          
-          <div class="article-tag">
-            <i class="fas fa-tag"></i>
-            
-            
-            <a class="tag-link" href="/tags/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96" rel="tag">财政政策</a>
-            
-             ,  
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
-            
-          </div>
-          
-        </div>
-      </header>
+        </header>
 
-      
-      <div class="content" itemprop="articleBody">
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X20301252">Fiscal policy driven bond risk premia</a></p>
+        
+        <div class="content" itemprop="articleBody">
+          <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X20301252">Fiscal policy driven bond risk premia</a></p>
 <h2 id="主题">主题</h2>
 <p>较高的政府支出水平和不确定性预示着未来的债券超额回报会更高。</p>
 <p>更高水平的政府支出导致收益率曲线正向移动和变陡，而更高的不确定性导致收益率曲线变陡。</p>
@@ -188,10 +198,10 @@
 <p>模型成功地匹配了宏观经济和金融时刻。通过模拟数据进行的资产定价测试进一步验证了我们的实证结果。在模型中，政府支出水平冲击意味着边际效用与通货膨胀（期限结构水平效应）之间存在正相关关系，从而导致正的通货膨胀风险溢价。另一方面，政府支出的不确定性冲击意味着对期限结构的强烈斜率效应。当边际效用高时，正支出不确定性冲击会导致长期债券相对于短期债券便宜，从而产生正期限溢价。</p>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
 </div>
-      </div>
-    </article>
+        </div>
+      </article>
 
-    
+      
   
 
 
@@ -199,7 +209,7 @@
 
 
 
-    <div id="footer-post-container">
+      <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -306,7 +316,7 @@
 </div>
 
 
-    <footer id="footer">
+      <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -330,6 +340,7 @@
 </footer>
 
 
+    </div>
   </div>
 </body>
 

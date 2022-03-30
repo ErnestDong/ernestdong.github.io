@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-<head>
+  <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -50,68 +50,78 @@
   
 </head>
 
-
-<body class="max-width mx-auto px3 ltr">
   <style type="text/css">
-    body {
-      counter-reset: h2counter;
-    }
+   body {
+     counter-reset: h2counter;
+   }
 
-    h1 {
-      counter-reset: h2counter;
-    }
+   h1 {
+     counter-reset: h2counter;
+   }
 
-    h2 {
-      counter-reset: h3counter;
-    }
+   h2 {
+     counter-reset: h3counter;
+   }
 
-    h3 {
-      counter-reset: h4counter;
-    }
+   h3 {
+     counter-reset: h4counter;
+   }
 
-    h4 {
-      counter-reset: h5counter;
-    }
+   h4 {
+     counter-reset: h5counter;
+   }
 
-    h2:before {
-      content: counter(h2counter) "\0000a0\0000a0  ";
-      counter-increment: h2counter;
-    }
+   h2:before {
+     content: counter(h2counter) "\0000a0\0000a0  ";
+     counter-increment: h2counter;
+   }
 
-    h3:before {
-      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
-      counter-increment: h3counter;
-    }
+   h3:before {
+     content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+     counter-increment: h3counter;
+   }
 
-    h4:before {
-      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
-      counter-increment: h4counter;
-    }
+   h4:before {
+     content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+     counter-increment: h4counter;
+   }
+   #nav{
+     fontsize:1.5em;
+   }
+
   </style>
-  <div class="content index py4">
 
-    <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        
-        <li><a href="/">Home</a></li>
-        
-        <li><a href="/notes">Notes</a></li>
-        
-        <li><a href="/posts">Posts</a></li>
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        <li><a href="/readme/index.html">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-  </span>
+<body>
+  <div class="py2" style="margin-left: 10%;margin-right: 10%">
+    <div id="header">
+      <a href="https://ernestdong.github.io">
+      
+        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+      
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+      </a>
+      <div id="nav" style="fontsize:1.5em">
+        <ul>
+          
+          <li><a href="/"  style="fontsize:1.5em!important;">Home</a></li>
+          
+          <li><a href="/notes"  style="fontsize:1.5em!important;">Notes</a></li>
+          
+          <li><a href="/posts"  style="fontsize:1.5em!important;">Posts</a></li>
+          
+          <li><a href="/tags"  style="fontsize:1.5em!important;">Tags</a></li>
+          
+          <li><a href="/readme/index.html"  style="fontsize:1.5em!important;">About</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-width mx-auto px3 ltr">
+    <div class="content index">
+      <div id="header-post">
   <div id="toc">
     <nav id="TableOfContents">
   <ul>
@@ -123,49 +133,49 @@
 </div>
 
 
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      <header>
-        <h1 class="posttitle" itemprop="name headline">
-          货币政策不确定性,违约风险与宏观经济波动
-        </h1>
-        <div class="meta">
-          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">
-              Ernest Dong
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+          <h1 class="posttitle" itemprop="name headline">
+            货币政策不确定性,违约风险与宏观经济波动
+          </h1>
+          <div class="meta">
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                Ernest Dong
+              </span>
             </span>
-          </span>
-          <div class="postdate">
+            <div class="postdate">
+              
+              <time datetime="2022-01-16 20:09:37 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+              
+            </div>
             
-            <time datetime="2022-01-16 20:09:37 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+            
+            <div class="article-read-time">
+              <i class="far fa-clock"></i>
+              
+              1 minute read
+            </div>
+            
+            
+            
+            <div class="article-tag">
+              <i class="fas fa-tag"></i>
+              
+              
+              <a class="tag-link" href="/%20/tags/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96" rel="tag">货币政策</a>
+              
+               ,  
+              <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
+              
+            </div>
             
           </div>
-          
-          
-          <div class="article-read-time">
-            <i class="far fa-clock"></i>
-            
-            1 minute read
-          </div>
-          
-          
-          
-          <div class="article-tag">
-            <i class="fas fa-tag"></i>
-            
-            
-            <a class="tag-link" href="/tags/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96" rel="tag">货币政策</a>
-            
-             ,  
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
-            
-          </div>
-          
-        </div>
-      </header>
+        </header>
 
-      
-      <div class="content" itemprop="articleBody">
-        <p><a href="/ox-hugo/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E3%80%81%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%B3%A2%E5%8A%A8_%E7%8E%8B%E5%8D%9A.pdf">货币政策不确定性,违约风险与宏观经济波动</a>
+        
+        <div class="content" itemprop="articleBody">
+          <p><a href="/ox-hugo/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E3%80%81%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%B3%A2%E5%8A%A8_%E7%8E%8B%E5%8D%9A.pdf">货币政策不确定性,违约风险与宏观经济波动</a>
 货币政策不确定性的增加会带来违约风险的上升</p>
 <h2 id="货币政策不确定性的度量">货币政策不确定性的度量</h2>
 <p>通过 (Jurado, Ludvigson, and Ng 2015) 加权平均和主成分分析法对所有的条件波动率提取公共因子得到两种货币政策的不 确定性指数。</p>
@@ -173,10 +183,10 @@
 <h2 id="宏观违约风险因子">宏观违约风险因子</h2>
 <p>信用利差的上升是信贷市场违约风险加大和经济衰退的重要预警指标(Gilchrist, Yankov, and Zakrajšek 2009)。同时，大量文献指出信贷/ GDP 缺口指标，即总信贷与 GDP 比值偏离其长期均值的部分，往往是债务违约以及银行危机的早期预警指标。信贷/GDP 缺口越大，表明信贷扩张引发债务违约和银行危机的可能性越大。本文用来测度违约风险的变量全部与违约风险正向相关。</p>
 
-      </div>
-    </article>
+        </div>
+      </article>
 
-    
+      
   
 
 
@@ -184,7 +194,7 @@
 
 
 
-    <div id="footer-post-container">
+      <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -289,7 +299,7 @@
 </div>
 
 
-    <footer id="footer">
+      <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -313,6 +323,7 @@
 </footer>
 
 
+    </div>
   </div>
 </body>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-<head>
+  <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -50,31 +50,78 @@
   
 </head>
 
-<body class="max-width mx-auto px3 ltr">
-  <div class="content index py4">
+  <style type="text/css">
+   body {
+     counter-reset: h2counter;
+   }
 
-  <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        
-        <li><a href="/">Home</a></li>
-        
-        <li><a href="/notes">Notes</a></li>
-        
-        <li><a href="/posts">Posts</a></li>
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        <li><a href="/readme/index.html">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-  </span>
+   h1 {
+     counter-reset: h2counter;
+   }
+
+   h2 {
+     counter-reset: h3counter;
+   }
+
+   h3 {
+     counter-reset: h4counter;
+   }
+
+   h4 {
+     counter-reset: h5counter;
+   }
+
+   h2:before {
+     content: counter(h2counter) "\0000a0\0000a0  ";
+     counter-increment: h2counter;
+   }
+
+   h3:before {
+     content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+     counter-increment: h3counter;
+   }
+
+   h4:before {
+     content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+     counter-increment: h4counter;
+   }
+   #nav{
+     fontsize:1.5em;
+   }
+
+  </style>
+
+<body>
+  <div class="py2" style="margin-left: 10%;margin-right: 10%">
+    <div id="header">
+      <a href="https://ernestdong.github.io">
+      
+        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+      
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+      </a>
+      <div id="nav" style="fontsize:1.5em">
+        <ul>
+          
+          <li><a href="/"  style="fontsize:1.5em!important;">Home</a></li>
+          
+          <li><a href="/notes"  style="fontsize:1.5em!important;">Notes</a></li>
+          
+          <li><a href="/posts"  style="fontsize:1.5em!important;">Posts</a></li>
+          
+          <li><a href="/tags"  style="fontsize:1.5em!important;">Tags</a></li>
+          
+          <li><a href="/readme/index.html"  style="fontsize:1.5em!important;">About</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-width mx-auto px3 ltr">
+    <div class="content index">
+      <div id="header-post">
   <div id="toc">
     <nav id="TableOfContents">
   <ul>
@@ -89,43 +136,46 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Doom Emacs 写论文的小 tweak
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
-          
-          <time datetime="2021-12-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-12-30</time>
-          
-        </div>
-        
-        
-        <div class="article-read-time">
-          <i class="far fa-clock"></i>
-          
-          2 minute read
-        </div>
-        
-        
-        
-        <div class="article-tag">
-            <i class="fas fa-tag"></i>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+          <h1 class="posttitle" itemprop="name headline">
+            Doom Emacs 写论文的小 tweak
+          </h1>
+          <div class="meta">
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                Ernest Dong
+              </span>
+            </span>
+            <div class="postdate">
+              
+              <time datetime="2021-12-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-12-30</time>
+              
+            </div>
             
             
-            <a class="tag-link" href="/tags/fun" rel="tag">fun</a>
+            <div class="article-read-time">
+              <i class="far fa-clock"></i>
+              
+              2 minute read
+            </div>
             
-        </div>
-        
-      </div>
-    </header>
+            
+            
+            <div class="article-tag">
+              <i class="fas fa-tag"></i>
+              
+              
+              <a class="tag-link" href="/%20/tags/fun" rel="tag">fun</a>
+              
+            </div>
+            
+          </div>
+        </header>
 
-  
-    
-    <div class="content" itemprop="articleBody">
-      <p>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。</p>
+        
+        <div class="content" itemprop="articleBody">
+          <p>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。</p>
 <p>emacs = jabref + onenote + tex studio</p>
 <h2 id="和学术搜索集成">和学术搜索集成</h2>
 <p>org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web of science 这样的功能。切换到 vertico、用 org-mode 的 cite 之后 org-ref 显得有些重了，我想到了 doom 的 lookup 功能。</p>
@@ -288,18 +338,18 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
-    </div>
-  </article>
+        </div>
+      </article>
 
+      
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+      <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -407,7 +457,7 @@
 </div>
 
 
-  <footer id="footer">
+      <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -431,6 +481,7 @@
 </footer>
 
 
+    </div>
   </div>
 </body>
 
@@ -442,7 +493,7 @@
 
 
 
-  
+
 
 
 <script>
@@ -455,8 +506,8 @@
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

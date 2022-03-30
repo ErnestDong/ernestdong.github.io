@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-<head>
+  <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -50,68 +50,78 @@
   
 </head>
 
-
-<body class="max-width mx-auto px3 ltr">
   <style type="text/css">
-    body {
-      counter-reset: h2counter;
-    }
+   body {
+     counter-reset: h2counter;
+   }
 
-    h1 {
-      counter-reset: h2counter;
-    }
+   h1 {
+     counter-reset: h2counter;
+   }
 
-    h2 {
-      counter-reset: h3counter;
-    }
+   h2 {
+     counter-reset: h3counter;
+   }
 
-    h3 {
-      counter-reset: h4counter;
-    }
+   h3 {
+     counter-reset: h4counter;
+   }
 
-    h4 {
-      counter-reset: h5counter;
-    }
+   h4 {
+     counter-reset: h5counter;
+   }
 
-    h2:before {
-      content: counter(h2counter) "\0000a0\0000a0  ";
-      counter-increment: h2counter;
-    }
+   h2:before {
+     content: counter(h2counter) "\0000a0\0000a0  ";
+     counter-increment: h2counter;
+   }
 
-    h3:before {
-      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
-      counter-increment: h3counter;
-    }
+   h3:before {
+     content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+     counter-increment: h3counter;
+   }
 
-    h4:before {
-      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
-      counter-increment: h4counter;
-    }
+   h4:before {
+     content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+     counter-increment: h4counter;
+   }
+   #nav{
+     fontsize:1.5em;
+   }
+
   </style>
-  <div class="content index py4">
 
-    <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        
-        <li><a href="/">Home</a></li>
-        
-        <li><a href="/notes">Notes</a></li>
-        
-        <li><a href="/posts">Posts</a></li>
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        <li><a href="/readme/index.html">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-  </span>
+<body>
+  <div class="py2" style="margin-left: 10%;margin-right: 10%">
+    <div id="header">
+      <a href="https://ernestdong.github.io">
+      
+        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+      
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+      </a>
+      <div id="nav" style="fontsize:1.5em">
+        <ul>
+          
+          <li><a href="/"  style="fontsize:1.5em!important;">Home</a></li>
+          
+          <li><a href="/notes"  style="fontsize:1.5em!important;">Notes</a></li>
+          
+          <li><a href="/posts"  style="fontsize:1.5em!important;">Posts</a></li>
+          
+          <li><a href="/tags"  style="fontsize:1.5em!important;">Tags</a></li>
+          
+          <li><a href="/readme/index.html"  style="fontsize:1.5em!important;">About</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-width mx-auto px3 ltr">
+    <div class="content index">
+      <div id="header-post">
   <div id="toc">
     <nav id="TableOfContents">
   <ul>
@@ -131,49 +141,49 @@
 </div>
 
 
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      <header>
-        <h1 class="posttitle" itemprop="name headline">
-          Corporate governance of banks and financial stability
-        </h1>
-        <div class="meta">
-          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">
-              Ernest Dong
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+          <h1 class="posttitle" itemprop="name headline">
+            Corporate governance of banks and financial stability
+          </h1>
+          <div class="meta">
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                Ernest Dong
+              </span>
             </span>
-          </span>
-          <div class="postdate">
+            <div class="postdate">
+              
+              <time datetime="2022-01-16 20:20:32 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+              
+            </div>
             
-            <time datetime="2022-01-16 20:20:32 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+            
+            <div class="article-read-time">
+              <i class="far fa-clock"></i>
+              
+              5 minute read
+            </div>
+            
+            
+            
+            <div class="article-tag">
+              <i class="fas fa-tag"></i>
+              
+              
+              <a class="tag-link" href="/%20/tags/%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86" rel="tag">公司治理</a>
+              
+               ,  
+              <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
+              
+            </div>
             
           </div>
-          
-          
-          <div class="article-read-time">
-            <i class="far fa-clock"></i>
-            
-            5 minute read
-          </div>
-          
-          
-          
-          <div class="article-tag">
-            <i class="fas fa-tag"></i>
-            
-            
-            <a class="tag-link" href="/tags/%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86" rel="tag">公司治理</a>
-            
-             ,  
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
-            
-          </div>
-          
-        </div>
-      </header>
+        </header>
 
-      
-      <div class="content" itemprop="articleBody">
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X18301715">Corporate governance of banks and financial stability</a></p>
+        
+        <div class="content" itemprop="articleBody">
+          <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X18301715">Corporate governance of banks and financial stability</a></p>
 <h2 id="主题">主题</h2>
 <p>对于股东，银行可以从风险不敏感存款保险形式的明确国家担保中受益，也可以从流动性和资本支持形式的潜在隐性担保中受益，以防止其倒闭。金融安全网代表了公共当局提供的看跌期权。这种看跌期权的价值增加了​银行活动的风险和银行杠杆。此外，如果在多家银行倒闭的情况下更有可能触发国家担保，银行就有动力去从众并承担相关（或系统性）风险。因此，银行股东可以从承担更多的独立风险和系统性风险中受益，随着股东试图将风险转移到纳税人身上，随着金融安全网的加强，额外风险承担的好处也会增加。</p>
 <p>对于经理人，更倾向于规避风险的经理。与可能持有多元化股票投资组合的股东不同，经理可以将他们的工作、声誉以及个人财富的很大一部分与公司的业绩和健康联系起来。</p>
@@ -206,10 +216,10 @@
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Bebchuk, Lucian, Alma Cohen, and Allen Ferrell. 2009. “What Matters in Corporate Governance?” <i>The Review of Financial Studies</i> 22 (2): 783–827.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Kanas, A., and P. Molyneux. 2020. “Do Measures of Systemic Risk Predict U.S. Corporate Bond Default Rates?” <i>International Review of Financial Analysis</i> 71. <a href="https://www.sciencedirect.com/science/article/pii/S1057521920301976">https://www.sciencedirect.com/science/article/pii/S1057521920301976</a>.</div>
 </div>
-      </div>
-    </article>
+        </div>
+      </article>
 
-    
+      
   
 
 
@@ -217,7 +227,7 @@
 
 
 
-    <div id="footer-post-container">
+      <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -330,7 +340,7 @@
 </div>
 
 
-    <footer id="footer">
+      <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -354,6 +364,7 @@
 </footer>
 
 
+    </div>
   </div>
 </body>
 

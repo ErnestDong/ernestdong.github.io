@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-<head>
+  <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -50,31 +50,78 @@
   
 </head>
 
-<body class="max-width mx-auto px3 ltr">
-  <div class="content index py4">
+  <style type="text/css">
+   body {
+     counter-reset: h2counter;
+   }
 
-  <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        
-        <li><a href="/">Home</a></li>
-        
-        <li><a href="/notes">Notes</a></li>
-        
-        <li><a href="/posts">Posts</a></li>
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        <li><a href="/readme/index.html">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-  </span>
+   h1 {
+     counter-reset: h2counter;
+   }
+
+   h2 {
+     counter-reset: h3counter;
+   }
+
+   h3 {
+     counter-reset: h4counter;
+   }
+
+   h4 {
+     counter-reset: h5counter;
+   }
+
+   h2:before {
+     content: counter(h2counter) "\0000a0\0000a0  ";
+     counter-increment: h2counter;
+   }
+
+   h3:before {
+     content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+     counter-increment: h3counter;
+   }
+
+   h4:before {
+     content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+     counter-increment: h4counter;
+   }
+   #nav{
+     fontsize:1.5em;
+   }
+
+  </style>
+
+<body>
+  <div class="py2" style="margin-left: 10%;margin-right: 10%">
+    <div id="header">
+      <a href="https://ernestdong.github.io">
+      
+        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+      
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+      </a>
+      <div id="nav" style="fontsize:1.5em">
+        <ul>
+          
+          <li><a href="/"  style="fontsize:1.5em!important;">Home</a></li>
+          
+          <li><a href="/notes"  style="fontsize:1.5em!important;">Notes</a></li>
+          
+          <li><a href="/posts"  style="fontsize:1.5em!important;">Posts</a></li>
+          
+          <li><a href="/tags"  style="fontsize:1.5em!important;">Tags</a></li>
+          
+          <li><a href="/readme/index.html"  style="fontsize:1.5em!important;">About</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-width mx-auto px3 ltr">
+    <div class="content index">
+      <div id="header-post">
   <div id="toc">
     <nav id="TableOfContents">
   <ul>
@@ -118,43 +165,46 @@
 </div>
 
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        python and mathematics
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
-          
-          <time datetime="2022-01-29 12:28:11 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-29</time>
-          
-        </div>
-        
-        
-        <div class="article-read-time">
-          <i class="far fa-clock"></i>
-          
-          9 minute read
-        </div>
-        
-        
-        
-        <div class="article-tag">
-            <i class="fas fa-tag"></i>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+          <h1 class="posttitle" itemprop="name headline">
+            python and mathematics
+          </h1>
+          <div class="meta">
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                Ernest Dong
+              </span>
+            </span>
+            <div class="postdate">
+              
+              <time datetime="2022-01-29 12:28:11 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-29</time>
+              
+            </div>
             
             
-            <a class="tag-link" href="/tags/python" rel="tag">python</a>
+            <div class="article-read-time">
+              <i class="far fa-clock"></i>
+              
+              9 minute read
+            </div>
             
-        </div>
-        
-      </div>
-    </header>
+            
+            
+            <div class="article-tag">
+              <i class="fas fa-tag"></i>
+              
+              
+              <a class="tag-link" href="/%20/tags/python" rel="tag">python</a>
+              
+            </div>
+            
+          </div>
+        </header>
 
-  
-    
-    <div class="content" itemprop="articleBody">
-      <h2 id="get-start">Get Start</h2>
+        
+        <div class="content" itemprop="articleBody">
+          <h2 id="get-start">Get Start</h2>
 <p>Concentrate on <a href="/tags/python/">python</a> and math</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -766,18 +816,18 @@ ndarray 通过 <strong>矢量化</strong> 加速程序运行</p>
 <h3 id="cheatsheet">cheatsheet</h3>
 <p><a href="https://github.com/ErnestDong/seaborn/blob/master/SB%20Tut.ipynb">cheat sheet</a></p>
 
-    </div>
-  </article>
+        </div>
+      </article>
 
+      
   
-  
 
 
 
 
 
 
-  <div id="footer-post-container">
+      <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -914,7 +964,7 @@ ndarray 通过 <strong>矢量化</strong> 加速程序运行</p>
 </div>
 
 
-  <footer id="footer">
+      <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -938,6 +988,7 @@ ndarray 通过 <strong>矢量化</strong> 加速程序运行</p>
 </footer>
 
 
+    </div>
   </div>
 </body>
 
@@ -949,7 +1000,7 @@ ndarray 通过 <strong>矢量化</strong> 加速程序运行</p>
 
 
 
-  
+
 
 
 <script>
@@ -962,8 +1013,8 @@ ndarray 通过 <strong>矢量化</strong> 加速程序运行</p>
     }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+<script type="text/javascript" id="MathJax-script" async src="/js/tex-mml-chtml.js">
 </script>
+
 
 </html>

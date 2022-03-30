@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-<head>
+  <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -50,68 +50,78 @@
   
 </head>
 
-
-<body class="max-width mx-auto px3 ltr">
   <style type="text/css">
-    body {
-      counter-reset: h2counter;
-    }
+   body {
+     counter-reset: h2counter;
+   }
 
-    h1 {
-      counter-reset: h2counter;
-    }
+   h1 {
+     counter-reset: h2counter;
+   }
 
-    h2 {
-      counter-reset: h3counter;
-    }
+   h2 {
+     counter-reset: h3counter;
+   }
 
-    h3 {
-      counter-reset: h4counter;
-    }
+   h3 {
+     counter-reset: h4counter;
+   }
 
-    h4 {
-      counter-reset: h5counter;
-    }
+   h4 {
+     counter-reset: h5counter;
+   }
 
-    h2:before {
-      content: counter(h2counter) "\0000a0\0000a0  ";
-      counter-increment: h2counter;
-    }
+   h2:before {
+     content: counter(h2counter) "\0000a0\0000a0  ";
+     counter-increment: h2counter;
+   }
 
-    h3:before {
-      content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
-      counter-increment: h3counter;
-    }
+   h3:before {
+     content: counter(h2counter) "."counter(h3counter) "\0000a0\0000a0";
+     counter-increment: h3counter;
+   }
 
-    h4:before {
-      content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
-      counter-increment: h4counter;
-    }
+   h4:before {
+     content: counter(h2counter) "."counter(h3counter)"."counter(h4counter) "\0000a0\0000a0";
+     counter-increment: h4counter;
+   }
+   #nav{
+     fontsize:1.5em;
+   }
+
   </style>
-  <div class="content index py4">
 
-    <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        
-        <li><a href="/">Home</a></li>
-        
-        <li><a href="/notes">Notes</a></li>
-        
-        <li><a href="/posts">Posts</a></li>
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        <li><a href="/readme/index.html">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-  </span>
+<body>
+  <div class="py2" style="margin-left: 10%;margin-right: 10%">
+    <div id="header">
+      <a href="https://ernestdong.github.io">
+      
+        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+      
+  <div id="title">
+    <h1>Ernest Dong</h1>
+  </div>
+      </a>
+      <div id="nav" style="fontsize:1.5em">
+        <ul>
+          
+          <li><a href="/"  style="fontsize:1.5em!important;">Home</a></li>
+          
+          <li><a href="/notes"  style="fontsize:1.5em!important;">Notes</a></li>
+          
+          <li><a href="/posts"  style="fontsize:1.5em!important;">Posts</a></li>
+          
+          <li><a href="/tags"  style="fontsize:1.5em!important;">Tags</a></li>
+          
+          <li><a href="/readme/index.html"  style="fontsize:1.5em!important;">About</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-width mx-auto px3 ltr">
+    <div class="content index">
+      <div id="header-post">
   <div id="toc">
     <nav id="TableOfContents">
   <ul>
@@ -126,49 +136,49 @@
 </div>
 
 
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      <header>
-        <h1 class="posttitle" itemprop="name headline">
-          Exploring the sources of default clustering
-        </h1>
-        <div class="meta">
-          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">
-              Ernest Dong
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+          <h1 class="posttitle" itemprop="name headline">
+            Exploring the sources of default clustering
+          </h1>
+          <div class="meta">
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                Ernest Dong
+              </span>
             </span>
-          </span>
-          <div class="postdate">
+            <div class="postdate">
+              
+              <time datetime="2022-01-16 20:24:46 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+              
+            </div>
             
-            <time datetime="2022-01-16 20:24:46 &#43;0800 &#43;0800" itemprop="datePublished">2022-01-16</time>
+            
+            <div class="article-read-time">
+              <i class="far fa-clock"></i>
+              
+              5 minute read
+            </div>
+            
+            
+            
+            <div class="article-tag">
+              <i class="fas fa-tag"></i>
+              
+              
+              <a class="tag-link" href="/%20/tags/%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93" rel="tag">风险传染</a>
+              
+               ,  
+              <a class="tag-link" href="/%20/tags/thesis" rel="tag">thesis</a>
+              
+            </div>
             
           </div>
-          
-          
-          <div class="article-read-time">
-            <i class="far fa-clock"></i>
-            
-            5 minute read
-          </div>
-          
-          
-          
-          <div class="article-tag">
-            <i class="fas fa-tag"></i>
-            
-            
-            <a class="tag-link" href="/tags/%E9%A3%8E%E9%99%A9%E4%BC%A0%E6%9F%93" rel="tag">风险传染</a>
-            
-             ,  
-            <a class="tag-link" href="/tags/thesis" rel="tag">thesis</a>
-            
-          </div>
-          
-        </div>
-      </header>
+        </header>
 
-      
-      <div class="content" itemprop="articleBody">
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X1830103X">Exploring the sources of default clustering</a></p>
+        
+        <div class="content" itemprop="articleBody">
+          <p><a href="https://www.sciencedirect.com/science/article/pii/S0304405X1830103X">Exploring the sources of default clustering</a></p>
 <h2 id="主题">主题</h2>
 <p>违约聚类的一个主要来源是公司共同暴露于共同或相关的风险因素，如利率、股票收益和 GDP 增长。这些因素的变动导致公司有条件违约率的相关变化。除了公司对系统性因素的共同暴露之外，还有其他违约集群的来源。</p>
 <p>公司之间的财务、法律或业务关系可能充当风险分散的渠道。例如，信用互换中保护卖方的违约可能会使买方面临保护，并增加保护买方的其他交易对手承担的违约风险。通过传染，一家公司的违约会对其他公司的有条件违约率产生直接影响(<a href="#citeproc_bib_item_1">Acemoglu, Ozdaglar, and Tahbaz-Salehi 2015</a>)。</p>
@@ -201,10 +211,10 @@
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Acemoglu, Daron, Asuman Ozdaglar, and Alireza Tahbaz-Salehi. 2015. “Systemic Risk and Stability in Financial Networks.” <i>American Economic Review</i> 105 (2): 564–608.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Hamilton, David. 2005. “Moodys Senior Ratings Algorithm and Estimated Senior Ratings.” <i>Moodys Investors Service</i>.</div>
 </div>
-      </div>
-    </article>
+        </div>
+      </article>
 
-    
+      
   
 
 
@@ -212,7 +222,7 @@
 
 
 
-    <div id="footer-post-container">
+      <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -320,7 +330,7 @@
 </div>
 
 
-    <footer id="footer">
+      <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -344,6 +354,7 @@
 </footer>
 
 
+    </div>
   </div>
 </body>
 
