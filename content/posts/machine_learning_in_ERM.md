@@ -1,7 +1,7 @@
 +++
 title = "机器学习在企业风险管理中的应用举例"
 author = ["Ernest Dong"]
-date = 2022-03-30
+date = 2022-03-30T00:00:00+08:00
 tags = ["python"]
 draft = false
 +++
@@ -127,9 +127,7 @@ df["Rating"].value_counts().plot(kind="bar")
 ```python
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, recall_score, precision_score
-import numpy as np
-np.random.seed(42)
-
+RANDOM_STATE = 42
 Y = df["Rating"]
 Y = Y.replace({"CCC": "C", "CC": "C"})
 df["Date"] = df["Date"].apply(lambda x: x.split("/")[-1])
@@ -137,7 +135,7 @@ dummies = ["Rating Agency Name", "Sector", "Date"]
 X = df[[i for i in df.columns if df[i].dtype != "object"]]
 for dummy in dummies:
     X = pd.concat([X, pd.get_dummies(df[dummy], drop_first=True, prefix=dummy)], axis=1)
-Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=42)
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=RANDOM_STATE)
 result = {}
 X.columns
 ```
@@ -194,7 +192,7 @@ def get_score(Xtest, Ytrue, model):
 
 import random
 
-random.seed(42)
+random.seed(RANDOM_STATE)
 ratings = Y.unique()
 tmp = {}
 monte_num = 100
@@ -223,7 +221,7 @@ result["random"]
 ```python
 from sklearn.linear_model import LogisticRegression
 
-logit = LogisticRegression(multi_class="multinomial", solver="saga")
+logit = LogisticRegression(multi_class="multinomial", solver="saga", random_state=RANDOM_STATE)
 logit.fit(Xtrain, Ytrain)
 result["logit"] = get_score(Xtest, Ytest, logit.predict)
 result["logit"]
@@ -248,7 +246,7 @@ result["logit"]
 ```python
 from sklearn.tree import DecisionTreeClassifier
 
-dt = DecisionTreeClassifier(max_depth=3)
+dt = DecisionTreeClassifier(max_depth=3, random_state=RANDOM_STATE)
 dt.fit(Xtrain, Ytrain)
 result["decision tree"] = get_score(Xtest, Ytest, dt.predict)
 result["decision tree"]
@@ -275,15 +273,15 @@ Bagging是bootstrap aggregating的简写。在 bagging 方法中，从整体数�
 ```python
 from sklearn.ensemble import RandomForestClassifier
 
-rf = RandomForestClassifier(n_estimators=100, max_depth=4)
+rf = RandomForestClassifier(n_estimators=100, max_depth=4, random_state=RANDOM_STATE)
 rf.fit(Xtrain, Ytrain)
 result["random forest"] = get_score(Xtest, Ytest, rf.predict)
 result["random forest"]
 ```
 
-|           |   |                     |        |   |                     |    |   |                     |           |   |                    |
-|-----------|---|---------------------|--------|---|---------------------|----|---|---------------------|-----------|---|--------------------|
-| precision | : | 0.40673539636143735 | recall | : | 0.43503937007874016 | f1 | : | 0.39258337709756824 | \\(R^2\\) | : | 0.4104515214454678 |
+|           |   |                     |        |   |                    |    |   |                     |           |   |                     |
+|-----------|---|---------------------|--------|---|--------------------|----|---|---------------------|-----------|---|---------------------|
+| precision | : | 0.39603489727136376 | recall | : | 0.4251968503937008 | f1 | : | 0.38351839772007446 | \\(R^2\\) | : | 0.39959139741930844 |
 
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
 
@@ -298,15 +296,16 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
 
-gb = GradientBoostingClassifier()
+gb = GradientBoostingClassifier(random_state=RANDOM_STATE)
+
 gb.fit(Xtrain, Ytrain)
 result["gradient boosting"] = get_score(Xtest, Ytest, gb.predict)
 result["gradient boosting"]
 ```
 
-|           |   |                    |        |   |                    |    |   |                    |           |   |                   |
-|-----------|---|--------------------|--------|---|--------------------|----|---|--------------------|-----------|---|-------------------|
-| precision | : | 0.5309218601759191 | recall | : | 0.5255905511811023 | f1 | : | 0.5096162941265188 | \\(R^2\\) | : | 0.543985737160968 |
+|           |   |                   |        |   |                    |    |   |                    |           |   |                    |
+|-----------|---|-------------------|--------|---|--------------------|----|---|--------------------|-----------|---|--------------------|
+| precision | : | 0.530520009176101 | recall | : | 0.5255905511811023 | f1 | : | 0.5094674767985568 | \\(R^2\\) | : | 0.5421094375792002 |
 
 
 ### 支持向量机 {#支持向量机}
@@ -324,7 +323,7 @@ Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在�
 ```python
 from sklearn.svm import SVC
 
-svm = SVC(kernel="rbf", gamma="auto")
+svm = SVC(kernel="rbf", gamma="auto", random_state=RANDOM_STATE)
 svm.fit(Xtrain, Ytrain)
 result["svm"] = get_score(Xtest, Ytest, svm.predict)
 result["svm"]
@@ -343,15 +342,24 @@ result["svm"]
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
-KNN = KNeighborsClassifier(n_neighbors=3)
+KNN = KNeighborsClassifier(n_neighbors=3, random_state=RANDOM_STATE)
 KNN.fit(Xtrain, Ytrain)
 result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
 result["KNN"]
 ```
 
-|           |   |                    |        |   |                     |    |   |                     |           |   |                     |
-|-----------|---|--------------------|--------|---|---------------------|----|---|---------------------|-----------|---|---------------------|
-| precision | : | 0.3625400456087721 | recall | : | 0.35236220472440943 | f1 | : | 0.34202311550427716 | \\(R^2\\) | : | 0.29873782865224163 |
+```text
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Input In [25], in <cell line: 4>()
+      1 from sklearn.neighbors import KNeighborsClassifier
+      2 from sklearn.metrics import accuracy_score
+----> 4 KNN = KNeighborsClassifier(n_neighbors=3, random_state=RANDOM_STATE)
+      5 KNN.fit(Xtrain, Ytrain)
+      6 result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
+
+TypeError: KNeighborsClassifier.__init__() got an unexpected keyword argument 'random_state'
+```
 
 
 ### K means {#k-means}
@@ -416,16 +424,16 @@ kmeans.predict([[0, 0], [12, 3]])
     ```
 
     ```text
-    1.3253589868545532 0.9112542271614075 83.43317413330078
-    4.226484298706055 7.316026210784912 0.13158977031707764
-    3.8841657638549805 7.51292610168457 0.06794870644807816
-    3.6355700492858887 7.649879455566406 0.03511052578687668
-    3.456868886947632 7.748322010040283 0.018142346292734146
-    3.3284122943878174 7.819086074829102 0.009374506771564484
-    3.2360737323760986 7.869953155517578 0.004844010807573795
-    3.1696975231170654 7.906517505645752 0.002503005089238286
-    3.1219840049743652 7.932802200317383 0.0012933481484651566
-    3.0876853466033936 7.951696395874023 0.0006682872772216797
+    1.3640172481536865 0.9061576724052429 82.493408203125
+    4.206701278686523 7.340141773223877 0.12923014163970947
+    3.8633475303649902 7.5342488288879395 0.06569399684667587
+    3.6158015727996826 7.667799949645996 0.03342194855213165
+    3.4392313957214355 7.763052463531494 0.01700344868004322
+    3.3132894039154053 7.830993175506592 0.008650500327348709
+    3.2234606742858887 7.879451751708984 0.0044010104611516
+    3.1593875885009766 7.9140167236328125 0.0022390284575521946
+    3.1136865615844727 7.938670635223389 0.001139115891419351
+    3.0810887813568115 7.956255912780762 0.0005795236211270094
     ```
 
     上述的代码在 pytorch 中对应的有：
@@ -673,15 +681,16 @@ epoch: 2700 loss: 0.0848860964179039
 | random            | 0.2364    | 0.1255 | 0.1544 | 0.0089    |
 | logit             | 0.1815    | 0.2441 | 0.1547 | -0.0178   |
 | decision tree     | 0.3499    | 0.3799 | 0.3529 | 0.3632    |
-| random forest     | 0.4067    | 0.435  | 0.3926 | 0.4105    |
-| gradient boosting | 0.5309    | 0.5256 | 0.5096 | 0.544     |
+| random forest     | 0.396     | 0.4252 | 0.3835 | 0.3996    |
+| gradient boosting | 0.5305    | 0.5256 | 0.5095 | 0.5421    |
 | svm               | 0.4137    | 0.4094 | 0.3517 | 0.3431    |
-| KNN               | 0.3625    | 0.3524 | 0.342  | 0.2987    |
 | bp neural network | 0.2739    | 0.3386 | 0.2763 | -0.0591   |
 | CNN               | 0.4308    | 0.4724 | 0.445  | 0.4383    |
 | RNN               | 0.4046    | 0.4508 | 0.4241 | 0.4729    |
 
 ```python
+import numpy as np
+np.random.seed(42)
 N = len(feature)
 angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
 angles = np.concatenate((angles, [angles[0]]))
@@ -697,7 +706,7 @@ plt.legend(bbox_to_anchor=(1.2, -0.1), ncol=3)
 plt.show()
 ```
 
-{{< figure src="/ox-hugo/ca7f2f23f5fde8c8e82973581cea23687e734bbf.png" >}}
+{{< figure src="/ox-hugo/5bedfd5c7467b2951a67a8c7caa710daf6c15157.png" >}}
 
 
 ## reference {#reference}

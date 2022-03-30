@@ -46,16 +46,16 @@
   <div class="py2" style="margin-left: 10%;margin-right: 10%">
     <div id="header">
       <a href="{{ .Site.BaseURL }}">
-      {{ if (isset .Site.Params "gravatar") }}
-        <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
-      {{ else if (isset .Site.Params "logo") }}
-        <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }})"></div>
-      {{ else }}
-        <div id="logo" style="background-image: url({{ "images/logo.png" | absURL }})"></div>
-      {{ end}}
-  <div id="title">
-    <h1>{{ .Site.Title }}</h1>
-  </div>
+        {{ if (isset .Site.Params "gravatar") }}
+          <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
+        {{ else if (isset .Site.Params "logo") }}
+          <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }})"></div>
+        {{ else }}
+          <div id="logo" style="background-image: url({{ "images/logo.png" | absURL }})"></div>
+        {{ end}}
+        <div id="title">
+            <h1>{{ .Site.Title }}</h1>
+        </div>
       </a>
       <div id="nav" style="fontsize:1.5em">
         <ul>
@@ -69,7 +69,6 @@
   <div class="max-width mx-auto px3 ltr">
     <div class="content index">
       {{ partial "page_nav.html" . }}
-
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header>
           <h1 class="posttitle" itemprop="name headline">
@@ -131,13 +130,14 @@
           {{ .Content}}
         </div>
       </article>
+      <div class="py3">
 
-      {{ partial "comments.html" . }}
+          {{ partial "comments.html" . }}
 
-      {{ partial "page_nav_mobile.html" . }}
+          {{ partial "page_nav_mobile.html" . }}
 
-      {{ partial "footer.html" . }}
-
+          {{ partial "footer.html" . }}
+      </div>
     </div>
   </div>
 </body>

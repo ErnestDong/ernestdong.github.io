@@ -82,7 +82,7 @@ df["Rating"].value_counts().plot(kind="bar")
 #+begin_src jupyter-python
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, recall_score, precision_score
-
+RANDOM_STATE = 42
 Y = df["Rating"]
 Y = Y.replace({"CCC": "C", "CC": "C"})
 df["Date"] = df["Date"].apply(lambda x: x.split("/")[-1])
@@ -90,7 +90,7 @@ dummies = ["Rating Agency Name", "Sector", "Date"]
 X = df[[i for i in df.columns if df[i].dtype != "object"]]
 for dummy in dummies:
     X = pd.concat([X, pd.get_dummies(df[dummy], drop_first=True, prefix=dummy)], axis=1)
-Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=42)
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=RANDOM_STATE)
 result = {}
 X.columns
 #+end_src
@@ -123,7 +123,7 @@ def get_score(Xtest, Ytrue, model):
 
 import random
 
-random.seed(42)
+random.seed(RANDOM_STATE)
 ratings = Y.unique()
 tmp = {}
 monte_num = 100
@@ -145,7 +145,7 @@ result["random"]
 #+begin_src jupyter-python :kernel python3 :session main :exports both
 from sklearn.linear_model import LogisticRegression
 
-logit = LogisticRegression(multi_class="multinomial", solver="saga")
+logit = LogisticRegression(multi_class="multinomial", solver="saga", random_state=RANDOM_STATE)
 logit.fit(Xtrain, Ytrain)
 result["logit"] = get_score(Xtest, Ytest, logit.predict)
 result["logit"]
@@ -159,7 +159,7 @@ result["logit"]
 #+begin_src jupyter-python
 from sklearn.tree import DecisionTreeClassifier
 
-dt = DecisionTreeClassifier(max_depth=3)
+dt = DecisionTreeClassifier(max_depth=3, random_state=RANDOM_STATE)
 dt.fit(Xtrain, Ytrain)
 result["decision tree"] = get_score(Xtest, Ytest, dt.predict)
 result["decision tree"]
@@ -177,7 +177,7 @@ Bagging是bootstrap aggregating的简写。在 bagging 方法中，从整体数�
 #+begin_src jupyter-python
 from sklearn.ensemble import RandomForestClassifier
 
-rf = RandomForestClassifier(n_estimators=100, max_depth=4)
+rf = RandomForestClassifier(n_estimators=100, max_depth=4, random_state=RANDOM_STATE)
 rf.fit(Xtrain, Ytrain)
 result["random forest"] = get_score(Xtest, Ytest, rf.predict)
 result["random forest"]
@@ -192,7 +192,8 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 #+begin_src jupyter-python
 from sklearn.ensemble import GradientBoostingClassifier
 
-gb = GradientBoostingClassifier()
+gb = GradientBoostingClassifier(random_state=RANDOM_STATE)
+
 gb.fit(Xtrain, Ytrain)
 result["gradient boosting"] = get_score(Xtest, Ytest, gb.predict)
 result["gradient boosting"]
@@ -213,7 +214,7 @@ Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在�
 #+begin_src jupyter-python
 from sklearn.svm import SVC
 
-svm = SVC(kernel="rbf", gamma="auto")
+svm = SVC(kernel="rbf", gamma="auto", random_state=RANDOM_STATE)
 svm.fit(Xtrain, Ytrain)
 result["svm"] = get_score(Xtest, Ytest, svm.predict)
 result["svm"]
@@ -229,7 +230,7 @@ result["svm"]
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
-KNN = KNeighborsClassifier(n_neighbors=3)
+KNN = KNeighborsClassifier(n_neighbors=3, random_state=RANDOM_STATE)
 KNN.fit(Xtrain, Ytrain)
 result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
 result["KNN"]
