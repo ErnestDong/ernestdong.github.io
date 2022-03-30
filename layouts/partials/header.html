@@ -19,12 +19,6 @@
       {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
-        <li>
-          <input type="text" placeholder="Search" id="search" style="border-radius: 10px;outline: none;padding-right: 20px">
-          <button onclick="window.location='https://github.com/ErnestDong/ernestdong.github.io/search?q='+document.getElementById('search').value"  style="margin-left: -20px;border-radius: 10px;">
-            <i class="fas fa-search"></i>
-          </button>
-        </li>
     </ul>
   </div>
 </header>

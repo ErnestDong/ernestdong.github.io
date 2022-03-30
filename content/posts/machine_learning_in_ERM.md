@@ -1,6 +1,7 @@
 +++
 title = "机器学习在企业风险管理中的应用举例"
 author = ["Ernest Dong"]
+date = 2022-03-30
 tags = ["python"]
 draft = false
 +++
