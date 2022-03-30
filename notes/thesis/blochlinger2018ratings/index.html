@@ -93,7 +93,7 @@
     <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -111,41 +111,9 @@
       </ul>
     </span>
     <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/2020do/" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#" aria-label="Share">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="toc">
-      <nav id="TableOfContents">
+  </span>
+  <div id="toc">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#主题">主题</a></li>
     <li><a href="#数据">数据</a></li>
@@ -160,64 +128,7 @@
     <li><a href="#结论">结论</a></li>
   </ul>
 </nav>
-    </div>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Facebook">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&text=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Twitter">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Linkedin">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&is_video=false&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pinterest">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f" aria-label="Email">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&title=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="reddit">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&name=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f&description=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f%20%e4%b8%bb%e9%a2%98%20%e6%8f%90%e5%87%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e4%bc%81%e4%b8%9a%e8%bf%9d%e7%ba%a6%ef%bc%8c%e6%a8%a1%e5%9e%8b%e5%8c%85%e6%8b%ac%e4%ba%86%20Altman%20Z%20%e8%af%84%e5%88%86%e5%92%8c%20Merton%20%e8%bf%9d%e7%ba%a6%e8%b7%9d%e7%a6%bb%ef%bc%8c%e4%b8%94%e6%af%94%e8%af%84%e7%ba%a7%e6%9b%b4%e5%a5%bd%20%e5%9c%a8%e4%b8%80%e4%b8%aa%e7%90%86%e8%ae%ba%e6%a8%a1%e5%9e%8b%e4%b8%ad%e8%a1%a8%e6%98%8e%ef%bc%8c%e6%9c%80%20powerful%20%e7%9a%84%e8%bf%9d%e7%ba%a6%e9%a2%84%e6%b5%8b" aria-label="Tumblr">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fblochlinger2018ratings%2f&t=Are%20ratings%20the%20worst%20form%20of%20credit%20assessment%20except%20for%20all%20the%20others%3f" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-  </span>
+  </div>
 </div>
 
 

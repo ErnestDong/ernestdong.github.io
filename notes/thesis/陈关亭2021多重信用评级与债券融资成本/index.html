@@ -93,7 +93,7 @@
     <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -111,41 +111,9 @@
       </ul>
     </span>
     <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/%E7%8E%8B%E6%98%A5%E4%B8%BD2014%E5%9F%BA%E4%BA%8E%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%8C%BA%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%AD%E5%9B%BD%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%A2%84%E8%AD%A6%E7%A0%94%E7%A9%B6/" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="https://ernestdong.github.io/notes/thesis/anginer2018corporate/" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#" aria-label="Share">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="toc">
-      <nav id="TableOfContents">
+  </span>
+  <div id="toc">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#主题">主题</a></li>
     <li><a href="#数据">数据</a></li>
@@ -154,64 +122,7 @@
     <li><a href="#结论">结论</a></li>
   </ul>
 </nav>
-    </div>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f" aria-label="Facebook">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&text=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae" aria-label="Twitter">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&title=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae" aria-label="Linkedin">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&is_video=false&description=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae" aria-label="Pinterest">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f" aria-label="Email">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&title=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&title=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae" aria-label="reddit">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&name=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae&description=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae%20%e4%b8%bb%e9%a2%98%20%e5%bd%93%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e7%9a%84%e8%af%84%e7%ba%a7%e6%84%8f%e8%a7%81%e4%b8%8d%e4%b8%80%e8%87%b4%e6%97%b6%ef%bc%8c%e5%b9%b3%e5%9d%87%e8%af%84%e7%ba%a7%e7%9a%84%e4%bf%a1%e6%81%af%e5%90%ab%e9%87%8f%e6%9c%80%e9%ab%98%20%e5%9c%a8%e6%88%91%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%ef%bc%8c%e8%af%84%e7%ba%a7%e6%9c%ba%e6%9e%84" aria-label="Tumblr">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2f%25E9%2599%2588%25E5%2585%25B3%25E4%25BA%25AD2021%25E5%25A4%259A%25E9%2587%258D%25E4%25BF%25A1%25E7%2594%25A8%25E8%25AF%2584%25E7%25BA%25A7%25E4%25B8%258E%25E5%2580%25BA%25E5%2588%25B8%25E8%259E%258D%25E8%25B5%2584%25E6%2588%2590%25E6%259C%25AC%2f&t=%e5%a4%9a%e9%87%8d%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e4%b8%8e%e5%80%ba%e5%88%b8%e8%9e%8d%e8%b5%84%e6%88%90%e6%9c%ac%e2%80%94%e2%80%94%e6%9d%a5%e8%87%aa%e4%b8%ad%e5%9b%bd%e5%80%ba%e5%88%b8%e5%b8%82%e5%9c%ba%e7%9a%84%e7%bb%8f%e9%aa%8c%e8%af%81%e6%8d%ae" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-  </span>
+  </div>
 </div>
 
 

@@ -56,7 +56,7 @@
   <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -74,41 +74,9 @@
       </ul>
     </span>
     <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/nagel2020banks/" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="https://ernestdong.github.io/notes/thesis_archive/" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#" aria-label="Share">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="toc">
-      <nav id="TableOfContents">
+  </span>
+  <div id="toc">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#get-start">Get Start</a></li>
     <li><a href="#numpy">numpy</a>
@@ -146,64 +114,7 @@
     </li>
   </ul>
 </nav>
-    </div>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f" aria-label="Facebook">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&text=python%20and%20mathematics" aria-label="Twitter">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="Linkedin">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&is_video=false&description=python%20and%20mathematics" aria-label="Pinterest">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=python%20and%20mathematics&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f" aria-label="Email">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&title=python%20and%20mathematics" aria-label="reddit">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&name=python%20and%20mathematics&description=Get%20Start%20Concentrate%20on%20python%20and%20math%201%20%28pyvenv-activate%20%26%2334%3b~%2fCode%2fthesis%2f.venv%2f%26%2334%3b%29%201%202%203%204%205%206%20import%20pandas%20as%20pd%20import%20numpy%20as%20np%20import%20matplotlib.pyplot%20as%20plt%20import%20seaborn%20as%20sns%20import%20statsmodels.api%20as%20sm%20import%20statsmodels.formula.api%20as%20smf%20numpy%20numpy%20%e6%98%af%e5%ba%95%e5%b1%82%e4%b8%ba%20C%20%e7%9a%84%e5%90%91%e9%87%8f%e8%ae%a1%e7%ae%97%e5%ba%93%ef%bc%8c%e6%98%af%20python%20%e7%a7%91%e5%ad%a6%e8%ae%a1%e7%ae%97%e7%9a%84%e5%9f%ba%e7%9f%b3%ef%bc%8c%e5%bf%ab%e9%80%9f%e3%80%81%e8%b4%b4%e8%bf%91%e5%ba%95" aria-label="Tumblr">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fposts%2fpython_and_mathematics%2f&t=python%20and%20mathematics" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-  </span>
+  </div>
 </div>
 
 

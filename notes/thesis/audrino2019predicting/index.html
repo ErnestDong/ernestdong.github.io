@@ -93,7 +93,7 @@
     <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -111,41 +111,9 @@
       </ul>
     </span>
     <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/%E6%B1%AA%E8%8E%892015%E6%94%BF%E5%BA%9C%E9%9A%90%E6%80%A7%E6%8B%85%E4%BF%9D/" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="https://ernestdong.github.io/notes/thesis/cortes2021financial/" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#" aria-label="Share">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="toc">
-      <nav id="TableOfContents">
+  </span>
+  <div id="toc">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#主题">主题</a></li>
     <li><a href="#数据">数据</a></li>
@@ -154,64 +122,7 @@
     <li><a href="#结论">结论</a></li>
   </ul>
 </nav>
-    </div>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f" aria-label="Facebook">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&text=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models" aria-label="Twitter">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&title=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models" aria-label="Linkedin">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&is_video=false&description=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models" aria-label="Pinterest">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f" aria-label="Email">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&title=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&title=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models" aria-label="reddit">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&name=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models&description=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models%20%e4%b8%bb%e9%a2%98%20%e5%9c%a8%20logit%20%e5%9b%9e%e5%bd%92%e4%b8%ad%e4%bd%bf%e7%94%a8%20Mixed-data%20sampling%20%28MIDAS%29%20%e4%bf%ae%e6%ad%a3%20%e8%bf%87%e5%8e%bb%e7%9a%84%e6%96%87%e7%8c%ae%e4%bb%8e%20CAMELS%20%e5%87%ba%e5%8f%91%e7%a0%94%e7%a9%b6%e9%93%b6%e8%a1%8c%e5%80%92%e9%97%ad%ef%bc%9a%20capital%20assets%20management%20earnings%20liquidity%20sensitivity%20to%20market%20risk%20%e7%bb%93%e6%9e%9c%e4%b8%8d%e5%a5%bd%e5%8f%af%e4%bb%a5%e5%b0%9d%e8%af%95%e8%bf%99%e7%a7%8d%e6%96%b9%e5%bc%8f%e6%94%b9%e8%bf%9b%20%e6%95%b0%e6%8d%ae%20Bank%20Level%2050%20quarters%20of%20data%20for" aria-label="Tumblr">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2faudrino2019predicting%2f&t=Predicting%20us%20bank%20failures%20with%20midas%20logit%20models" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-  </span>
+  </div>
 </div>
 
 

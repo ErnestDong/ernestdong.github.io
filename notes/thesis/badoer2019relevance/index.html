@@ -93,7 +93,7 @@
     <div id="header-post">
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:block;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -111,41 +111,9 @@
       </ul>
     </span>
     <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" https://ernestdong.github.io/notes/thesis/%E6%A2%85%E5%86%AC%E5%B7%9E2021%E8%B4%A2%E6%94%BF%E6%89%A9%E5%BC%A0/" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="https://ernestdong.github.io/notes/thesis/%E9%92%9F%E5%AE%81%E6%A1%A62018%E6%95%A3%E6%88%B7%E6%8A%95%E8%B5%84%E8%80%85%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%80%BA%E5%88%B8%E4%BB%B7%E6%A0%BC/" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#" aria-label="Share">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="toc">
-      <nav id="TableOfContents">
+  </span>
+  <div id="toc">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#主题">主题</a></li>
     <li><a href="#数据">数据</a></li>
@@ -154,64 +122,7 @@
     <li><a href="#结论">结论</a></li>
   </ul>
 </nav>
-    </div>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f" aria-label="Facebook">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&text=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets" aria-label="Twitter">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&title=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets" aria-label="Linkedin">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&is_video=false&description=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets" aria-label="Pinterest">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets&body=Check out this article: https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f" aria-label="Email">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&title=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&title=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets" aria-label="reddit">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&name=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets&description=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets%20%e4%b8%bb%e9%a2%98%20%e4%bf%a1%e6%81%af%e6%9b%b4%e9%80%8f%e6%98%8e%ef%bc%8c%e8%af%84%e7%ba%a7%e6%9c%ba%e6%9e%84%e7%9a%84%e4%bd%9c%e7%94%a8%20%e6%9c%ac%e6%96%87%e8%80%83%e5%af%9f%e4%ba%86%e9%80%9a%e8%bf%87TRACE%e7%b3%bb%e7%bb%9f%e5%af%b9%e5%85%ac%e5%8f%b8%e5%80%ba%e5%88%b8%e4%ba%a4%e6%98%93%e7%9a%84%e5%85%ac%e5%bc%80%e6%8a%ab%e9%9c%b2%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%20%e4%bf%a1%e7%94%a8%e8%af%84%e7%ba%a7%e7%9a%84%e4%bf%a1%e6%81%af%e5%90%ab%e9%87%8f%20%e8%af%84%e7%ba%a7%e5%92%8c%e5%88%a9%e5%b7%ae%e7%9a%84%e7%9b%b8" aria-label="Tumblr">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fernestdong.github.io%2fnotes%2fthesis%2fbadoer2019relevance%2f&t=The%20relevance%20of%20credit%20ratings%20in%20transparent%20bond%20markets" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-  </span>
+  </div>
 </div>
 
 
