@@ -1,6 +1,6 @@
 title = "Ernest Dong"
 baseURL = "https://ernestdong.github.io"
-theme = "cactus"
+theme = "cactus" #"researcher"
 enableEmoji = true
 hasCJKLanguage = true
 enableGitInfo = true
@@ -42,7 +42,7 @@ enableGitInfo = true
     weight = 2
   [[menu.main]]
     name = "Posts"
-    url = "/post"
+    url = "/posts"
     weight = 3
   [[menu.main]]
     name = "Tags"
