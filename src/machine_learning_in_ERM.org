@@ -2,7 +2,7 @@
 #+filetags: :python:
 #+HUGO_BASE_DIR: ../
 #+HUGO_SECTION: posts
-#+DATE: \today
+#+DATE: <2022-03-30 Wed>
 #+BIBLIOGRAPHY: ref.bib
 #+PROPERTY: header-args:jupyter-python :tangle ~/code/erm/main.py
 * 前言
