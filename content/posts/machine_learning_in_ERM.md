@@ -342,24 +342,15 @@ result["svm"]
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
-KNN = KNeighborsClassifier(n_neighbors=3, random_state=RANDOM_STATE)
+KNN = KNeighborsClassifier(n_neighbors=3)
 KNN.fit(Xtrain, Ytrain)
 result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
 result["KNN"]
 ```
 
-```text
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-Input In [25], in <cell line: 4>()
-      1 from sklearn.neighbors import KNeighborsClassifier
-      2 from sklearn.metrics import accuracy_score
-----> 4 KNN = KNeighborsClassifier(n_neighbors=3, random_state=RANDOM_STATE)
-      5 KNN.fit(Xtrain, Ytrain)
-      6 result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
-
-TypeError: KNeighborsClassifier.__init__() got an unexpected keyword argument 'random_state'
-```
+|           |   |                    |        |   |                     |    |   |                     |           |   |                     |
+|-----------|---|--------------------|--------|---|---------------------|----|---|---------------------|-----------|---|---------------------|
+| precision | : | 0.3625400456087721 | recall | : | 0.35236220472440943 | f1 | : | 0.34202311550427716 | \\(R^2\\) | : | 0.29873782865224163 |
 
 
 ### K means {#k-means}
@@ -424,16 +415,16 @@ kmeans.predict([[0, 0], [12, 3]])
     ```
 
     ```text
-    1.3640172481536865 0.9061576724052429 82.493408203125
-    4.206701278686523 7.340141773223877 0.12923014163970947
-    3.8633475303649902 7.5342488288879395 0.06569399684667587
-    3.6158015727996826 7.667799949645996 0.03342194855213165
-    3.4392313957214355 7.763052463531494 0.01700344868004322
-    3.3132894039154053 7.830993175506592 0.008650500327348709
-    3.2234606742858887 7.879451751708984 0.0044010104611516
-    3.1593875885009766 7.9140167236328125 0.0022390284575521946
-    3.1136865615844727 7.938670635223389 0.001139115891419351
-    3.0810887813568115 7.956255912780762 0.0005795236211270094
+    1.3772944211959839 0.9042965173721313 82.13077545166016
+    4.214730262756348 7.343286037445068 0.12421412765979767
+    3.882797956466675 7.529382228851318 0.06513956934213638
+    3.6395726203918457 7.65905237197876 0.034189920872449875
+    3.4633584022521973 7.752990245819092 0.01794535294175148
+    3.335692882537842 7.821046829223633 0.009418941102921963
+    3.2432024478912354 7.870352268218994 0.004943722393363714
+    3.176194906234741 7.906073093414307 0.00259480276145041
+    3.1276495456695557 7.931951999664307 0.001361933653242886
+    3.092479944229126 7.950700283050537 0.000714847119525075
     ```
 
     上述的代码在 pytorch 中对应的有：
@@ -530,7 +521,7 @@ kmeans.predict([[0, 0], [12, 3]])
 所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 ![](https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg)
 
-[卷积](https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF)有其数学定义 \\(f\*g)(n) = \int\_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\\)，简单地理解就是两个函数 `f` 和 `g` ，先对g函数进行翻转，相当于在数轴上把 `g` 函数从右边“卷”到左边去。然后再把 `g` 函数平移到 `n` ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。
+[卷积](https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF)有其数学定义 \((f\*g)(n) = \int\_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\\)，简单地理解就是两个函数 `f` 和 `g` ，先对g函数进行翻转，相当于在数轴上把 `g` 函数从右边“卷”到左边去。然后再把 `g` 函数平移到 `n` ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。
 
 卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 `pytorch` 中常用 `Conv2d` 。而我们的数据则是一条条的，望文生义应该用 `Conv1d` （其实会用在自然语言处理中，但 RNN 应用更多）。
 
@@ -684,6 +675,7 @@ epoch: 2700 loss: 0.0848860964179039
 | random forest     | 0.396     | 0.4252 | 0.3835 | 0.3996    |
 | gradient boosting | 0.5305    | 0.5256 | 0.5095 | 0.5421    |
 | svm               | 0.4137    | 0.4094 | 0.3517 | 0.3431    |
+| KNN               | 0.3625    | 0.3524 | 0.342  | 0.2987    |
 | bp neural network | 0.2739    | 0.3386 | 0.2763 | -0.0591   |
 | CNN               | 0.4308    | 0.4724 | 0.445  | 0.4383    |
 | RNN               | 0.4046    | 0.4508 | 0.4241 | 0.4729    |
@@ -706,10 +698,12 @@ plt.legend(bbox_to_anchor=(1.2, -0.1), ncol=3)
 plt.show()
 ```
 
-{{< figure src="/ox-hugo/5bedfd5c7467b2951a67a8c7caa710daf6c15157.png" >}}
+{{< figure src="/ox-hugo/529497edec8df5a4871a4e92910dc24d9e9f45dc.png" >}}
 
 
 ## reference {#reference}
+
+## References
 
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Golbayani, Parisa, Ionu Florescu, and Rupak Chatterjee. 2020. “A Comparative Study of Forecasting Corporate Credit Ratings Using Neural Networks, Support Vector Machines, and Decision Trees.” <i>The North American Journal of Economics and Finance</i> 54: 101251. <a href="https://www.sciencedirect.com/science/article/pii/S1062940820301480">https://www.sciencedirect.com/science/article/pii/S1062940820301480</a>.</div>
