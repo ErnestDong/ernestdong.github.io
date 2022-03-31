@@ -19,8 +19,8 @@
 <meta property="og:description" content="前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernestdong.github.io/posts/machine_learning_in_erm/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-03-30T17:54:09+08:00" />
+<meta property="article:published_time" content="2022-03-30T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-03-30T23:16:43+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -95,12 +95,12 @@
   <div class="py2" style="margin-left: 10%;margin-right: 10%">
     <div id="header">
       <a href="https://ernestdong.github.io">
-      
-        <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
-      
-  <div id="title">
-    <h1>Ernest Dong</h1>
-  </div>
+        
+          <div id="logo" style="background-image: url(https://ernestdong.github.io/images/logo.png)"></div>
+        
+        <div id="title">
+            <h1>Ernest Dong</h1>
+        </div>
       </a>
       <div id="nav" style="fontsize:1.5em">
         <ul>
@@ -145,7 +145,6 @@
   </div>
 </div>
 
-
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header>
           <h1 class="posttitle" itemprop="name headline">
@@ -159,7 +158,7 @@
             </span>
             <div class="postdate">
               
-              <time datetime="2022-03-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2022-03-30</time>
+              <time datetime="2022-03-30 00:00:00 &#43;0800 &#43;0800" itemprop="datePublished">2022-03-30</time>
               
             </div>
             
@@ -381,15 +380,11 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.model_selection <span style="color:#ff79c6">import</span> train_test_split
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.metrics <span style="color:#ff79c6">import</span> f1_score, recall_score, precision_score
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
-</span></span><span style="display:flex;"><span>np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>seed(<span style="color:#bd93f9">42</span>)
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>RANDOM_STATE <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">42</span>
 </span></span><span style="display:flex;"><span>Y <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#34;Rating&#34;</span>]
 </span></span><span style="display:flex;"><span>Y <span style="color:#ff79c6">=</span> Y<span style="color:#ff79c6">.</span>replace({<span style="color:#f1fa8c">&#34;CCC&#34;</span>: <span style="color:#f1fa8c">&#34;C&#34;</span>, <span style="color:#f1fa8c">&#34;CC&#34;</span>: <span style="color:#f1fa8c">&#34;C&#34;</span>})
 </span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#34;Date&#34;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#34;Date&#34;</span>]<span style="color:#ff79c6">.</span>apply(<span style="color:#ff79c6">lambda</span> x: x<span style="color:#ff79c6">.</span>split(<span style="color:#f1fa8c">&#34;/&#34;</span>)[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>])
@@ -397,7 +392,7 @@
 </span></span><span style="display:flex;"><span>X <span style="color:#ff79c6">=</span> df[[i <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> df<span style="color:#ff79c6">.</span>columns <span style="color:#ff79c6">if</span> df[i]<span style="color:#ff79c6">.</span>dtype <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#34;object&#34;</span>]]
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> dummy <span style="color:#ff79c6">in</span> dummies:
 </span></span><span style="display:flex;"><span>    X <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>concat([X, pd<span style="color:#ff79c6">.</span>get_dummies(df[dummy], drop_first<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>, prefix<span style="color:#ff79c6">=</span>dummy)], axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>)
-</span></span><span style="display:flex;"><span>Xtrain, Xtest, Ytrain, Ytest <span style="color:#ff79c6">=</span> train_test_split(X, Y, test_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.25</span>, random_state<span style="color:#ff79c6">=</span><span style="color:#bd93f9">42</span>)
+</span></span><span style="display:flex;"><span>Xtrain, Xtest, Ytrain, Ytest <span style="color:#ff79c6">=</span> train_test_split(X, Y, test_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.25</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>result <span style="color:#ff79c6">=</span> {}
 </span></span><span style="display:flex;"><span>X<span style="color:#ff79c6">.</span>columns
 </span></span></code></pre></td></tr></table>
@@ -526,7 +521,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> random
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>random<span style="color:#ff79c6">.</span>seed(<span style="color:#bd93f9">42</span>)
+</span></span><span style="display:flex;"><span>random<span style="color:#ff79c6">.</span>seed(RANDOM_STATE)
 </span></span><span style="display:flex;"><span>ratings <span style="color:#ff79c6">=</span> Y<span style="color:#ff79c6">.</span>unique()
 </span></span><span style="display:flex;"><span>tmp <span style="color:#ff79c6">=</span> {}
 </span></span><span style="display:flex;"><span>monte_num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
@@ -590,7 +585,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.linear_model <span style="color:#ff79c6">import</span> LogisticRegression
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>logit <span style="color:#ff79c6">=</span> LogisticRegression(multi_class<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;multinomial&#34;</span>, solver<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;saga&#34;</span>)
+</span></span><span style="display:flex;"><span>logit <span style="color:#ff79c6">=</span> LogisticRegression(multi_class<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;multinomial&#34;</span>, solver<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;saga&#34;</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>logit<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;logit&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, logit<span style="color:#ff79c6">.</span>predict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;logit&#34;</span>]
@@ -657,7 +652,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.tree <span style="color:#ff79c6">import</span> DecisionTreeClassifier
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dt <span style="color:#ff79c6">=</span> DecisionTreeClassifier(max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>)
+</span></span><span style="display:flex;"><span>dt <span style="color:#ff79c6">=</span> DecisionTreeClassifier(max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>dt<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;decision tree&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, dt<span style="color:#ff79c6">.</span>predict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;decision tree&#34;</span>]
@@ -715,7 +710,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.ensemble <span style="color:#ff79c6">import</span> RandomForestClassifier
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>rf <span style="color:#ff79c6">=</span> RandomForestClassifier(n_estimators<span style="color:#ff79c6">=</span><span style="color:#bd93f9">100</span>, max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span>rf <span style="color:#ff79c6">=</span> RandomForestClassifier(n_estimators<span style="color:#ff79c6">=</span><span style="color:#bd93f9">100</span>, max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>rf<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;random forest&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, rf<span style="color:#ff79c6">.</span>predict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;random forest&#34;</span>]
@@ -742,16 +737,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.40673539636143735</td>
+<td>0.39603489727136376</td>
 <td>recall</td>
 <td>:</td>
-<td>0.43503937007874016</td>
+<td>0.4251968503937008</td>
 <td>f1</td>
 <td>:</td>
-<td>0.39258337709756824</td>
+<td>0.38351839772007446</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.4104515214454678</td>
+<td>0.39959139741930844</td>
 </tr>
 </tbody>
 </table>
@@ -773,11 +768,13 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.ensemble <span style="color:#ff79c6">import</span> GradientBoostingClassifier
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>gb <span style="color:#ff79c6">=</span> GradientBoostingClassifier()
+</span></span><span style="display:flex;"><span>gb <span style="color:#ff79c6">=</span> GradientBoostingClassifier(random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>gb<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;gradient boosting&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, gb<span style="color:#ff79c6">.</span>predict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;gradient boosting&#34;</span>]
@@ -804,16 +801,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.5309218601759191</td>
+<td>0.530520009176101</td>
 <td>recall</td>
 <td>:</td>
 <td>0.5255905511811023</td>
 <td>f1</td>
 <td>:</td>
-<td>0.5096162941265188</td>
+<td>0.5094674767985568</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.543985737160968</td>
+<td>0.5421094375792002</td>
 </tr>
 </tbody>
 </table>
@@ -840,7 +837,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.svm <span style="color:#ff79c6">import</span> SVC
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>svm <span style="color:#ff79c6">=</span> SVC(kernel<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;rbf&#34;</span>, gamma<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;auto&#34;</span>)
+</span></span><span style="display:flex;"><span>svm <span style="color:#ff79c6">=</span> SVC(kernel<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;rbf&#34;</span>, gamma<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;auto&#34;</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>svm<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;svm&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, svm<span style="color:#ff79c6">.</span>predict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;svm&#34;</span>]
@@ -896,47 +893,39 @@
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.neighbors <span style="color:#ff79c6">import</span> KNeighborsClassifier
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sklearn.metrics <span style="color:#ff79c6">import</span> accuracy_score
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>KNN <span style="color:#ff79c6">=</span> KNeighborsClassifier(n_neighbors<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>)
+</span></span><span style="display:flex;"><span>KNN <span style="color:#ff79c6">=</span> KNeighborsClassifier(n_neighbors<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>KNN<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;KNN&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, KNN<span style="color:#ff79c6">.</span>predict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;KNN&#34;</span>]
 </span></span></code></pre></td></tr></table>
 </div>
-</div><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>precision</td>
-<td>:</td>
-<td>0.3625400456087721</td>
-<td>recall</td>
-<td>:</td>
-<td>0.35236220472440943</td>
-<td>f1</td>
-<td>:</td>
-<td>0.34202311550427716</td>
-<td>\(R^2\)</td>
-<td>:</td>
-<td>0.29873782865224163</td>
-</tr>
-</tbody>
-</table>
-<h3 id="k-means">K means</h3>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>TypeError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>Input In [25], in &lt;cell line: 4&gt;()
+</span></span><span style="display:flex;"><span>      1 from sklearn.neighbors import KNeighborsClassifier
+</span></span><span style="display:flex;"><span>      2 from sklearn.metrics import accuracy_score
+</span></span><span style="display:flex;"><span>----&gt; 4 KNN = KNeighborsClassifier(n_neighbors=3, random_state=RANDOM_STATE)
+</span></span><span style="display:flex;"><span>      5 KNN.fit(Xtrain, Ytrain)
+</span></span><span style="display:flex;"><span>      6 result[&#34;KNN&#34;] = get_score(Xtest, Ytest, KNN.predict)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TypeError: KNeighborsClassifier.__init__() got an unexpected keyword argument &#39;random_state&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="k-means">K means</h3>
 <blockquote>
 <p>有四个牧师去郊区布道，一开始牧师们随意选了几个布道点，并且把这几个布道点的情况公告给了郊区所有的村民，于是每个村民到离自己家最近的布道点去听课。</p>
 <p>听课之后，大家觉得距离太远了，于是每个牧师统计了一下自己的课上所有的村民的地址，搬到了所有地址的中心地带，并且在海报上更新了自己的布道点的位置。</p>
@@ -1029,16 +1018,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1.3253589868545532 0.9112542271614075 83.43317413330078
-</span></span><span style="display:flex;"><span>4.226484298706055 7.316026210784912 0.13158977031707764
-</span></span><span style="display:flex;"><span>3.8841657638549805 7.51292610168457 0.06794870644807816
-</span></span><span style="display:flex;"><span>3.6355700492858887 7.649879455566406 0.03511052578687668
-</span></span><span style="display:flex;"><span>3.456868886947632 7.748322010040283 0.018142346292734146
-</span></span><span style="display:flex;"><span>3.3284122943878174 7.819086074829102 0.009374506771564484
-</span></span><span style="display:flex;"><span>3.2360737323760986 7.869953155517578 0.004844010807573795
-</span></span><span style="display:flex;"><span>3.1696975231170654 7.906517505645752 0.002503005089238286
-</span></span><span style="display:flex;"><span>3.1219840049743652 7.932802200317383 0.0012933481484651566
-</span></span><span style="display:flex;"><span>3.0876853466033936 7.951696395874023 0.0006682872772216797
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1.3640172481536865 0.9061576724052429 82.493408203125
+</span></span><span style="display:flex;"><span>4.206701278686523 7.340141773223877 0.12923014163970947
+</span></span><span style="display:flex;"><span>3.8633475303649902 7.5342488288879395 0.06569399684667587
+</span></span><span style="display:flex;"><span>3.6158015727996826 7.667799949645996 0.03342194855213165
+</span></span><span style="display:flex;"><span>3.4392313957214355 7.763052463531494 0.01700344868004322
+</span></span><span style="display:flex;"><span>3.3132894039154053 7.830993175506592 0.008650500327348709
+</span></span><span style="display:flex;"><span>3.2234606742858887 7.879451751708984 0.0044010104611516
+</span></span><span style="display:flex;"><span>3.1593875885009766 7.9140167236328125 0.0022390284575521946
+</span></span><span style="display:flex;"><span>3.1136865615844727 7.938670635223389 0.001139115891419351
+</span></span><span style="display:flex;"><span>3.0810887813568115 7.956255912780762 0.0005795236211270094
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上述的代码在 pytorch 中对应的有：</p>
@@ -1575,17 +1564,17 @@
 </tr>
 <tr>
 <td>random forest</td>
-<td>0.4067</td>
-<td>0.435</td>
-<td>0.3926</td>
-<td>0.4105</td>
+<td>0.396</td>
+<td>0.4252</td>
+<td>0.3835</td>
+<td>0.3996</td>
 </tr>
 <tr>
 <td>gradient boosting</td>
-<td>0.5309</td>
+<td>0.5305</td>
 <td>0.5256</td>
-<td>0.5096</td>
-<td>0.544</td>
+<td>0.5095</td>
+<td>0.5421</td>
 </tr>
 <tr>
 <td>svm</td>
@@ -1593,13 +1582,6 @@
 <td>0.4094</td>
 <td>0.3517</td>
 <td>0.3431</td>
-</tr>
-<tr>
-<td>KNN</td>
-<td>0.3625</td>
-<td>0.3524</td>
-<td>0.342</td>
-<td>0.2987</td>
 </tr>
 <tr>
 <td>bp neural network</td>
@@ -1639,9 +1621,13 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>N <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(feature)
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
+</span></span><span style="display:flex;"><span>np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>seed(<span style="color:#bd93f9">42</span>)
+</span></span><span style="display:flex;"><span>N <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(feature)
 </span></span><span style="display:flex;"><span>angles <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>linspace(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">*</span> np<span style="color:#ff79c6">.</span>pi, N, endpoint<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
 </span></span><span style="display:flex;"><span>angles <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>concatenate((angles, [angles[<span style="color:#bd93f9">0</span>]]))
 </span></span><span style="display:flex;"><span>fig <span style="color:#ff79c6">=</span> plt<span style="color:#ff79c6">.</span>figure()
@@ -1656,7 +1642,7 @@
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>show()
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/ca7f2f23f5fde8c8e82973581cea23687e734bbf.png"/>
+</div><figure><img src="/ox-hugo/5bedfd5c7467b2951a67a8c7caa710daf6c15157.png"/>
 </figure>
 
 <h2 id="reference">reference</h2>
@@ -1669,8 +1655,9 @@
 
         </div>
       </article>
+      <div class="py3">
 
-      
+          
   
 
 
@@ -1678,7 +1665,7 @@
 
 
 
-      <div id="footer-post-container">
+          <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -1796,7 +1783,7 @@
 </div>
 
 
-      <footer id="footer">
+          <footer id="footer">
   <div class="footer-left">
     Copyright  &copy; 2022  Ernest Dong 
   </div>
@@ -1819,7 +1806,7 @@
   </div>
 </footer>
 
-
+      </div>
     </div>
   </div>
 </body>
