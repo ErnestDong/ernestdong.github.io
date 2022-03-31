@@ -1233,7 +1233,7 @@
 <h4 id="cnn">CNN</h4>
 <p>所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 <img src="https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg" alt=""></p>
-<p><a href="https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF">卷积</a>有其数学定义 \(f*g)(n) = \int_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\)，简单地理解就是两个函数 <code>f</code> 和 <code>g</code> ，先对g函数进行翻转，相当于在数轴上把 <code>g</code> 函数从右边“卷”到左边去。然后再把 <code>g</code> 函数平移到 <code>n</code> ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。</p>
+<p><a href="https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF">卷积</a>有其数学定义 ((f*g)(n) = \int_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\)，简单地理解就是两个函数 <code>f</code> 和 <code>g</code> ，先对g函数进行翻转，相当于在数轴上把 <code>g</code> 函数从右边“卷”到左边去。然后再把 <code>g</code> 函数平移到 <code>n</code> ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。</p>
 <p>卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 <code>pytorch</code> 中常用 <code>Conv2d</code> 。而我们的数据则是一条条的，望文生义应该用 <code>Conv1d</code> （其实会用在自然语言处理中，但 RNN 应用更多）。</p>
 <p>从这里开始利用 CPU 训练比较慢，有 NVIDIA GPU 的同学可以尝试在 GPU 上训练</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
