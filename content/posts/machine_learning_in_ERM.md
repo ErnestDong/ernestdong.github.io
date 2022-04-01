@@ -15,7 +15,7 @@ draft = false
 
 {{< figure src="/ox-hugo/mathworks.svg" caption="<span class=\"figure-number\">Figure 1: </span>一些常见的机器学习算法" >}}
 
-机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, vc-git-region-history-font-lock-keywords, scikit-learn），几行代码就可以实现一个模型， ~~之后便是漫无止境地调参~~ 。
+机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, scikit-learn），几行代码就可以实现一个模型， ~~之后便是漫无止境地调参~~ 。
 
 本文主要参考了Pedregosa et al. (<a href="#citeproc_bib_item_4">2011</a>)的文档，在编码过程中阅读文档是有帮助的。
 
@@ -700,8 +700,6 @@ plt.show()
 
 {{< figure src="/ox-hugo/529497edec8df5a4871a4e92910dc24d9e9f45dc.png" >}}
 
-
-## reference {#reference}
 
 ## References
 
