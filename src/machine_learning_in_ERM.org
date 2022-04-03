@@ -16,7 +16,7 @@
 [[file:/Users/dcy/Code/ernest/static/images/xkcd/1838.png]]
 
 
-什么是学习？ [[https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0][维基百科]]上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，染机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
+什么是学习？ [[https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0][维基百科]]上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，让机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
 机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：
 #+CAPTION: 一些常见的机器学习算法
 [[./lib/mathworks.svg]]
@@ -59,8 +59,50 @@ df = pd.read_csv("/Users/dcy/Code/erm/corporate_rating.csv", encoding="utf-8")
 df.info()
    #+end_src
 
+   #+RESULTS:
+   #+begin_example
+   <class 'pandas.core.frame.DataFrame'>
+   RangeIndex: 2029 entries, 0 to 2028
+   Data columns (total 31 columns):
+    #   Column                              Non-Null Count  Dtype
+   ---  ------                              --------------  -----
+    0   Rating                              2029 non-null   object
+    1   Name                                2029 non-null   object
+    2   Symbol                              2029 non-null   object
+    3   Rating Agency Name                  2029 non-null   object
+    4   Date                                2029 non-null   object
+    5   Sector                              2029 non-null   object
+    6   currentRatio                        2029 non-null   float64
+    7   quickRatio                          2029 non-null   float64
+    8   cashRatio                           2029 non-null   float64
+    9   daysOfSalesOutstanding              2029 non-null   float64
+    10  netProfitMargin                     2029 non-null   float64
+    11  pretaxProfitMargin                  2029 non-null   float64
+    12  grossProfitMargin                   2029 non-null   float64
+    13  operatingProfitMargin               2029 non-null   float64
+    14  returnOnAssets                      2029 non-null   float64
+    15  returnOnCapitalEmployed             2029 non-null   float64
+    16  returnOnEquity                      2029 non-null   float64
+    17  assetTurnover                       2029 non-null   float64
+    18  fixedAssetTurnover                  2029 non-null   float64
+    19  debtEquityRatio                     2029 non-null   float64
+    20  debtRatio                           2029 non-null   float64
+    21  effectiveTaxRate                    2029 non-null   float64
+    22  freeCashFlowOperatingCashFlowRatio  2029 non-null   float64
+    23  freeCashFlowPerShare                2029 non-null   float64
+    24  cashPerShare                        2029 non-null   float64
+    25  companyEquityMultiplier             2029 non-null   float64
+    26  ebitPerRevenue                      2029 non-null   float64
+    27  enterpriseValueMultiple             2029 non-null   float64
+    28  operatingCashFlowPerShare           2029 non-null   float64
+    29  operatingCashFlowSalesRatio         2029 non-null   float64
+    30  payablesTurnover                    2029 non-null   float64
+   dtypes: float64(25), object(6)
+   memory usage: 491.5+ KB
+   #+end_example
+
 评级分布如下图。我们可以看到评级 CC, C, D 的企业数量较少。三大评级公司所谓的“D”是违约“Default”，因此我们保留下来 D 级，而合并 =CCC= =CC= =C= 。一方面是由于 CCC 以下数量少，另一方面是由于大多数“评级下调加速到期”条款限定在了降至 CCC 的垃圾级。类似的，由于 AAA 企业数量很少都是非常优质的企业（ +不像目前国内评级新发债一半为 AAA+ ），而 AA 和 A 数量都不小，我们仍然单独把他们拿出来。
-#+begin_src jupyter-python :kernel python3 :session main :exports both
+#+begin_src jupyter-python
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -75,7 +117,7 @@ df["Rating"].value_counts().plot(kind="bar")
 #+RESULTS:
 :RESULTS:
 : <AxesSubplot:>
-[[file:./.ob-jupyter/18b330c536f54c5e1fa3a066b737d82627c6a40f.png]]
+[[file:./.ob-jupyter/2475fbd207d00348d4aff2b5db9de9f766ebc7a8.png]]
 :END:
 
 让我们处理一下数据
@@ -95,6 +137,30 @@ result = {}
 X.columns
 #+end_src
 
+#+RESULTS:
+#+begin_example
+Index(['currentRatio', 'quickRatio', 'cashRatio', 'daysOfSalesOutstanding',
+       'netProfitMargin', 'pretaxProfitMargin', 'grossProfitMargin',
+       'operatingProfitMargin', 'returnOnAssets', 'returnOnCapitalEmployed',
+       'returnOnEquity', 'assetTurnover', 'fixedAssetTurnover',
+       'debtEquityRatio', 'debtRatio', 'effectiveTaxRate',
+       'freeCashFlowOperatingCashFlowRatio', 'freeCashFlowPerShare',
+       'cashPerShare', 'companyEquityMultiplier', 'ebitPerRevenue',
+       'enterpriseValueMultiple', 'operatingCashFlowPerShare',
+       'operatingCashFlowSalesRatio', 'payablesTurnover',
+       'Rating Agency Name_Egan-Jones Ratings Company',
+       'Rating Agency Name_Fitch Ratings',
+       'Rating Agency Name_Moody's Investors Service',
+       'Rating Agency Name_Standard & Poor's Ratings Services',
+       'Sector_Capital Goods', 'Sector_Consumer Durables',
+       'Sector_Consumer Non-Durables', 'Sector_Consumer Services',
+       'Sector_Energy', 'Sector_Finance', 'Sector_Health Care',
+       'Sector_Miscellaneous', 'Sector_Public Utilities', 'Sector_Technology',
+       'Sector_Transportation', 'Date_2009', 'Date_2010', 'Date_2011',
+       'Date_2012', 'Date_2013', 'Date_2014', 'Date_2015', 'Date_2016'],
+      dtype='object')
+#+end_example
+
 =get_score= 中定义了三重维度来度量预测的准确性，如下表。precision 是 \(tp / (tp + fp)\) ，即预测阳性中真实为正的概率；recall 是 \(tp / (tp + fn)\) ，即样本中的正例有多少被预测正确了；而 f1 则是二者的调和平均
 
 |          | True | False |
@@ -103,7 +169,7 @@ X.columns
 
 鉴于评级有七个，完完全全的准确率可能没有那么高，我们做一个随机的测试，作为基准。
 
-#+begin_src jupyter-python :kernel python3 :session main :exports both
+#+begin_src jupyter-python :kernel python3 :session main
 from scipy.stats import pearsonr
 
 
@@ -122,7 +188,7 @@ def get_score(Xtest, Ytrue, model):
 
 
 import random
-
+import numpy as np
 random.seed(RANDOM_STATE)
 ratings = Y.unique()
 tmp = {}
@@ -138,11 +204,14 @@ result["random"] = {i: tmp[i] / 100 for i in tmp}
 result["random"]
 #+end_src
 
+#+RESULTS:
+| precision | : | 0.23640721599080028 | recall | : | 0.12547244094488194 | f1 | : | 0.1544436285781241 | \(R^2\) | : | 0.008907176874420717 |
+
 ** 线性回归与决策树
 我们先看一些简单直接的例子。
 
 按照维基百科的定义，我们在计量经济学中学习的 OLS/GLS/Logit 模型也是通过机器来学习拟合样本的分布，也是一种机器学习。统计学中的 lasso/ridge 等回归方式也在模型泛化中有许多应用。
-#+begin_src jupyter-python :kernel python3 :session main :exports both
+#+begin_src jupyter-python :kernel python3 :session main
 from sklearn.linear_model import LogisticRegression
 
 logit = LogisticRegression(multi_class="multinomial", solver="saga", random_state=RANDOM_STATE)
@@ -150,6 +219,14 @@ logit.fit(Xtrain, Ytrain)
 result["logit"] = get_score(Xtest, Ytest, logit.predict)
 result["logit"]
 #+end_src
+
+#+RESULTS:
+:RESULTS:
+: /Users/dcy/Code/erm/.venv/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:352: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+:   warnings.warn(
+| precision | : | 0.18152641834788635 | recall | : | 0.2440944881889764 | f1 | : | 0.15470492292394605 | \(R^2\) | : | -0.01775335686060572 |
+:END:
+
 决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
 该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
@@ -164,6 +241,9 @@ dt.fit(Xtrain, Ytrain)
 result["decision tree"] = get_score(Xtest, Ytest, dt.predict)
 result["decision tree"]
 #+end_src
+
+#+RESULTS:
+| precision | : | 0.3498883972871522 | recall | : | 0.3799212598425197 | f1 | : | 0.3528756642882673 | \(R^2\) | : | 0.3632276367156315 |
 
 ** 集成学习
 ensemble learning 是单个模型并不能很完美的解决某个分类或者回归问题（弱监督模型，在某些方面表现较好）的时候，那么就训练出多个弱监督模型，每个模型可能是相同的也可以是不同的，然后预测的时候将数据分别输入每个模型，最后将每个模型的输出综合起来作为该未知数据的输出即便某一个弱分类器得到了错误的预测，其他的弱分类器也可以将错误纠正回来。简而言之，采样-学习-组合。
@@ -182,12 +262,16 @@ rf.fit(Xtrain, Ytrain)
 result["random forest"] = get_score(Xtest, Ytest, rf.predict)
 result["random forest"]
 #+end_src
+
+#+RESULTS:
+| precision | : | 0.39603489727136376 | recall | : | 0.4251968503937008 | f1 | : | 0.38351839772007446 | \(R^2\) | : | 0.39959139741930844 |
+
 Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。
 
 #+CAPTION: random forest
 [[https://tfugcs.andfun.cn/original/2X/7/74f5a02b7692010da60a746d5469471c68b2ff3c.gif]]
 *** boosting
-[[bagging]] 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
+bagging 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
 调参时可以树的深度很少就能达到很高的精度。
 #+begin_src jupyter-python
 from sklearn.ensemble import GradientBoostingClassifier
@@ -198,6 +282,9 @@ gb.fit(Xtrain, Ytrain)
 result["gradient boosting"] = get_score(Xtest, Ytest, gb.predict)
 result["gradient boosting"]
 #+end_src
+
+#+RESULTS:
+| precision | : | 0.530520009176101 | recall | : | 0.5255905511811023 | f1 | : | 0.5094674767985568 | \(R^2\) | : | 0.5421094375792002 |
 
 ** 支持向量机
 Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在空间中，找到一个可以划分开样本点、并且间隔最大的的（超）平面。直观上间隔最大是为了让模型更稳健。
@@ -221,10 +308,10 @@ result["svm"]
 #+end_src
 
 #+RESULTS:
-| precision | : | 0.3871822535819534 | recall | : | 0.39408866995073893 | f1 | : | 0.3310900991255093 |
+| precision | : | 0.4136927083234441 | recall | : | 0.4094488188976378 | f1 | : | 0.351708147106921 | \(R^2\) | : | 0.3431290118925812 |
 
 ** KNN
-这里的 NN 不是后文的 [[CNN]] 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居
+这里的 NN 不是后文的 CNN 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居
 
 #+begin_src jupyter-python
 from sklearn.neighbors import KNeighborsClassifier
@@ -235,6 +322,9 @@ KNN.fit(Xtrain, Ytrain)
 result["KNN"] = get_score(Xtest, Ytest, KNN.predict)
 result["KNN"]
 #+end_src
+
+#+RESULTS:
+| precision | : | 0.3625400456087721 | recall | : | 0.35236220472440943 | f1 | : | 0.34202311550427716 | \(R^2\) | : | 0.29873782865224163 |
 
 ** K means
 #+begin_quote
@@ -288,6 +378,18 @@ for i in range(500):
     if i % 50 == 0:
         print(w.item(), b.item(), loss.item())
 #+end_src
+
+#+RESULTS:
+: 1.386063575744629 0.9126168489456177 83.67776489257812
+: 4.305609703063965 7.24848747253418 0.1539001762866974
+: 3.9357428550720215 7.46671199798584 0.07863160222768784
+: 3.6690192222595215 7.618724822998047 0.04019376263022423
+: 3.4783215522766113 7.72740364074707 0.0205457154661417
+: 3.34197998046875 7.805105209350586 0.010502253659069538
+: 3.244502067565918 7.860658168792725 0.005368418991565704
+: 3.174808979034424 7.900376319885254 0.002744155703112483
+: 3.124981641769409 7.928772449493408 0.001402730355039239
+: 3.0893561840057373 7.949076175689697 0.000717016460839659
 
 上述的代码在 pytorch 中对应的有：
 | =for= 循环里面的模型 | =nn.Module= 封装好了许多模型         |
@@ -363,6 +465,8 @@ result["bp neural network"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["bp neural network"]
 #+end_src
 
+#+RESULTS:
+| precision | : | 0.27389121797460775 | recall | : | 0.33858267716535434 | f1 | : | 0.27631891749192855 | \(R^2\) | : | -0.0591120710799986 |
 
 *** CNN
 所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
@@ -413,6 +517,21 @@ result["CNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["CNN"]
 #+end_src
 
+#+RESULTS:
+:RESULTS:
+: epoch: 0 loss: 0.24517522752285004
+: epoch: 1000 loss: 0.15429307520389557
+: epoch: 2000 loss: 0.13127736747264862
+: epoch: 3000 loss: 0.07982835918664932
+: epoch: 4000 loss: 0.055595122277736664
+: epoch: 5000 loss: 0.05239807069301605
+: epoch: 6000 loss: 0.05039357766509056
+: epoch: 7000 loss: 0.048878513276576996
+: epoch: 8000 loss: 0.047704149037599564
+: epoch: 9000 loss: 0.046559300273656845
+| precision | : | 0.4308013335051745 | recall | : | 0.47244094488188976 | f1 | : | 0.44504613282710614 | \(R^2\) | : | 0.43825492027319096 |
+:END:
+
 增加网络层数可能会导致梯度离散和梯度爆炸的情况，反而效果不好。残差网络 ResNet 利用在网络间加入 shortcut ，使更深层次的训练结果至少不差于更浅层次（如果更差就直接走 shortcut ）
 *** RNN
 [[https://pic1.zhimg.com/80/v2-ea6d9bcb018d897518a8f076e7f9fdcc_1440w.jpg]]
@@ -461,6 +580,21 @@ result["RNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["RNN"]
 #+end_src
 
+#+RESULTS:
+:RESULTS:
+: epoch: 0 loss: 0.17870499193668365
+: epoch: 300 loss: 0.1091841384768486
+: epoch: 600 loss: 0.10914024710655212
+: epoch: 900 loss: 0.10904531925916672
+: epoch: 1200 loss: 0.10863472521305084
+: epoch: 1500 loss: 0.1002660021185875
+: epoch: 1800 loss: 0.0945233702659607
+: epoch: 2100 loss: 0.09050614386796951
+: epoch: 2400 loss: 0.08861099183559418
+: epoch: 2700 loss: 0.0848860964179039
+| precision | : | 0.40462763611699026 | recall | : | 0.4507874015748031 | f1 | : | 0.4241080748168216 | \(R^2\) | : | 0.47292193256499304 |
+:END:
+
 但是 RNN 的的梯度非常容易“爆炸”（特别大）或“离散”（特别小以致于不更新），预测可能会出错。
 针对此，LSTM （Long Short Term Memory）模型设计了三个“门”：输入门 =i= ，遗忘门 =f= ，输出门 =o= ，有一篇非常好的[[https://colah.github.io/posts/2015-08-Understanding-LSTMs/][blog]]详细描述了这些门是如何工作的，简而言之他加入了长期记忆的部分。
 
@@ -473,10 +607,23 @@ result["RNN"]
 #+end_quote
 
 ** 对比
-#+begin_src jupyter-python :exports results
+#+begin_src jupyter-python
 feature = ["precision", "recall", "f1", "\(R^2\)"]
 [["model"]+feature]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
 #+end_src
+
+#+RESULTS:
+| model             | precision | recall |     f1 | \(R^2\) |
+| random            |    0.2364 | 0.1255 | 0.1544 |  0.0089 |
+| logit             |    0.1815 | 0.2441 | 0.1547 | -0.0178 |
+| decision tree     |    0.3499 | 0.3799 | 0.3529 |  0.3632 |
+| random forest     |     0.396 | 0.4252 | 0.3835 |  0.3996 |
+| gradient boosting |    0.5305 | 0.5256 | 0.5095 |  0.5421 |
+| svm               |    0.4137 | 0.4094 | 0.3517 |  0.3431 |
+| KNN               |    0.3625 | 0.3524 |  0.342 |  0.2987 |
+| bp neural network |    0.2739 | 0.3386 | 0.2763 | -0.0591 |
+| CNN               |    0.4308 | 0.4724 |  0.445 |  0.4383 |
+| RNN               |    0.4046 | 0.4508 | 0.4241 |  0.4729 |
 
 #+begin_src jupyter-python
 N = len(feature)
@@ -495,7 +642,17 @@ plt.show()
 #+end_src
 
 #+RESULTS:
-[[file:./.ob-jupyter/9070f4b76eb923ed9526bb81e7d69e91dc9b8839.png]]
+:RESULTS:
+# [goto error]
+: [0;31m---------------------------------------------------------------------------[0m
+: [0;31mNameError[0m                                 Traceback (most recent call last)
+: Input [0;32mIn [5][0m, in [0;36m<cell line: 1>[0;34m()[0m
+: [0;32m----> 1[0m N [38;5;241m=[39m [38;5;28mlen[39m([43mfeature[49m)
+: [1;32m      2[0m angles [38;5;241m=[39m np[38;5;241m.[39mlinspace([38;5;241m0[39m, [38;5;241m2[39m [38;5;241m*[39m np[38;5;241m.[39mpi, N, endpoint[38;5;241m=[39m[38;5;28;01mFalse[39;00m)
+: [1;32m      3[0m angles [38;5;241m=[39m np[38;5;241m.[39mconcatenate((angles, [angles[[38;5;241m0[39m]]))
+:
+: [0;31mNameError[0m: name 'feature' is not defined
+:END:
 
 
 #+print_bibliography:
