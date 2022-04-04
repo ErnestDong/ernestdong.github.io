@@ -49,7 +49,7 @@ There are 30 features for every company of which 25 are financial indicators. Th
 1. Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding
 2. Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed
 3. Debt Ratios: debtRatio, debtEquityRatio
-4. Operating Performance Ratios:` assetTurnover
+4. Operating Performance Ratios: assetTurnover, fixedAssetTurnover
 5. Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio
    #+begin_src jupyter-python
 import pandas as pd
@@ -189,6 +189,7 @@ def get_score(Xtest, Ytrue, model):
 
 import random
 import numpy as np
+np.random.seed(RANDOM_STATE)
 random.seed(RANDOM_STATE)
 ratings = Y.unique()
 tmp = {}
@@ -229,7 +230,7 @@ result["logit"]
 
 决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
-该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
+该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有信息熵/基尼系数等。
 这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看[[https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html][这里]]。
 
 决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。
@@ -273,6 +274,8 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 *** boosting
 bagging 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
 调参时可以树的深度很少就能达到很高的精度。
+[[https://www.researchgate.net/publication/351542039/figure/fig1/AS:1022852723662850@1620878501807/Flow-diagram-of-gradient-boosting-machine-learning-method-The-ensemble-classifiers.png]]
+
 #+begin_src jupyter-python
 from sklearn.ensemble import GradientBoostingClassifier
 
@@ -303,8 +306,8 @@ from sklearn.svm import SVC
 
 svm = SVC(kernel="rbf", gamma="auto", random_state=RANDOM_STATE)
 svm.fit(Xtrain, Ytrain)
-result["svm"] = get_score(Xtest, Ytest, svm.predict)
-result["svm"]
+result["SVM"] = get_score(Xtest, Ytest, svm.predict)
+result["SVM"]
 #+end_src
 
 #+RESULTS:
@@ -482,12 +485,12 @@ class CNN(nn.Module):
     def __init__(self) -> None:
         super(CNN, self).__init__()
         self.conv = nn.Sequential(
-            nn.Conv1d(Xtrain_nn.shape[1], 20, 3, padding=3),
+            nn.Conv1d(Xtrain_nn.shape[1], 20, 3,padding=2),
             nn.Tanh(),
-            nn.AvgPool1d(2),
+            nn.AvgPool1d(3),
         )
         self.fc = nn.Sequential(
-            nn.Linear(40, len(encode)),
+            nn.Linear(20, len(encode)),
             nn.ReLU(),
             nn.Softmax(dim=1),
         )
@@ -497,76 +500,57 @@ class CNN(nn.Module):
         out = out.view(out.size(0), -1)
         out = self.fc(out)
         return out
-Xtrain_cnn = Xtrain_nn.unsqueeze(2)
-Xtest_cnn = Xtest_nn.unsqueeze(2)
+
+
 net = CNN()
-optimizer = torch.optim.Adamax(net.parameters())
+optimizer = torch.optim.Adamax(net.parameters(),lr=0.0025)
 loss_func = torch.nn.L1Loss()
 epochnum = 10000
 for epoch in range(epochnum):
-    prediction = net(Xtrain_cnn)
+    prediction = net(Xtrain_nn.unsqueeze(2))
     loss = loss_func(Ytrain_nn, prediction)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
     if epoch % (epochnum / 10) == 0:
         print("epoch:", epoch, "loss:", loss.item())
-prediction = pd.DataFrame(net(Xtest_cnn).detach().numpy())
+prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(2)).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["CNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["CNN"]
 #+end_src
-
-#+RESULTS:
-:RESULTS:
-: epoch: 0 loss: 0.24517522752285004
-: epoch: 1000 loss: 0.15429307520389557
-: epoch: 2000 loss: 0.13127736747264862
-: epoch: 3000 loss: 0.07982835918664932
-: epoch: 4000 loss: 0.055595122277736664
-: epoch: 5000 loss: 0.05239807069301605
-: epoch: 6000 loss: 0.05039357766509056
-: epoch: 7000 loss: 0.048878513276576996
-: epoch: 8000 loss: 0.047704149037599564
-: epoch: 9000 loss: 0.046559300273656845
-| precision | : | 0.4308013335051745 | recall | : | 0.47244094488188976 | f1 | : | 0.44504613282710614 | \(R^2\) | : | 0.43825492027319096 |
-:END:
 
 增加网络层数可能会导致梯度离散和梯度爆炸的情况，反而效果不好。残差网络 ResNet 利用在网络间加入 shortcut ，使更深层次的训练结果至少不差于更浅层次（如果更差就直接走 shortcut ）
 *** RNN
 [[https://pic1.zhimg.com/80/v2-ea6d9bcb018d897518a8f076e7f9fdcc_1440w.jpg]]
 循环神经网络：常用在 NLP 中并大放异彩，也会应用在股价等时间序列中。他会短期地“记住”参数，就如同我说这句话的时候你短期地记住了上一句话，会更新“自我”而非直接向前传递，在该层中“循环”。即对于隐藏层而言，\(h_t = f_w(h_{t-1}, x_t)\) 。随着输入的更新，有一个短暂的 memory ，记住刚刚的参数。
 #+begin_src jupyter-python
-
-class LSTM(nn.Module):
+class RNN(nn.Module):
     def __init__(self):
-        super(LSTM, self).__init__()
-        self.lstm = nn.LSTM(
-            input_size=1,
-            hidden_size=32,
-            num_layers=1,
+        super(RNN, self).__init__()
+        self.rnn = nn.RNN(
+            input_size=48,
+            hidden_size=100,
             batch_first=True,
-            bidirectional=True,
+            # bidirectional=True,
         )
-        self.fc = nn.Linear(32* 2, num_classes)
+        self.fc = nn.Sequential(
+            nn.Linear(100, len(encode)),
+            nn.ReLU(),
+            nn.Softmax(dim=1),
+        )
 
     def forward(self, x):
-        # x, _ = x
-        out, _ = self.lstm(x)
+        out, _ = self.rnn(x)
         out = self.fc(out[:, -1, :])
         return out
 
-
-input_size = 1
-hidden_size = 32
-num_layers = 1
-num_classes = 7
-net = LSTM()
+net = RNN()
 optimizer = torch.optim.Adamax(net.parameters())
 loss_func = nn.MSELoss()
 epochnum = 3000
 for epoch in range(epochnum):
-    out = net(Xtrain_nn.unsqueeze(2))
+    out = net(Xtrain_nn.unsqueeze(1))
     loss = loss_func(out, Ytrain_nn)
     optimizer.zero_grad()
     loss.backward()
@@ -574,26 +558,11 @@ for epoch in range(epochnum):
     if epoch % (epochnum / 10) == 0:
         print("epoch:", epoch, "loss:", loss.item())
 
-prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(2)).detach().numpy())
+prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(1)).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["RNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["RNN"]
 #+end_src
-
-#+RESULTS:
-:RESULTS:
-: epoch: 0 loss: 0.17870499193668365
-: epoch: 300 loss: 0.1091841384768486
-: epoch: 600 loss: 0.10914024710655212
-: epoch: 900 loss: 0.10904531925916672
-: epoch: 1200 loss: 0.10863472521305084
-: epoch: 1500 loss: 0.1002660021185875
-: epoch: 1800 loss: 0.0945233702659607
-: epoch: 2100 loss: 0.09050614386796951
-: epoch: 2400 loss: 0.08861099183559418
-: epoch: 2700 loss: 0.0848860964179039
-| precision | : | 0.40462763611699026 | recall | : | 0.4507874015748031 | f1 | : | 0.4241080748168216 | \(R^2\) | : | 0.47292193256499304 |
-:END:
 
 但是 RNN 的的梯度非常容易“爆炸”（特别大）或“离散”（特别小以致于不更新），预测可能会出错。
 针对此，LSTM （Long Short Term Memory）模型设计了三个“门”：输入门 =i= ，遗忘门 =f= ，输出门 =o= ，有一篇非常好的[[https://colah.github.io/posts/2015-08-Understanding-LSTMs/][blog]]详细描述了这些门是如何工作的，简而言之他加入了长期记忆的部分。

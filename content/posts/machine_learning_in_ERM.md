@@ -50,7 +50,7 @@ There are 30 features for every company of which 25 are financial indicators. Th
 1.  Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding
 2.  Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed
 3.  Debt Ratios: debtRatio, debtEquityRatio
-4.  Operating Performance Ratios:\` assetTurnover
+4.  Operating Performance Ratios: assetTurnover, fixedAssetTurnover
 5.  Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio
 
     ```python
@@ -191,7 +191,8 @@ def get_score(Xtest, Ytrue, model):
 
 
 import random
-
+import numpy as np
+np.random.seed(RANDOM_STATE)
 random.seed(RANDOM_STATE)
 ratings = Y.unique()
 tmp = {}
@@ -238,7 +239,7 @@ result["logit"]
 
 决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
-该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
+该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有信息熵/基尼系数等。
 这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看[这里](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)。
 
 决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。
@@ -290,8 +291,9 @@ Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网�
 
 #### boosting {#boosting}
 
-[bagging](#bagging) 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
+bagging 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
 调参时可以树的深度很少就能达到很高的精度。
+![](https://www.researchgate.net/publication/351542039/figure/fig1/AS:1022852723662850@1620878501807/Flow-diagram-of-gradient-boosting-machine-learning-method-The-ensemble-classifiers.png)
 
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
@@ -325,8 +327,8 @@ from sklearn.svm import SVC
 
 svm = SVC(kernel="rbf", gamma="auto", random_state=RANDOM_STATE)
 svm.fit(Xtrain, Ytrain)
-result["svm"] = get_score(Xtest, Ytest, svm.predict)
-result["svm"]
+result["SVM"] = get_score(Xtest, Ytest, svm.predict)
+result["SVM"]
 ```
 
 |           |   |                    |        |   |                    |    |   |                   |           |   |                    |
@@ -336,7 +338,7 @@ result["svm"]
 
 ### KNN {#knn}
 
-这里的 NN 不是后文的 [CNN](#cnn) 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居
+这里的 NN 不是后文的 CNN 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier
@@ -415,16 +417,16 @@ kmeans.predict([[0, 0], [12, 3]])
     ```
 
     ```text
-    1.3772944211959839 0.9042965173721313 82.13077545166016
-    4.214730262756348 7.343286037445068 0.12421412765979767
-    3.882797956466675 7.529382228851318 0.06513956934213638
-    3.6395726203918457 7.65905237197876 0.034189920872449875
-    3.4633584022521973 7.752990245819092 0.01794535294175148
-    3.335692882537842 7.821046829223633 0.009418941102921963
-    3.2432024478912354 7.870352268218994 0.004943722393363714
-    3.176194906234741 7.906073093414307 0.00259480276145041
-    3.1276495456695557 7.931951999664307 0.001361933653242886
-    3.092479944229126 7.950700283050537 0.000714847119525075
+    1.3611265420913696 0.907298743724823 82.69320678710938
+    4.225016117095947 7.326720714569092 0.1297740489244461
+    3.884570360183716 7.520116806030273 0.06721365451812744
+    3.6368446350097656 7.654516220092773 0.03483818471431732
+    3.4584925174713135 7.7512712478637695 0.01805729605257511
+    3.3300886154174805 7.820929527282715 0.009359428659081459
+    3.2376456260681152 7.8710784912109375 0.004851202480494976
+    3.1710915565490723 7.90718412399292 0.00251445802859962
+    3.123175859451294 7.933177947998047 0.0013032826827839017
+    3.088679552078247 7.951891899108887 0.0006755132926627994
     ```
 
     上述的代码在 pytorch 中对应的有：
@@ -521,7 +523,7 @@ kmeans.predict([[0, 0], [12, 3]])
 所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 ![](https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg)
 
-[卷积](https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF)有其数学定义 \((f\*g)(n) = \int\_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\\)，简单地理解就是两个函数 `f` 和 `g` ，先对g函数进行翻转，相当于在数轴上把 `g` 函数从右边“卷”到左边去。然后再把 `g` 函数平移到 `n` ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。
+[卷积](https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF)有其数学定义 \\((f\*g)(n) = \int\_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\\)，简单地理解就是两个函数 `f` 和 `g` ，先对g函数进行翻转，相当于在数轴上把 `g` 函数从右边“卷”到左边去。然后再把 `g` 函数平移到 `n` ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。
 
 卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 `pytorch` 中常用 `Conv2d` 。而我们的数据则是一条条的，望文生义应该用 `Conv1d` （其实会用在自然语言处理中，但 RNN 应用更多）。
 
@@ -532,12 +534,12 @@ class CNN(nn.Module):
     def __init__(self) -> None:
         super(CNN, self).__init__()
         self.conv = nn.Sequential(
-            nn.Conv1d(Xtrain_nn.shape[1], 20, 3, padding=3),
+            nn.Conv1d(Xtrain_nn.shape[1], 20, 3,padding=2),
             nn.Tanh(),
-            nn.AvgPool1d(2),
+            nn.AvgPool1d(3),
         )
         self.fc = nn.Sequential(
-            nn.Linear(40, len(encode)),
+            nn.Linear(20, len(encode)),
             nn.ReLU(),
             nn.Softmax(dim=1),
         )
@@ -547,42 +549,42 @@ class CNN(nn.Module):
         out = out.view(out.size(0), -1)
         out = self.fc(out)
         return out
-Xtrain_cnn = Xtrain_nn.unsqueeze(2)
-Xtest_cnn = Xtest_nn.unsqueeze(2)
+
+
 net = CNN()
-optimizer = torch.optim.Adamax(net.parameters())
+optimizer = torch.optim.Adamax(net.parameters(),lr=0.0025)
 loss_func = torch.nn.L1Loss()
 epochnum = 10000
 for epoch in range(epochnum):
-    prediction = net(Xtrain_cnn)
+    prediction = net(Xtrain_nn.unsqueeze(2))
     loss = loss_func(Ytrain_nn, prediction)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
     if epoch % (epochnum / 10) == 0:
         print("epoch:", epoch, "loss:", loss.item())
-prediction = pd.DataFrame(net(Xtest_cnn).detach().numpy())
+prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(2)).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["CNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["CNN"]
 ```
 
 ```text
-epoch: 0 loss: 0.24517522752285004
-epoch: 1000 loss: 0.15429307520389557
-epoch: 2000 loss: 0.13127736747264862
-epoch: 3000 loss: 0.07982835918664932
-epoch: 4000 loss: 0.055595122277736664
-epoch: 5000 loss: 0.05239807069301605
-epoch: 6000 loss: 0.05039357766509056
-epoch: 7000 loss: 0.048878513276576996
-epoch: 8000 loss: 0.047704149037599564
-epoch: 9000 loss: 0.046559300273656845
+epoch: 0 loss: 0.24548448622226715
+epoch: 1000 loss: 0.15290552377700806
+epoch: 2000 loss: 0.13819478452205658
+epoch: 3000 loss: 0.08962152153253555
+epoch: 4000 loss: 0.06852802634239197
+epoch: 5000 loss: 0.060417093336582184
+epoch: 6000 loss: 0.055087827146053314
+epoch: 7000 loss: 0.05235404893755913
+epoch: 8000 loss: 0.050883542746305466
+epoch: 9000 loss: 0.048509202897548676
 ```
 
-|           |   |                    |        |   |                     |    |   |                     |           |   |                     |
-|-----------|---|--------------------|--------|---|---------------------|----|---|---------------------|-----------|---|---------------------|
-| precision | : | 0.4308013335051745 | recall | : | 0.47244094488188976 | f1 | : | 0.44504613282710614 | \\(R^2\\) | : | 0.43825492027319096 |
+|           |   |                    |        |   |                    |    |   |                     |           |   |                     |
+|-----------|---|--------------------|--------|---|--------------------|----|---|---------------------|-----------|---|---------------------|
+| precision | : | 0.4275809716701871 | recall | : | 0.4645669291338583 | f1 | : | 0.43998424878311354 | \\(R^2\\) | : | 0.43565444166649087 |
 
 增加网络层数可能会导致梯度离散和梯度爆炸的情况，反而效果不好。残差网络 ResNet 利用在网络间加入 shortcut ，使更深层次的训练结果至少不差于更浅层次（如果更差就直接走 shortcut ）
 
@@ -593,36 +595,32 @@ epoch: 9000 loss: 0.046559300273656845
 循环神经网络：常用在 NLP 中并大放异彩，也会应用在股价等时间序列中。他会短期地“记住”参数，就如同我说这句话的时候你短期地记住了上一句话，会更新“自我”而非直接向前传递，在该层中“循环”。即对于隐藏层而言，\\(h\_t = f\_w(h\_{t-1}, x\_t)\\) 。随着输入的更新，有一个短暂的 memory ，记住刚刚的参数。
 
 ```python
-
-class LSTM(nn.Module):
+class RNN(nn.Module):
     def __init__(self):
-        super(LSTM, self).__init__()
-        self.lstm = nn.LSTM(
-            input_size=1,
-            hidden_size=32,
-            num_layers=1,
+        super(RNN, self).__init__()
+        self.rnn = nn.RNN(
+            input_size=48,
+            hidden_size=100,
             batch_first=True,
-            bidirectional=True,
+            # bidirectional=True,
         )
-        self.fc = nn.Linear(32* 2, num_classes)
+        self.fc = nn.Sequential(
+            nn.Linear(100, len(encode)),
+            nn.ReLU(),
+            nn.Softmax(dim=1),
+        )
 
     def forward(self, x):
-        # x, _ = x
-        out, _ = self.lstm(x)
+        out, _ = self.rnn(x)
         out = self.fc(out[:, -1, :])
         return out
 
-
-input_size = 1
-hidden_size = 32
-num_layers = 1
-num_classes = 7
-net = LSTM()
+net = RNN()
 optimizer = torch.optim.Adamax(net.parameters())
 loss_func = nn.MSELoss()
 epochnum = 3000
 for epoch in range(epochnum):
-    out = net(Xtrain_nn.unsqueeze(2))
+    out = net(Xtrain_nn.unsqueeze(1))
     loss = loss_func(out, Ytrain_nn)
     optimizer.zero_grad()
     loss.backward()
@@ -630,28 +628,28 @@ for epoch in range(epochnum):
     if epoch % (epochnum / 10) == 0:
         print("epoch:", epoch, "loss:", loss.item())
 
-prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(2)).detach().numpy())
+prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(1)).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["RNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["RNN"]
 ```
 
 ```text
-epoch: 0 loss: 0.17870499193668365
-epoch: 300 loss: 0.1091841384768486
-epoch: 600 loss: 0.10914024710655212
-epoch: 900 loss: 0.10904531925916672
-epoch: 1200 loss: 0.10863472521305084
-epoch: 1500 loss: 0.1002660021185875
-epoch: 1800 loss: 0.0945233702659607
-epoch: 2100 loss: 0.09050614386796951
-epoch: 2400 loss: 0.08861099183559418
-epoch: 2700 loss: 0.0848860964179039
+epoch: 0 loss: 0.1237807646393776
+epoch: 300 loss: 0.06955940276384354
+epoch: 600 loss: 0.034297578036785126
+epoch: 900 loss: 0.016720153391361237
+epoch: 1200 loss: 0.009165622293949127
+epoch: 1500 loss: 0.006110946647822857
+epoch: 1800 loss: 0.004620142746716738
+epoch: 2100 loss: 0.003905945923179388
+epoch: 2400 loss: 0.0028917351737618446
+epoch: 2700 loss: 0.0026480290107429028
 ```
 
-|           |   |                     |        |   |                    |    |   |                    |           |   |                     |
-|-----------|---|---------------------|--------|---|--------------------|----|---|--------------------|-----------|---|---------------------|
-| precision | : | 0.40462763611699026 | recall | : | 0.4507874015748031 | f1 | : | 0.4241080748168216 | \\(R^2\\) | : | 0.47292193256499304 |
+|           |   |                     |        |   |                    |    |   |                     |           |   |                    |
+|-----------|---|---------------------|--------|---|--------------------|----|---|---------------------|-----------|---|--------------------|
+| precision | : | 0.45571789744910574 | recall | : | 0.4645669291338583 | f1 | : | 0.45579366963021595 | \\(R^2\\) | : | 0.3853397572978466 |
 
 但是 RNN 的的梯度非常容易“爆炸”（特别大）或“离散”（特别小以致于不更新），预测可能会出错。
 针对此，LSTM （Long Short Term Memory）模型设计了三个“门”：输入门 `i` ，遗忘门 `f` ，输出门 `o` ，有一篇非常好的[blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)详细描述了这些门是如何工作的，简而言之他加入了长期记忆的部分。
@@ -667,6 +665,11 @@ epoch: 2700 loss: 0.0848860964179039
 
 ### 对比 {#对比}
 
+```python
+feature = ["precision", "recall", "f1", "\(R^2\)"]
+[["model"]+feature]+list([i[0]]+ [round(j,4) for j in i[1].values()] for i in result.items())
+```
+
 | model             | precision | recall | f1     | \\(R^2\\) |
 |-------------------|-----------|--------|--------|-----------|
 | random            | 0.2364    | 0.1255 | 0.1544 | 0.0089    |
@@ -674,15 +677,13 @@ epoch: 2700 loss: 0.0848860964179039
 | decision tree     | 0.3499    | 0.3799 | 0.3529 | 0.3632    |
 | random forest     | 0.396     | 0.4252 | 0.3835 | 0.3996    |
 | gradient boosting | 0.5305    | 0.5256 | 0.5095 | 0.5421    |
-| svm               | 0.4137    | 0.4094 | 0.3517 | 0.3431    |
+| SVM               | 0.4137    | 0.4094 | 0.3517 | 0.3431    |
 | KNN               | 0.3625    | 0.3524 | 0.342  | 0.2987    |
 | bp neural network | 0.2739    | 0.3386 | 0.2763 | -0.0591   |
-| CNN               | 0.4308    | 0.4724 | 0.445  | 0.4383    |
-| RNN               | 0.4046    | 0.4508 | 0.4241 | 0.4729    |
+| CNN               | 0.4276    | 0.4646 | 0.44   | 0.4357    |
+| RNN               | 0.4557    | 0.4646 | 0.4558 | 0.3853    |
 
 ```python
-import numpy as np
-np.random.seed(42)
 N = len(feature)
 angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
 angles = np.concatenate((angles, [angles[0]]))
@@ -698,8 +699,7 @@ plt.legend(bbox_to_anchor=(1.2, -0.1), ncol=3)
 plt.show()
 ```
 
-{{< figure src="/ox-hugo/529497edec8df5a4871a4e92910dc24d9e9f45dc.png" >}}
-
+{{< figure src="/ox-hugo/77711a7fb5e334bf778dc1bd7807feb9d7b14f93.png" >}}
 
 ## References
 
