@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernestdong.github.io/posts/machine_learning_in_erm/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-30T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-04-03T11:39:06+08:00" />
+<meta property="article:modified_time" content="2022-04-04T19:43:42+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -224,7 +224,7 @@
 <p>Debt Ratios: debtRatio, debtEquityRatio</p>
 </li>
 <li>
-<p>Operating Performance Ratios:` assetTurnover</p>
+<p>Operating Performance Ratios: assetTurnover, fixedAssetTurnover</p>
 </li>
 <li>
 <p>Cash Flow Indicator Ratios: operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, operatingCashFlowSalesRatio, freeCashFlowOperatingCashFlowRatio</p>
@@ -500,6 +500,7 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> scipy.stats <span style="color:#ff79c6">import</span> pearsonr
@@ -520,7 +521,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> random
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
+</span></span><span style="display:flex;"><span>np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>seed(RANDOM_STATE)
 </span></span><span style="display:flex;"><span>random<span style="color:#ff79c6">.</span>seed(RANDOM_STATE)
 </span></span><span style="display:flex;"><span>ratings <span style="color:#ff79c6">=</span> Y<span style="color:#ff79c6">.</span>unique()
 </span></span><span style="display:flex;"><span>tmp <span style="color:#ff79c6">=</span> {}
@@ -637,7 +639,7 @@
 </table>
 <p>决策树也在日常生活中有应用，车险定价或者我们日常的决策都可以抽象成决策树。
 他的思想是，一个数据集有多个特征，每个节点按照某个特征是否满足一定的条件分叉，形成一棵二叉树。
-该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有2信息熵/基尼系数等。
+该节点选取特征分叉的决策依据是最大化“信息增益”，即分叉前后数据更“有序”，且更有序的程度最大，常见指标的有信息熵/基尼系数等。
 这棵树为了避免过拟合，我们会对决策树“剪枝”，增加一些分支条件的限制，可以看<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">这里</a>。</p>
 <p>决策树好处是计算量简单，可解释性强，比较适合处理有缺失属性值的样本，能够处理不相关的特征；但是容易过拟合。</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -758,8 +760,9 @@
 </figure>
 
 <h4 id="boosting">boosting</h4>
-<p><a href="#bagging">bagging</a> 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
-调参时可以树的深度很少就能达到很高的精度。</p>
+<p>bagging 的训练是平行的，boosting 则是迭代地训练一系列的分类器，每个分类器采用的样本分布都和上一轮的学习结果有关，直观比方是每个树都去学习上一个树没有学习好的地方，代表算法有AdaBoost（Adaptive boosting）算法，以及 XGBoost 算法。
+调参时可以树的深度很少就能达到很高的精度。
+<img src="https://www.researchgate.net/publication/351542039/figure/fig1/AS:1022852723662850@1620878501807/Flow-diagram-of-gradient-boosting-machine-learning-method-The-ensemble-classifiers.png" alt=""></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -839,8 +842,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>svm <span style="color:#ff79c6">=</span> SVC(kernel<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;rbf&#34;</span>, gamma<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;auto&#34;</span>, random_state<span style="color:#ff79c6">=</span>RANDOM_STATE)
 </span></span><span style="display:flex;"><span>svm<span style="color:#ff79c6">.</span>fit(Xtrain, Ytrain)
-</span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;svm&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, svm<span style="color:#ff79c6">.</span>predict)
-</span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;svm&#34;</span>]
+</span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;SVM&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, svm<span style="color:#ff79c6">.</span>predict)
+</span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;SVM&#34;</span>]
 </span></span></code></pre></td></tr></table>
 </div>
 </div><table>
@@ -878,7 +881,7 @@
 </tbody>
 </table>
 <h3 id="knn">KNN</h3>
-<p>这里的 NN 不是后文的 <a href="#cnn">CNN</a> 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居</p>
+<p>这里的 NN 不是后文的 CNN 等的神经网络，全称是K Nearest Neighbors，意思是某个点分类取决于 K 个最近的邻居</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1026,16 +1029,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1.3772944211959839 0.9042965173721313 82.13077545166016
-</span></span><span style="display:flex;"><span>4.214730262756348 7.343286037445068 0.12421412765979767
-</span></span><span style="display:flex;"><span>3.882797956466675 7.529382228851318 0.06513956934213638
-</span></span><span style="display:flex;"><span>3.6395726203918457 7.65905237197876 0.034189920872449875
-</span></span><span style="display:flex;"><span>3.4633584022521973 7.752990245819092 0.01794535294175148
-</span></span><span style="display:flex;"><span>3.335692882537842 7.821046829223633 0.009418941102921963
-</span></span><span style="display:flex;"><span>3.2432024478912354 7.870352268218994 0.004943722393363714
-</span></span><span style="display:flex;"><span>3.176194906234741 7.906073093414307 0.00259480276145041
-</span></span><span style="display:flex;"><span>3.1276495456695557 7.931951999664307 0.001361933653242886
-</span></span><span style="display:flex;"><span>3.092479944229126 7.950700283050537 0.000714847119525075
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1.3611265420913696 0.907298743724823 82.69320678710938
+</span></span><span style="display:flex;"><span>4.225016117095947 7.326720714569092 0.1297740489244461
+</span></span><span style="display:flex;"><span>3.884570360183716 7.520116806030273 0.06721365451812744
+</span></span><span style="display:flex;"><span>3.6368446350097656 7.654516220092773 0.03483818471431732
+</span></span><span style="display:flex;"><span>3.4584925174713135 7.7512712478637695 0.01805729605257511
+</span></span><span style="display:flex;"><span>3.3300886154174805 7.820929527282715 0.009359428659081459
+</span></span><span style="display:flex;"><span>3.2376456260681152 7.8710784912109375 0.004851202480494976
+</span></span><span style="display:flex;"><span>3.1710915565490723 7.90718412399292 0.00251445802859962
+</span></span><span style="display:flex;"><span>3.123175859451294 7.933177947998047 0.0013032826827839017
+</span></span><span style="display:flex;"><span>3.088679552078247 7.951891899108887 0.0006755132926627994
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上述的代码在 pytorch 中对应的有：</p>
@@ -1232,7 +1235,7 @@
 <h4 id="cnn">CNN</h4>
 <p>所谓卷积神经网络，就是用卷积核扫描，类似“锐化”，是一种比较经典的计算机视觉算法。图片之间的像素是有关系的，刚刚的神经网络显然没有考虑到连续像素的关联性，CNN 通过做卷积将关系呈现出来。
 <img src="https://pic2.zhimg.com/v2-ede517995e1604d6f96cc01614d320b9_b.jpg" alt=""></p>
-<p><a href="https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF">卷积</a>有其数学定义 ((f*g)(n) = \int_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\)，简单地理解就是两个函数 <code>f</code> 和 <code>g</code> ，先对g函数进行翻转，相当于在数轴上把 <code>g</code> 函数从右边“卷”到左边去。然后再把 <code>g</code> 函数平移到 <code>n</code> ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。</p>
+<p><a href="https://zh.m.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF">卷积</a>有其数学定义 \((f*g)(n) = \int_{-\infty}^{\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\)，简单地理解就是两个函数 <code>f</code> 和 <code>g</code> ，先对g函数进行翻转，相当于在数轴上把 <code>g</code> 函数从右边“卷”到左边去。然后再把 <code>g</code> 函数平移到 <code>n</code> ，在这个位置对两个函数的对应点相乘，然后相加（“积”）。</p>
 <p>卷积神经网络先用卷积层扫描出特征，然后利用“池化”增强稳健性防止过拟合，最后一个全连接层处理输出。图像可以由二维的位置和第三维（颜色 RGB ）确定，在 <code>pytorch</code> 中常用 <code>Conv2d</code> 。而我们的数据则是一条条的，望文生义应该用 <code>Conv1d</code> （其实会用在自然语言处理中，但 RNN 应用更多）。</p>
 <p>从这里开始利用 CPU 训练比较慢，有 NVIDIA GPU 的同学可以尝试在 GPU 上训练</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -1280,12 +1283,12 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self) <span style="color:#ff79c6">-&gt;</span> <span style="color:#ff79c6">None</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>(CNN, self)<span style="color:#ff79c6">.</span>__init__()
 </span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>conv <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>Sequential(
-</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Conv1d(Xtrain_nn<span style="color:#ff79c6">.</span>shape[<span style="color:#bd93f9">1</span>], <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">3</span>, padding<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Conv1d(Xtrain_nn<span style="color:#ff79c6">.</span>shape[<span style="color:#bd93f9">1</span>], <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">3</span>,padding<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>),
 </span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Tanh(),
-</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>AvgPool1d(<span style="color:#bd93f9">2</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>AvgPool1d(<span style="color:#bd93f9">3</span>),
 </span></span><span style="display:flex;"><span>        )
 </span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>fc <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>Sequential(
-</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Linear(<span style="color:#bd93f9">40</span>, <span style="color:#8be9fd;font-style:italic">len</span>(encode)),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Linear(<span style="color:#bd93f9">20</span>, <span style="color:#8be9fd;font-style:italic">len</span>(encode)),
 </span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>ReLU(),
 </span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Softmax(dim<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>),
 </span></span><span style="display:flex;"><span>        )
@@ -1295,21 +1298,21 @@
 </span></span><span style="display:flex;"><span>        out <span style="color:#ff79c6">=</span> out<span style="color:#ff79c6">.</span>view(out<span style="color:#ff79c6">.</span>size(<span style="color:#bd93f9">0</span>), <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>)
 </span></span><span style="display:flex;"><span>        out <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>fc(out)
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> out
-</span></span><span style="display:flex;"><span>Xtrain_cnn <span style="color:#ff79c6">=</span> Xtrain_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">2</span>)
-</span></span><span style="display:flex;"><span>Xtest_cnn <span style="color:#ff79c6">=</span> Xtest_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>net <span style="color:#ff79c6">=</span> CNN()
-</span></span><span style="display:flex;"><span>optimizer <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>optim<span style="color:#ff79c6">.</span>Adamax(net<span style="color:#ff79c6">.</span>parameters())
+</span></span><span style="display:flex;"><span>optimizer <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>optim<span style="color:#ff79c6">.</span>Adamax(net<span style="color:#ff79c6">.</span>parameters(),lr<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.0025</span>)
 </span></span><span style="display:flex;"><span>loss_func <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>nn<span style="color:#ff79c6">.</span>L1Loss()
 </span></span><span style="display:flex;"><span>epochnum <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10000</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> epoch <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(epochnum):
-</span></span><span style="display:flex;"><span>    prediction <span style="color:#ff79c6">=</span> net(Xtrain_cnn)
+</span></span><span style="display:flex;"><span>    prediction <span style="color:#ff79c6">=</span> net(Xtrain_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">2</span>))
 </span></span><span style="display:flex;"><span>    loss <span style="color:#ff79c6">=</span> loss_func(Ytrain_nn, prediction)
 </span></span><span style="display:flex;"><span>    optimizer<span style="color:#ff79c6">.</span>zero_grad()
 </span></span><span style="display:flex;"><span>    loss<span style="color:#ff79c6">.</span>backward()
 </span></span><span style="display:flex;"><span>    optimizer<span style="color:#ff79c6">.</span>step()
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> epoch <span style="color:#ff79c6">%</span> (epochnum <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">10</span>) <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;epoch:&#34;</span>, epoch, <span style="color:#f1fa8c">&#34;loss:&#34;</span>, loss<span style="color:#ff79c6">.</span>item())
-</span></span><span style="display:flex;"><span>prediction <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame(net(Xtest_cnn)<span style="color:#ff79c6">.</span>detach()<span style="color:#ff79c6">.</span>numpy())
+</span></span><span style="display:flex;"><span>prediction <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame(net(Xtest_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">2</span>))<span style="color:#ff79c6">.</span>detach()<span style="color:#ff79c6">.</span>numpy())
 </span></span><span style="display:flex;"><span>Ypredict <span style="color:#ff79c6">=</span> prediction<span style="color:#ff79c6">.</span>idxmax(axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>)<span style="color:#ff79c6">.</span>map(<span style="color:#ff79c6">lambda</span> x: encode[x])
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;CNN&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, <span style="color:#ff79c6">lambda</span> _: Ypredict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;CNN&#34;</span>]
@@ -1329,16 +1332,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.24517522752285004
-</span></span><span style="display:flex;"><span>epoch: 1000 loss: 0.15429307520389557
-</span></span><span style="display:flex;"><span>epoch: 2000 loss: 0.13127736747264862
-</span></span><span style="display:flex;"><span>epoch: 3000 loss: 0.07982835918664932
-</span></span><span style="display:flex;"><span>epoch: 4000 loss: 0.055595122277736664
-</span></span><span style="display:flex;"><span>epoch: 5000 loss: 0.05239807069301605
-</span></span><span style="display:flex;"><span>epoch: 6000 loss: 0.05039357766509056
-</span></span><span style="display:flex;"><span>epoch: 7000 loss: 0.048878513276576996
-</span></span><span style="display:flex;"><span>epoch: 8000 loss: 0.047704149037599564
-</span></span><span style="display:flex;"><span>epoch: 9000 loss: 0.046559300273656845
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.24548448622226715
+</span></span><span style="display:flex;"><span>epoch: 1000 loss: 0.15290552377700806
+</span></span><span style="display:flex;"><span>epoch: 2000 loss: 0.13819478452205658
+</span></span><span style="display:flex;"><span>epoch: 3000 loss: 0.08962152153253555
+</span></span><span style="display:flex;"><span>epoch: 4000 loss: 0.06852802634239197
+</span></span><span style="display:flex;"><span>epoch: 5000 loss: 0.060417093336582184
+</span></span><span style="display:flex;"><span>epoch: 6000 loss: 0.055087827146053314
+</span></span><span style="display:flex;"><span>epoch: 7000 loss: 0.05235404893755913
+</span></span><span style="display:flex;"><span>epoch: 8000 loss: 0.050883542746305466
+</span></span><span style="display:flex;"><span>epoch: 9000 loss: 0.048509202897548676
 </span></span></code></pre></td></tr></table>
 </div>
 </div><table>
@@ -1362,16 +1365,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.4308013335051745</td>
+<td>0.4275809716701871</td>
 <td>recall</td>
 <td>:</td>
-<td>0.47244094488188976</td>
+<td>0.4645669291338583</td>
 <td>f1</td>
 <td>:</td>
-<td>0.44504613282710614</td>
+<td>0.43998424878311354</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.43825492027319096</td>
+<td>0.43565444166649087</td>
 </tr>
 </tbody>
 </table>
@@ -1418,42 +1421,34 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">LSTM</span>(nn<span style="color:#ff79c6">.</span>Module):
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">RNN</span>(nn<span style="color:#ff79c6">.</span>Module):
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>(LSTM, self)<span style="color:#ff79c6">.</span>__init__()
-</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>lstm <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>LSTM(
-</span></span><span style="display:flex;"><span>            input_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>,
-</span></span><span style="display:flex;"><span>            hidden_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">32</span>,
-</span></span><span style="display:flex;"><span>            num_layers<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>(RNN, self)<span style="color:#ff79c6">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>rnn <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>RNN(
+</span></span><span style="display:flex;"><span>            input_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">48</span>,
+</span></span><span style="display:flex;"><span>            hidden_size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">100</span>,
 </span></span><span style="display:flex;"><span>            batch_first<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>,
-</span></span><span style="display:flex;"><span>            bidirectional<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># bidirectional=True,</span>
 </span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>fc <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>Linear(<span style="color:#bd93f9">32</span><span style="color:#ff79c6">*</span> <span style="color:#bd93f9">2</span>, num_classes)
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>fc <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>Sequential(
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Linear(<span style="color:#bd93f9">100</span>, <span style="color:#8be9fd;font-style:italic">len</span>(encode)),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#ff79c6">.</span>Softmax(dim<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>),
+</span></span><span style="display:flex;"><span>        )
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">forward</span>(self, x):
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># x, _ = x</span>
-</span></span><span style="display:flex;"><span>        out, _ <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>lstm(x)
+</span></span><span style="display:flex;"><span>        out, _ <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>rnn(x)
 </span></span><span style="display:flex;"><span>        out <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>fc(out[:, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, :])
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> out
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>input_size <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
-</span></span><span style="display:flex;"><span>hidden_size <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">32</span>
-</span></span><span style="display:flex;"><span>num_layers <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
-</span></span><span style="display:flex;"><span>num_classes <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">7</span>
-</span></span><span style="display:flex;"><span>net <span style="color:#ff79c6">=</span> LSTM()
+</span></span><span style="display:flex;"><span>net <span style="color:#ff79c6">=</span> RNN()
 </span></span><span style="display:flex;"><span>optimizer <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>optim<span style="color:#ff79c6">.</span>Adamax(net<span style="color:#ff79c6">.</span>parameters())
 </span></span><span style="display:flex;"><span>loss_func <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>MSELoss()
 </span></span><span style="display:flex;"><span>epochnum <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3000</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> epoch <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(epochnum):
-</span></span><span style="display:flex;"><span>    out <span style="color:#ff79c6">=</span> net(Xtrain_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">2</span>))
+</span></span><span style="display:flex;"><span>    out <span style="color:#ff79c6">=</span> net(Xtrain_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">1</span>))
 </span></span><span style="display:flex;"><span>    loss <span style="color:#ff79c6">=</span> loss_func(out, Ytrain_nn)
 </span></span><span style="display:flex;"><span>    optimizer<span style="color:#ff79c6">.</span>zero_grad()
 </span></span><span style="display:flex;"><span>    loss<span style="color:#ff79c6">.</span>backward()
@@ -1461,7 +1456,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> epoch <span style="color:#ff79c6">%</span> (epochnum <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">10</span>) <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;epoch:&#34;</span>, epoch, <span style="color:#f1fa8c">&#34;loss:&#34;</span>, loss<span style="color:#ff79c6">.</span>item())
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>prediction <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame(net(Xtest_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">2</span>))<span style="color:#ff79c6">.</span>detach()<span style="color:#ff79c6">.</span>numpy())
+</span></span><span style="display:flex;"><span>prediction <span style="color:#ff79c6">=</span> pd<span style="color:#ff79c6">.</span>DataFrame(net(Xtest_nn<span style="color:#ff79c6">.</span>unsqueeze(<span style="color:#bd93f9">1</span>))<span style="color:#ff79c6">.</span>detach()<span style="color:#ff79c6">.</span>numpy())
 </span></span><span style="display:flex;"><span>Ypredict <span style="color:#ff79c6">=</span> prediction<span style="color:#ff79c6">.</span>idxmax(axis<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>)<span style="color:#ff79c6">.</span>map(<span style="color:#ff79c6">lambda</span> x: encode[x])
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;RNN&#34;</span>] <span style="color:#ff79c6">=</span> get_score(Xtest, Ytest, <span style="color:#ff79c6">lambda</span> _: Ypredict)
 </span></span><span style="display:flex;"><span>result[<span style="color:#f1fa8c">&#34;RNN&#34;</span>]
@@ -1481,16 +1476,16 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.17870499193668365
-</span></span><span style="display:flex;"><span>epoch: 300 loss: 0.1091841384768486
-</span></span><span style="display:flex;"><span>epoch: 600 loss: 0.10914024710655212
-</span></span><span style="display:flex;"><span>epoch: 900 loss: 0.10904531925916672
-</span></span><span style="display:flex;"><span>epoch: 1200 loss: 0.10863472521305084
-</span></span><span style="display:flex;"><span>epoch: 1500 loss: 0.1002660021185875
-</span></span><span style="display:flex;"><span>epoch: 1800 loss: 0.0945233702659607
-</span></span><span style="display:flex;"><span>epoch: 2100 loss: 0.09050614386796951
-</span></span><span style="display:flex;"><span>epoch: 2400 loss: 0.08861099183559418
-</span></span><span style="display:flex;"><span>epoch: 2700 loss: 0.0848860964179039
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>epoch: 0 loss: 0.1237807646393776
+</span></span><span style="display:flex;"><span>epoch: 300 loss: 0.06955940276384354
+</span></span><span style="display:flex;"><span>epoch: 600 loss: 0.034297578036785126
+</span></span><span style="display:flex;"><span>epoch: 900 loss: 0.016720153391361237
+</span></span><span style="display:flex;"><span>epoch: 1200 loss: 0.009165622293949127
+</span></span><span style="display:flex;"><span>epoch: 1500 loss: 0.006110946647822857
+</span></span><span style="display:flex;"><span>epoch: 1800 loss: 0.004620142746716738
+</span></span><span style="display:flex;"><span>epoch: 2100 loss: 0.003905945923179388
+</span></span><span style="display:flex;"><span>epoch: 2400 loss: 0.0028917351737618446
+</span></span><span style="display:flex;"><span>epoch: 2700 loss: 0.0026480290107429028
 </span></span></code></pre></td></tr></table>
 </div>
 </div><table>
@@ -1514,16 +1509,16 @@
 <tr>
 <td>precision</td>
 <td>:</td>
-<td>0.40462763611699026</td>
+<td>0.45571789744910574</td>
 <td>recall</td>
 <td>:</td>
-<td>0.4507874015748031</td>
+<td>0.4645669291338583</td>
 <td>f1</td>
 <td>:</td>
-<td>0.4241080748168216</td>
+<td>0.45579366963021595</td>
 <td>\(R^2\)</td>
 <td>:</td>
-<td>0.47292193256499304</td>
+<td>0.3853397572978466</td>
 </tr>
 </tbody>
 </table>
@@ -1538,7 +1533,17 @@
 <p>强化学习（RL）是机器学习的一个领域，涉及软件代理如何在环境中采取行动以最大化一些累积奖励的概念。该问题由于其一般性，在许多其他学科中得到研究，如博弈论，控制理论，运筹学，信息论，基于仿真的优化，多智能体系统，群智能，统计和遗传算法。。在运筹学和控制文献中，强化学习被称为近似动态规划或神经动态规划。&ndash;Wikipedia</p>
 </blockquote>
 <h3 id="对比">对比</h3>
-<table>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>feature <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;precision&#34;</span>, <span style="color:#f1fa8c">&#34;recall&#34;</span>, <span style="color:#f1fa8c">&#34;f1&#34;</span>, <span style="color:#f1fa8c">&#34;\(R^2\)&#34;</span>]
+</span></span><span style="display:flex;"><span>[[<span style="color:#f1fa8c">&#34;model&#34;</span>]<span style="color:#ff79c6">+</span>feature]<span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">list</span>([i[<span style="color:#bd93f9">0</span>]]<span style="color:#ff79c6">+</span> [<span style="color:#8be9fd;font-style:italic">round</span>(j,<span style="color:#bd93f9">4</span>) <span style="color:#ff79c6">for</span> j <span style="color:#ff79c6">in</span> i[<span style="color:#bd93f9">1</span>]<span style="color:#ff79c6">.</span>values()] <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> result<span style="color:#ff79c6">.</span>items())
+</span></span></code></pre></td></tr></table>
+</div>
+</div><table>
 <thead>
 <tr>
 <th>model</th>
@@ -1585,7 +1590,7 @@
 <td>0.5421</td>
 </tr>
 <tr>
-<td>svm</td>
+<td>SVM</td>
 <td>0.4137</td>
 <td>0.4094</td>
 <td>0.3517</td>
@@ -1607,17 +1612,17 @@
 </tr>
 <tr>
 <td>CNN</td>
-<td>0.4308</td>
-<td>0.4724</td>
-<td>0.445</td>
-<td>0.4383</td>
+<td>0.4276</td>
+<td>0.4646</td>
+<td>0.44</td>
+<td>0.4357</td>
 </tr>
 <tr>
 <td>RNN</td>
-<td>0.4046</td>
-<td>0.4508</td>
-<td>0.4241</td>
-<td>0.4729</td>
+<td>0.4557</td>
+<td>0.4646</td>
+<td>0.4558</td>
+<td>0.3853</td>
 </tr>
 </tbody>
 </table>
@@ -1636,13 +1641,9 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
-</span></span><span style="display:flex;"><span>np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>seed(<span style="color:#bd93f9">42</span>)
-</span></span><span style="display:flex;"><span>N <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(feature)
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>N <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(feature)
 </span></span><span style="display:flex;"><span>angles <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>linspace(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">*</span> np<span style="color:#ff79c6">.</span>pi, N, endpoint<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
 </span></span><span style="display:flex;"><span>angles <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>concatenate((angles, [angles[<span style="color:#bd93f9">0</span>]]))
 </span></span><span style="display:flex;"><span>fig <span style="color:#ff79c6">=</span> plt<span style="color:#ff79c6">.</span>figure()
@@ -1657,7 +1658,7 @@
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>show()
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/529497edec8df5a4871a4e92910dc24d9e9f45dc.png"/>
+</div><figure><img src="/ox-hugo/77711a7fb5e334bf778dc1bd7807feb9d7b14f93.png"/>
 </figure>
 
 <h2 id="references">References</h2>
