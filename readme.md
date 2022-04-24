@@ -41,12 +41,10 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-Python         21 hrs 1 min    ████████████▒░░░░░░░░░░░░   49.20 %
-TeX            7 hrs 52 mins   ████▓░░░░░░░░░░░░░░░░░░░░   18.42 %
-org mode       5 hrs           ███░░░░░░░░░░░░░░░░░░░░░░   11.73 %
-Emacs Lisp     3 hrs 11 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.47 %
-Markdown       1 hr 37 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   03.81 %
-SQL            1 hr 20 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.14 %
+Python       8 hrs 26 mins   ███████████▒░░░░░░░░░░░░░   45.33 %
+Emacs Lisp   4 hrs 54 mins   ██████▓░░░░░░░░░░░░░░░░░░   26.37 %
+org mode     4 hrs 16 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.93 %
+Other        12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.11 %
 ```
 
 <!--END_SECTION:waka-->
