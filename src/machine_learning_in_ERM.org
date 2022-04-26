@@ -518,6 +518,7 @@ prediction = pd.DataFrame(net(Xtest_nn.unsqueeze(2)).detach().numpy())
 Ypredict = prediction.idxmax(axis=1).map(lambda x: encode[x])
 result["CNN"] = get_score(Xtest, Ytest, lambda _: Ypredict)
 result["CNN"]
+result
 #+end_src
 
 增加网络层数可能会导致梯度离散和梯度爆炸的情况，反而效果不好。残差网络 ResNet 利用在网络间加入 shortcut ，使更深层次的训练结果至少不差于更浅层次（如果更差就直接走 shortcut ）
