@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernestdong.github.io/posts/machine_learning_in_erm/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-30T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-04-04T19:43:42+08:00" />
+<meta property="article:modified_time" content="2022-05-29T13:54:34+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -1125,6 +1125,7 @@
 <p>神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导（这样的话通过神经网络线性函数的叠加仍然是一个线性函数），而是要经历一个非线性的“激活函数”，如 <code>relu</code> , <code>sigmoid</code>, <code>softsign</code> ，然后再进行传导。即针对 \(X\) 输入，神经元输出会是 \(f(W^TX+b)\) 。</p>
 <p>我们可以在这里可视化地理解一下
 <a href="https://playground.tensorflow.org/">https://playground.tensorflow.org/</a></p>
+<p>一层神经网络可以拟合出任意的函数，而多层的神经网络在拟合时更有效率</p>
 </li>
 </ul>
 <!--list-separator-->

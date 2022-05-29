@@ -5,7 +5,16 @@
     <link>https://ernestdong.github.io/tags/python/</link>
     <description>Recent content in python on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 May 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python 速成</title>
+      <link>https://ernestdong.github.io/posts/python-%E4%BB%8E-0-%E5%88%B0-1/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://ernestdong.github.io/posts/python-%E4%BB%8E-0-%E5%88%B0-1/</guid>
+      <description>python 安装 安装 python 安装包分别在 Windows mac，记得下载 python 3 而不是 python 2，安装时记得勾选“add python to path”安装 vscode (optional) 用来写 python 程序，在 这里 下载，下载完成后打</description>
+    </item>
+    
     <item>
       <title>机器学习在企业风险管理中的应用举例</title>
       <link>https://ernestdong.github.io/posts/machine_learning_in_erm/</link>
