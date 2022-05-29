@@ -475,6 +475,7 @@ kmeans.predict([[0, 0], [12, 3]])
     我们可以在这里可视化地理解一下
     <https://playground.tensorflow.org/>
 
+    一层神经网络可以拟合出任意的函数，而多层的神经网络在拟合时更有效率
 <!--list-separator-->
 
 -  一个尝试

@@ -433,6 +433,8 @@ list(model.parameters())
 
 我们可以在这里可视化地理解一下
 https://playground.tensorflow.org/
+
+一层神经网络可以拟合出任意的函数，而多层的神经网络在拟合时更有效率
 **** 一个尝试
 
 这是我用两层神经网络的代码
