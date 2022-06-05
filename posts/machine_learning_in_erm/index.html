@@ -1120,7 +1120,7 @@
 <li>
 <p>激活函数</p>
 <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png"/>
-</figure>
+    </figure>
 
 <p>神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导（这样的话通过神经网络线性函数的叠加仍然是一个线性函数），而是要经历一个非线性的“激活函数”，如 <code>relu</code> , <code>sigmoid</code>, <code>softsign</code> ，然后再进行传导。即针对 \(X\) 输入，神经元输出会是 \(f(W^TX+b)\) 。</p>
 <p>我们可以在这里可视化地理解一下
