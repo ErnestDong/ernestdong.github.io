@@ -41,10 +41,11 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-Markdown     9 hrs 54 mins   █████████████▓░░░░░░░░░░░   55.18 %
-Python       5 hrs 15 mins   ███████▒░░░░░░░░░░░░░░░░░   29.26 %
-C++          1 hr 10 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   06.58 %
-Other        47 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.39 %
+Markdown   5 hrs 52 mins   █████████████████████░░░░   84.64 %
+Go         37 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   08.91 %
+JSON       8 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.15 %
+Python     8 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.06 %
+Other      2 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.72 %
 ```
 
 <!--END_SECTION:waka-->
