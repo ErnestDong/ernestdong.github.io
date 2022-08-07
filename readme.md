@@ -41,10 +41,9 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-Markdown   17 hrs 52 mins  █████████████████████████   99.70 %
-JSON       2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.26 %
-Git        0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 %
-BibTeX     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 %
+Markdown     23 hrs 25 mins  ██████████████▓░░░░░░░░░░   59.22 %
+JavaScript   8 hrs 50 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.33 %
+Other        2 hrs 57 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.49 %
 ```
 
 <!--END_SECTION:waka-->
