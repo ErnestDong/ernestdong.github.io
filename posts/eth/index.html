@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernestdong.github.io/posts/eth/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-08T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-08-09T13:03:19+08:00" />
+<meta property="article:modified_time" content="2022-08-11T21:12:44+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -147,6 +147,14 @@
         <li><a href="#dao">DAO</a></li>
       </ul>
     </li>
+    <li><a href="#其他公链生态基础技术架构分析">其他公链生态基础技术架构分析</a>
+      <ul>
+        <li><a href="#bridges桥接-evm-union">Bridges：桥接 EVM Union</a></li>
+        <li><a href="#bnb背靠-binance-发力-defi">BNB：背靠 Binance 发力 DeFi</a></li>
+        <li><a href="#solana追求高效率与高扩展性">Solana：追求高效率与高扩展性</a></li>
+        <li><a href="#tron">TRON</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -173,7 +181,7 @@
             <div class="article-read-time">
               <i class="far fa-clock"></i>
               
-              35 minute read
+              49 minute read
             </div>
             
             
@@ -270,14 +278,14 @@
 <p>为了支持基于以太坊的交易，以太坊 ethereum 发行了原生的加密货币 ether(ETH)。接下来我们将介绍 ETH 在以太坊生态中的流转过程。</p>
 <h3 id="eth-的产出">ETH 的产出</h3>
 <p>ETH 的供应也是去中心化且透明的。以太坊是一个通胀模型，系统并没有规定以太币发行量的上限。矿工的收益一共有三部分：区块奖励、gas 以及 MEV。加密货币的拥趸认为它们是“数字黄金”，其价值来源于总量的稀缺性。以太坊的价值来源于它的使用而非储藏，以太坊的通胀模型则是由于其有更宏大的<a href="https://ethereum.org/zh/upgrades/vision/">愿景</a>，希望以太坊可以作为去中心化的计算平台，因而选择的是总量<a href="https://etherscan.io/chart/ethersupplygrowth">温和通胀</a>，以适应供需的增长，近一年通胀率控制在2%。
-区块奖励为矿工开采出一个新区块的奖励，平均12-14秒左右出一个区块，奖励由最初的每区块5个ETH降低为现如今的2个ETH，叔块的计算也能获得1.75个ETH。gas多出的部分分给矿工，基础费率部分通过“burn”销毁以避免过度的通胀。最后为最大可提取价值 MEV，为矿工通过在区块中添加和排除交易并更改区块中的交易顺序，可以从区块生产中得到的价值。
+区块奖励为矿工开采出一个新区块的奖励，平均12-14秒左右出一个区块，奖励由最初的每区块5个ETH降低为现如今的2个ETH，叔块的计算也能获得1.75个ETH。**gas多出的部分(优先费)分给矿工，基本费用部分通过“burn”销毁以避免过度的通胀。**最后为最大可提取价值 MEV，为矿工通过在区块中添加和排除交易并更改区块中的交易顺序，可以从区块生产中得到的价值。
 <img src="/attachments/gas.png" alt="一个区块"></p>
 <p>目前开采区块的方式为 PoW 机制，未来将转为 PoS 机制。
 以太坊的交易被处理为区块。与比特币类似，以太坊也是要求矿工找到一个 nonce，哈希计算后数值满足前若干位为0(使用“难度”difficulty 衡量)；但以太坊为了避免持有 ASIC 矿机的矿池形成中心化，采用了不适合 ASIC 芯片计算的内存密集的算法<a href="https://ethereum.org/zh/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/">ethash</a>。在听到新的交易请求时，每个以太坊网络节点会添加这笔交易到本地的内存池。一个挖矿节点将几十或上百个交易请求汇总到潜在区块中，从而尽量多收取交易手续费，同时保证不超出区块 gas 限制。节点将验证有效性并执行 op code，更新 EVM 的状态，交易打包为一个 Merkle Tree，取头节点的 hash 作为摘要。最后进行广播，交易被写入链上。</p>
 <blockquote>
 <p>算法的过程是根据过去的区块生成随机数种子，进而得到一个初始为 16M 的随机 Cache，再从 16M 的 Cache 生成初始为 1G 大小的 Dataset，同时根据发生的交易生成 Merkle-Tree 数据结构，保留头节点的 hash 作为所有交易的摘要。利用头节点的 hash、Dataset，不断尝试随机数 nonce 以满足区块链难度。当尝试得到满足的结果时广播，其他节点可以比较容易地验证结果并达成“共识”Consensus，进入下一个区块的开采。Cache 和 Dataset 大小会随时间线性增长以满足摩尔定律。</p>
 </blockquote>
-<p>未来以太坊将转向 Proof of Stake 机制，不再需要矿工“挖矿”而是需要“验证者”validator“计算”。用户需要质押 32 ETH 来获得作为验证者的资格。 验证者被随机选择去创建区块，并且负责检查和确认那些不是由他们创造的区块。 一个用户的权益也被用于激励良好的验证者行为的一种方式。 例如，用户可能会因为离线（验证失败）而损失一部分权益， 或因故意勾结而损失他们的全部权益。验证者之间没有竞争的关系，只需要在被选中的时候创建区块并且在没有被选中的时候验证他人提交的区块。如果为恶意区块提供证明，验证者就会失去质押的 ETH。</p>
+<p>未来以太坊将转向 Proof of Stake 机制，不再需要矿工“挖矿”而是需要“验证者”validator“计算”。用户需要质押 32 ETH 来获得作为验证者的资格。 验证者被随机选择去创建区块，并且负责检查和确认那些不是由他们创造的区块。 一个用户的权益也被用于激励良好的验证者行为的一种方式。 例如，用户可能会因为离线(验证失败)而损失一部分权益， 或因故意勾结而损失他们的全部权益。验证者之间没有竞争的关系，只需要在被选中的时候创建区块并且在没有被选中的时候验证他人提交的区块。如果为恶意区块提供证明，验证者就会失去质押的 ETH。</p>
 <p>PoS 和 PoW 都可能遇到“51%攻击”，但目前而言都是这样的攻击都不经济的。PoS相对更节能，gas费率更低，并且对 sharding 更友好每秒钟交易量更高，但安全性有待检验，不利于流动性可能会导致通缩和财富集中化。目前以太坊主网仍在 PoW 机制上，而 testnet Ropsten 已成功切换。当前的 PoW 链将转化为“执行层”，即将于主网进行“合并” Merge。届时，以太坊难度炸弹将使新区块开采变得十分困难，鼓励矿工转向 PoS；也可能会存在分叉的风险。</p>
 <h3 id="eth-的使用与转换">ETH 的使用与转换</h3>
 <p>我们可以通过metamask等钱包，连接到 ethereum 主网。然后我们选择兑换成满足 ERC-20 的 token 或直接使用 ETH。例如，opensea 可以直接使用 ETH 购买 NFT，或者我们可以选择兑换为与美元挂钩的 ERC20-USDT token、与黄金挂钩的 AurusGOLD token、与社区治理相关的 UNI token 等等。</p>
@@ -286,6 +294,7 @@
 <blockquote>
 <p>ERC-20 规定了一组接口，token 想要融入以太坊生态就需要实现接口对应的方法，例如 <code>transfer</code> 等。从代码中可以看到，token 其实就是智能合约，例如<a href="https://github.com/Uniswap/governance/blob/master/contracts/Uni.sol">UNI</a>这一 token，就是实现了各种 ERC-20 接口的智能合约</p>
 </blockquote>
+<p>ETH 也会被销毁，即每次交易时 gas 的基础费率部分。销毁的幅度会根据上一个区块的大小(所有交易中使用的 gas 数量)与目标大小进行比较，如果超过目标区块大小，区块的基本费用将最多增加 12.5%。 这种指数级增长使得区块大小无限期保持高位在经济上不可行。也因此，可能某个区块上的 gas 费用小于销毁的数量。销毁的机制是将 ETH 转移到地址为 0x0 的“黑洞”，密码学原理不可能生成 0 的私钥。</p>
 <h3 id="eth-的未来">ETH 的未来</h3>
 <ul>
 <li>sharding：在以太坊之上，将许多交易交易分为多个并行的层，validator 验证某一层和层之间的关系，从而加快交易处理速度。这种处理方式类似于数据库中的通过分库分表增加效率。shard 链将在信标链合并之后研发，预计会在 2023 年开始</li>
@@ -314,6 +323,46 @@
 <p>DAO 也是基于智能合约的，DAO 的成员认定通常是基于 token 的，持有 token 即可对社区治理提案进行投票，并通过 token 机制激励利益相关者。DAO 启动与发行 token 类似，他们发行的 token 享有社区的治理权。DAO 的流程通常是链下讨论、链上投票并将结果写入区块链、利用智能合约执行(如投资/资助某个创业项目等)。</p>
 <p>DAO 是对传统公司模式的革新。与他人创办涉及资金和金钱的组织，需要对与合作对象高度信任。不过，这显然很难相信互联网上素不相识的人。通过 DAO 成员可以不需要相信组织中的其他人，只需要相信 DAO 公开透明的代码，任何人都可以验证(当然 DAO 的成员通常是志同道合的人，大的方向上通常是一致的)。DAO 的成员也是 DAO 的所有者，有 token 激励去为 DAO 的生态做贡献。</p>
 <p>DAO 目前仍存在一些问题，比如法律风险、投票机制是否民主等。</p>
+<h2 id="其他公链生态基础技术架构分析">其他公链生态基础技术架构分析</h2>
+<p><img src="/attachments/blockchain.jpeg" alt="blockchain"></p>
+<h3 id="bridges桥接-evm-union">Bridges：桥接 EVM Union</h3>
+<p>如今加密世界已经进入了一个多链并存的时代，并逐渐形成了以太坊为核心，其他各公链百花齐放，众星拱月的局面。当区块链的协议越来越多、资产交互也越来越频繁时，人们迫切需要一类新技术来让不同链之间能够产生交互。针对这一问题，跨链桥应运而生。</p>
+<p>桥要保证一份资产从一个区块链以一个相对公平的价格转移而非复制到另一个区块链上，<a href="https://chainstack.com/how-to-create-blockchain-bridge/">本质上也是一个智能合约</a>。桥的合约通过调用源链上token销毁/锁仓的合约的同时，在新链上调用铸币的合约。例如 WBTC 通过锁仓比特币的同时发行新的在 ERC-20 token，让比特币也能在以太坊平台上参与 DeFi，其交换汇率根据 oracle 来确定。</p>
+<p>不少 layer-2 的 token 亦通过 bridges 连接到以太坊平台上，例如 polygon 等，他们有很低的交易费用，在 layer-2 上运算并将结果写入到以太坊上，避免开高额的交易费用。
+<img src="https://static.coinall.ltd/cdn/assets/plugins/2022/04/20220426072801163.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp" alt="Dune Analytics"></p>
+<p>桥接也会带来一些风险，包括但不限于：安全风险(<a href="https://rekt.news/wormhole-rekt/">智能合约漏洞被攻击</a>)、金融风险(各种包装 token 接受到了两个区块链波动的风险)、交易对手风险(验证者和oracle可能是不可信的)</p>
+<h3 id="bnb背靠-binance-发力-defi">BNB：背靠 Binance 发力 DeFi</h3>
+<p>BNB 的 ERC-20 token 通过桥的方式将币安链与以太坊相连。币安币(BNB)是 BNB chain 的原生代币，一开始基于以太坊网络，但发展到后来，ERC-20 BNB代币已经能够以1:1的汇率交换BEP-2 BNB(旧版币安链的原生 token，即现在的 BNB beacon chain信标链)和 BEP-20 BNB(币安智能链的 token，即现在的 BNB smart chain智能链)，可以独立于以太坊运行。除了提供低交易费用，BNB 链的搭建也意在战略层面为巨大的币安用户群提供 Defi 的第一个入口。</p>
+<p><img src="https://cdn.sanity.io/images/2bt0j8lu/production/6d961b5ca9000324a260ceea080936a8dda7c01c-1920x1080.png?w=714&amp;fit=max&amp;auto=format&amp;dpr=3" alt="BNB"></p>
+<p>目前 BNB 链分为信标链和智能链，分别用以治理和执行，其上应用主要为 DeFi。信标链是为 DEX(去中心化交易所)服务而开发的，旨在实现高交易吞吐量和比中心化交易所更高级的用户体验。而智能链则是针对智能合约设计的。当两条区块链合并时，信标链成为治理(质押和投票)的专用层，智能链成为EVM共识和执行的专用层。自 BNB 智能链推出以来，网络上的活动主要来自 DeFi 活动，因为该网络现在托管来自 400 多个 DeFi 协议(根据 DeFi Llama 平台)以及来自其他行业的大约 1,000 个项目的活动。就总价值锁定(TVL)和在链上运行的应用程序数量而言，它现在是继以太坊之后的第二大网络。使用最多的应用程序是pancake swap，基于 uniswap 的代码实现的 BSC 上的<a href="https://zhuanlan.zhihu.com/p/537965712">自动做市商</a>，约占整个 DeFi 生态的 TVL 的 50%。</p>
+<p>BNB 采用的是 PoS 证明，BSC只需要21名验证者，这些验证者是由币安审核过的，通过他们押注项目的原生BNB代币来达成共识。虽然使用如此有限数量的验证者来验证区块，使得网络具有高扩展性与快速吞吐量的特点，但这也意味着区块链越来越中心化，有点像EOS的21个超级节点。BNB 主要有以下几种用途：</p>
+<ul>
+<li>支付币安交易平台、币安DEX的交易费用；</li>
+<li>支付币安链上的交易费用；</li>
+<li>币安生态系统的社区效用代币，例如游戏和DApp、参与币安 Launchpad 主持的代币销售；</li>
+<li>为线上和实体店购买的商品和服务付款，例如使用币安卡或币安支付、通过Travala.com预订酒店和机票等；</li>
+<li>为币安流动性挖矿注入流动性。</li>
+</ul>
+<p>此外，BNB 还有自动销毁 auto-burn 机制。代币销毁让代币供不应求，从而造成通货紧缩效应，并潜在拉升加密货币价值，让持有者获益。 BNB代币销毁活动的目标是将BNB总供应量逐步减少到1亿枚(即减少50%)以下。BNB自动销毁机制将根据每个季度的BNB价格和币安链的出块数量自动调整BNB的销毁数量。</p>
+<h3 id="solana追求高效率与高扩展性">Solana：追求高效率与高扩展性</h3>
+<p>区块链也有所谓不可能三角，即去中心化(Decentralization)、可扩展性(Scalability)和安全性(Security) 难以同时兼顾。Solana 尝试在区块链的安全性基础上，增加 TPS(60000 TPS)，利用 PoH 机制加快共识达成速度，并有一些<a href="https://forkast.news/what-is-solana-why-hottest-blockchain/">辅助的技术</a>提升区块链的去中心化和交易效率：</p>
+<ul>
+<li>工作历史证明(Proof-of-History)，通过共识前的时钟来验证时间顺序 <img src="/images/2022-08-11-16-35-23.png" alt="PoH"></li>
+<li>塔式BFT算法(Tower BFT)：验证算法 PBFT 算法的 PoH 改进，减少消息传递的延迟</li>
+<li>涡轮传播协议(Turbine)：区块传播协议，处理可扩展性，让节点之间传输数据更快</li>
+<li>湾流(Gulf Stream)：高性能网络内存管理方案，避免内存阻塞，减少交易确认时间</li>
+<li>海平面(Sealevel)：允许运行并行处理数万个智能合约，同时尽可能多地使用 validator 可用的内核</li>
+<li>流水线(Pipeline)：高性能地利用硬件，验证交易处理</li>
+<li>云存储(Cloudbreak)：水平扩展的账户数据库，提高区块链数据读写速度</li>
+<li>存档器(Archivers)：分布式账本存储</li>
+</ul>
+<p><a href="https://docs.solana.com/cluster/synchronization">PoH 不是共识机制</a>，而是用于提高 Solana 的 PoS 共识的性能。PoS 性能的瓶颈是节点间确定交易的顺序，需要不同的验证者投票实现共识。在 Solana 的 PoH 机制设计中，首先选出一个不负责验证的节点 leader，所有交易信息要经过 leader，leader 来排序交易并串行地 hash，其他节点从 leader 这里拿到 block，可以并行验证链上数据是否一致，从而提高效率。leader 是通过 PoS 选举出来的，如果产生分叉就重新选举leader，同时集群通过轮换 leader 来最大限度地减少恶意 leader 的影响。</p>
+<p>Solana 最大的特点是高效，高效带来了低费用、易扩展。通过压缩共识形成的时间，Solana 可以支持更多并发的交易量，远超目前大多数的区块链，Solana 可以做到每秒交易峰值 65000 笔(以太坊 PoS 的目标为 TPS 达到 10万)，实时性上甚至超越了 VISA 和 paypal。而高效率也降低了每笔交易的手续费，每笔交易仅需平均支付 0.0015 美元，延迟在 0.4 秒左右。
+<img src="https://miro.medium.com/max/1400/1*clDWfSMcldcezT4EQzSLIg.png" alt="solana"><img src="https://pbs.twimg.com/media/FASyoYPUcBAeFjR.jpg:large" alt="solana"></p>
+<p>Solana 发行原生的 token 为 SOL，且支持智能合约。SOL是一个通胀率逐渐降低至1.5%的模型，交易 gas 中有 50% 销毁。Solana 支持完整的智能合约，且采用编译后发生语言上的安全问题概率较低的 rust 编写。此外，Solana 在由 Andreessen Horowitz 领投的一轮融资中筹集了约 3 亿美元，获得了一个巨大的资金来源，他们可以用此来激励开发人员和市场并发展 Solana 生态系统；Brave 浏览器亦对 Solana 提供了集成支持。</p>
+<p>Solana 在 NFT 和 DeFi 市场上有广泛的应用，有一定的 dapp 生态。全球最大的加密货币交易所之一 FTX 选择 Solana 作为构建其 DEX、Serum 的首选区块链。Saber是在 Solana 上交的 AMM，据此前报道 SaberLabs 获得770万美元种子轮融资，Race Capital领投，Jump、Multicoin等知名机构参投。最大的NFT交易平台 Opensea宣布将集成部署在Solana 链上，在 Solana区块链网络上铸造的 NFT 可以在OpenSea上交易并以 SOL 定价。</p>
+<p>但 Solana 也面临着中心化与网络安全的问题，已发生多次网络安全事故。Solana 的中心化一方面是由于交易前要选出 1400 多个节点中选出 leader 节点，另一方面是由于其使用挖矿算法由于 PoH 对时间的要求需要很高的机器性能，以致于只有中心化的专业机构可以购买 ASIC 芯片参与。安全性上，作为率先推出桥接到以太坊的非 EVM 链，Solana的<a href="https://rekt.news/wormhole-rekt/">Wormhole</a>曾被侵入损失达 $ 320mn，截止2022年8月初已出现大大小小的停机12次，其配套钱包也被黑客攻陷尚未解决。</p>
+<h3 id="tron">TRON</h3>
 
         </div>
       </article>
@@ -370,6 +419,14 @@
         <li><a href="#defi">DeFi</a></li>
         <li><a href="#nft">NFT</a></li>
         <li><a href="#dao">DAO</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他公链生态基础技术架构分析">其他公链生态基础技术架构分析</a>
+      <ul>
+        <li><a href="#bridges桥接-evm-union">Bridges：桥接 EVM Union</a></li>
+        <li><a href="#bnb背靠-binance-发力-defi">BNB：背靠 Binance 发力 DeFi</a></li>
+        <li><a href="#solana追求高效率与高扩展性">Solana：追求高效率与高扩展性</a></li>
+        <li><a href="#tron">TRON</a></li>
       </ul>
     </li>
   </ul>
