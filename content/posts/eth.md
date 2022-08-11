@@ -208,4 +208,15 @@ Solana 在 NFT 和 DeFi 市场上有广泛的应用，有一定的 dapp 生态�
 
 但 Solana 也面临着中心化与网络安全的问题，已发生多次网络安全事故。Solana 的中心化一方面是由于交易前要选出 1400 多个节点中选出 leader 节点，另一方面是由于其使用挖矿算法由于 PoH 对时间的要求需要很高的机器性能，以致于只有中心化的专业机构可以购买 ASIC 芯片参与。安全性上，作为率先推出桥接到以太坊的非 EVM 链，Solana的[Wormhole](https://rekt.news/wormhole-rekt/)曾被侵入损失达 \$ 320mn，截止2022年8月初已出现大大小小的停机12次，其配套钱包也被黑客攻陷尚未解决。
 
-### TRON
+### TRON：擅长营销炒作，韭菜的共识也是共识？
+
+绝大多数模型抄自以太坊。gas 替换成带宽和能量，带宽是衡量保存在区块链数据库中的交易字节大小的单位，能量是衡量在TRON网络上“TVM虚拟机”执行特定操作所需的计算量的单位。而所谓 TVM，除了名字上的修改外，增添了“匿名合约”、“合约投票”的功能。token 则抄了 ERC-20 与 ERC-721 等，换成了 TRC-20/TRC-721。就连客户端，都是以太坊早已淘汰的 Java 客户端[修改来的](https://github.com/tronprotocol/java-tron/issues/25)
+
+区块生产采用所谓 `DPoS`，大概因为只有 27个节点达成共识速度很快，所以交易费用低。任何账户只需支付 9999 个原生代币 TRX 就可以申请成为超级代表候选人，参与超级代表竞选。任何账户都可以给超级代表候选人投票，获得票数最高的前27名候选人即成为超级代表，投票采用 1T1V。但[coincarp](https://www.coincarp.com/currencies/tron/richlist/)上的数据看上去变化很难，0.2%以上就是 top27，而0.4%以上15个
+
+智能合约抄以太坊，连编程语言都是 solidity，而很久以前自称使用 Java领先solidity。而其TVM 的匿名交易，是基于账户模型的隐私交易方案。思路是通过部署一个智能合约，用户将TRC20代币转给智能合约，通过智能合约来执行匿名交易。我无法理解和[Tornado.Cash](https://www.binance.com/zh-CN/news/flash/7171373)的区别，可能有法律风险。
+![TRON](https://www.hellobtc.com/d/file/201904/2cd4f30fba1aea60dba30ebc8e814544.png)
+![TRON](https://www.hellobtc.com/d/file/201904/bfb4d9cd3b6849f0a72ab33f5a701d7a.png)
+
+创始人非常擅长营销，应用场景有以下几处。基于其上的广泛应用为稳定币 TRC-20 USDT，比基于ERC-20 的USDT [还要大](https://coin.top/pdf/波场与加密资产的ETF之路%200917.pdf)，但 USDT 亦由于中心化、不透明而受社区批评。创始人孙宇晨擅长通过各种热点事件增加 TRX 曝光度，但抛售、割韭菜等声誉风险值得注意
+![TRON](/images/2022-08-11-23-02-03.png)
