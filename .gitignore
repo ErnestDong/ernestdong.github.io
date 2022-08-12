@@ -5,3 +5,4 @@ TODO
 public/
 *.lock
 /src/.ob-jupyter/*.png
+*.docx
