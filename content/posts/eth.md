@@ -11,14 +11,14 @@ draft = false
 ## 去中心化的状态机
 
 以太坊 ethereum 是一个去中心化的开源的公共区块链平台，由 Vitalik Buterin 在 2013 年提出，并通过众筹的方式在 2014 年推出，是目前市值第二高的加密货币。以太坊不止是一个分布式的账本，还是一个[分布式的状态机](https://ethereum.org/en/developers/docs/evm/)，一个全球性的新型应用程序平台。
-![[Ethereum in numbers](https://ethereum.org/en/what-is-ethereum/)](../../static/attachments/ethereum.png)
+![[Ethereum in numbers](https://ethereum.org/en/what-is-ethereum/)](https://ernestdong.github.io/attachments/ethereum.png)
 
 ### 加密货币交易原理
 
 人们提出过许多加密算法，加密算法的本质是生成一对函数 $(P,S)$，二者互为反函数，很难在有限时间内从公钥 $P$ 推算出私钥 $S$，并且输入不同输出通常也不同，人们可以公开自己的公钥 $P$。这个函数对通常有两类作用：一种是加密通信：Alice对信息$M$ 加密为$P(M)$，Bob利用自己的私钥解密为$S(P(M))=M$；一种是数字签名：Alice 发送信息 $M$时，同时发送$(M,S(M))$给对方，Bob 验证$M=P(S(M))$从而确认信息是 Alice 发出的没有被篡改。
 
 加密货币中，地址为公钥，人们可以通过公钥查询这个地址的所有交易，进而推算出该地址的余额。而私钥则需保密保管，有了私钥才可以对地址上的信息进行修改，如Alice将一笔交易信息$(M,S_A(M), P_B(M), \dots)$发送到区块链上由矿工验证交易由 Alice 发出，并在区块链上进行相应的操作。比特币的交易操作依赖于比特币的脚本([Bitcoin Script](https://www.liaoxuefeng.com/article/1124144362997184))。下图是一个比特币交易的例子，out addr 里面包含的其实是一条脚本和交易比特币的数量。只有满足了脚本的条件交易才会执行，例如只有拥有私钥可解密的人才能获得这些比特币。这种脚本有一定的可编程性，例如等待7天后再放款给卖家。
-![比特币交易](../../static/attachments/btc.jpeg)
+![比特币交易](https://ernestdong.github.io/attachments/btc.jpeg)
 
 ### 不止于账本：EVM 与智能合约
 
@@ -67,7 +67,7 @@ contract SimpleAuction {
 图灵机无法解决“停机问题”，即一个程序是否能在有限的时间之内结束运行。如果恶意或者错误的程序无法停机/持续时间过长，那么其他的交易也会被阻塞。这也是为何比特币的脚本被故意设计成图灵不完备的，没有循环和跳转指令。
 
 以太坊采用了 gas 机制来解决图灵机的停机问题。gas 好比是汽车所加的汽油，我们为了避免以太坊这辆永远会运行的汽车停不下来，会对执行操作设定一定的汽油量(gas)。所谓 gas 是以太坊支付的手续费，不同的 op code、区块难度等有不同的基础费率，提供额外的 gas 可以在网络拥堵时吸引矿工优先计算。当耗尽用户设定的 gas 上限而交易仍未完成时，EVM 会回退到交易执行前的状态，并把剩余的资金退还给用户，gas 转移给矿工或销毁。有限的 gas 保证了 EVM 不会因为恶意或错误的代码阻塞，同时也激励更多矿工进入以太坊的系统为 EVM 的计算提供算力，让 EVM 之上的操作可以更快。
-![平均gas价格](../../static/attachments/gas%20price.png)
+![平均gas价格](https://ernestdong.github.io/attachments/gas%20price.png)
 
 ## 一枚 ether 的冒险
 
@@ -77,7 +77,7 @@ contract SimpleAuction {
 
 ETH 的供应也是去中心化且透明的。以太坊是一个通胀模型，系统并没有规定以太币发行量的上限。矿工的收益一共有三部分：区块奖励、gas 以及 MEV。加密货币的拥趸认为它们是“数字黄金”，其价值来源于总量的稀缺性。以太坊的价值来源于它的使用而非储藏，以太坊的通胀模型则是由于其有更宏大的[愿景](https://ethereum.org/zh/upgrades/vision/)，希望以太坊可以作为去中心化的计算平台，因而选择的是总量[温和通胀](https://etherscan.io/chart/ethersupplygrowth)，以适应供需的增长，近一年通胀率控制在2%。
 区块奖励为矿工开采出一个新区块的奖励，平均12-14秒左右出一个区块，奖励由最初的每区块5个ETH降低为现如今的2个ETH，叔块的计算也能获得1.75个ETH。**gas多出的部分(优先费)分给矿工，基本费用部分通过“burn”销毁以避免过度的通胀。**最后为最大可提取价值 MEV，为矿工通过在区块中添加和排除交易并更改区块中的交易顺序，可以从区块生产中得到的价值。
-![一个区块](../../static/attachments/gas.png)
+![一个区块](https://ernestdong.github.io/attachments/gas.png)
 
 目前开采区块的方式为 PoW 机制，未来将转为 PoS 机制。
 以太坊的交易被处理为区块。与比特币类似，以太坊也是要求矿工找到一个 nonce，哈希计算后数值满足前若干位为0(使用“难度”difficulty 衡量)；但以太坊为了避免持有 ASIC 矿机的矿池形成中心化，采用了不适合 ASIC 芯片计算的内存密集的算法[ethash](https://ethereum.org/zh/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)。在听到新的交易请求时，每个以太坊网络节点会添加这笔交易到本地的内存池。一个挖矿节点将几十或上百个交易请求汇总到潜在区块中，从而尽量多收取交易手续费，同时保证不超出区块 gas 限制。节点将验证有效性并执行 op code，更新 EVM 的状态，交易打包为一个 Merkle Tree，取头节点的 hash 作为摘要。最后进行广播，交易被写入链上。
@@ -153,7 +153,7 @@ DAO 目前仍存在一些问题，比如法律风险、投票机制是否民主�
 
 ## 其他公链生态基础技术架构分析
 
-![blockchain](../../static/attachments/blockchain.jpeg)
+![blockchain](https://ernestdong.github.io/attachments/blockchain.jpeg)
 
 ### Bridges：桥接 EVM Union
 
@@ -188,7 +188,7 @@ BNB 采用的是 PoS 证明，BSC只需要21名验证者，这些验证者是由
 
 区块链也有所谓不可能三角，即去中心化(Decentralization)、可扩展性(Scalability)和安全性(Security) 难以同时兼顾。Solana 尝试在区块链的安全性基础上，增加 TPS(60000 TPS)，利用 PoH 机制加快共识达成速度，并有一些[辅助的技术](https://forkast.news/what-is-solana-why-hottest-blockchain/)提升区块链的去中心化和交易效率：
 
-- 工作历史证明(Proof-of-History)，通过共识前的时钟来验证时间顺序 ![PoH](../../static/images/2022-08-11-16-35-23.png)
+- 工作历史证明(Proof-of-History)，通过共识前的时钟来验证时间顺序 ![PoH](https://ernestdong.github.io/images/2022-08-11-16-35-23.png)
 - 塔式BFT算法(Tower BFT)：验证算法 PBFT 算法的 PoH 改进，减少消息传递的延迟
 - 涡轮传播协议(Turbine)：区块传播协议，处理可扩展性，让节点之间传输数据更快
 - 湾流(Gulf Stream)：高性能网络内存管理方案，避免内存阻塞，减少交易确认时间
@@ -219,4 +219,4 @@ Solana 在 NFT 和 DeFi 市场上有广泛的应用，有一定的 dapp 生态�
 ![TRON](https://www.hellobtc.com/d/file/201904/bfb4d9cd3b6849f0a72ab33f5a701d7a.png)
 
 创始人非常擅长营销，应用场景有以下几处。基于其上的广泛应用为稳定币 TRC-20 USDT，比基于ERC-20 的USDT [还要大](https://coin.top/pdf/波场与加密资产的ETF之路%200917.pdf)，但 USDT 亦由于中心化、不透明而受社区批评。创始人孙宇晨擅长通过各种热点事件增加 TRX 曝光度，但抛售、割韭菜等声誉风险值得注意
-![TRON](../../static/images/2022-08-11-23-02-03.png)
+![TRON](https://ernestdong.github.io/images/2022-08-11-23-02-03.png)
