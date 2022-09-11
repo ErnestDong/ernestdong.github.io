@@ -41,12 +41,12 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-Markdown     9 hrs 31 mins   ████████████████████░░░░░   80.59 %
-Python       1 hr 3 mins     ██▒░░░░░░░░░░░░░░░░░░░░░░   08.98 %
-TeX          46 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.52 %
-JSON         27 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.83 %
-YAML         0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.05 %
-Git Config   0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.04 %
+Markdown   5 hrs 52 mins   ████████████████▒░░░░░░░░   65.69 %
+Python     2 hrs 5 mins    █████▓░░░░░░░░░░░░░░░░░░░   23.31 %
+JSON       47 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   08.87 %
+INI        7 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.43 %
+TOML       1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.32 %
+YAML       1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.29 %
 ```
 
 <!--END_SECTION:waka-->
