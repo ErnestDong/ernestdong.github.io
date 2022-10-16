@@ -41,12 +41,12 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-TeX           7 hrs 14 mins   █████████▓░░░░░░░░░░░░░░░   38.53 %
-Markdown      5 hrs 50 mins   ███████▓░░░░░░░░░░░░░░░░░   31.12 %
-sh            3 hrs 59 mins   █████▒░░░░░░░░░░░░░░░░░░░   21.24 %
-TypeScript    43 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.88 %
-JSON          16 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.46 %
-TOML          13 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.17 %
+Markdown      10 hrs 40 mins  ████████████████████░░░░░   80.02 %
+sh            1 hr 35 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.87 %
+TeX           47 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.90 %
+JSON          8 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.11 %
+TypeScript    4 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.51 %
+Git           2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.37 %
 ```
 
 <!--END_SECTION:waka-->
