@@ -41,11 +41,7 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-TeX          1 hr 33 mins    █████████████░░░░░░░░░░░░   52.59 %
-sh           1 hr 20 mins    ███████████▒░░░░░░░░░░░░░   45.42 %
-Modula-2     3 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.74 %
-Git Config   0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.23 %
-Git          0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.02 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
