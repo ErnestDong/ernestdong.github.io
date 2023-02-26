@@ -41,12 +41,10 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```text
-TeX          38 hrs 12 mins  ███████████████████████▒░   93.44 %
-Python       2 hrs 17 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.60 %
-HTML         14 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.61 %
-JSON         5 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.22 %
-TOML         2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 %
-Git Config   0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 %
+TeX      31 hrs 12 mins  ████████████████████████▒   97.68 %
+Python   27 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.46 %
+JSON     10 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.54 %
+Other    3 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.16 %
 ```
 
 <!--END_SECTION:waka-->
