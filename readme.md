@@ -41,11 +41,7 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python   35 mins         ██████████████▓░░░░░░░░░░   58.57 %
-TOML     16 mins         ██████▓░░░░░░░░░░░░░░░░░░   26.61 %
-TeX      6 mins          ██▓░░░░░░░░░░░░░░░░░░░░░░   10.35 %
-Other    1 min           ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.27 %
-JSON     0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.21 %
+Python   2 mins          █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
