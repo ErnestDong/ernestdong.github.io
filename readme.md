@@ -41,9 +41,9 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python       16 mins         █████████████████████▒░░░   85.24 %
-JavaScript   2 mins          ██▓░░░░░░░░░░░░░░░░░░░░░░   11.22 %
-JSON         0 secs          █░░░░░░░░░░░░░░░░░░░░░░░░   03.54 %
+Python   33 mins         ████████████████████░░░░░   79.66 %
+Java     6 mins          ███▓░░░░░░░░░░░░░░░░░░░░░   14.42 %
+JSON     2 mins          █▒░░░░░░░░░░░░░░░░░░░░░░░   05.93 %
 ```
 
 <!--END_SECTION:waka-->
