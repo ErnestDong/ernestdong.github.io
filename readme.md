@@ -41,11 +41,10 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python         4 hrs 57 mins   ███████████████████▒░░░░░   76.78 %
-TeX            1 hr 2 mins     ████░░░░░░░░░░░░░░░░░░░░░   16.04 %
-ActionScript   26 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.85 %
-Zed            0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.20 %
-Other          0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 %
+Python         51 mins         █████████████████░░░░░░░░   67.57 %
+ActionScript   20 mins         ███████░░░░░░░░░░░░░░░░░░   27.77 %
+TeX            3 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.29 %
+Other          0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.36 %
 ```
 
 <!--END_SECTION:waka-->
