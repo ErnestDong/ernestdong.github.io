@@ -41,11 +41,10 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python       22 mins         ██████████████▓░░░░░░░░░░   58.92 %
-TypeScript   11 mins         ███████▒░░░░░░░░░░░░░░░░░   29.70 %
-JSON         3 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   07.81 %
-Other        1 min           █░░░░░░░░░░░░░░░░░░░░░░░░   03.49 %
-TSConfig     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 %
+Python   1 hr 36 mins    ███████████████████████░░   92.01 %
+SQL      6 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.31 %
+JSON     1 min           ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.50 %
+Other    0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.18 %
 ```
 
 <!--END_SECTION:waka-->
