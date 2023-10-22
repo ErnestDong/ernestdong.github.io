@@ -41,9 +41,11 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python   6 mins          ████████████████████████░   95.61 %
-SQL      0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.98 %
-JSON     0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.41 %
+Go         46 mins         ████████░░░░░░░░░░░░░░░░░   32.28 %
+Rust       34 mins         ██████░░░░░░░░░░░░░░░░░░░   23.89 %
+Python     29 mins         █████░░░░░░░░░░░░░░░░░░░░   20.28 %
+C++        9 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.64 %
+JSON       9 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.49 %
 ```
 
 <!--END_SECTION:waka-->
