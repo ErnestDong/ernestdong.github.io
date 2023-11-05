@@ -6,33 +6,28 @@
     <description>Recent content in python on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 May 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 May 2022 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://ernestdong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python 速成</title>
       <link>https://ernestdong.github.io/posts/python-%E4%BB%8E-0-%E5%88%B0-1/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/python-%E4%BB%8E-0-%E5%88%B0-1/</guid>
       <description>python 安装 安装 python 安装包分别在 Windows mac，记得下载 python 3 而不是 python 2，安装时记得勾选“add python to path” 安装 vscode (optional) 用来写 python 程序，在 这里 下载，下载完成后打</description>
     </item>
-    
     <item>
       <title>机器学习在企业风险管理中的应用举例</title>
       <link>https://ernestdong.github.io/posts/machine_learning_in_erm/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/machine_learning_in_erm/</guid>
       <description>前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，让机器去利用算法和算力</description>
     </item>
-    
     <item>
       <title>python and mathematics</title>
       <link>https://ernestdong.github.io/posts/python_and_mathematics/</link>
       <pubDate>Sat, 29 Jan 2022 12:28:11 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/python_and_mathematics/</guid>
       <description>Get Start Concentrate on python and math 1 (pyvenv-activate &amp;#34;~/Code/thesis/.venv/&amp;#34;) 1 2 3 4 5 6 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns import statsmodels.api as sm import statsmodels.formula.api as smf numpy numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底</description>
     </item>
-    
   </channel>
 </rss>

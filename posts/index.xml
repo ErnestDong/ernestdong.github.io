@@ -6,69 +6,56 @@
     <description>Recent content in Posts on Ernest Dong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ernestdong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://ernestdong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>以太坊</title>
       <link>https://ernestdong.github.io/posts/eth/</link>
       <pubDate>Mon, 08 Aug 2022 00:00:00 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/eth/</guid>
       <description>去中心化的状态机 以太坊 ethereum 是一个去中心化的开源的公共区块链平台，由 Vitalik Buterin 在 2013 年提出，并通过众筹的方式在 2014 年推出，是目前市值第二高的加密货币。以太</description>
     </item>
-    
     <item>
       <title>python 速成</title>
       <link>https://ernestdong.github.io/posts/python-%E4%BB%8E-0-%E5%88%B0-1/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/python-%E4%BB%8E-0-%E5%88%B0-1/</guid>
       <description>python 安装 安装 python 安装包分别在 Windows mac，记得下载 python 3 而不是 python 2，安装时记得勾选“add python to path” 安装 vscode (optional) 用来写 python 程序，在 这里 下载，下载完成后打</description>
     </item>
-    
     <item>
       <title>机器学习在企业风险管理中的应用举例</title>
       <link>https://ernestdong.github.io/posts/machine_learning_in_erm/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/machine_learning_in_erm/</guid>
       <description>前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，让机器去利用算法和算力</description>
     </item>
-    
     <item>
       <title>python and mathematics</title>
       <link>https://ernestdong.github.io/posts/python_and_mathematics/</link>
       <pubDate>Sat, 29 Jan 2022 12:28:11 +0800</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/python_and_mathematics/</guid>
       <description>Get Start Concentrate on python and math 1 (pyvenv-activate &amp;#34;~/Code/thesis/.venv/&amp;#34;) 1 2 3 4 5 6 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns import statsmodels.api as sm import statsmodels.formula.api as smf numpy numpy 是底层为 C 的向量计算库，是 python 科学计算的基石，快速、贴近底</description>
     </item>
-    
     <item>
       <title>Doom Emacs 写论文的小 tweak</title>
       <link>https://ernestdong.github.io/posts/doom-thesis/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/doom-thesis/</guid>
       <description>最近开始写本科毕业论文，老师让我先读文献。读文献的时候找到一些小 tweak 分享出来。 emacs = jabref + onenote + tex studio 和学术搜索集成 org-ref 有回车然后可以搜索这篇文章在 Google Scholar/web</description>
     </item>
-    
     <item>
       <title>用 Pass 管理密码</title>
       <link>https://ernestdong.github.io/posts/the-unix-pass/</link>
       <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/the-unix-pass/</guid>
       <description>&lt;p&gt;pass for macOS usage&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A stata scratch</title>
       <link>https://ernestdong.github.io/posts/a-stata-scratch/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://ernestdong.github.io/posts/a-stata-scratch/</guid>
       <description>&lt;p&gt;stata on our own&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
