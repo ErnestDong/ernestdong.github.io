@@ -41,7 +41,8 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python   11 mins         █████████████████████████   100.00 %
+Python   29 mins         ████████████████████████▒   97.97 %
+C++      0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.03 %
 ```
 
 <!--END_SECTION:waka-->
