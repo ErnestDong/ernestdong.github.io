@@ -41,10 +41,7 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-TeX      39 mins         ██████████████████▒░░░░░░   72.98 %
-Bash     14 mins         ██████▓░░░░░░░░░░░░░░░░░░   26.58 %
-BibTeX   0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.23 %
-JSON     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.21 %
+TeX   1 min           █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
