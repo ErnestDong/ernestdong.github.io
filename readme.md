@@ -41,11 +41,8 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Java              16 mins         ███████████████████████░░   91.45 %
-XML               1 min           █▓░░░░░░░░░░░░░░░░░░░░░░░   06.00 %
-Other             0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.26 %
-Java Properties   0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.20 %
-YAML              0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 %
+Python   1 hr 12 mins    ████████████████████████░   96.58 %
+YAML     2 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.42 %
 ```
 
 <!--END_SECTION:waka-->
