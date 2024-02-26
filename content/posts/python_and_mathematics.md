@@ -8,7 +8,7 @@ draft = false
 
 ## Get Start {#get-start}
 
-Concentrate on [python]({{<relref "python.md#" >}}) and math
+Concentrate on python and math
 
 ```emacs-lisp
 (pyvenv-activate "~/Code/thesis/.venv/")
