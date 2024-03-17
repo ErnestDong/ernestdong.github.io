@@ -22,7 +22,6 @@
 <meta property="article:published_time" content="2022-03-30T00:00:00+08:00" />
 <meta property="article:modified_time" content="2022-05-29T13:54:34+08:00" />
 
-
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="机器学习在企业风险管理中的应用举例"/>
 <meta name="twitter:description" content="前言 什么是学习？ 维基百科上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，让机器去利用算法和算力"/>
 
@@ -184,15 +183,15 @@
         
         <div class="content" itemprop="articleBody">
           <h2 id="前言">前言</h2>
-<figure><img src="/images/xkcd/1838.png"/>
+<figure><img src="/images/xkcd/1838.png">
 </figure>
 
 <p>什么是学习？ <a href="https://zh.wikipedia.org/wiki/%E5%AD%A6%E4%B9%A0">维基百科</a>上说学习是获得新的理解、知识、行为、技能、价值观、态度和偏好的过程。在计算技术快速发展的今天，让机器去利用算法和算力去“学习”、推理、决策，就是机器学习。
 机器学习按照学习的方式可以分为以下几种，但也不绝对，存在半监督学习和强化学习这种难以归类的方式，部分算法也可以横跨几种分类：</p>
 <figure><img src="/ox-hugo/mathworks.svg"
-         alt="Figure 1: 一些常见的机器学习算法"/><figcaption>
-            <p><span class="figure-number">Figure 1: </span>一些常见的机器学习算法</p>
-        </figcaption>
+    alt="Figure 1: 一些常见的机器学习算法"><figcaption>
+      <p><span class="figure-number">Figure 1: </span>一些常见的机器学习算法</p>
+    </figcaption>
 </figure>
 
 <p>机器学习深究的话，需要学习很多数学和计算机。但是工业界将常用的机器学习算法封装地很好（pytorch, scikit-learn），几行代码就可以实现一个模型， <del>之后便是漫无止境地调参</del> 。</p>
@@ -360,7 +359,7 @@
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&lt;AxesSubplot:&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/2475fbd207d00348d4aff2b5db9de9f766ebc7a8.png"/>
+</div><figure><img src="/ox-hugo/2475fbd207d00348d4aff2b5db9de9f766ebc7a8.png">
 </figure>
 
 <p>让我们处理一下数据</p>
@@ -753,9 +752,9 @@
 </table>
 <p>Bagging主要关注降低方差，因此它在不剪枝的决策树、神经网络等学习器上效用更为明显，不容易过拟合。</p>
 <figure><img src="https://tfugcs.andfun.cn/original/2X/7/74f5a02b7692010da60a746d5469471c68b2ff3c.gif"
-         alt="Figure 2: random forest"/><figcaption>
-            <p><span class="figure-number">Figure 2: </span>random forest</p>
-        </figcaption>
+    alt="Figure 2: random forest"><figcaption>
+      <p><span class="figure-number">Figure 2: </span>random forest</p>
+    </figcaption>
 </figure>
 
 <h4 id="boosting">boosting</h4>
@@ -820,9 +819,9 @@
 <p>Support Vector Machine, SVM 是一种二分类器，其思想是样本分布在空间中，找到一个可以划分开样本点、并且间隔最大的的（超）平面。直观上间隔最大是为了让模型更稳健。</p>
 <p><a id="figure--SVM 图示"></a></p>
 <figure><img src="https://pic2.zhimg.com/80/v2-f9e1e7fd08460a5fab044c71ed8b0bb1_1440w.jpg"
-         alt="Figure 3: SVM 图示"/><figcaption>
-            <p><span class="figure-number">Figure 3: </span>SVM 图示</p>
-        </figcaption>
+    alt="Figure 3: SVM 图示"><figcaption>
+      <p><span class="figure-number">Figure 3: </span>SVM 图示</p>
+    </figcaption>
 </figure>
 
 <p>最简单的线性的硬间隔可分的如图 [3](#figure&ndash;SVM 图示) 所示，当然这是比较理想的情况。当样本分布更复杂的时候，我们会选择软间隔，即将之前的硬间隔最大化条件放宽一点，允许部分点出错，在优化函数中加入惩罚项。</p>
@@ -1118,7 +1117,7 @@
 <ul>
 <li>
 <p>激活函数</p>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png"/>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Action_potential.svg/718px-Action_potential.svg.png">
     </figure>
 
 <p>神经网络本意是想模仿神经元。高中我们学过神经受到刺激后不一定会产生电信号，而是需要达到阈值后才能产生动作电位。因此当神经网络的输入层收到信号传导给隐藏层后，隐藏层是直接向输出层传导（这样的话通过神经网络线性函数的叠加仍然是一个线性函数），而是要经历一个非线性的“激活函数”，如 <code>relu</code> , <code>sigmoid</code>, <code>softsign</code> ，然后再进行传导。即针对 \(X\) 输入，神经元输出会是 \(f(W^TX+b)\) 。</p>
@@ -1658,7 +1657,7 @@
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>show()
 </span></span></code></pre></td></tr></table>
 </div>
-</div><figure><img src="/ox-hugo/77711a7fb5e334bf778dc1bd7807feb9d7b14f93.png"/>
+</div><figure><img src="/ox-hugo/77711a7fb5e334bf778dc1bd7807feb9d7b14f93.png">
 </figure>
 
 <h2 id="references">References</h2>
