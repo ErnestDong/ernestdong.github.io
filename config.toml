@@ -30,7 +30,7 @@ enableGitInfo = true
     link = "https://www.instagram.com/ernestdong2000/"
   [[params.social]]
     name = "email"
-    link = "dongcy2000@outlook.com"
+    link = "dongcy2000@gmail.com"
 [menu]
   [[menu.main]]
     name = "Home"
