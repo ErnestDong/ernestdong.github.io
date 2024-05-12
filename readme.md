@@ -41,11 +41,11 @@ More about me in my [LinkedIn](https://www.linkedin.com/in/晨阳-董-918ab41b4/
 <!--START_SECTION:waka-->
 
 ```txt
-Python     10 hrs 42 mins  █████████▒░░░░░░░░░░░░░░░   37.07 %
-TeX        10 hrs 24 mins  █████████░░░░░░░░░░░░░░░░   35.98 %
-sh         5 hrs 3 mins    ████▒░░░░░░░░░░░░░░░░░░░░   17.48 %
-SQL        1 hr 21 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   04.71 %
-Markdown   59 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.40 %
+Markdown   4 hrs 27 mins   ███████████▒░░░░░░░░░░░░░   45.86 %
+sh         3 hrs 13 mins   ████████▒░░░░░░░░░░░░░░░░   33.15 %
+Python     1 hr 54 mins    █████░░░░░░░░░░░░░░░░░░░░   19.54 %
+JSON       6 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.18 %
+TeX        1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.27 %
 ```
 
 <!--END_SECTION:waka-->
